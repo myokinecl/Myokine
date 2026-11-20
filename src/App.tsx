@@ -27,6 +27,7 @@ import { CLINICAL_QUESTIONS, ClinicalQuestion } from "./questions";
 import { AnimatePresence, motion } from "motion/react";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
 import { ContactBlock, ServicesSection, WhatsAppShareButton, SITE_URL } from "./components/Contacto";
+import { ComoTrabajo } from "./components/ComoTrabajo";
 import exercisePolypillImg from "./assets/images/exercise_polypill_1781741842587.jpg";
 
 type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca";
@@ -1737,6 +1738,9 @@ Lee el artículo completo en MyoKine (@myokinecl)
               <h1 className="font-serif text-3xl sm:text-4xl text-[#0a0a0c] font-medium tracking-tight">
                 Lukas · Kinesiólogo y creador de MyoKine
               </h1>
+              <p className="text-sm sm:text-base text-[#0a0a0c]/65">
+                Magíster (c) en Fisiología Clínica del Ejercicio
+              </p>
             </div>
 
             <div className="space-y-6 text-[#0a0a0c]/85 leading-[1.8] text-base font-sans">
@@ -1792,6 +1796,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </p>
 
               <ServicesSection />
+
+              <ComoTrabajo />
             </div>
           </div>
         )}
