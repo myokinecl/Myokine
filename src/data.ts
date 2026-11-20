@@ -55,6 +55,152 @@ export const CATEGORIES = {
 
 export const STATIC_ARTICLES: Article[] = [
   {
+    id: '45',
+    slug: 'decision-cirugia-hombro-manguito-rotador-malliaras-2021',
+    title: '"El kinesiólogo no va a reparar un tendón roto": cómo deciden operarse las personas con dolor de hombro',
+    subtitle: 'Un estudio cualitativo de Malliaras y colaboradores (2021) escuchó a 15 personas que se operaron del manguito rotador. Lo que pesó en su decisión dice mucho de cómo comunicamos.',
+    categoryType: 'segmento',
+    categoryValue: 'hombro',
+    categoryLabel: 'Hombro',
+    audience: 'ambos',
+    date: '20 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 7,
+    summary: 'Dolor intenso, sensación de haber probado todo, confianza en el cirujano y una idea poderosa: "si está roto, hay que repararlo". Así decidieron operarse 15 personas con dolor de hombro.',
+    pullQuote: 'Para muchos pacientes, la idea de que un tendón roto necesita cirugía es coherente y lógica, aunque no necesariamente sea cierta.',
+    content: `Imagina que llevas meses sin poder dormir de lado, que te cuesta lavarte el pelo y que la resonancia dice "rotura del supraespinoso". La conclusión parece obvia: si algo está roto, hay que repararlo.
+
+Ese razonamiento es justamente lo que estudiaron **Peter Malliaras** y su equipo en la Universidad de Monash (Australia). Entrevistaron en profundidad a **15 personas** de entre 34 y 71 años que se habían operado del manguito rotador en el último año, para entender cómo tomaron esa decisión.
+
+### Por qué importa
+
+Las guías clínicas recomiendan probar entre **6 y 12 semanas** de tratamiento sin cirugía (ejercicio, educación y ajustes de actividad) antes de pensar en infiltraciones u operación. Además, una revisión Cochrane mostró con alta certeza que la descompresión subacromial no es mejor que una cirugía placebo. Aun así, en Australia las tasas de estas cirugías se duplicaron entre 2001 y 2013, y sus costos se triplicaron.
+
+Si la evidencia no empuja hacia la cirugía, ¿qué es lo que la empuja?
+
+### Lo que contaron los pacientes: seis temas
+
+**1. "Había que resolverlo."** Dos de cada tres describieron un dolor que les cambiaba la vida: no dormían, no podían trabajar, tomaban analgésicos todos los días. La mitad llevaba un año o más con dolor. Para ellos, operarse era la forma más directa de salir de ahí.
+
+**2. "Sentía que ya había hecho todo."** Los 15 habían hecho ejercicio y 10 se habían infiltrado. La mayoría sintió que había agotado las alternativas. Algunos dejaron el ejercicio porque les dolía y temían estar empeorando el tendón.
+
+**3. "El kinesiólogo no va a reparar un tendón roto."** Es la frase que da nombre al estudio. Dos tercios pensaban que su problema era mecánico y que solo una cirugía podía arreglarlo. Muchas veces esa idea nació de cómo les explicaron la resonancia: "no tienes opción, te tienes que operar".
+
+**4. Confianza total en el cirujano.** Uno lo dijo así: si le hubieran dicho que se tragara mil arañas, lo habría hecho. La reputación del cirujano se construía de boca en boca, sin mucho cuestionamiento.
+
+**5. "El doctor Google pesó mucho."** Sentían que informarse era su responsabilidad. Buscaron en internet y preguntaron a conocidos, aunque confiaban más en lo que les decían los profesionales.
+
+**6. Barreras del sistema.** El costo, el seguro y hasta que el kinesiólogo se cambiara de ciudad influyeron en la decisión.
+
+### Lo que más preocupa
+
+Solo **7 de 15** sintieron que les explicaron los riesgos de la cirugía. Otros dijeron que nadie les habló de complicaciones, y una persona supo después de operarse que existían ejercicios como alternativa.
+
+Mientras tanto, la evidencia dice cosas que casi ningún paciente sabía:
+- Muchas personas tienen roturas del manguito **sin ningún dolor**.
+- Una rotura no necesariamente crece ni empeora con el tiempo.
+- Muchas personas con roturas mejoran sin cirugía.
+- Hasta un **40 %** vuelve a romperse después de la reparación y, aun así, mejora parecido. Eso pone en duda que el beneficio venga de "reparar" el tendón.
+
+### Qué significa para ti
+
+**Si tienes dolor de hombro:** una imagen alterada no es una sentencia. Antes de decidir, puedes preguntar qué beneficio real se espera, qué riesgos tiene la cirugía y qué pasa si sigues con un plan de ejercicio bien hecho.
+
+**Si eres profesional de la salud:** lo que decimos al mostrar una resonancia pesa más que casi cualquier ejercicio que indiquemos. Explicar que los hallazgos son frecuentes en personas sin dolor, dar un plan de ejercicio con dosis y progresión claras, y compartir la decisión con el paciente no es un detalle: es parte del tratamiento.
+
+### Límites del estudio
+
+Es un estudio cualitativo de 15 personas reclutadas en un solo centro de imágenes de Melbourne, todas atendidas en el sistema privado. Sus resultados sirven para generar hipótesis, no para medir frecuencias en la población.`,
+    references: [
+      {
+        author: 'Malliaras P, Rathi S, Burstein F, Watt L, Ridgway J, King C, Warren N.',
+        year: '2021',
+        journal: 'Disability and Rehabilitation',
+        doi: '10.1080/09638288.2021.1879945',
+        title: "'Physio's not going to repair a torn tendon': patient decision-making related to surgery for rotator cuff related shoulder pain"
+      }
+    ]
+  },
+  {
+    id: '44',
+    slug: 'musculos-espalda-dolor-lumbar-cronico-matheve-2023',
+    title: 'Los músculos de la espalda en el dolor lumbar crónico: qué cambia y cómo entrenarlos',
+    subtitle: 'Matheve, Hodges y Danneels (2023) resumen lo que sabemos de los cambios en el multífido y los erectores, y proponen un marco para individualizar el entrenamiento.',
+    categoryType: 'segmento',
+    categoryValue: 'columna-lumbar',
+    categoryLabel: 'Columna lumbar',
+    audience: 'clinico',
+    date: '20 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 9,
+    summary: 'En el dolor lumbar crónico los músculos de la espalda cambian, pero no igual en todos. La pregunta clínica no es si entrenarlos, sino a quién, cuándo y cómo.',
+    pullQuote: 'Los efectos del entrenamiento probablemente son mayores cuando apuntan a lo que a esa persona le falta para volver a las actividades que valora.',
+    content: `Cerca del 80 % de las personas tendrá dolor lumbar alguna vez. La mayoría mejora en semanas, pero hasta dos tercios tienen una recaída dentro del año y alrededor del 15 % desarrolla dolor lumbar crónico (más de tres meses).
+
+En ese escenario, el **multífido lumbar** y los **erectores espinales** suelen estar en el centro del tratamiento. **Thomas Matheve, Paul Hodges y Lieven Danneels** revisaron la evidencia disponible hasta 2023 para responder tres preguntas: qué cambia en estos músculos, si el ejercicio lo puede revertir y si esos cambios explican la mejoría clínica.
+
+### Un repaso rápido de anatomía
+
+- **Multífido profundo:** fibras cortas que cruzan dos segmentos. Casi no extiende la columna; aporta compresión para el control segmentario.
+- **Multífido superficial y erectores:** brazos de palanca largos. Extienden la columna y manejan cargas externas.
+
+### Qué cambia en el dolor lumbar crónico
+
+**En la estructura:**
+- Menor área de sección del multífido, a menudo **en ambos lados** y en varios niveles (en el dolor agudo suele ser más localizada).
+- Más infiltración de grasa y tejido fibroso.
+- En un subgrupo, menor proporción de fibras tipo I.
+
+**En la función:**
+- Cuando hay alteraciones en la activación ante perturbaciones, lo típico es un **retraso** en la respuesta de los erectores.
+- En tareas funcionales es frecuente ver **más actividad** de los erectores (y no del multífido), probablemente como estrategia de protección.
+- Durante tareas de fatiga se activan más las regiones altas de los extensores, lo que se asocia a fatiga más precoz y más dolor.
+- Cambios en la corteza motora relacionados con peor función del multífido, y menor propiocepción lumbar.
+- Menor fuerza y resistencia de los extensores en muchos pacientes.
+
+Pero el punto central del artículo es este: **no todos los pacientes presentan estos cambios, ni en la misma medida.** Que existan en el grupo no significa que expliquen el dolor de la persona que tienes al frente.
+
+### ¿El ejercicio los revierte?
+
+- **Fuerza y resistencia:** sí, hay evidencia clara de que mejoran con ejercicio específico.
+- **Patrones de activación:** el entrenamiento de control sensoriomotor puede cambiarlos; la extensión de espalda genérica, no tanto.
+- **Estructura:** la evidencia es incompleta. El control motor de baja carga solo no basta para recuperar masa muscular, pero combinarlo con sobrecarga progresiva sí logró hipertrofia del multífido junto con menos dolor y discapacidad. La infiltración grasa parece difícil de revertir, aunque muchos programas estudiados quizá fueron cortos o con cargas insuficientes.
+
+### ¿Mejorar el músculo explica que mejore el dolor?
+
+No está claro. Los programas mejoran tanto la función muscular como el dolor, pero la relación causal entre ambos sigue en duda. Parte del problema es metodológico: los ensayos suelen medir de forma genérica y mezclan pacientes muy distintos. Cuando se usan diseños de caso único con medidas individualizadas, la relación entre cambios en el movimiento y en el dolor aparece en el 72 % de las comparaciones, frente al 31 % en ensayos clínicos convencionales.
+
+### El marco que proponen
+
+**1. Considera la heterogeneidad.** El ejercicio específico (control sensoriomotor, fuerza, resistencia) funciona peor en personas con rasgos nociplásticos marcados o creencias poco útiles, como miedo al movimiento. Ahí suele convenir partir por exposición gradual, ejercicio general o abordaje cognitivo-conductual. El ejercicio específico tiene más sentido en dolor de predominio nociceptivo: localizado, con patrones claros de provocación y alivio según posturas y movimientos.
+
+**2. Equilibra carga y capacidad.** Enseñar a "proteger la espalda" puede instalar la idea de que es frágil. Lo que se busca es entrenar con cargas suficientes para mejorar fuerza y resistencia. La carga probablemente no daña, aunque puede doler, y el dolor transitorio es una razón frecuente de abandono. Educar sobre el dolor antes de cargar ayuda a la adherencia.
+
+**3. Entrena el control sensoriomotor cuando haga falta.** Si hay alteraciones, la activación selectiva del multífido al inicio puede restaurar patrones de activación. Una vez logrado, no hace falta insistir: lo lógico es avanzar a tareas funcionales y a etapas más automáticas del aprendizaje motor.
+
+**4. Progresa a fuerza y resistencia** según lo que la persona necesita en su vida: no es lo mismo alguien que hace flexiones repetidas en su trabajo que alguien que pasa horas en semiflexión.
+
+### Para llevar a la consulta
+
+- Los cambios musculares en el dolor lumbar crónico existen, pero son variables. Evalúa antes de asumir.
+- Define primero el mecanismo de dolor predominante; eso decide si el ejercicio específico es prioridad.
+- Si entrenas la musculatura, hazlo con carga real y progresión, no solo con activación de baja carga.
+- Mide lo que es relevante para esa persona, no solo parámetros genéricos.
+
+### Límites
+
+Es una revisión narrativa del estado del arte, no una revisión sistemática. Varias de sus propuestas, como el orden de las fases de entrenamiento, son hipótesis razonables que todavía requieren confirmación.`,
+    references: [
+      {
+        author: 'Matheve T, Hodges P, Danneels L.',
+        year: '2023',
+        journal: 'Journal of Clinical Medicine',
+        doi: '10.3390/jcm12175510',
+        title: 'The Role of Back Muscle Dysfunctions in Chronic Low Back Pain: State-of-the-Art and Clinical Implications'
+      }
+    ]
+  },
+  {
     id: '43',
     slug: 'beneficios-salud-ejercicio-mecanismos-moleculares-celulares-ying-2026',
     title: 'Los beneficios del ejercicio para la salud: Mecanismos celulares y moleculares',

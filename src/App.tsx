@@ -1329,7 +1329,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-300"
+                          className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-300"
                         />
                       </div>
 
@@ -1853,7 +1853,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-start justify-center p-4 bg-black/75 backdrop-blur-sm overflow-y-auto"
             onClick={closeInfografiaModal}
           >
             <motion.div
@@ -1886,7 +1886,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 <img
                   src={selectedInfografia.image}
                   alt={selectedInfografia.title}
-                  className="w-full h-auto max-h-[65vh] object-contain mx-auto"
+                  className="w-full h-auto mx-auto"
                 />
               </div>
 
