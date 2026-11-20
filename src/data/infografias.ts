@@ -28,6 +28,8 @@ export interface Infografia {
   image: string;
   description: string;
   downloadName?: string;
+  /** categoryValue de los artículos relacionados (ver CATEGORIES en data.ts) */
+  relatedCategories: string[];
 }
 
 /**
@@ -38,6 +40,7 @@ export interface Infografia {
 export const INFOGRAFIAS: Infografia[] = [
   {
     id: 'inf-1',
+    relatedCategories: ['columna-lumbar'],
     slug: "tu-espalda-es-fuerte",
     title: "Tu espalda es fuerte",
     topic: "Espalda",
@@ -47,6 +50,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-2',
+    relatedCategories: ['dolor-persistente', 'evidencia-dolor'],
     slug: "el-dolor-es-tu-alarma",
     title: "El dolor es tu alarma de protección",
     topic: "Dolor",
@@ -56,6 +60,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-3',
+    relatedCategories: ['hombro'],
     slug: "tu-hombro-es-fuerte",
     title: "Tu hombro es más fuerte de lo que crees",
     topic: "Hombro",
@@ -65,6 +70,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-4',
+    relatedCategories: ['rodilla'],
     slug: "artrosis-rodilla-moverte-es-tratamiento",
     title: "Artrosis de rodilla: moverte es tratamiento",
     topic: "Rodilla y tendones",
@@ -74,6 +80,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-5',
+    relatedCategories: ['tobillo-pie', 'rodilla'],
     slug: "tendinopatia-carga-no-reposo",
     title: "Tendinopatía: el tendón necesita carga, no reposo",
     topic: "Rodilla y tendones",
@@ -83,6 +90,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-6',
+    relatedCategories: ['ciencias-deporte', 'entrenamiento-fuerza'],
     slug: "moverte-es-medicina",
     title: "Moverte es medicina",
     topic: "Actividad física",
@@ -92,6 +100,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-7',
+    relatedCategories: ['nutricion'],
     slug: "alimentacion-lo-basico",
     title: "Alimentación: lo básico que sí está claro",
     topic: "Nutrición",
@@ -101,6 +110,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-8',
+    relatedCategories: ['nutricion', 'entrenamiento-fuerza'],
     slug: "proteina-construir-musculo",
     title: "Proteína: el material para construir músculo",
     topic: "Nutrición",
@@ -110,6 +120,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-9',
+    relatedCategories: ['nutricion'],
     slug: "creatina-que-si-y-que-no",
     title: "Creatina: qué sí y qué no",
     topic: "Nutrición",
@@ -119,6 +130,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-10',
+    relatedCategories: ['hombro', 'sesgos-cognitivos'],
     slug: "las-palabras-importan",
     title: "Las palabras importan",
     topic: "Hombro",
@@ -128,6 +140,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-11',
+    relatedCategories: ['hombro'],
     slug: "para-ti-dolor-de-hombro",
     title: "Para ti, que tienes dolor de hombro",
     topic: "Hombro",
@@ -137,6 +150,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-12',
+    relatedCategories: ['columna-lumbar'],
     slug: "no-existe-la-postura-perfecta",
     title: "No existe la postura perfecta",
     topic: "Espalda",
@@ -146,6 +160,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-13',
+    relatedCategories: ['columna-lumbar', 'evidencia-dolor'],
     slug: "10-hechos-dolor-de-espalda",
     title: "10 hechos sobre el dolor de espalda",
     topic: "Espalda",
@@ -155,6 +170,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-14',
+    relatedCategories: ['retorno-deporte', 'entrenamiento-fuerza', 'rehabilitacion-razonamiento'],
     slug: "carga-y-capacidad",
     title: "Carga y capacidad",
     topic: "Actividad física",
@@ -164,6 +180,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-15',
+    relatedCategories: ['tobillo-pie'],
     slug: "que-irrita-a-un-tendon",
     title: "Qué irrita a un tendón (y qué lo calma)",
     topic: "Rodilla y tendones",
@@ -173,6 +190,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-16',
+    relatedCategories: ['rehabilitacion-razonamiento', 'evidencia-dolor'],
     slug: "buena-atencion",
     title: "Qué esperar de una buena atención",
     topic: "Dolor",
@@ -182,6 +200,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-17',
+    relatedCategories: ['rehabilitacion-razonamiento', 'sesgos-cognitivos'],
     slug: "por-que-mejore",
     title: "¿Por qué mejoré?",
     topic: "Dolor",
@@ -191,6 +210,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-18',
+    relatedCategories: ['sueno', 'dolor-persistente'],
     slug: "sueno-y-dolor",
     title: "Sueño y dolor: un camino de ida y vuelta",
     topic: "Hábitos",
@@ -200,6 +220,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-19',
+    relatedCategories: ['dolor-persistente', 'salud-mental'],
     slug: "estilo-de-vida-dolor-persistente",
     title: "Estilo de vida y dolor persistente",
     topic: "Hábitos",
@@ -209,6 +230,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-20',
+    relatedCategories: ['dolor-persistente', 'columna-lumbar'],
     slug: "plan-crisis-de-dolor",
     title: "Plan para una crisis de dolor",
     topic: "Dolor",
@@ -218,6 +240,7 @@ export const INFOGRAFIAS: Infografia[] = [
   },
   {
     id: 'inf-21',
+    relatedCategories: ['rehabilitacion-razonamiento', 'retorno-deporte'],
     slug: "como-medir-tu-progreso",
     title: "Cómo medir tu progreso",
     topic: "Dolor",

@@ -26,6 +26,7 @@ import { INFOGRAFIAS, Infografia } from "./data/infografias";
 import { CLINICAL_QUESTIONS, ClinicalQuestion } from "./questions";
 import { AnimatePresence, motion } from "motion/react";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
+import { ContactBlock, ServicesSection, WhatsAppShareButton, SITE_URL } from "./components/Contacto";
 import exercisePolypillImg from "./assets/images/exercise_polypill_1781741842587.jpg";
 
 type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca";
@@ -88,8 +89,6 @@ export default function App() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   // Newsletter state (no backend)
-  const [newsletterEmail, setNewsletterEmail] = useState<string>("");
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState<boolean>(false);
 
   // Bookmarks
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>(() => {
@@ -329,13 +328,6 @@ export default function App() {
   const handleTopicSelect = (topicValue: string | null) => {
     setSelectedTopic(topicValue);
     setTimeout(scrollToCatalogTop, 40);
-  };
-
-  const handleNewsletterSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!newsletterEmail.trim()) return;
-    setNewsletterSubmitted(true);
-    setNewsletterEmail("");
   };
 
   // Infografías filtering
@@ -987,6 +979,43 @@ Lee el artículo completo en MyoKine (@myokinecl)
               <MarkdownRenderer content={selectedArticle.content} />
             </div>
 
+            {/* Para tu paciente: infografías relacionadas */}
+            {(() => {
+              const related = INFOGRAFIAS.filter((i) =>
+                i.relatedCategories.includes(selectedArticle.categoryValue)
+              ).slice(0, 3);
+              if (related.length === 0) return null;
+              return (
+                <div className="mt-14 pt-10 border-t border-[#0a0a0c]/10" id="article-infografias">
+                  <span className="text-[#8b3a2a] uppercase text-[11px] font-bold tracking-[0.18em] mb-2 block">
+                    Para tu paciente
+                  </span>
+                  <p className="text-sm text-[#0a0a0c]/65 mb-5">
+                    Infografías relacionadas, listas para descargar o enviar.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {related.map((inf) => (
+                      <button
+                        key={inf.id}
+                        type="button"
+                        onClick={() => {
+                          window.location.hash = `#/infografias/${inf.slug}`;
+                        }}
+                        className="text-left rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-white hover:border-[#8b3a2a] transition-colors cursor-pointer"
+                      >
+                        <div className="aspect-[3/4] bg-[#f7f4ef] overflow-hidden">
+                          <img src={inf.image} alt={inf.title} loading="lazy" className="w-full h-full object-cover object-top" />
+                        </div>
+                        <div className="p-3 text-xs sm:text-sm font-serif font-semibold text-[#0a0a0c] leading-snug">
+                          {inf.title}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Scientific References */}
             {selectedArticle.references && selectedArticle.references.length > 0 && (
               <div
@@ -1073,6 +1102,9 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     : "Copiar link"}
                 </span>
               </button>
+              <WhatsAppShareButton
+                text={`${selectedArticle.title} — MyoKine\n${SITE_URL}/#/articulo/${selectedArticle.slug}`}
+              />
             </div>
           </article>
         )}
@@ -1232,53 +1264,13 @@ Lee el artículo completo en MyoKine (@myokinecl)
               )}
             </section>
 
-            {/* 4. SIMPLE NEWSLETTER BLOCK (No Google Auth, no backend) */}
-            <section className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div className="space-y-1.5 max-w-lg">
-                <div className="flex items-center gap-2 text-[#8b3a2a]">
-                  <Mail className="w-4 h-4" />
-                  <span className="text-xs font-bold uppercase tracking-widest">
-                    Newsletter
-                  </span>
-                </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#0a0a0c]">
-                  Recibe nuevos artículos e infografías en tu correo
-                </h3>
-                <p className="text-sm text-[#0a0a0c]/65">
-                  Lecturas cortas sobre dolor, movimiento y ciencia clínica sin ruido ni spam.
-                </p>
-              </div>
-
-              <div className="w-full md:w-auto md:min-w-[360px]">
-                {newsletterSubmitted ? (
-                  <div className="p-4 rounded-xl bg-[#f7f4ef] border border-[#0a0a0c]/10 text-sm font-medium text-[#0a0a0c] flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#8b3a2a] shrink-0" />
-                    <span>Gracias, te escribiré pronto.</span>
-                  </div>
-                ) : (
-                  <form
-                    onSubmit={handleNewsletterSubmit}
-                    className="flex flex-col sm:flex-row gap-2.5"
-                  >
-                    <input
-                      type="email"
-                      required
-                      value={newsletterEmail}
-                      onChange={(e) => setNewsletterEmail(e.target.value)}
-                      placeholder="tu@correo.com"
-                      aria-label="Tu correo electrónico"
-                      className="flex-1 bg-[#f7f4ef]/70 border border-[#0a0a0c]/15 rounded-xl px-4 py-3 text-sm text-[#0a0a0c] placeholder:text-[#0a0a0c]/40 focus:outline-none focus:border-[#8b3a2a] focus:bg-white"
-                    />
-                    <button
-                      type="submit"
-                      className="px-6 py-3 rounded-xl bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap cursor-pointer"
-                    >
-                      Suscribirme
-                    </button>
-                  </form>
-                )}
-              </div>
-            </section>
+            {/* 4. CONTACTO (WhatsApp / Instagram) */}
+            <ContactBlock
+              onServices={() => {
+                navigateToTab("sobre-mi");
+                setTimeout(() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }), 300);
+              }}
+            />
           </div>
         )}
 
@@ -1798,6 +1790,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
               <p className="border-t border-[#0a0a0c]/10 pt-6 font-serif italic text-sm text-[#8b3a2a] text-right">
                 — Lukas · MyoKine
               </p>
+
+              <ServicesSection />
             </div>
           </div>
         )}
@@ -1882,13 +1876,6 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 </button>
               </div>
 
-              <div className="rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-[#f7f4ef]">
-                <img
-                  src={selectedInfografia.image}
-                  alt={selectedInfografia.title}
-                  className="w-full h-auto mx-auto"
-                />
-              </div>
 
               <p className="text-xs sm:text-sm text-[#0a0a0c]/70 leading-relaxed">
                 {selectedInfografia.description}
@@ -1927,6 +1914,44 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   )}
                 </button>
               </div>
+              <WhatsAppShareButton
+                label="Enviar por WhatsApp"
+                text={`${selectedInfografia.title} — infografía MyoKine\n${SITE_URL}/#/infografias/${selectedInfografia.slug}`}
+              />
+
+              <div className="rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-[#f7f4ef]">
+                <img
+                  src={selectedInfografia.image}
+                  alt={selectedInfografia.title}
+                  className="w-full h-auto mx-auto"
+                />
+              </div>
+
+              {(() => {
+                const relatedArticles = SORTED_ARTICLES.filter((a) =>
+                  selectedInfografia.relatedCategories.includes(a.categoryValue)
+                ).slice(0, 3);
+                if (relatedArticles.length === 0) return null;
+                return (
+                  <div className="pt-2 space-y-2">
+                    <span className="text-[#8b3a2a] uppercase text-[11px] font-bold tracking-[0.18em] block">
+                      Lee la evidencia detrás
+                    </span>
+                    {relatedArticles.map((a) => (
+                      <button
+                        key={a.id}
+                        type="button"
+                        onClick={() => {
+                          window.location.hash = `#/articulo/${a.slug}`;
+                        }}
+                        className="w-full text-left p-3 rounded-xl border border-[#0a0a0c]/10 hover:border-[#8b3a2a] bg-[#f7f4ef]/50 text-sm font-serif font-semibold text-[#0a0a0c] transition-colors cursor-pointer"
+                      >
+                        {a.title} <span className="text-[#8b3a2a]">→</span>
+                      </button>
+                    ))}
+                  </div>
+                );
+              })()}
             </motion.div>
           </motion.div>
         )}

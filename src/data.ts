@@ -30,7 +30,7 @@ export const CATEGORIES = {
     { value: 'columna-cervical', label: 'Columna cervical', desc: 'Control motor, propiocepción y abordaje actual de la inestabilidad.' },
     { value: 'hombro', label: 'Hombro', desc: 'Cinemática escapulohumeral, manguito rotador y el mito de la simetría.' },
     { value: 'rodilla', label: 'Rodilla', desc: 'Mecanobiología del cartílago, tendinopatías y dosificación de carga.' },
-    { value: 'tobillo-pie', label: 'Tobillo y pie', desc: 'Inestabilidad crónica, stiffness tendinoso y control neuromuscular.' },
+    { value: 'tobillo-pie', label: 'Tobillo y pie', desc: 'Inestabilidad crónica, rigidez del tendón y control neuromuscular.' },
     { value: 'cadera', label: 'Cadera', desc: 'Conflicto femoroacetabular y el rol de la fuerza en la estabilidad articular.' },
     { value: 'codo-muneca', label: 'Codo y muñeca', desc: 'Manejo de epicondilalgias y neurodinámica aplicada de miembro superior.' }
   ],
@@ -41,14 +41,14 @@ export const CATEGORIES = {
     { value: 'retorno-deporte', label: 'Retorno al deporte (RTS)', desc: 'Criterios de progresión biológica, carga de entrenamiento y asimetrías.' },
     { value: 'rehabilitacion-razonamiento', label: 'Razonamiento clínico', desc: 'Fisiología del tejido, toma de decisiones y modelos integrativos.' },
     { value: 'nutricion', label: 'Nutrición y composición', desc: 'Ingesta proteica, inflamación sistémica y reparación tisular.' },
-    { value: 'sueno', label: 'Sueño y recuperación', desc: 'Glymphatic system, arquitectura del sueño e impacto en la resiliencia.' },
-    { value: 'salud-mental', label: 'Salud mental y movimiento', desc: 'Sistemas afectivos, interocepeción y el cuerpo como experiencia vivida.' },
+    { value: 'sueno', label: 'Sueño y recuperación', desc: 'Cómo dormir influye en el dolor, la recuperación y el rendimiento.' },
+    { value: 'salud-mental', label: 'Salud mental y movimiento', desc: 'Emociones, estrés, interocepción y cómo se viven en el cuerpo.' },
     { value: 'ciencias-deporte', label: 'Ciencias del deporte', desc: 'Monitoreo de carga interna y externa, fisiología del rendimiento.' }
   ],
   paciente: [
-    { value: 'evidencia-dolor', label: '¿Qué dice la evidencia sobre mi dolor?', desc: 'Desmitificar hallazgos de forma simple, empoderando tu proceso.' },
+    { value: 'evidencia-dolor', label: '¿Qué dice la evidencia sobre mi dolor?', desc: 'Hallazgos explicados en simple, para que entiendas tu proceso.' },
     { value: 'diagnostico', label: 'Entender mi diagnóstico', desc: 'Traducción de términos clínicos atemorizantes a explicaciones biológicas útiles.' },
-    { value: 'mitos', label: 'Mitos frecuentes', desc: 'Deconstruyendo paradigmas obsoletos como la postura ideal y el alineamiento.' },
+    { value: 'mitos', label: 'Mitos frecuentes', desc: 'Ideas antiguas que no se sostienen, como la postura ideal o la alineación perfecta.' },
     { value: 'preguntas-kinesiologo', label: 'Preguntas para tu kinesiólogo', desc: 'Herramientas prácticas para que tomes el control de tu consulta.' }
   ]
 };
@@ -212,7 +212,7 @@ Es una revisión narrativa del estado del arte, no una revisión sistemática. V
     date: '18 de Noviembre, 2026',
     author: 'Peifeng Ying, Huilin Wang, Shukuan Ling et al. (Adaptado por MyoKine)',
     readingTime: 13,
-    summary: '¿Cómo reprograma el ejercicio nuestro organismo a escala molecular? Esta revisión exhaustiva de MedComm detalla las cascadas genómicas, exoquinas y vesículas extracelulares que orquestan la salud sistémica.',
+    summary: '¿Cómo reprograma el ejercicio nuestro organismo a escala molecular? Una revisión en MedComm explica las señales (exerquinas, vesículas extracelulares, cambios genéticos) que conectan el ejercicio con la salud de todo el cuerpo.',
     pullQuote: 'El ejercicio físico no es simplemente un gasto de calorías; es una intervención molecular y celular sistémica que activa programas biológicos evolutivamente conservados para combatir la enfermedad y el envejecimiento.',
     content: `Durante décadas, el ejercicio físico fue investigado primordialmente desde variables fisiológicas tradicionales: consumo de oxígeno ($\text{V}\text{O}_{2\text{max}}$), fuerza muscular isométrica y parámetros hemodinámicos. Sin embargo, la irrupción de las ciencias multiómicas (genómica, transcriptómica, proteómica, metabolómica) y la biología celular de alta resolución ha transformado radicalmente nuestro entendimiento: **el ejercicio es una potente señal biológica sistémica capaz de reprogramar la homeostasis tisular**.
 
@@ -562,7 +562,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     date: '25 de Octubre, 2026',
     author: 'Morten Hoegh (Adaptado por MyoKine)',
     readingTime: 9,
-    summary: '¿Qué diferencia al wind-up de la sensibilización central clásica o la potenciación a largo plazo? Desmitificamos la cronología sináptica y analizamos el impacto del método experimental en las conclusiones clínicas.',
+    summary: '¿Qué diferencia al wind-up de la sensibilización central clásica o la potenciación a largo plazo? Ordenamos qué pasa en la sinapsis y en qué momento, y analizamos el impacto del método experimental en las conclusiones clínicas.',
     pullQuote: 'El wind-up dura apenas segundos tras cesar el estímulo; la sensibilización central clásica y la LTP espinal, en cambio, reflejan cambios neuroplásticos prolongados mediados por calcio y receptores NMDA.',
     content: `El término paraguas "sensibilización central" a menudo genera confusión en la práctica clínica porque se utiliza indistintamente para referirse a fenómenos bioeléctricos de duraciones y naturalezas muy diversas: desde cambios sinápticos efímeros de milisegundos hasta potenciaciones prolongadas de meses o años.
 
@@ -793,7 +793,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '34',
     slug: 'neurociencia-dolor-practica-parte-1-transduccion-transmision-percepcion-hoegh-2022',
     title: 'Neurociencia del dolor en la práctica (Parte 1): ¿Qué es la neurociencia del dolor?',
-    subtitle: 'Conceptos fundamentales de transducción, transmisión axonal, canales de sodio NaV1.7 y la distinción insustituible entre nocicepción y dolor.',
+    subtitle: 'Conceptos fundamentales de transducción, transmisión axonal, canales de sodio NaV1.7 y por qué nocicepción y dolor no son lo mismo.',
     categoryType: 'tematica',
     categoryValue: 'dolor-persistente',
     categoryLabel: 'Dolor persistente y neurociencia',
@@ -851,7 +851,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '33',
     slug: 'ejercicio-paterno-herencia-epigenetica-micrornas-esperma-2025',
     title: 'El ejercicio paterno transmite capacidad de resistencia a la descendencia mediante microARNs del esperma',
-    subtitle: 'Un estudio de Cell Metabolism demuestra cómo el entrenamiento aeróbico paterno reprograma el epigenoma espermático mediante miR-148a-3p y el silenciamiento del co-represor NCoR1 embrionario.',
+    subtitle: 'Un estudio en Cell Metabolism, hecho principalmente en ratones, sugiere que el entrenamiento aeróbico del padre modifica microARNs del esperma que influyen en el metabolismo de las crías.',
     categoryType: 'tematica',
     categoryValue: 'ciencias-deporte',
     categoryLabel: 'Ciencias del deporte',
@@ -1016,7 +1016,7 @@ Los autores expusieron a los participantes a mensajes de salud con argumentos id
 ### 3. Implicancias para la Consulta y la Comunicación Clínica
 * **Expectativa de Autoridad:** Los oyentes asocian la cortesía excesiva en un experto con posible vacilación, falta de convicción o afán comercial/superficial. Por el contrario, un lenguaje firme, directo y sin rodeos puede ser interpretado como señal de alta seguridad técnica y honestidad clínica.
 * **Cuidado con el Sesgo:** Aunque el estudio muestra un beneficio persuasivo del lenguaje firme en expertos, la falta de empatía genuina puede lesionar la alianza terapéutica si no se equilibra con competencia percibida.
-* **Aplicación en Educación en Dolor:** Al deconstruir creencias limitantes o kinesiofobia, el clínico no debe dudar en ser claro, asertivo y directo respecto a la seguridad del movimiento, evitando la ambigüedad o la cautela excesiva que pueda alimentar la percepción de fragilidad en el paciente.
+* **Aplicación en Educación en Dolor:** Al abordar creencias limitantes o kinesiofobia, el clínico no debe dudar en ser claro, asertivo y directo respecto a la seguridad del movimiento, evitando la ambigüedad o la cautela excesiva que pueda alimentar la percepción de fragilidad en el paciente.
 
 ### Conclusión
 Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
@@ -1349,7 +1349,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '23',
     slug: 'conceptos-actuales-ejercicio-pliometrico-2015',
     title: 'Conceptos actuales de ejercicio pliométrico: Del laboratorio a la clínica',
-    subtitle: 'Un análisis profundo sobre las fases del ciclo estiramiento-acortamiento (SSC), las bases neurofisiológicas y las guías de progresión de carga en rehabilitación deportiva.',
+    subtitle: 'Las fases del ciclo estiramiento-acortamiento, sus bases neurofisiológicas y cómo progresar la carga en rehabilitación deportiva.',
     categoryType: 'tematica',
     categoryValue: 'ciencias-deporte',
     categoryLabel: 'Ciencias del deporte',
@@ -1568,7 +1568,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '19',
     slug: 'fuerza-no-es-todo-rehabilitacion-musculoesqueletica-bjsm-2025',
     title: 'No todo es fuerza: Repensando los mecanismos del ejercicio en rehabilitación',
-    subtitle: 'El hito de la medicina deportiva de BJSM (2025) liderado por Jared Powell y col. desafía la hipótesis biomecánica tradicional, demostrando que los cambios en fuerza no median el alivio del dolor.',
+    subtitle: 'Un artículo de Jared Powell y colaboradores en BJSM (2025) cuestiona la explicación biomecánica clásica: los cambios de fuerza no explican por qué baja el dolor.',
     categoryType: 'tematica',
     categoryValue: 'rehabilitacion-razonamiento',
     categoryLabel: 'Razonamiento clínico',
@@ -1576,7 +1576,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     date: '09 de Julio, 2026',
     author: 'Jared Powell, Lianne Wood & Col.',
     readingTime: 6,
-    summary: '¿Por qué el ejercicio reduce el dolor si no se debe solo a que te haces más fuerte? Un artículo seminal de BJSM (2025) expone que la fuerza física no explica el alivio del dolor musculoesquelético.',
+    summary: '¿Por qué el ejercicio reduce el dolor si no se debe solo a que te haces más fuerte? Un artículo en BJSM (2025) muestra que ganar fuerza no explica, por sí solo, el alivio del dolor musculoesquelético.',
     pullQuote: 'La fuerza es excelente para tu salud y longevidad, pero no es el mecanismo causal por el cual el ejercicio alivia el dolor musculoesquelético. Debemos abandonar narrativas de debilidad y fragilidad.',
     content: `En rehabilitación, se asumía con frecuencia que los beneficios del ejercicio terapéutico en dolor musculoesquelético se debían exclusivamente a aumentos en la fuerza muscular o corrección de desbalances.
 
@@ -1612,7 +1612,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '18',
     slug: 'educacion-neurociencia-dolor-pne-metanalisis-louw',
     title: 'Educación en neurociencia del dolor: El poder de la reconceptualización en kinesiología',
-    subtitle: 'La histórica revisión sistemática de Louw, Zimney, Puentedura y Diener (2016) consolida el impacto neurofisiológico de educar sobre la biología del dolor.',
+    subtitle: 'La revisión sistemática de Louw, Zimney, Puentedura y Diener (2016) resume qué logra educar a los pacientes sobre la biología del dolor.',
     categoryType: 'tematica',
     categoryValue: 'dolor-persistente',
     categoryLabel: 'Dolor persistente y neurociencia',
@@ -1620,7 +1620,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     date: '04 de Julio, 2026',
     author: 'Adriaan Louw & Kory Zimney',
     readingTime: 8,
-    summary: '¿Por qué explicar al paciente la fisiología de su sistema nervioso alivia el dolor? El metanálisis seminal de Louw et al. (2016) demuestra que la PNE disminuye el miedo, la catastropización y los costos de salud.',
+    summary: '¿Por qué explicar al paciente la fisiología de su sistema nervioso alivia el dolor? La revisión de Louw et al. (2016) encontró que la educación en neurociencia del dolor reduce el miedo, la catastrofización y el uso de recursos de salud.',
     pullQuote: 'Cuando un paciente comprende que el dolor es una alarma del sistema nervioso sensibilizado y no una medida exacta de daño tisular, la amenaza disminuye, el cerebro libera analgésicos naturales y el movimiento vuelve a ser seguro.',
     content: `En la literatura de rehabilitación y dolor, el enfoque biomédico tradicional tendía a asumir que el dolor siempre guarda relación proporcional directa con el daño tisular. Sin embargo, en cuadros de dolor persistente, el tejido puede estar cicatrizado mientras el sistema de procesamiento continúa sensibilizado.
 
@@ -1654,7 +1654,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '17',
     slug: 'guia-dolor-lumbar-inespecifico-jama-2026',
     title: 'Manejo del dolor lumbar inespecífico: Desmontando el sobreuso de imágenes y fármacos',
-    subtitle: 'La revisión exhaustiva de JAMA (2026) liderada por Aidan Cashin y Roger Chou define la ruta del tratamiento basado en guías: educación, movimiento activo y desmedicalización.',
+    subtitle: 'La revisión de Aidan Cashin y Roger Chou en JAMA (2026) resume lo que recomiendan las guías: educación, movimiento y menos medicalización.',
     categoryType: 'segmento',
     categoryValue: 'columna-lumbar',
     categoryLabel: 'Columna lumbar',
@@ -1662,7 +1662,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     date: '29 de Junio, 2026',
     author: 'Aidan G. Cashin, Roger Chou & Col.',
     readingTime: 7,
-    summary: '¿Tu resonancia lumbar muestra "desgaste"? Un hito editorial de JAMA (2026) advierte que el 90% de los dolores lumbares son inespecíficos, y que la mejor receta es mantenerse activo y evitar exámenes de rutina.',
+    summary: '¿Tu resonancia lumbar muestra "desgaste"? Una revisión en JAMA (2026) recuerda que alrededor del 90 % de los dolores lumbares son inespecíficos, y que lo que más ayuda es mantenerse activo y evitar exámenes de rutina.',
     pullQuote: 'El dolor lumbar inespecífico es una condición heterogénea y de excelente pronóstico en agudo si evitamos la trampa de la patologización, el reposo y la cascada inútil de fármacos e imágenes de rutina.',
     content: `El dolor lumbar constituye una de las principales causas de consulta en salud. Aproximadamente el 90% de los casos se clasifican como dolor lumbar inespecífico, es decir, no asociado a una causa patoanatómica específica (como radiculopatía severa, fractura o infección).
 
@@ -1696,7 +1696,7 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     id: '16',
     slug: 'ejercicio-no-compensa-sedentarismo-resistencia-ejercicio',
     title: 'El ejercicio no borra el sedentarismo: El mito de la compensación y la resistencia metabólica',
-    subtitle: 'Dempsey et al. (2026) demuestran que una sesión de entrenamiento no elimina por completo los riesgos del comportamiento sedentario prolongado, proponiendo un enfoque de movimiento distribuido.',
+    subtitle: 'Dempsey et al. (2026) muestran que una sesión de entrenamiento no compensa del todo muchas horas sentado, y proponen repartir el movimiento durante el día.',
     categoryType: 'tematica',
     categoryValue: 'ciencias-deporte',
     categoryLabel: 'Ciencias del deporte',
@@ -1748,7 +1748,7 @@ Los autores proponen un enfoque integrado del movimiento durante el día:
     date: '19 de Junio, 2026',
     author: 'Agorastos A. & Chrousos G.P.',
     readingTime: 7,
-    summary: '¿Cómo se transforma el estrés psicológico en enfermedad física real? Analizamos la revisión seminal de Agorastos y Chrousos (2021) sobre los sistemas HPA, SAM y el concepto revolucionario de cacostasis.',
+    summary: '¿Cómo se transforma el estrés psicológico en enfermedad física real? Revisamos el trabajo de Agorastos y Chrousos (2021) sobre los ejes del estrés (HPA y SAM) y el concepto de cacostasis.',
     pullQuote: 'El estrés crónico no es simplemente una sensación mental, sino un estado de cacostasis activa donde la sobrecarga sostenida de los sistemas glucocorticoides y autonómicos degrada de forma silenciosa la fisiología celular y tisular.',
     content: `El estrés es un fenómeno biológico que modula diversos sistemas de nuestro organismo. En su revisión publicada en *Molecular Psychiatry* (2021), los doctores **Agorastos Agorastos** y **George P. Chrousos** proponen un modelo integrativo y neuroendocrino que detalla el continuo a través del cual la adaptación al estrés (alostasis) evoluciona hacia estados prolongados.
 
@@ -1787,7 +1787,7 @@ Para los profesionales de la salud del movimiento, el modelo de Agorastos y Chro
     id: '14',
     slug: 'sinergia-span-sueno-actividad-nutricion-longevidad',
     title: 'La revolución de los pequeños cambios: Sinergia de sueño, actividad física y nutrición (SPAN) en la longevidad',
-    subtitle: 'Un estudio de cohorte en Lancet (2026) demuestra que pequeñas mejoras concurrentes en estilo de vida multiplican los años de vida libre de enfermedad.',
+    subtitle: 'Un estudio de cohorte (2026) sugiere que pequeñas mejoras simultáneas en sueño, actividad y alimentación se asocian a más años de vida sin enfermedad.',
     categoryType: 'tematica',
     categoryValue: 'sueno',
     categoryLabel: 'Sueño y recuperación',
@@ -1796,7 +1796,7 @@ Para los profesionales de la salud del movimiento, el modelo de Agorastos y Chro
     author: 'Lukas · MyoKine',
     readingTime: 6,
     summary: '¿Necesitas cambios drásticos para vivir más y mejor? Koemel et al. (2026) revelan que un enfoque sinérgico (SPAN) con micro-ajustes diarios de 5 min de sueño, 2 min de ejercicio y media porción de vegetales suma un año entero de vida.',
-    pullQuote: 'Mientras que de forma aislada se requieren dosis masivas de ejercicio o sueño para impactar la longevidad, la combinación sinérgica de micro-hábitos (SPAN) genera un efecto protector exponencial con un esfuerzo conductual mínimo.',
+    pullQuote: 'Por separado, hacen falta cambios grandes en ejercicio o sueño para notar efecto en la longevidad. Combinados, pequeños ajustes en sueño, actividad y alimentación suman mucho más con poco esfuerzo.',
     content: `La modificación de conductas de salud representa una herramienta efectiva para extender la expectativa de vida y los años libres de enfermedades crónicas. No obstante, el enfoque tradicional suele abordar de forma aislada el sueño, la actividad física o la nutrición.
 
 Un estudio de cohorte poblacional liderado por **Nicholas A. Koemel, Emmanuel Stamatakis y colaboradores (2026)**, publicado en la revista *eClinicalMedicine*, examinó las dosis combinadas de **Sueño, Actividad Física Moderada-Vigorosa (MVPA) y Nutrición (SPAN)**.
@@ -1833,7 +1833,7 @@ Para los profesionales de la salud del movimiento, este estudio ofrece pautas pr
     id: '13',
     slug: 'homeostasis-tisular-dolor-patelofemoral-dye',
     title: 'La rodilla no es de cristal: El dolor patelofemoral desde la perspectiva de la homeostasis tisular',
-    subtitle: 'Por qué culpar a la "condromalacia" o al "malalineamiento" es un error clínico. Un nuevo paradigma de la kinesiología basado en el equilibrio celular.',
+    subtitle: 'Por qué culpar a la "condromalacia" o al "malalineamiento" es un error clínico. Una forma de entenderlo basada en el equilibrio de los tejidos.',
     categoryType: 'segmento',
     categoryValue: 'rodilla',
     categoryLabel: 'Rodilla',
@@ -1841,7 +1841,7 @@ Para los profesionales de la salud del movimiento, este estudio ofrece pautas pr
     date: '09 de Junio, 2026',
     author: 'Scott F. Dye & Col.',
     readingTime: 6,
-    summary: 'El modelo estructural clásico ha fracasado en explicar el dolor patelofemoral. Analizamos el concepto revolucionario del "Envelope of Function" (Sobre de Función) de Scott Dye y cómo la pérdida de homeostasis celular activa el dolor.',
+    summary: 'El modelo estructural no logra explicar bien el dolor patelofemoral. Revisamos la idea del "envelope of function" (sobre de función) de Scott Dye y cómo la pérdida de equilibrio en los tejidos se relaciona con el dolor.',
     pullQuote: 'El dolor patelofemoral no responde a un daño estructural inerte del cartílago, sino a una perturbación metabólica activa de la homeostasis celular en los tejidos inervados como la sinovial y el hueso subcondral.',
     content: `El dolor fémororrotuliano o patelofemoral (PFP) ha constituido un desafío clínico durante mucho tiempo. El abordaje tradicional insistió en un modelo puramente **Estructural, Anatómico y Biomecánico (S/A/B)**, prescribiendo intervenciones para corregir el "mal alineamiento" patelar o limar el cartílago bajo el diagnóstico de condromalacia. 
 
@@ -1893,7 +1893,7 @@ El plan de rehabilitación se centra en restaurar la homeostasis:
     date: '04 de Junio, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 6,
-    summary: 'Un profundo análisis metodológico y clínico para la kinesiología basado en el paper de Stovitz, Impellizzeri y Shrier (2025) sobre el impreciso concepto de factor de riesgo y el peligro de las falsas asunciones causales.',
+    summary: 'A partir del trabajo de Stovitz, Impellizzeri y Shrier (2025), revisamos por qué "factor de riesgo" es un concepto impreciso y cómo nos lleva a suponer causas que no están demostradas.',
     pullQuote: 'Que una variable se asocie estadísticamente con un mayor índice de lesiones no significa que modificarla vaya a reducir la tasa real de lesiones del paciente. Confundir predicción con explicación es un error costoso.',
     content: `En la literatura de kinesiología y medicina deportiva abundan los artículos dirigidos a identificar "factores de riesgo modificables" para diversas lesiones musculoesqueléticas. Guiados por estas investigaciones, los clínicos prescribimos rutinas asumiendo que, al combatir esa asimetría o rasgo específico, reduciremos directamente el riesgo de lesión de nuestro paciente.
 
@@ -1975,7 +1975,7 @@ Esto demuestra que la lesión no es meramente un daño tisular pasivo aislado: e
     id: '10',
     slug: 'precision-test-fuerza-manguito-rotador',
     title: 'La ilusión de la medición de fuerza en el dolor de hombro',
-    subtitle: '¿Mide tu Handheld Dynamometer debilidad estructural o simple inhibición por dolor? Un análisis desde la kinesiología moderna.',
+    subtitle: '¿Tu dinamómetro de mano mide debilidad estructural o una inhibición por dolor?',
     categoryType: 'segmento',
     categoryValue: 'hombro',
     categoryLabel: 'Hombro',
@@ -1983,7 +1983,7 @@ Esto demuestra que la lesión no es meramente un daño tisular pasivo aislado: e
     date: '24 de Mayo, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 5,
-    summary: 'Un análisis clínico crítico del manguito rotador basado en Cook, Lewis y Powell (2026). Desmitificamos la utilidad diagnóstica de medir la fuerza máxima.',
+    summary: 'Un análisis clínico crítico del manguito rotador basado en Cook, Lewis y Powell (2026). Revisamos qué tan útil es realmente medir la fuerza máxima para diagnosticar.',
     pullQuote: 'La aparente debilidad detectada en un test de fuerza de manguito rotador refleja con frecuencia una inhibición cortical temporal secundaria al dolor, no una pérdida real de capacidad contráctil estructural del tejido.',
     content: `Cuando nos enfrentamos a un paciente con dolor de hombro relacionado al manguito rotador (RCRSP), la rutina clínica tradicional nos empuja a tomar de inmediato un dinamómetro de mano (Handheld Dynamometer - HHD) o recurrir a pruebas musculares manuales (MMT). Buscamos identificar qué músculo específico del manguito presenta "debilidad" para etiquetar su lesión y diseñar un plan centrado exclusivamente en combatir esa deficiencia.
 
@@ -2020,7 +2020,7 @@ Medir la fuerza es una herramienta útil, pero no debe convertirse en una guía 
     date: '19 de Mayo, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 6,
-    summary: 'Basándonos en Reeves et al. (2019), deconstruimos el extendido nocebo de la "inestabilidad de columna" y explicamos sus nefastos efectos biomecánicos.',
+    summary: 'A partir de Reeves et al. (2019), revisamos por qué la idea de una "columna inestable" puede generar miedo y estrategias de movimiento que perpetúan el dolor.',
     pullQuote: 'Informar al paciente de que su columna está "inestable" o es "frágil" desencadena una respuesta biológica de bloqueo y coactivación protectora excesiva que acaba fatigando los músculos de la espalda e incrementando el dolor.',
     content: `El dolor lumbar es frecuente en la consulta de kinesiología. A menudo se recurre a explicaciones que afectan la confianza del paciente: se les diagnostica con "pérdida de la estabilidad del core", "vértebras rotadas" o "inestabilidad de columna". 
 
@@ -2049,7 +2049,7 @@ La columna humana es una estructura adaptativa y maleable. Nuestro lenguaje clí
     id: '8',
     slug: 'biomecanica-injerto-lca-ejercicio-seguro',
     title: 'Dosificación mecánica del injerto en la rehabilitación de LCA',
-    subtitle: 'Selección científica de ejercicios weight-bearing y non-weight-bearing basados en las fuerzas de cizallamiento y strain del ligamento.',
+    subtitle: 'Qué ejercicios en cadena abierta y cerrada cargan más o menos el ligamento, según las fuerzas de cizallamiento y la tensión que generan.',
     categoryType: 'segmento',
     categoryValue: 'rodilla',
     categoryLabel: 'Rodilla',
@@ -2057,7 +2057,7 @@ La columna humana es una estructura adaptativa y maleable. Nuestro lenguaje clí
     date: '14 de Mayo, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 6,
-    summary: 'Un análisis biomecánico riguroso sobre cómo se carga el injerto de LCA. Basándonos en Escamilla et al. (2012), detallamos el impacto real de cada ejercicio clínico.',
+    summary: 'Cómo se carga el injerto de LCA en cada ejercicio, según la revisión biomecánica de Escamilla et al. (2012).',
     pullQuote: 'Los ejercicios en cadena cinética abierta como la extensión de rodilla sentado cargan significativamente más el LCA entre los 10° y 50° de flexión que los ejercicios de cadena cerrada como las sentadillas o prensa.',
     content: `La reconstrucción quirúrgica del ligamento cruzado anterior (LCA) somete al injerto a un proceso de adaptación biológica llamado "ligamentización". Durante las primeras semanas postquirúrgicas, el injerto y sus puntos de anclaje óseo están en fase de maduración. Por ello, la rehabilitación debe equilibrar la necesidad de fortalecer el cuádriceps de forma activa y evitar atrofias por desuso con el resguardo del injerto ante cargas mecánicas cizallantes excesivas.
 
@@ -2085,8 +2085,8 @@ Si necesitas disminuir la tensión en el LCA durante la rehabilitación temprana
   {
     id: '7',
     slug: 'mitos-tendon-aquiles-fuerza-dolor',
-    title: '¿Por qué fortalecer un tendón no siempre sana su dolor? Desmitificando las tendinopatías',
-    subtitle: 'Supusimos que el aumento de fuerza o la remodelación estructural del Triceps Surae controlaba el alivio clínico. Los datos demuestran un escenario diferente.',
+    title: '¿Por qué fortalecer un tendón no siempre alivia su dolor?',
+    subtitle: 'Se suponía que ganar fuerza o remodelar el tríceps sural explicaba el alivio. Los datos muestran algo distinto.',
     categoryType: 'segmento',
     categoryValue: 'tobillo-pie',
     categoryLabel: 'Tobillo y pie',
@@ -2094,7 +2094,7 @@ Si necesitas disminuir la tensión en el LCA durante la rehabilitación temprana
     date: '09 de Mayo, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 6,
-    summary: 'Un metanálisis seminal liderado por Murphy et al. (2023) expone que la mejoría del dolor en la tendinopatía de Aquiles no se correlaciona lógicamente con el cambio muscular.',
+    summary: 'El metanálisis de Murphy et al. (2023) muestra que la mejoría del dolor en la tendinopatía de Aquiles no se relaciona de forma clara con los cambios musculares.',
     pullQuote: 'No existe actualmente evidencia científica sólida que vincule de forma causal la mejoría en el dolor o la discapacidad de la tendinopatía con cambios estructurales o de fuerza neuromuscular en el Triceps Surae.',
     content: `Durante décadas, la rehabilitación de la tendinopatía de Aquiles de porción media se ha centrado en el enfoque del "reacondicionamiento tisular". Prescribimos programas excéntricos o de resistencia lenta pesada (HSR) asumiendo dos metas: primero, que debemos modificar mecánicamente el tendón; y segundo, que el aumento de fuerza máxima del Triceps Surae actuará como protección.
 
@@ -2110,7 +2110,7 @@ Al sintetizar los datos de múltiples ensayos clínicos, los investigadores enco
 Si el tendón no se restructura por completo ni la fuerza es la causa directa del alivio, ¿por qué mejoran nuestros pacientes? La kinesiología actual apunta a fenómenos neurobiológicos y cognitivos integrativos:
 1. **Analgesia inducida por ejercicio:** La carga mecánica isométrica pesada o isotónica progresiva modula el sistema modulador de dolor central y periférico, disminuyendo el tono nociceptivo espinal.
 2. **Plasticidad cortical e inhibición:** El dolor crónico altera la excitabilidad motor. El entrenamiento estimula la variabilidad neuromuscular y desensibiliza el cerebro frente al movimiento.
-3. **Factores biocomportamentales:** El aumento de la autoeficacia motriz, la disminución de la kinesiofobia y la deconstrucción activa de mitos aumentan el umbral de tolerancia adaptativa de la persona.
+3. **Factores biocomportamentales:** El aumento de la autoeficacia motriz, la disminución de la kinesiofobia y el trabajo activo sobre creencias que limitan aumentan el umbral de tolerancia adaptativa de la persona.
 
 Por lo tanto, la carga sigue siendo la primera línea de tratamiento, no porque actúe como una pieza mecánica que se parcha, sino mediante una reorganización neurológica y biocomportamental.`,
     references: [
@@ -2127,7 +2127,7 @@ Por lo tanto, la carga sigue siendo la primera línea de tratamiento, no porque 
     id: '6',
     slug: 'pliometria-rehabilitacion-deportiva-davies',
     title: 'Pliometría progresiva en kinesiología: Ciencia y progresión del ciclo estiramiento-acortamiento',
-    subtitle: 'Cómo la ciencia clínica de la pliometría nos permite guiar una dosificación óptima y segura para el retorno deportivo.',
+    subtitle: 'Cómo usar lo que sabemos de pliometría para dosificar de forma segura en el retorno al deporte.',
     categoryType: 'tematica',
     categoryValue: 'retorno-deporte',
     categoryLabel: 'Retorno al juego (RTS)',
@@ -2165,7 +2165,7 @@ En términos de volumen (contactos con el pie por sesión), se recomiendan de 80
     id: '5',
     slug: 'sesgo-confirmacion-camilla-clinica',
     title: 'El sesgo de confirmación en la camilla: Cuándo nuestras técnicas favoritas nos mienten',
-    subtitle: 'Cómo la psicología cognitiva de los terapeutas define el razonamiento de las lesiones, y por qué las mejorías clínicas pueden no tener nada que ver con lo que creemos.',
+    subtitle: 'Cómo nuestros sesgos influyen en el razonamiento clínico, y por qué una mejoría puede no deberse a lo que creemos.',
     categoryType: 'tematica',
     categoryValue: 'sesgos-cognitivos',
     categoryLabel: 'Sesgos cognitivos en clínica, de MyoKine',
@@ -2173,7 +2173,7 @@ En términos de volumen (contactos con el pie por sesión), se recomiendan de 80
     date: '28 de Abril, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 6,
-    summary: '¿Mejoró por mi fantástica técnica manual o por regresión a la media e historia natural? Una autocrítica científica necesaria para kinesiologos veteranos y novatos.',
+    summary: '¿Mejoró por mi fantástica técnica manual o por regresión a la media e historia natural? Una autocrítica necesaria para kinesiólogos con experiencia y para quienes recién empiezan.',
     pullQuote: 'Confundir causa y efecto terapéutico es la trampa heurística más común de la consulta de salud. El paciente que mejora después de una sesión contigo no necesariamente mejoró debido a lo que hiciste en su cuerpo.',
     content: `Como clínicos del movimiento humano, dedicamos cientos de horas e invertimos sumas cuantiosas de dinero en certificarnos en técnicas sofisticadas: manipulación fascial, punción seca, vendaje neuromuscular especializado, movilización articular de alta velocidad o terapia de ondas de choque. Cuando un paciente ingresa a nuestra consulta con dolor severo y se retira manifestando una mejoría instantánea del 60% tras aplicar nuestra técnica favorita, nuestro cerebro archiva de forma automática este suceso como una demostración irrefutable: *"La técnica manual X funciona"*.
 
@@ -2219,7 +2219,7 @@ No inventes explicaciones mecánicas fantásticas sobre liberar fascias pegadas,
     id: '4',
     slug: 'mitos-cartilago-rodilla-neumaticos',
     title: 'La verdad sobre el "desgaste de rodilla": Por qué tus cartílagos no son neumáticos',
-    subtitle: 'El término descriptivo de la artrosis ha generado un miedo injustificado en la población. Una mirada biológica racional a la salud de nuestra rodilla.',
+    subtitle: 'Hablar de "desgaste" ha generado mucho miedo. Qué dice la biología sobre el cartílago y la carga.',
     categoryType: 'paciente',
     categoryValue: 'evidencia-dolor',
     categoryLabel: 'Para el paciente',
@@ -2245,7 +2245,7 @@ Si dejas de moverte o reduces drásticamente la actividad diaria por miedo al "r
 
 ### ¿Qué dice la ciencia sobre correr y la artrosis?
 
-Durante mucho tiempo se pensó que correr largas distancias arruinaba las rodillas de por vida. Sin embargo, estudios epidemiológicos masivos (como por ejemplo, el de Alentorn-Geli et al., 2017) demuestran que los corredores recreativos habituales presentan de hecho **tasas significativamente menores** de artrosis de rodilla e inflamación sinovial en comparación con sujetos sedentarios emparejados por edad.
+Durante mucho tiempo se pensó que correr largas distancias arruinaba las rodillas de por vida. Sin embargo, estudios epidemiológicos amplios (como el metanálisis de Alentorn-Geli et al., 2017) demuestran que los corredores recreativos habituales presentan de hecho **tasas significativamente menores** de artrosis de rodilla e inflamación sinovial en comparación con sujetos sedentarios emparejados por edad.
 
 Los datos apuntan a que los ciclos rítmicos de carga mecánica asociados a la marcha o el trote recreativo actúan como un estímulo anabólico potente, estimulando la diferenciación celular de los condrocitos y fortaleciendo la calidad estructural de la matriz de colágeno articular y del hueso subcondral subyacente.
 
@@ -2277,7 +2277,7 @@ Si tienes un diagnóstico de artrosis en tu rodilla, no asumas que tu cuerpo se 
     id: '3',
     slug: 'fuerza-neuromuscular-cortex',
     title: 'Fuerza como medicina: Mecanismos neurofisiológicos más allá de la hipertrofia',
-    subtitle: 'El entrenamiento de fuerza clínico suele prescribirse pensando solo en el músculo. En realidad, las mayores batallas se libran en el cerebro.',
+    subtitle: 'El entrenamiento de fuerza clínico suele prescribirse pensando solo en el músculo. Pero buena parte de los primeros cambios ocurre en el sistema nervioso.',
     categoryType: 'tematica',
     categoryValue: 'entrenamiento-fuerza',
     categoryLabel: 'Entrenamiento de fuerza clínico',
@@ -2289,7 +2289,7 @@ Si tienes un diagnóstico de artrosis en tu rodilla, no asumas que tu cuerpo se 
     pullQuote: 'Las ganancias iniciales de fuerza obtenidas durante las primeras 3 a 5 semanas de entrenamiento clínico ocurren de forma virtual sin ningún aumento apreciable en el área transversal del músculo. Es el cerebro aprendiendo a sintonizar su propio motor.',
     content: `En la práctica de la rehabilitación musculoesquelética actual, el entrenamiento de fuerza ha dejado de ser una herramienta exclusiva de la preparación deportiva para convertirse en una piedra angular metabólica y molecular. Sin embargo, la prescripción a menudo sigue anclada en un modelo puramente miocéntrico: hacemos ejercicio terapéutico con el fin exclusivo de "fortalecer el músculo débil" o "crear hipertrofia".
 
-La realidad es mucho más fascinante. Las respuestas plásticas iniciales al entrenamiento con carga no pertenecen principalmente a la esfera muscular, sino al territorio de la neurofisiología central. El músculo es simplemente el transductor de un comando que se genera en tu corteza motora.
+La realidad es más interesante. Las respuestas plásticas iniciales al entrenamiento con carga no pertenecen principalmente a la esfera muscular, sino al territorio de la neurofisiología central. El músculo es simplemente el transductor de un comando que se genera en tu corteza motora.
 
 ### La autopista neuronal del movimiento
 
@@ -2331,7 +2331,7 @@ El estímulo clínico debe ser progresivo, con una dosificación basada en el ca
     id: '2',
     slug: 'diskinesia-escapular-hombro',
     title: 'Rotación ascendente y diskinesia escapular: ¿Causa real o variante anatómica benigna?',
-    subtitle: 'La obsesión clínica por la simetría visual ha dominado la rehabilitación del hombro. Analizamos si la asimetría dinámica realmente se vincula con los síntomas.',
+    subtitle: 'Por años se buscó la simetría perfecta del hombro. Revisamos si la asimetría escapular realmente se relaciona con los síntomas.',
     categoryType: 'segmento',
     categoryValue: 'hombro',
     categoryLabel: 'Hombro',
@@ -2339,7 +2339,7 @@ El estímulo clínico debe ser progresivo, con una dosificación basada en el ca
     date: '04 de Abril, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 5,
-    summary: '¿Es la falta de rotación ascendente o la diskinesia escapular la verdadera culpable del dolor de hombro? Los datos clínicos ponen en jaque el paradigma de la simetría perfecta.',
+    summary: '¿Es la falta de rotación ascendente o la diskinesia escapular la verdadera culpable del dolor de hombro? Los datos cuestionan la idea de que el hombro debe moverse de forma simétrica.',
     pullQuote: 'La obsesión con corregir la diskinesia escapular a menudo ignora que el 61% de los atletas de alto rendimiento asintomáticos presentan diskinesia visible. La asimetría podría no ser un defecto, sino una adaptación adaptativa funcional.',
     content: `Durante más de dos décadas, evaluar el hombro significaba examinar de reojo la escápula del paciente mientras descendía los brazos, buscando cualquier pequeña alteración en su ritmo dinámico. Diagnosticábamos de inmediato una **diskinesia escapular** y diseñábamos planes con bandas elásticas pensados exclusivamente para activar el serrato anterior o el trapecio inferior. La premisa era lógica: una escápula asimétrica altera la rotación ascendente, pinza el espacio subacromial y genera dolor. 
 
@@ -2347,7 +2347,7 @@ Sin embargo, cuando contrastamos esta hipótesis intuitiva con los datos cinemá
 
 ### ¿Qué nos dicen los estudios de cohortes?
 
-Las investigaciones acumuladas en la última década sugieren un panorama mucho más flexible. Un exhaustivo estudio de seguimiento sistemático realizado por Plummer et al. (2017) evaluó la cinemática escapular tridimensional en nadadores y beisbolistas competitivos. Encontraron que la diskinesia escapular observable no se asocia de forma causal con el inicio de síntomas de dolor de hombro a mediano plazo.
+Las investigaciones acumuladas en la última década sugieren un panorama mucho más flexible. Un estudio de Plummer et al. (2017) evaluó la cinemática escapular tridimensional en nadadores y beisbolistas competitivos. Encontraron que la diskinesia escapular observable no se asocia de forma causal con el inicio de síntomas de dolor de hombro a mediano plazo.
 
 Además, los estudios de intervención muestran un fenómeno curioso: los programas dirigidos a "corregir" la posición escapular mediante ejercicios específicos son sumamente efectivos para aliviar el dolor, pero **no cambian la cinemática de la escápula**. En otras palabras, los pacientes mejoran de forma sustancial y recuperan su función, pero su escápula sigue moviéndose de forma asimétrica. 
 
@@ -2400,7 +2400,7 @@ En lugar de infundir miedo al paciente explicando que su escápula "funciona mal
 
 ### La evidencia sobre individuos sanos
 
-Un metanálisis seminal liderado por Brinjikji et al. (2015) analizó las resonancias magnéticas de más de 3.100 personas que **nunca habían tenido dolor de espalda o síntomas lumbares**. Los resultados deberían estar pegados con un imán en las paredes de cada consulta clínica:
+Una revisión sistemática de Brinjikji et al. (2015) analizó las resonancias magnéticas de más de 3.100 personas que **nunca habían tenido dolor de espalda o síntomas lumbares**. Los resultados deberían estar pegados con un imán en las paredes de cada consulta clínica:
 
 - **Degeneración discal:** Presente en el 37% de los jóvenes asintomáticos de 20 años y en el 80% de los adultos asintomáticos de 50 años.
 - **Protusión discal:** Encontrada en el 30% de los sujetos de 20 años y en el 60% de los de 50 años, todos completamente funcionales y sin molestias.
