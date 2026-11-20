@@ -1,0 +1,6 @@
+{
+  "name": "MyoKine",
+  "description": "Diario de conocimiento clínico para kinesiólogos, científicos del movimiento y pacientes curiosos en América Latina.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
