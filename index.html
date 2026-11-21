@@ -21,6 +21,25 @@
     <meta property="og:locale" content="es_CL" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://myokinecl.netlify.app/og.png" />
+    <script>
+      // Links sin "#" (Instagram suele borrar lo que va después del #):
+      // /sobre-mi, /infografias, /articulo/slug, /atencion, /mentoria
+      (function () {
+        var p = location.pathname.replace(/\/+$/, "");
+        if (!p || p === "/index.html") return;
+        var alias = { "/atencion": ["/sobre-mi", "como-trabajo"], "/mentoria": ["/sobre-mi", "mentoria"], "/servicios": ["/sobre-mi", "servicios"] };
+        var target = alias[p] ? alias[p][0] : p;
+        var anchor = alias[p] ? alias[p][1] : null;
+        history.replaceState(null, "", "/#" + target);
+        if (anchor) {
+          var tries = 0;
+          var t = setInterval(function () {
+            var el = document.getElementById(anchor);
+            if (el || ++tries > 40) { clearInterval(t); if (el) el.scrollIntoView({ behavior: "smooth" }); }
+          }, 150);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1104,7 +1104,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 </span>
               </button>
               <WhatsAppShareButton
-                text={`${selectedArticle.title} — MyoKine\n${SITE_URL}/#/articulo/${selectedArticle.slug}`}
+                text={`${selectedArticle.title} — MyoKine\n${SITE_URL}/articulo/${selectedArticle.slug}`}
               />
             </div>
           </article>
@@ -1922,7 +1922,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </div>
               <WhatsAppShareButton
                 label="Enviar por WhatsApp"
-                text={`${selectedInfografia.title} — infografía MyoKine\n${SITE_URL}/#/infografias/${selectedInfografia.slug}`}
+                text={`${selectedInfografia.title} — infografía MyoKine\n${SITE_URL}/infografias/${selectedInfografia.slug}`}
               />
 
               <div className="rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-[#f7f4ef]">
