@@ -28,9 +28,10 @@ import { AnimatePresence, motion } from "motion/react";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
 import { ContactBlock, ServicesSection, WhatsAppShareButton, SITE_URL } from "./components/Contacto";
 import { ComoTrabajo } from "./components/ComoTrabajo";
+import { Pizarra } from "./components/Pizarra";
 import exercisePolypillImg from "./assets/images/exercise_polypill_1781741842587.jpg";
 
-type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca";
+type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca" | "pizarra";
 type AudienceFilter = "todos" | "paciente" | "clinico";
 
 const SPANISH_MONTHS: Record<string, number> = {
@@ -187,6 +188,13 @@ export default function App() {
         return;
       }
 
+      if (clean === "pizarra") {
+        setActiveTab("pizarra");
+        setSelectedArticle(null);
+        setSelectedInfografia(null);
+        return;
+      }
+
       if (clean === "sobre-mi") {
         setActiveTab("sobre-mi");
         setSelectedArticle(null);
@@ -222,6 +230,7 @@ export default function App() {
       academia: "#/academia",
       "sobre-mi": "#/sobre-mi",
       biblioteca: "#/biblioteca",
+      pizarra: "#/pizarra",
     };
     window.location.hash = hashMap[tab];
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -766,7 +775,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               [
                 { id: "journal", label: "Journal" },
                 { id: "infografias", label: "Infografías" },
-                { id: "academia", label: "Academia" },
+                { id: "pizarra", label: "Pizarra" },
                 { id: "sobre-mi", label: "Sobre mí" },
               ] as { id: TabType; label: string }[]
             ).map((item) => {
@@ -826,7 +835,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               [
                 { id: "journal", label: "Journal" },
                 { id: "infografias", label: "Infografías" },
-                { id: "academia", label: "Academia" },
+                { id: "pizarra", label: "Pizarra" },
                 { id: "sobre-mi", label: "Sobre mí" },
               ] as { id: TabType; label: string }[]
             ).map((item) => {
@@ -1384,6 +1393,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
         )}
 
         {/* VIEW 3: ACADEMIA (Fixed 6-question Quiz only) */}
+        {activeTab === "pizarra" && !selectedArticle && <Pizarra />}
+
         {activeTab === "academia" && !selectedArticle && (
           <div
             className="max-w-3xl mx-auto space-y-8"
@@ -2179,10 +2190,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
             </button>
             <button
               type="button"
-              onClick={() => navigateToTab("academia")}
+              onClick={() => navigateToTab("pizarra")}
               className="hover:text-[#8b3a2a] transition-colors cursor-pointer"
             >
-              Academia
+              Pizarra
             </button>
             <button
               type="button"
