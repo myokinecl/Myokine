@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent, type Dispatch, type SetStateAction } from "react";
 import { Undo2, Trash2, Eraser, Pencil, Send, Download, Plus, X, RotateCcw } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -168,7 +168,7 @@ function ListaDS({
 }: {
   tipo: "DIMs" | "SIMs";
   items: string[];
-  setItems: (v: string[]) => void;
+  setItems: Dispatch<SetStateAction<string[]>>;
   sugeridos: string[];
 }) {
   const [txt, setTxt] = useState("");
@@ -176,8 +176,8 @@ function ListaDS({
   const color = isDim ? "#c0392b" : "#2f7d5b";
   const add = (v: string) => {
     const t = v.trim();
-    if (!t || items.includes(t)) return;
-    setItems([...items, t]);
+    if (!t) return;
+    setItems((prev) => (prev.includes(t) ? prev : [...prev, t]));
   };
   return (
     <div className="rounded-2xl border border-[#0a0a0c]/10 bg-white p-4 sm:p-5 space-y-3">
@@ -202,7 +202,7 @@ function ListaDS({
               <button
                 type="button"
                 aria-label={`Quitar ${it}`}
-                onClick={() => setItems(items.filter((x) => x !== it))}
+                onClick={() => setItems((prev) => prev.filter((x) => x !== it))}
                 className="p-0.5 rounded-full hover:bg-white/20"
               >
                 <X className="w-3.5 h-3.5" />
@@ -312,7 +312,11 @@ export function Pizarra() {
 
   const onDown = (e: RPointerEvent) => {
     e.preventDefault();
-    (e.target as Element).setPointerCapture(e.pointerId);
+    try {
+      (e.target as Element).setPointerCapture(e.pointerId);
+    } catch {
+      /* sin captura: igual se dibuja */
+    }
     drawing.current = { color, size: erase ? size * 1.8 : size, erase, pts: [toPt(e)] };
     redraw();
   };
@@ -351,7 +355,7 @@ export function Pizarra() {
   /* -------------------- Componer la imagen para el paciente -------------------- */
   const buildImage = async (): Promise<Blob> => {
     const OW = 1080;
-    const OH = 1620;
+    const OH = 2000;
     const cv = document.createElement("canvas");
     cv.width = OW;
     cv.height = OH;
@@ -477,12 +481,20 @@ export function Pizarra() {
       }
     }
 
-    // Pie
-    ctx.fillStyle = "rgba(10,10,12,0.45)";
-    ctx.font = "400 20px system-ui, sans-serif";
-    ctx.fillText("Lukas · Kinesiólogo · myokinecl.netlify.app", 60, OH - 50);
+    if (nota.trim()) y += 40 + 34 * Math.min(4, wrapText(ctx, nota.trim(), OW - 120).length);
 
-    return await new Promise<Blob>((res) => cv.toBlob((b) => res(b!), "image/png"));
+    // Recorta el alto al contenido y agrega el pie
+    const finalH = Math.min(OH, Math.max(1350, y + 90));
+    const out = document.createElement("canvas");
+    out.width = OW;
+    out.height = finalH;
+    const octx = out.getContext("2d")!;
+    octx.drawImage(cv, 0, 0);
+    octx.fillStyle = "rgba(10,10,12,0.45)";
+    octx.font = "400 20px system-ui, sans-serif";
+    octx.fillText("Lukas · Kinesiólogo · myokinecl.netlify.app", 60, finalH - 44);
+
+    return await new Promise<Blob>((res) => out.toBlob((b) => res(b!), "image/png"));
   };
 
   const fileName = () =>

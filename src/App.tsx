@@ -29,6 +29,7 @@ import { MarkdownRenderer } from "./components/MarkdownRenderer";
 import { ContactBlock, ServicesSection, WhatsAppShareButton, SITE_URL } from "./components/Contacto";
 import { ComoTrabajo } from "./components/ComoTrabajo";
 import { Pizarra } from "./components/Pizarra";
+import { ARTICULOS_OCULTOS } from "./data/revision";
 import exercisePolypillImg from "./assets/images/exercise_polypill_1781741842587.jpg";
 
 type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca" | "pizarra";
@@ -60,7 +61,7 @@ function parseSpanishDate(dateStr: string): number {
   return new Date(year, month, day).getTime();
 }
 
-const SORTED_ARTICLES: Article[] = [...STATIC_ARTICLES].sort(
+const SORTED_ARTICLES: Article[] = STATIC_ARTICLES.filter((a) => !ARTICULOS_OCULTOS.includes(a.slug)).sort(
   (a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date)
 );
 
