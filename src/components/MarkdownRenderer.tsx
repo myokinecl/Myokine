@@ -18,7 +18,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     return parts.map((part, index) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return (
-          <strong key={index} className="font-bold text-[#0a0a0c]">
+          <strong key={index} className="font-bold text-[#1D2433]">
             {part.slice(2, -2)}
           </strong>
         );
@@ -112,7 +112,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   }
 
   return (
-    <div className="space-y-6 text-[#0a0a0c]/90 leading-relaxed font-sans text-base sm:text-lg">
+    <div className="space-y-6 text-[#1D2433]/90 leading-relaxed font-serif text-[18px] sm:text-[19px]">
       {blocks.map((block, index) => {
         const key = `${block.type}-${index}`;
 
@@ -122,7 +122,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               <h1
                 key={key}
                 id={`h1-${index}`}
-                className="font-serif text-3xl sm:text-4xl text-[#0a0a0c] font-bold tracking-tight pt-8 pb-3"
+                className="font-display text-3xl sm:text-4xl text-[#1D2433] font-bold tracking-tight pt-8 pb-3"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </h1>
@@ -132,7 +132,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               <h2
                 key={key}
                 id={`h2-${index}`}
-                className="font-serif text-2xl sm:text-3xl text-[#0a0a0c] font-semibold tracking-tight pt-6 pb-2"
+                className="font-display text-2xl sm:text-3xl text-[#1D2433] font-semibold tracking-tight pt-6 pb-2"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </h2>
@@ -142,7 +142,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               <h3
                 key={key}
                 id={`h3-${index}`}
-                className="font-serif text-xl sm:text-2xl text-[#0a0a0c] font-medium tracking-tight pt-4 pb-1 border-b border-[#8b3a2a]/10"
+                className="font-display text-xl sm:text-2xl text-[#1D2433] font-medium tracking-tight pt-4 pb-1 border-b border-[#E3E5E8]"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </h3>
@@ -152,7 +152,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               <h4
                 key={key}
                 id={`h4-${index}`}
-                className="font-serif text-lg sm:text-xl text-[#0a0a0c] font-medium tracking-tight pt-3 pb-1"
+                className="font-display text-lg sm:text-xl text-[#1D2433] font-medium tracking-tight pt-3 pb-1"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </h4>
@@ -161,7 +161,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <blockquote
                 key={key}
-                className="border-l-2 border-[#8b3a2a]/60 pl-4 py-1.5 my-4 italic font-serif text-[#8b3a2a] bg-[#8b3a2a]/[0.03]"
+                className="border-l-[3px] border-[#1D2433] pl-5 py-1 my-5 italic font-serif text-[#1D2433]"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </blockquote>
@@ -170,7 +170,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <ul key={key} className="list-disc pl-5 space-y-2 py-1">
                 {block.lines.map((line, idx) => (
-                  <li key={idx} className="pl-1 text-[#0a0a0c]/85">
+                  <li key={idx} className="pl-1 text-[#1D2433]/85">
                     {parseInlineStyles(line)}
                   </li>
                 ))}
@@ -180,7 +180,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <ol key={key} className="list-decimal pl-5 space-y-2 py-1">
                 {block.lines.map((line, idx) => (
-                  <li key={idx} className="pl-1 text-[#0a0a0c]/85">
+                  <li key={idx} className="pl-1 text-[#1D2433]/85">
                     {parseInlineStyles(line)}
                   </li>
                 ))}
@@ -191,7 +191,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <p
                 key={key}
-                className="leading-[1.8] text-justify text-[#0a0a0c]/85 text-base sm:text-[17px]"
+                className="leading-[1.75] text-[#1D2433]/90"
               >
                 {parseInlineStyles(block.lines.join(' '))}
               </p>

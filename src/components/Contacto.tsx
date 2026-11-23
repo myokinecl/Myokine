@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Dumbbell, HeartPulse, Stethoscope, GraduationCap, ArrowRight } from "lucide-react";
+import { Instagram, MessageCircle, Dumbbell, HeartPulse, Stethoscope, GraduationCap } from "lucide-react";
 
 export const WHATSAPP_NUMBER = "56998520291";
 export const INSTAGRAM_URL = "https://www.instagram.com/myokinecl/";
@@ -41,7 +41,7 @@ export function ContactButtons({ compact = false }: { compact?: boolean }) {
         href={whatsappContactUrl()}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-sm font-semibold transition-colors"
+        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors"
       >
         <MessageCircle className="w-4 h-4" />
         Escríbeme por WhatsApp
@@ -50,7 +50,7 @@ export function ContactButtons({ compact = false }: { compact?: boolean }) {
         href={INSTAGRAM_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-[#0a0a0c]/15 hover:border-[#8b3a2a] hover:text-[#8b3a2a] text-[#0a0a0c] text-sm font-semibold transition-colors bg-white"
+        className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-[#1D2433]/15 hover:border-[#0F5C4D] hover:text-[#0F5C4D] text-[#1D2433] text-sm font-semibold transition-colors bg-white"
       >
         <Instagram className="w-4 h-4" />
         @myokinecl
@@ -62,24 +62,24 @@ export function ContactButtons({ compact = false }: { compact?: boolean }) {
 /** Bloque de contacto para la portada (reemplaza al newsletter). */
 export function ContactBlock({ onServices }: { onServices?: () => void }) {
   return (
-    <section className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <section className="bg-white border border-[#1D2433]/10 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
       <div className="space-y-1.5 max-w-lg">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#8b3a2a]">
+        <span className="text-sm font-bold text-[#0F5C4D]">
           ¿Conversamos?
         </span>
-        <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#0a0a0c]">
+        <h3 className="font-display text-xl sm:text-2xl font-medium text-[#1D2433]">
           Entrenamiento, rehabilitación y mentorías
         </h3>
-        <p className="text-sm text-[#0a0a0c]/65">
+        <p className="text-sm text-[#1D2433]/65">
           Si tienes dolor, una lesión o una cirugía por delante, o eres estudiante y quieres razonar mejor, escríbeme.
         </p>
         {onServices && (
           <button
             type="button"
             onClick={onServices}
-            className="inline-flex items-center gap-1.5 pt-1 text-sm font-semibold text-[#8b3a2a] hover:underline cursor-pointer"
+            className="inline-flex items-center gap-1.5 pt-1 text-sm font-semibold text-[#0F5C4D] hover:underline cursor-pointer"
           >
-            Ver lo que ofrezco <ArrowRight className="w-3.5 h-3.5" />
+            Ver lo que ofrezco
           </button>
         )}
       </div>
@@ -91,27 +91,27 @@ export function ContactBlock({ onServices }: { onServices?: () => void }) {
 /** Servicios + contacto para la sección Sobre mí. */
 export function ServicesSection() {
   return (
-    <div className="pt-6 border-t border-[#0a0a0c]/10 space-y-6" id="servicios">
-      <h2 className="font-serif text-2xl sm:text-3xl text-[#0a0a0c] font-semibold tracking-tight">
+    <div className="pt-6 border-t border-[#1D2433]/10 space-y-6" id="servicios">
+      <h2 className="font-display text-2xl sm:text-3xl text-[#1D2433] font-semibold tracking-tight">
         Cómo puedo ayudarte
       </h2>
       <div className="grid sm:grid-cols-2 gap-3">
         {SERVICES.map((s) => (
-          <div key={s.title} className="rounded-xl border border-[#0a0a0c]/10 bg-[#f7f4ef]/60 p-5 space-y-2">
-            <s.icon className="w-5 h-5 text-[#8b3a2a]" />
-            <h3 className="font-serif text-lg font-semibold text-[#0a0a0c]">{s.title}</h3>
-            <p className="text-sm text-[#0a0a0c]/70 leading-relaxed">{s.desc}</p>
+          <div key={s.title} className="rounded-xl border border-[#1D2433]/10 bg-[#F6F7F8]/60 p-5 space-y-2">
+            <s.icon className="w-5 h-5 text-[#0F5C4D]" />
+            <h3 className="font-display text-lg font-semibold text-[#1D2433]">{s.title}</h3>
+            <p className="text-sm text-[#1D2433]/70 leading-relaxed">{s.desc}</p>
           </div>
         ))}
       </div>
-      <div className="rounded-xl bg-[#0a0a0c] text-white p-6 space-y-4">
+      <div className="rounded-xl bg-[#1D2433] text-white p-6 space-y-4">
         <p className="font-serif text-lg">¿Te interesa alguno? Escríbeme y vemos si te puedo ayudar.</p>
         <div className="flex flex-col sm:flex-row gap-2.5">
           <a
             href={whatsappContactUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#8b3a2a] hover:bg-[#a44734] text-white text-sm font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0F5C4D] hover:bg-[#0B4A3E] text-white text-sm font-semibold transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp
@@ -138,7 +138,7 @@ export function WhatsAppShareButton({ text, label = "Enviar por WhatsApp" }: { t
       href={whatsappShareUrl(text)}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#0a0a0c]/15 hover:border-[#8b3a2a] hover:text-[#8b3a2a] text-[#0a0a0c] text-xs sm:text-sm font-semibold transition-colors bg-white"
+      className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#1D2433]/15 hover:border-[#0F5C4D] hover:text-[#0F5C4D] text-[#1D2433] text-sm sm:text-sm font-semibold transition-colors bg-white"
     >
       <MessageCircle className="w-4 h-4" />
       {label}

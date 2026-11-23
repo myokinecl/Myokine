@@ -8,7 +8,6 @@ import {
   Info,
   Check,
   X,
-  ArrowRight,
   Mail,
   RotateCcw,
   Flame,
@@ -529,17 +528,17 @@ Lee el artículo completo en MyoKine (@myokinecl)
 
     let bgGradient: CanvasGradient | string;
     let textColor = "#ffffff";
-    let accentColor = "#e07a5f";
+    let accentColor = "#F5E663";
     let subTextColor = "rgba(255, 255, 255, 0.75)";
     let cardBg = "#1e1a19";
-    let borderColor = "#8b3a2a";
-    let pillBg = "#8b3a2a";
+    let borderColor = "#0F5C4D";
+    let pillBg = "#0F5C4D";
     let pillText = "#ffffff";
 
     if (theme === "light") {
-      bgGradient = "#f7f4ef";
-      textColor = "#0a0a0c";
-      accentColor = "#8b3a2a";
+      bgGradient = "#F6F7F8";
+      textColor = "#1D2433";
+      accentColor = "#0F5C4D";
       subTextColor = "rgba(10, 10, 12, 0.7)";
       cardBg = "#ffffff";
       borderColor = "rgba(139, 58, 42, 0.3)";
@@ -554,26 +553,26 @@ Lee el artículo completo en MyoKine (@myokinecl)
     } else if (theme === "gradient") {
       const grad = ctx.createLinearGradient(0, 0, 1080, 1080);
       grad.addColorStop(0, "#2d1810");
-      grad.addColorStop(0.5, "#8b3a2a");
+      grad.addColorStop(0.5, "#0F5C4D");
       grad.addColorStop(1, "#120806");
       bgGradient = grad;
       textColor = "#ffffff";
-      accentColor = "#f5e6d3";
+      accentColor = "#FBF6C9";
       subTextColor = "rgba(255, 255, 255, 0.85)";
       cardBg = "rgba(0, 0, 0, 0.35)";
-      borderColor = "#f5e6d3";
-      pillBg = "#f5e6d3";
+      borderColor = "#FBF6C9";
+      pillBg = "#FBF6C9";
       pillText = "#141212";
     } else {
       const grad = ctx.createLinearGradient(0, 0, 0, 1080);
       grad.addColorStop(0, "#141212");
       grad.addColorStop(1, "#0a0808");
       bgGradient = grad;
-      textColor = "#f9f6f0";
-      accentColor = "#e07a5f";
+      textColor = "#F6F7F8";
+      accentColor = "#F5E663";
       subTextColor = "rgba(249, 246, 240, 0.75)";
       cardBg = "#1e1a19";
-      borderColor = "#8b3a2a";
+      borderColor = "#0F5C4D";
     }
 
     ctx.fillStyle = bgGradient;
@@ -682,95 +681,80 @@ Lee el artículo completo en MyoKine (@myokinecl)
       <article
         key={article.id}
         onClick={() => openArticle(article)}
-        className="bg-white border border-[#0a0a0c]/10 rounded-xl p-6 hover:border-[#8b3a2a]/40 transition-colors cursor-pointer group flex flex-col justify-between gap-5"
+        className="group grid grid-cols-1 md:grid-cols-[150px_1fr] lg:grid-cols-[150px_1fr_260px] gap-x-9 gap-y-1.5 py-6 border-b border-[#E3E5E8] cursor-pointer"
       >
-        <div className="space-y-2.5">
-          <div className="flex items-center justify-between gap-3 text-[11px] font-semibold uppercase tracking-wider text-[#0a0a0c]/50">
-            <span className="text-[#8b3a2a] truncate">{article.categoryLabel}</span>
-            <span className="font-mono tabular-nums shrink-0">{article.date}</span>
-          </div>
+        <div className="text-[15px] font-medium text-[#5A6170] md:pt-1">{article.categoryLabel}</div>
 
-          <h3 className="font-serif text-xl sm:text-2xl font-semibold leading-snug text-[#0a0a0c] group-hover:text-[#8b3a2a] transition-colors">
+        <div className="min-w-0">
+          <h3 className="font-display text-xl sm:text-[23px] font-semibold leading-snug tracking-[-0.01em] text-[#1D2433] group-hover:underline decoration-[#F5E663] decoration-[6px] underline-offset-[-1px] [text-decoration-skip-ink:none]">
             {article.title}
           </h3>
-
           {showSummary && (
-            <p className="text-sm text-[#0a0a0c]/65 leading-relaxed font-sans line-clamp-1">
+            <p className="font-serif text-[17px] sm:text-lg text-[#5A6170] leading-relaxed mt-2 line-clamp-2">
               {article.summary}
             </p>
           )}
-        </div>
-
-        <div className="pt-4 border-t border-[#0a0a0c]/8 flex items-center justify-between gap-3 text-xs font-semibold text-[#0a0a0c]/55">
-          <span className="font-mono tabular-nums whitespace-nowrap">
-            {article.readingTime} min
-          </span>
-
-          <div className="flex items-center gap-3">
+          <div className="mt-3 flex items-center gap-4 text-[15px] text-[#5A6170]">
+            <span className="tabular-nums">{article.readingTime} min de lectura</span>
             <button
               type="button"
               onClick={(e) => copyShareLink(shareHash, `art-${article.id}`, e)}
-              className="inline-flex items-center gap-1 px-2 py-1 rounded text-[11px] text-[#0a0a0c]/60 hover:text-[#0a0a0c] hover:bg-[#0a0a0c]/5 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 hover:text-[#1D2433] transition-colors cursor-pointer"
               title="Copiar link del artículo"
             >
               {isCopied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-700" />
-                  <span className="text-emerald-700">Copiado</span>
+                  <Check className="w-4 h-4 text-[#0F5C4D]" />
+                  <span className="text-[#0F5C4D]">Copiado</span>
                 </>
               ) : (
                 <>
-                  <Link2 className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Copiar link</span>
+                  <Link2 className="w-4 h-4" />
+                  <span>Copiar link</span>
                 </>
               )}
             </button>
-
             <button
               type="button"
               onClick={(e) => toggleBookmark(article.id, e)}
-              className="p-1.5 rounded hover:bg-[#0a0a0c]/5 text-[#0a0a0c]/60 hover:text-[#8b3a2a] transition-colors cursor-pointer"
-              aria-label={
-                isBookmarked(article.id) ? "Quitar de biblioteca" : "Guardar en biblioteca"
-              }
-              title={
-                isBookmarked(article.id) ? "Quitar de biblioteca" : "Guardar en biblioteca"
-              }
+              className="inline-flex items-center gap-1.5 hover:text-[#1D2433] transition-colors cursor-pointer"
+              aria-label={isBookmarked(article.id) ? "Quitar de guardados" : "Guardar"}
             >
               {isBookmarked(article.id) ? (
-                <BookmarkCheck className="w-4 h-4 text-[#8b3a2a] fill-[#8b3a2a]" />
+                <BookmarkCheck className="w-4 h-4 text-[#0F5C4D] fill-[#0F5C4D]" />
               ) : (
                 <Bookmark className="w-4 h-4" />
               )}
+              <span>{isBookmarked(article.id) ? "Guardado" : "Guardar"}</span>
             </button>
-
-            <span className="text-[#8b3a2a] font-bold group-hover:translate-x-0.5 transition-transform whitespace-nowrap">
-              Leer →
-            </span>
           </div>
         </div>
+
+        <p className="hidden lg:block font-serif italic text-[16px] leading-relaxed text-[#1D2433]/85 line-clamp-4">
+          {article.pullQuote}
+        </p>
       </article>
     );
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f4ef] text-[#0a0a0c] font-sans flex flex-col selection:bg-[#8b3a2a] selection:text-white">
+    <div className="min-h-screen bg-white text-[#1D2433] font-sans flex flex-col">
       {/* Compact Header (Max 64px height on mobile) */}
-      <header className="h-16 border-b border-[#0a0a0c]/10 bg-[#f7f4ef]/95 sticky top-0 z-40 backdrop-blur-sm">
+      <header className="h-16 border-b border-[#E3E5E8] bg-white/95 sticky top-0 z-40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
           {/* Clean Brand Wordmark */}
           <button
             type="button"
             onClick={() => navigateToTab("journal")}
-            className="font-serif text-xl sm:text-2xl font-bold tracking-tight uppercase text-[#0a0a0c] hover:text-[#8b3a2a] transition-colors cursor-pointer whitespace-nowrap"
+            className="font-display text-[22px] sm:text-2xl font-extrabold tracking-[-0.02em] text-[#1D2433] cursor-pointer whitespace-nowrap"
           >
-            MyoKine
+            Myo<span className="text-[#0F5C4D]">Kine</span>
           </button>
 
           {/* Desktop 4-item text navigation */}
           <nav
             aria-label="Navegación principal"
-            className="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-[#0a0a0c]/65"
+            className="hidden md:flex items-center gap-8 text-[17px] font-medium text-[#5A6170]"
           >
             {(
               [
@@ -788,8 +772,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   onClick={() => navigateToTab(item.id)}
                   className={`py-1 border-b-2 transition-colors whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? "text-[#0a0a0c] border-[#8b3a2a]"
-                      : "border-transparent hover:text-[#8b3a2a]"
+                      ? "text-[#1D2433] font-semibold border-[#1D2433]"
+                      : "border-transparent hover:text-[#1D2433]"
                   }`}
                 >
                   {item.label}
@@ -807,8 +791,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
               title="Biblioteca"
               className={`p-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === "biblioteca"
-                  ? "text-[#8b3a2a] bg-[#8b3a2a]/10"
-                  : "text-[#0a0a0c]/70 hover:text-[#8b3a2a] hover:bg-[#0a0a0c]/5"
+                  ? "text-[#0F5C4D] bg-[#0F5C4D]/10"
+                  : "text-[#1D2433]/70 hover:text-[#0F5C4D] hover:bg-[#1D2433]/5"
               }`}
             >
               {activeTab === "biblioteca" || bookmarkedIds.length > 0 ? (
@@ -822,7 +806,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
-              className="md:hidden p-2 rounded-lg text-[#0a0a0c]/80 hover:bg-[#0a0a0c]/5 transition-colors cursor-pointer"
+              className="md:hidden p-2 rounded-lg text-[#1D2433]/80 hover:bg-[#1D2433]/5 transition-colors cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -831,7 +815,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
 
         {/* Mobile Drawer Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#f7f4ef] border-b border-[#0a0a0c]/10 px-4 py-3 flex items-center justify-between gap-2 shadow-sm">
+          <div className="md:hidden bg-white border-b border-[#1D2433]/10 px-4 py-3 flex items-center justify-between gap-2 shadow-sm">
             {(
               [
                 { id: "journal", label: "Journal" },
@@ -846,10 +830,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   key={item.id}
                   type="button"
                   onClick={() => navigateToTab(item.id)}
-                  className={`text-[11px] font-semibold uppercase tracking-wider py-1.5 px-2 rounded transition-colors whitespace-nowrap ${
+                  className={`text-sm font-semibold py-1.5 px-2 rounded transition-colors whitespace-nowrap ${
                     isActive
-                      ? "text-[#8b3a2a] bg-[#8b3a2a]/10"
-                      : "text-[#0a0a0c]/70 hover:text-[#0a0a0c]"
+                      ? "text-[#0F5C4D] bg-[#0F5C4D]/10"
+                      : "text-[#1D2433]/70 hover:text-[#1D2433]"
                   }`}
                 >
                   {item.label}
@@ -865,45 +849,45 @@ Lee el artículo completo en MyoKine (@myokinecl)
         {/* ARTICLE DETAIL VIEW */}
         {selectedArticle && (
           <article
-            className="max-w-3xl mx-auto bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-12 lg:p-14 shadow-sm"
+            className="max-w-3xl mx-auto bg-white border border-[#1D2433]/10 rounded-2xl p-6 sm:p-12 lg:p-14 shadow-sm"
             id="article-view-workspace"
           >
             {/* Back button */}
             <button
               type="button"
               onClick={closeArticle}
-              className="group mb-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0a0a0c]/55 hover:text-[#8b3a2a] transition-colors py-1 cursor-pointer"
+              className="group mb-8 inline-flex items-center gap-2 text-sm font-bold text-[#1D2433]/55 hover:text-[#0F5C4D] transition-colors py-1 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span>Volver al Journal</span>
             </button>
 
             {/* Category & Date */}
-            <div className="flex flex-wrap items-center gap-2.5 text-[11px] uppercase font-semibold tracking-widest text-[#8b3a2a] mb-4">
+            <div className="flex flex-wrap items-center gap-2.5 text-sm font-semibold text-[#0F5C4D] mb-4">
               <span>{selectedArticle.categoryLabel}</span>
-              <span className="text-[#0a0a0c]/30">·</span>
-              <span className="font-mono text-[#0a0a0c]/55 tabular-nums">
+              <span className="text-[#1D2433]/30">·</span>
+              <span className="font-mono text-[#1D2433]/55 tabular-nums">
                 {selectedArticle.date}
               </span>
             </div>
 
             {/* Article Title */}
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-semibold leading-[1.12] text-[#0a0a0c] tracking-tight mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[44px] font-semibold leading-[1.12] text-[#1D2433] tracking-tight mb-6">
               {selectedArticle.title}
             </h1>
 
             {/* En 15 segundos (Right below title) */}
-            <div className="mb-8 p-5 sm:p-6 bg-[#f7f4ef] border border-[#0a0a0c]/10 rounded-xl space-y-2">
-              <span className="text-[11px] uppercase tracking-widest font-bold text-[#8b3a2a] block">
+            <div className="mb-8 p-5 sm:p-6 bg-[#F6F7F8] border border-[#1D2433]/10 rounded-xl space-y-2">
+              <span className="text-sm font-bold text-[#0F5C4D] block">
                 En 15 segundos
               </span>
-              <p className="text-base sm:text-lg font-serif text-[#0a0a0c]/85 leading-relaxed">
+              <p className="text-base sm:text-lg font-serif text-[#1D2433]/85 leading-relaxed">
                 {selectedArticle.summary}
               </p>
             </div>
 
             {/* Byline & Actions */}
-            <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#0a0a0c]/10 text-xs text-[#0a0a0c]/60 font-semibold uppercase tracking-wider mb-10">
+            <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#1D2433]/10 text-sm text-[#1D2433]/60 font-semibold mb-10">
               <div className="flex items-center gap-3">
                 <span>Por Lukas · MyoKine</span>
                 <span>·</span>
@@ -921,7 +905,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       `detail-${selectedArticle.id}`
                     )
                   }
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#0a0a0c]/15 bg-[#f7f4ef]/60 hover:bg-[#f7f4ef] text-[#0a0a0c]/80 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#1D2433]/15 bg-[#F6F7F8]/60 hover:bg-[#F6F7F8] text-[#1D2433]/80 transition-colors cursor-pointer"
                 >
                   {copiedId === `detail-${selectedArticle.id}` ? (
                     <>
@@ -939,12 +923,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 <button
                   type="button"
                   onClick={() => toggleBookmark(selectedArticle.id)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#0a0a0c]/15 hover:border-[#8b3a2a]/40 hover:text-[#8b3a2a] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#1D2433]/15 hover:border-[#0F5C4D]/40 hover:text-[#0F5C4D] transition-colors cursor-pointer"
                 >
                   {isBookmarked(selectedArticle.id) ? (
                     <>
-                      <BookmarkCheck className="w-3.5 h-3.5 text-[#8b3a2a] fill-[#8b3a2a]" />
-                      <span className="text-[#8b3a2a]">Guardado</span>
+                      <BookmarkCheck className="w-3.5 h-3.5 text-[#0F5C4D] fill-[#0F5C4D]" />
+                      <span className="text-[#0F5C4D]">Guardado</span>
                     </>
                   ) : (
                     <>
@@ -956,12 +940,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </div>
             </div>
 
-            {/* Hallazgo Clave + Neutral Instagram Share */}
+            {/* Lo que me llevo + Neutral Instagram Share */}
             {selectedArticle.pullQuote && (
-              <div className="my-10 p-6 sm:p-8 bg-[#f7f4ef]/70 border-l-2 border-[#8b3a2a] rounded-r-xl relative">
+              <div className="my-10 p-6 sm:p-8 bg-[#F6F7F8]/70 border-l-2 border-[#0F5C4D] rounded-r-xl relative">
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#8b3a2a]">
-                    Hallazgo Clave
+                  <span className="text-[13px] font-bold text-[#0F5C4D]">
+                    Lo que me llevo
                   </span>
                   <button
                     type="button"
@@ -969,17 +953,17 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       setInstagramModalArticle(selectedArticle);
                       setInstagramCopied(false);
                     }}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-[#0a0a0c]/5 text-[#0a0a0c]/80 border border-[#0a0a0c]/15 rounded-lg text-xs font-semibold transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-[#1D2433]/5 text-[#1D2433]/80 border border-[#1D2433]/15 rounded-lg text-sm font-semibold transition-colors cursor-pointer"
                     title="Crear publicación para Instagram"
                   >
                     <Instagram className="w-3.5 h-3.5" />
                     <span>Compartir en Instagram</span>
                   </button>
                 </div>
-                <p className="font-serif italic text-lg sm:text-xl text-[#0a0a0c] leading-relaxed">
+                <p className="font-serif italic text-lg sm:text-xl text-[#1D2433] leading-relaxed">
                   "{selectedArticle.pullQuote}"
                 </p>
-                <span className="text-xs text-[#0a0a0c]/50 block mt-3 text-right">
+                <span className="text-sm text-[#1D2433]/50 block mt-3 text-right">
                   — MyoKine
                 </span>
               </div>
@@ -997,11 +981,11 @@ Lee el artículo completo en MyoKine (@myokinecl)
               ).slice(0, 3);
               if (related.length === 0) return null;
               return (
-                <div className="mt-14 pt-10 border-t border-[#0a0a0c]/10" id="article-infografias">
-                  <span className="text-[#8b3a2a] uppercase text-[11px] font-bold tracking-[0.18em] mb-2 block">
+                <div className="mt-14 pt-10 border-t border-[#1D2433]/10" id="article-infografias">
+                  <span className="text-[#0F5C4D] text-sm font-bold mb-2 block">
                     Para tu paciente
                   </span>
-                  <p className="text-sm text-[#0a0a0c]/65 mb-5">
+                  <p className="text-sm text-[#1D2433]/65 mb-5">
                     Infografías relacionadas, listas para descargar o enviar.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -1012,12 +996,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
                         onClick={() => {
                           window.location.hash = `#/infografias/${inf.slug}`;
                         }}
-                        className="text-left rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-white hover:border-[#8b3a2a] transition-colors cursor-pointer"
+                        className="text-left rounded-xl overflow-hidden border border-[#1D2433]/10 bg-white hover:border-[#0F5C4D] transition-colors cursor-pointer"
                       >
-                        <div className="aspect-[3/4] bg-[#f7f4ef] overflow-hidden">
+                        <div className="aspect-[3/4] bg-[#F6F7F8] overflow-hidden">
                           <img src={inf.image} alt={inf.title} loading="lazy" className="w-full h-full object-cover object-top" />
                         </div>
-                        <div className="p-3 text-xs sm:text-sm font-serif font-semibold text-[#0a0a0c] leading-snug">
+                        <div className="p-3 text-sm sm:text-sm font-display font-semibold text-[#1D2433] leading-snug">
                           {inf.title}
                         </div>
                       </button>
@@ -1030,38 +1014,38 @@ Lee el artículo completo en MyoKine (@myokinecl)
             {/* Scientific References */}
             {selectedArticle.references && selectedArticle.references.length > 0 && (
               <div
-                className="mt-14 pt-10 border-t border-[#0a0a0c]/10"
+                className="mt-14 pt-10 border-t border-[#1D2433]/10"
                 id="article-references"
               >
-                <span className="text-[#8b3a2a] uppercase text-[11px] font-bold tracking-[0.18em] mb-2 block">
+                <span className="text-[#0F5C4D] text-sm font-bold mb-2 block">
                   Referencias científicas
                 </span>
-                <p className="text-xs font-serif italic text-[#0a0a0c]/55 mb-4">
+                <p className="text-sm font-serif italic text-[#1D2433]/55 mb-4">
                   Todo lo mencionado en este artículo está respaldado por las siguientes publicaciones originales.
                 </p>
                 <div className="space-y-3">
                   {selectedArticle.references.map((ref, rIdx) => (
                     <div
                       key={rIdx}
-                      className="bg-[#f7f4ef]/60 p-4 rounded-xl border border-[#0a0a0c]/8 text-xs sm:text-sm"
+                      className="bg-[#F6F7F8]/60 p-4 rounded-xl border border-[#1D2433]/8 text-sm sm:text-sm"
                     >
-                      <div className="font-bold text-[#0a0a0c] mb-1 font-serif">
+                      <div className="font-bold text-[#1D2433] mb-1 font-display">
                         {ref.title}
                       </div>
-                      <div className="text-[#0a0a0c]/75">
+                      <div className="text-[#1D2433]/75">
                         {ref.author} ({ref.year}).{" "}
                         <span className="italic">{ref.journal}</span>
                       </div>
                       {ref.doi && (
                         <div className="mt-1.5 flex items-center gap-2">
-                          <span className="text-[10px] font-mono uppercase text-[#0a0a0c]/50">
+                          <span className="text-[13px] text-[#1D2433]/50">
                             DOI:
                           </span>
                           <a
                             href={`https://doi.org/${ref.doi}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs font-mono text-[#8b3a2a] hover:underline break-all"
+                            className="text-sm text-[#0F5C4D] hover:underline break-all"
                           >
                             {ref.doi}
                           </a>
@@ -1074,25 +1058,25 @@ Lee el artículo completo en MyoKine (@myokinecl)
             )}
 
             {/* Clinical disclaimer */}
-            <div className="mt-12 p-5 sm:p-6 bg-[#f7f4ef] rounded-xl border border-[#0a0a0c]/10 text-xs sm:text-sm">
+            <div className="mt-12 p-5 sm:p-6 bg-[#F6F7F8] rounded-xl border border-[#1D2433]/10 text-sm sm:text-sm">
               <div className="flex gap-3.5 items-start">
-                <Info className="w-4 h-4 text-[#8b3a2a] shrink-0 mt-0.5" />
+                <Info className="w-4 h-4 text-[#0F5C4D] shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <span className="font-bold block text-[#0a0a0c]">
+                  <span className="font-bold block text-[#1D2433]">
                     Nota clínica
                   </span>
-                  <p className="text-[#0a0a0c]/75 leading-relaxed">
+                  <p className="text-[#1D2433]/75 leading-relaxed">
                     Este contenido es informativo y busca acercar la evidencia científica actual. No reemplaza una evaluación kinesiológica o médica presencial individualizada.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10 pt-8 border-t border-[#0a0a0c]/10 flex flex-wrap justify-between items-center gap-4">
+            <div className="mt-10 pt-8 border-t border-[#1D2433]/10 flex flex-wrap justify-between items-center gap-4">
               <button
                 type="button"
                 onClick={closeArticle}
-                className="bg-[#0a0a0c] text-white px-6 py-3 rounded-full text-xs font-bold hover:bg-[#8b3a2a] transition-colors uppercase tracking-widest cursor-pointer"
+                className="bg-[#1D2433] text-white px-6 py-3 rounded-[10px] text-sm font-bold hover:bg-[#0F5C4D] transition-colors cursor-pointer"
               >
                 Volver al Journal
               </button>
@@ -1104,7 +1088,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     `bottom-${selectedArticle.id}`
                   )
                 }
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#0a0a0c]/15 text-xs font-bold uppercase tracking-widest text-[#0a0a0c]/75 hover:border-[#8b3a2a] hover:text-[#8b3a2a] transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[10px] border border-[#1D2433]/15 text-sm font-bold text-[#1D2433]/75 hover:border-[#0F5C4D] hover:text-[#0F5C4D] transition-colors cursor-pointer"
               >
                 <Link2 className="w-3.5 h-3.5" />
                 <span>
@@ -1124,63 +1108,123 @@ Lee el artículo completo en MyoKine (@myokinecl)
         {activeTab === "journal" && !selectedArticle && (
           <div className="space-y-14">
             {/* 1. HERO */}
-            <section className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-12 lg:p-16">
-              <div className="max-w-3xl space-y-6">
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.03] tracking-tight text-[#0a0a0c]">
-                  ¿Y si tu cuerpo no estuviera{" "}
-                  <span className="italic text-[#8b3a2a]">
-                    dañado, sino sobreprotegido?
-                  </span>
+            <section className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-end pt-2 sm:pt-6">
+              <div>
+                <h1 className="font-display text-[40px] sm:text-6xl lg:text-[64px] font-bold leading-[1.04] tracking-[-0.035em] text-[#1D2433] max-w-[13ch]">
+                  Leer evidencia para <mark className="hl">atender mejor</mark> a tus pacientes
                 </h1>
-
-                <p className="text-lg sm:text-xl text-[#0a0a0c]/75 font-serif leading-relaxed">
-                  Dolor, fuerza y deporte explicados con evidencia y sin dogmas. Por Lukas, kinesiólogo.
+                <p className="font-serif text-[19px] sm:text-[22px] leading-relaxed text-[#5A6170] mt-6 mb-8 max-w-[34em]">
+                  Soy Lukas, kinesiólogo. Leo papers de dolor, carga y rehabilitación y los resumo en lo que sirve en la consulta. Gratis, en español.
                 </p>
-
-                <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+                <div className="flex flex-wrap gap-3.5">
                   <button
                     type="button"
-                    onClick={() => handleAudienceChoice("paciente")}
-                    className={`px-6 py-4 rounded-xl text-sm font-bold tracking-wide transition-all border text-left flex items-center justify-between gap-3 cursor-pointer ${
-                      audienceFilter === "paciente"
-                        ? "bg-[#8b3a2a] text-white border-[#8b3a2a] shadow-sm"
-                        : "bg-[#0a0a0c] text-white border-[#0a0a0c] hover:bg-[#8b3a2a] hover:border-[#8b3a2a]"
-                    }`}
+                    onClick={scrollToCatalogTop}
+                    className="bg-[#0F5C4D] text-white rounded-[10px] px-6 py-3.5 text-[17px] font-semibold hover:bg-[#0B4A3E] transition-colors cursor-pointer"
                   >
-                    <span>Quiero entender mi dolor</span>
-                    <ArrowRight className="w-4 h-4 shrink-0" />
+                    Leer el journal
                   </button>
-
                   <button
                     type="button"
-                    onClick={() => handleAudienceChoice("clinico")}
-                    className={`px-6 py-4 rounded-xl text-sm font-bold tracking-wide transition-all border text-left flex items-center justify-between gap-3 cursor-pointer ${
-                      audienceFilter === "clinico"
-                        ? "bg-[#8b3a2a] text-white border-[#8b3a2a] shadow-sm"
-                        : "bg-white text-[#0a0a0c] border-[#0a0a0c]/20 hover:border-[#8b3a2a] hover:text-[#8b3a2a]"
-                    }`}
+                    onClick={() => {
+                      navigateToTab("sobre-mi");
+                      setTimeout(() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" }), 300);
+                    }}
+                    className="border-[1.5px] border-[#1D2433] text-[#1D2433] rounded-[10px] px-6 py-3.5 text-[17px] font-semibold hover:bg-[#1D2433] hover:text-white transition-colors cursor-pointer"
                   >
-                    <span>Soy profesional de la salud</span>
-                    <ArrowRight className="w-4 h-4 shrink-0" />
+                    Atención y mentorías
                   </button>
                 </div>
               </div>
+
+              {latestThreeArticles[0] && (
+                <button
+                  type="button"
+                  onClick={() => openArticle(latestThreeArticles[0])}
+                  className="text-left border-l-[3px] border-[#1D2433] pl-6 py-1 cursor-pointer group"
+                >
+                  <span className="text-[15px] font-medium text-[#5A6170]">Lo último que leí</span>
+                  <h3 className="font-display text-2xl sm:text-[25px] font-semibold leading-tight tracking-[-0.015em] text-[#1D2433] mt-2.5 mb-3.5 group-hover:underline">
+                    {latestThreeArticles[0].title}
+                  </h3>
+                  <p className="font-serif text-lg sm:text-[19px] leading-relaxed text-[#1D2433]">
+                    <mark className="hl">{latestThreeArticles[0].pullQuote}</mark>
+                  </p>
+                  <span className="block text-[15px] text-[#5A6170] mt-3.5">
+                    {latestThreeArticles[0].readingTime} min de lectura
+                  </span>
+                </button>
+              )}
             </section>
 
-            {/* 2. LO ÚLTIMO (Top 3 most recent articles) */}
-            <section className="space-y-6">
-              <div className="flex items-baseline justify-between border-b border-[#0a0a0c]/10 pb-3">
-                <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#0a0a0c]">
-                  Lo último
+            {/* 2. ESTA SEMANA */}
+            <section>
+              <div className="flex items-baseline justify-between border-b-[1.5px] border-[#1D2433] pb-3.5">
+                <h2 className="font-display text-[26px] sm:text-3xl font-bold tracking-[-0.02em] text-[#1D2433]">
+                  Esta semana
                 </h2>
-                <span className="text-xs font-mono text-[#0a0a0c]/50 uppercase tracking-wider">
-                  Publicaciones recientes
-                </span>
+                <button
+                  type="button"
+                  onClick={scrollToCatalogTop}
+                  className="text-[17px] font-semibold text-[#0F5C4D] underline underline-offset-4 cursor-pointer"
+                >
+                  Ver los {SORTED_ARTICLES.length}
+                </button>
               </div>
+              <div>{latestThreeArticles.map((article) => renderArticleCard(article))}</div>
+            </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {latestThreeArticles.map((article) => renderArticleCard(article))}
-              </div>
+            {/* HERRAMIENTAS */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
+              {[
+                {
+                  tab: "pizarra" as TabType,
+                  title: "Pizarra de consulta",
+                  text: "Dibuja dónde duele, anota DIMs y SIMs y envíaselo a tu paciente.",
+                  cta: "Abrir pizarra",
+                  img: (
+                    <svg viewBox="0 0 60 120" className="w-[58%] h-[80%]" aria-hidden="true">
+                      <g fill="none" stroke="#1D2433" strokeWidth="1.6">
+                        <circle cx="30" cy="12" r="8" />
+                        <path d="M22 24h16l6 40-5 1-4-26v76h-6V82h-2v33h-6V39l-4 26-5-1z" />
+                      </g>
+                      <path d="M37 30q5 4 4 12" stroke="#c0392b" strokeWidth="3" fill="none" strokeLinecap="round" />
+                      <path d="M27 95q2 6 0 11" stroke="#2563eb" strokeWidth="3" fill="none" strokeLinecap="round" />
+                    </svg>
+                  ),
+                },
+                {
+                  tab: "infografias" as TabType,
+                  title: "Infografías para pacientes",
+                  text: `${INFOGRAFIAS.length} láminas listas para mandar por WhatsApp.`,
+                  cta: "Ver infografías",
+                  img: (
+                    <svg viewBox="0 0 80 100" className="w-[70%] h-[80%]" aria-hidden="true">
+                      <rect x="6" y="6" width="68" height="88" rx="4" fill="#F6F7F8" />
+                      <rect x="14" y="16" width="44" height="7" rx="2" fill="#1D2433" />
+                      <rect x="14" y="30" width="52" height="4" fill="#5A6170" opacity=".5" />
+                      <rect x="14" y="38" width="40" height="4" fill="#5A6170" opacity=".5" />
+                      <rect x="14" y="52" width="52" height="28" rx="3" fill="#F5E663" />
+                    </svg>
+                  ),
+                },
+              ].map((t) => (
+                <button
+                  key={t.tab}
+                  type="button"
+                  onClick={() => navigateToTab(t.tab)}
+                  className="text-left bg-[#F6F7F8] rounded-[18px] p-5 sm:p-7 flex gap-5 sm:gap-6 items-center cursor-pointer group"
+                >
+                  <div className="shrink-0 w-24 h-28 sm:w-[150px] sm:h-[170px] bg-white rounded-xl border border-[#E3E5E8] flex items-center justify-center">
+                    {t.img}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[22px] sm:text-2xl font-bold tracking-[-0.015em] text-[#1D2433] mb-2">{t.title}</h3>
+                    <p className="font-serif text-[17px] sm:text-lg leading-relaxed text-[#5A6170] mb-3">{t.text}</p>
+                    <span className="text-[17px] font-semibold text-[#0F5C4D] underline underline-offset-4">{t.cta}</span>
+                  </div>
+                </button>
+              ))}
             </section>
 
             {/* 3. FULL LISTING WITH COMPACT TOPIC FILTER */}
@@ -1189,12 +1233,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
               id="listado-articulos"
               className="space-y-6 scroll-mt-20"
             >
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#0a0a0c]/10 pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#1D2433]/10 pb-4">
                 <div>
-                  <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#0a0a0c]">
+                  <h2 className="font-display text-[26px] sm:text-3xl font-bold tracking-[-0.02em] text-[#1D2433]">
                     Todos los artículos
                   </h2>
-                  <p className="text-xs text-[#0a0a0c]/55 mt-1 font-mono tabular-nums">
+                  <p className="text-sm text-[#1D2433]/55 mt-1 tabular-nums">
                     {filteredCatalogArticles.length}{" "}
                     {filteredCatalogArticles.length === 1 ? "publicación" : "publicaciones"}
                     {audienceFilter === "paciente" && " · Para pacientes"}
@@ -1209,11 +1253,31 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       setAudienceFilter("todos");
                       setSelectedTopic(null);
                     }}
-                    className="self-start sm:self-auto text-xs font-bold uppercase tracking-wider text-[#8b3a2a] hover:underline cursor-pointer"
+                    className="self-start sm:self-auto text-sm font-bold text-[#0F5C4D] hover:underline cursor-pointer"
                   >
                     Limpiar filtros ×
                   </button>
                 )}
+              </div>
+
+              <div className="flex flex-wrap gap-2.5">
+                {([
+                  ["paciente", "Para pacientes"],
+                  ["clinico", "Para clínicos"],
+                ] as const).map(([v, label]) => (
+                  <button
+                    key={v}
+                    type="button"
+                    onClick={() => handleAudienceChoice(v)}
+                    className={`px-4 py-2 rounded-[10px] text-[15px] font-semibold border-[1.5px] transition-colors cursor-pointer ${
+                      audienceFilter === v
+                        ? "bg-[#1D2433] text-white border-[#1D2433]"
+                        : "bg-white text-[#1D2433] border-[#1D2433]/25 hover:border-[#1D2433]"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
 
               {/* Compact Horizontal Scrollable Topic Chips */}
@@ -1221,10 +1285,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 <button
                   type="button"
                   onClick={() => handleTopicSelect(null)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition-colors shrink-0 cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-[10px] text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 cursor-pointer ${
                     selectedTopic === null
-                      ? "bg-[#0a0a0c] text-white border-[#0a0a0c]"
-                      : "bg-white text-[#0a0a0c]/70 border-[#0a0a0c]/15 hover:border-[#8b3a2a] hover:text-[#8b3a2a]"
+                      ? "bg-[#1D2433] text-white border-[#1D2433]"
+                      : "bg-white text-[#1D2433]/70 border-[#1D2433]/15 hover:border-[#0F5C4D] hover:text-[#0F5C4D]"
                   }`}
                 >
                   Todos
@@ -1238,10 +1302,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                         selectedTopic === topic.value ? null : topic.value
                       )
                     }
-                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition-colors shrink-0 cursor-pointer ${
+                    className={`px-3.5 py-1.5 rounded-[10px] text-sm font-semibold whitespace-nowrap border transition-colors shrink-0 cursor-pointer ${
                       selectedTopic === topic.value
-                        ? "bg-[#8b3a2a] text-white border-[#8b3a2a]"
-                        : "bg-white text-[#0a0a0c]/70 border-[#0a0a0c]/15 hover:border-[#8b3a2a] hover:text-[#8b3a2a]"
+                        ? "bg-[#0F5C4D] text-white border-[#0F5C4D]"
+                        : "bg-white text-[#1D2433]/70 border-[#1D2433]/15 hover:border-[#0F5C4D] hover:text-[#0F5C4D]"
                     }`}
                   >
                     {topic.label}
@@ -1251,8 +1315,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
 
               {/* Articles Grid */}
               {filteredCatalogArticles.length === 0 ? (
-                <div className="bg-white border border-[#0a0a0c]/10 rounded-xl p-10 text-center space-y-3">
-                  <p className="font-serif text-lg text-[#0a0a0c]/75">
+                <div className="bg-white border border-[#1D2433]/10 rounded-xl p-10 text-center space-y-3">
+                  <p className="font-serif text-lg text-[#1D2433]/75">
                     No hay artículos que coincidan con esta combinación de filtros.
                   </p>
                   <button
@@ -1261,13 +1325,13 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       setAudienceFilter("todos");
                       setSelectedTopic(null);
                     }}
-                    className="text-xs font-bold uppercase tracking-wider text-[#8b3a2a] hover:underline cursor-pointer"
+                    className="text-sm font-bold text-[#0F5C4D] hover:underline cursor-pointer"
                   >
                     Ver todos los artículos
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
                   {filteredCatalogArticles.map((article) =>
                     renderArticleCard(article)
                   )}
@@ -1288,11 +1352,11 @@ Lee el artículo completo en MyoKine (@myokinecl)
         {/* VIEW 2: INFOGRAFÍAS */}
         {activeTab === "infografias" && !selectedArticle && (
           <div className="space-y-10" id="infografias-workspace">
-            <div className="border-b border-[#0a0a0c]/10 pb-6 space-y-2">
-              <h1 className="font-serif text-3xl sm:text-4xl font-medium text-[#0a0a0c] tracking-tight">
+            <div className="border-b border-[#1D2433]/10 pb-6 space-y-2">
+              <h1 className="font-display text-3xl sm:text-4xl font-medium text-[#1D2433] tracking-tight">
                 Infografías clínicas
               </h1>
-              <p className="text-sm sm:text-base text-[#0a0a0c]/65 max-w-2xl">
+              <p className="text-sm sm:text-base text-[#1D2433]/65 max-w-2xl">
                 Material visual descargable para explicar conceptos de dolor, carga y movimiento sin catastrofismo.
               </p>
             </div>
@@ -1304,10 +1368,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   key={topic}
                   type="button"
                   onClick={() => setSelectedInfografiaTopic(topic)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border transition-colors cursor-pointer ${
+                  className={`px-3.5 py-1.5 rounded-[10px] text-sm font-semibold whitespace-nowrap border transition-colors cursor-pointer ${
                     selectedInfografiaTopic === topic
-                      ? "bg-[#0a0a0c] text-white border-[#0a0a0c]"
-                      : "bg-white text-[#0a0a0c]/70 border-[#0a0a0c]/15 hover:border-[#8b3a2a] hover:text-[#8b3a2a]"
+                      ? "bg-[#1D2433] text-white border-[#1D2433]"
+                      : "bg-white text-[#1D2433]/70 border-[#1D2433]/15 hover:border-[#0F5C4D] hover:text-[#0F5C4D]"
                   }`}
                 >
                   {topic}
@@ -1322,12 +1386,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 return (
                   <div
                     key={item.id}
-                    className="bg-white border border-[#0a0a0c]/10 rounded-2xl overflow-hidden flex flex-col justify-between"
+                    className="bg-white border border-[#1D2433]/10 rounded-2xl overflow-hidden flex flex-col justify-between"
                   >
                     <div>
                       <div
                         onClick={() => openInfografiaModal(item)}
-                        className="aspect-[3/4] bg-[#f7f4ef] overflow-hidden cursor-pointer border-b border-[#0a0a0c]/8"
+                        className="aspect-[3/4] bg-[#F6F7F8] overflow-hidden cursor-pointer border-b border-[#1D2433]/8"
                       >
                         <img
                           src={item.image}
@@ -1337,16 +1401,16 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       </div>
 
                       <div className="p-5 space-y-2">
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8b3a2a] block">
+                        <span className="text-sm font-semibold text-[#0F5C4D] block">
                           {item.topic}
                         </span>
                         <h2
                           onClick={() => openInfografiaModal(item)}
-                          className="font-serif text-lg font-semibold text-[#0a0a0c] leading-snug cursor-pointer hover:text-[#8b3a2a] transition-colors"
+                          className="font-display text-lg font-semibold text-[#1D2433] leading-snug cursor-pointer hover:text-[#0F5C4D] transition-colors"
                         >
                           {item.title}
                         </h2>
-                        <p className="text-xs text-[#0a0a0c]/65 leading-relaxed">
+                        <p className="text-sm text-[#1D2433]/65 leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -1356,7 +1420,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       <button
                         type="button"
                         onClick={(e) => downloadInfografia(item, e)}
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-xs font-semibold transition-colors cursor-pointer"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors cursor-pointer"
                       >
                         <Download className="w-3.5 h-3.5" />
                         <span>Descargar</span>
@@ -1371,7 +1435,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                             e
                           )
                         }
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-[#0a0a0c]/15 bg-white hover:bg-[#0a0a0c]/5 text-[#0a0a0c]/80 text-xs font-semibold transition-colors cursor-pointer"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-[#1D2433]/15 bg-white hover:bg-[#1D2433]/5 text-[#1D2433]/80 text-sm font-semibold transition-colors cursor-pointer"
                       >
                         {isCopied ? (
                           <>
@@ -1402,26 +1466,26 @@ Lee el artículo completo en MyoKine (@myokinecl)
             id="duolingo-academia"
           >
             {/* Status Bar */}
-            <div className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-4 sm:p-6 flex flex-wrap items-center justify-between gap-4 select-none">
+            <div className="bg-white border border-[#1D2433]/10 rounded-2xl p-4 sm:p-6 flex flex-wrap items-center justify-between gap-4 select-none">
               <div>
-                <h1 className="font-serif text-xl font-bold text-[#0a0a0c]">
+                <h1 className="font-display text-xl font-bold text-[#1D2433]">
                   Academia MyoKine
                 </h1>
-                <p className="text-[11px] text-[#0a0a0c]/55 font-semibold uppercase tracking-wider">
+                <p className="text-sm text-[#1D2433]/55 font-semibold">
                   Quiz clínico · 6 preguntas
                 </p>
               </div>
 
               <div className="flex-1 min-w-[140px] sm:max-w-xs px-2">
-                <div className="flex justify-between items-center text-[11px] text-[#0a0a0c]/55 font-bold mb-1 uppercase tracking-wider">
+                <div className="flex justify-between items-center text-sm text-[#1D2433]/55 font-bold mb-1">
                   <span>Progreso</span>
                   <span className="font-mono tabular-nums">
                     {currentTriviaIndex + 1} / {triviaQuestions.length}
                   </span>
                 </div>
-                <div className="w-full h-2.5 bg-[#0a0a0c]/8 rounded-full overflow-hidden">
+                <div className="w-full h-2.5 bg-[#1D2433]/8 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#8b3a2a] rounded-full transition-all duration-300"
+                    className="h-full bg-[#0F5C4D] rounded-full transition-all duration-300"
                     style={{
                       width: `${
                         ((currentTriviaIndex +
@@ -1452,8 +1516,8 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       key={heartNum}
                       className={`w-4 h-4 transition-transform ${
                         triviaHearts >= heartNum
-                          ? "text-[#8b3a2a] fill-[#8b3a2a]"
-                          : "text-[#0a0a0c]/15"
+                          ? "text-[#0F5C4D] fill-[#0F5C4D]"
+                          : "text-[#1D2433]/15"
                       }`}
                     />
                   ))}
@@ -1462,7 +1526,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 <button
                   type="button"
                   onClick={() => setTriviaAudioEnabled(!triviaAudioEnabled)}
-                  className="p-2 rounded-lg border border-[#0a0a0c]/10 text-[#0a0a0c]/60 hover:text-[#0a0a0c] transition-colors cursor-pointer"
+                  className="p-2 rounded-lg border border-[#1D2433]/10 text-[#1D2433]/60 hover:text-[#1D2433] transition-colors cursor-pointer"
                   title={triviaAudioEnabled ? "Silenciar sonido" : "Activar sonido"}
                 >
                   {triviaAudioEnabled ? (
@@ -1474,7 +1538,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </div>
             </div>
 
-            <div className="bg-white/70 border border-[#0a0a0c]/10 rounded-xl px-5 py-3.5 text-sm font-serif italic text-[#0a0a0c]/75">
+            <div className="bg-white/70 border border-[#1D2433]/10 rounded-xl px-5 py-3.5 text-sm font-display italic text-[#1D2433]/75">
               {triviaMascotMessage}
             </div>
 
@@ -1487,16 +1551,16 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   exit={{ opacity: 0 }}
                   className="bg-white border border-red-300 rounded-2xl p-6 sm:p-10 text-center space-y-5"
                 >
-                  <h2 className="font-serif text-2xl font-bold text-[#0a0a0c]">
+                  <h2 className="font-display text-2xl font-bold text-[#1D2433]">
                     Sin corazones disponibles
                   </h2>
-                  <p className="text-sm text-[#0a0a0c]/70 max-w-md mx-auto">
+                  <p className="text-sm text-[#1D2433]/70 max-w-md mx-auto">
                     Obtuviste {triviaScore} de {triviaQuestions.length} respuestas correctas.
                   </p>
                   <button
                     type="button"
                     onClick={handleResetTrivia}
-                    className="bg-[#0a0a0c] text-white font-semibold text-xs uppercase tracking-widest px-7 py-3 rounded-full hover:bg-[#8b3a2a] transition-colors inline-flex items-center gap-2 cursor-pointer"
+                    className="bg-[#1D2433] text-white font-semibold text-sm px-7 py-3 rounded-[10px] hover:bg-[#0F5C4D] transition-colors inline-flex items-center gap-2 cursor-pointer"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>Reintentar</span>
@@ -1510,33 +1574,33 @@ Lee el artículo completo en MyoKine (@myokinecl)
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-10 text-center space-y-6"
+                  className="bg-white border border-[#1D2433]/10 rounded-2xl p-6 sm:p-10 text-center space-y-6"
                 >
-                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#8b3a2a]">
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F5C4D]">
                     Desafío completado
                   </h2>
                   <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
-                    <div className="bg-[#f7f4ef] rounded-xl p-4">
-                      <span className="text-[10px] uppercase font-bold text-[#0a0a0c]/50 block">
+                    <div className="bg-[#F6F7F8] rounded-xl p-4">
+                      <span className="text-[13px] font-bold text-[#1D2433]/50 block">
                         Acierto
                       </span>
-                      <span className="font-serif text-xl font-bold text-[#0a0a0c] tabular-nums">
+                      <span className="font-display text-xl font-bold text-[#1D2433] tabular-nums">
                         {Math.round((triviaScore / triviaQuestions.length) * 100)}%
                       </span>
                     </div>
-                    <div className="bg-[#f7f4ef] rounded-xl p-4">
-                      <span className="text-[10px] uppercase font-bold text-[#0a0a0c]/50 block">
+                    <div className="bg-[#F6F7F8] rounded-xl p-4">
+                      <span className="text-[13px] font-bold text-[#1D2433]/50 block">
                         Puntos
                       </span>
-                      <span className="font-serif text-xl font-bold text-[#0a0a0c] tabular-nums">
+                      <span className="font-display text-xl font-bold text-[#1D2433] tabular-nums">
                         {triviaScore} / {triviaQuestions.length}
                       </span>
                     </div>
-                    <div className="bg-[#f7f4ef] rounded-xl p-4">
-                      <span className="text-[10px] uppercase font-bold text-[#0a0a0c]/50 block">
+                    <div className="bg-[#F6F7F8] rounded-xl p-4">
+                      <span className="text-[13px] font-bold text-[#1D2433]/50 block">
                         Racha
                       </span>
-                      <span className="font-serif text-xl font-bold text-[#8b3a2a] tabular-nums">
+                      <span className="font-display text-xl font-bold text-[#0F5C4D] tabular-nums">
                         {triviaStreak}
                       </span>
                     </div>
@@ -1545,7 +1609,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     <button
                       type="button"
                       onClick={handleResetTrivia}
-                      className="bg-[#8b3a2a] text-white font-semibold text-xs uppercase tracking-widest px-7 py-3 rounded-full hover:bg-[#722f22] transition-colors inline-flex items-center gap-2 cursor-pointer"
+                      className="bg-[#0F5C4D] text-white font-semibold text-sm px-7 py-3 rounded-[10px] hover:bg-[#0B4A3E] transition-colors inline-flex items-center gap-2 cursor-pointer"
                     >
                       <RotateCcw className="w-4 h-4" />
                       <span>Volver a jugar</span>
@@ -1553,7 +1617,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     <button
                       type="button"
                       onClick={() => navigateToTab("journal")}
-                      className="bg-white border border-[#0a0a0c]/15 text-[#0a0a0c] font-semibold text-xs uppercase tracking-widest px-7 py-3 rounded-full hover:border-[#8b3a2a] transition-colors cursor-pointer"
+                      className="bg-white border border-[#1D2433]/15 text-[#1D2433] font-semibold text-sm px-7 py-3 rounded-[10px] hover:border-[#0F5C4D] transition-colors cursor-pointer"
                     >
                       Volver al Journal
                     </button>
@@ -1576,17 +1640,17 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       exit={{ opacity: 0, x: -12 }}
                       className="space-y-6"
                     >
-                      <div className="bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-8 space-y-6">
-                        <div className="flex items-center justify-between gap-2 text-xs">
-                          <span className="font-bold uppercase tracking-wider text-[#8b3a2a]">
+                      <div className="bg-white border border-[#1D2433]/10 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div className="flex items-center justify-between gap-2 text-sm">
+                          <span className="font-bold text-[#0F5C4D]">
                             {q.pilarLabel}
                           </span>
-                          <span className="font-mono text-[#0a0a0c]/45 tabular-nums">
+                          <span className="font-mono text-[#1D2433]/45 tabular-nums">
                             {currentTriviaIndex + 1} de {triviaQuestions.length}
                           </span>
                         </div>
 
-                        <h2 className="font-serif text-xl sm:text-2xl text-[#0a0a0c] font-semibold leading-snug">
+                        <h2 className="font-display text-xl sm:text-2xl text-[#1D2433] font-semibold leading-snug">
                           {q.question}
                         </h2>
 
@@ -1599,15 +1663,15 @@ Lee el artículo completo en MyoKine (@myokinecl)
                             const isCorrectOpt = opt.key === q.correctKey;
 
                             let optionStyle =
-                              "border-[#0a0a0c]/12 bg-white hover:border-[#8b3a2a]/40";
+                              "border-[#1D2433]/12 bg-white hover:border-[#0F5C4D]/40";
                             let badgeStyle =
-                              "border-[#0a0a0c]/15 text-[#0a0a0c]/70 bg-[#f7f4ef]";
+                              "border-[#1D2433]/15 text-[#1D2433]/70 bg-[#F6F7F8]";
 
                             if (isSelected) {
                               optionStyle =
-                                "border-2 border-[#8b3a2a] bg-[#8b3a2a]/[0.03]";
+                                "border-2 border-[#0F5C4D] bg-[#0F5C4D]/[0.03]";
                               badgeStyle =
-                                "bg-[#8b3a2a] text-white border-[#8b3a2a]";
+                                "bg-[#0F5C4D] text-white border-[#0F5C4D]";
                             }
 
                             if (isAnswered) {
@@ -1623,7 +1687,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                                   "bg-red-600 text-white border-red-600";
                               } else {
                                 optionStyle =
-                                  "border-[#0a0a0c]/8 bg-white opacity-60";
+                                  "border-[#1D2433]/8 bg-white opacity-60";
                               }
                             }
 
@@ -1636,11 +1700,11 @@ Lee el artículo completo en MyoKine (@myokinecl)
                                 className={`w-full text-left p-4 rounded-xl border flex items-start gap-3.5 transition-colors cursor-pointer ${optionStyle}`}
                               >
                                 <span
-                                  className={`w-6 h-6 rounded-md border text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 ${badgeStyle}`}
+                                  className={`w-6 h-6 rounded-md border text-sm font-bold flex items-center justify-center shrink-0 mt-0.5 ${badgeStyle}`}
                                 >
                                   {opt.key}
                                 </span>
-                                <p className="text-sm text-[#0a0a0c]/85 leading-relaxed">
+                                <p className="text-sm text-[#1D2433]/85 leading-relaxed">
                                   {opt.text}
                                 </p>
                               </button>
@@ -1649,19 +1713,18 @@ Lee el artículo completo en MyoKine (@myokinecl)
                         </div>
 
                         {triviaStatus === "playing" && (
-                          <div className="flex justify-end pt-2 border-t border-[#0a0a0c]/8">
+                          <div className="flex justify-end pt-2 border-t border-[#1D2433]/8">
                             <button
                               type="button"
                               disabled={!selectedTriviaOption}
                               onClick={handleVerifyTriviaAnswer}
-                              className={`px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 transition-colors ${
+                              className={`px-7 py-3 rounded-[10px] text-sm font-bold inline-flex items-center gap-2 transition-colors ${
                                 selectedTriviaOption
-                                  ? "bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white cursor-pointer"
-                                  : "bg-[#0a0a0c]/10 text-[#0a0a0c]/35 cursor-not-allowed"
+                                  ? "bg-[#1D2433] hover:bg-[#0F5C4D] text-white cursor-pointer"
+                                  : "bg-[#1D2433]/10 text-[#1D2433]/35 cursor-not-allowed"
                               }`}
                             >
                               <span>Comprobar respuesta</span>
-                              <ArrowRight className="w-4 h-4" />
                             </button>
                           </div>
                         )}
@@ -1685,18 +1748,18 @@ Lee el artículo completo en MyoKine (@myokinecl)
                               <X className="w-5 h-5 text-red-600 shrink-0" />
                             )}
                             <div>
-                              <h3 className="font-serif text-base font-bold text-[#0a0a0c]">
+                              <h3 className="font-display text-base font-bold text-[#1D2433]">
                                 {triviaStatus === "correct"
                                   ? "Correcto."
                                   : `Incorrecto. La respuesta correcta es ${q.correctKey}.`}
                               </h3>
-                              <p className="text-[11px] font-mono text-[#0a0a0c]/60">
+                              <p className="text-sm text-[#1D2433]/60">
                                 {q.evidenceLevel}
                               </p>
                             </div>
                           </div>
 
-                          <p className="text-sm text-[#0a0a0c]/85 leading-relaxed">
+                          <p className="text-sm text-[#1D2433]/85 leading-relaxed">
                             {q.reasoning}
                           </p>
 
@@ -1710,7 +1773,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                                 <button
                                   type="button"
                                   onClick={() => openArticle(foundArt)}
-                                  className="text-xs font-bold text-[#8b3a2a] hover:underline flex items-center gap-1.5 cursor-pointer"
+                                  className="text-sm font-bold text-[#0F5C4D] hover:underline flex items-center gap-1.5 cursor-pointer"
                                 >
                                   <BookOpen className="w-4 h-4" />
                                   <span>Leer artículo: {q.linkedArticleTitle}</span>
@@ -1721,7 +1784,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                             <button
                               type="button"
                               onClick={handleNextTriviaQuestion}
-                              className="px-7 py-2.5 rounded-full bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+                              className="px-7 py-2.5 rounded-[10px] bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-bold transition-colors cursor-pointer"
                             >
                               {currentTriviaIndex + 1 >= triviaQuestions.length
                                 ? "Finalizar"
@@ -1740,32 +1803,29 @@ Lee el artículo completo en MyoKine (@myokinecl)
         {/* VIEW 4: SOBRE MÍ */}
         {activeTab === "sobre-mi" && !selectedArticle && (
           <div
-            className="max-w-3xl mx-auto bg-white border border-[#0a0a0c]/10 rounded-2xl p-6 sm:p-12 lg:p-14 space-y-10"
+            className="max-w-3xl mx-auto bg-white border border-[#1D2433]/10 rounded-2xl p-6 sm:p-12 lg:p-14 space-y-10"
             id="about-workspace"
           >
-            <div className="space-y-2 border-b border-[#0a0a0c]/10 pb-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8b3a2a] block">
-                Sobre mí
-              </span>
-              <h1 className="font-serif text-3xl sm:text-4xl text-[#0a0a0c] font-medium tracking-tight">
+            <div className="space-y-2 border-b border-[#1D2433]/10 pb-6">
+              <h1 className="font-display text-3xl sm:text-4xl text-[#1D2433] font-medium tracking-tight">
                 Lukas · Kinesiólogo y creador de MyoKine
               </h1>
-              <p className="text-sm sm:text-base text-[#0a0a0c]/65">
+              <p className="text-sm sm:text-base text-[#1D2433]/65">
                 Magíster (c) en Fisiología Clínica del Ejercicio
               </p>
             </div>
 
-            <div className="space-y-6 text-[#0a0a0c]/85 leading-[1.8] text-base font-sans">
+            <div className="space-y-6 text-[#1D2433]/90 leading-[1.75] text-[18px] font-serif">
               <p>
-                MyoKine nace con una idea directa: <strong>la evidencia disponible hoy es el mejor mapa que tenemos, pero nunca el territorio definitivo.</strong> Un buen ensayo clínico o una revisión rigurosa puede obligarnos a actualizar lo que ayer dábamos por sentado.
+                Soy kinesiólogo y trabajo con personas que vuelven al deporte o a su vida después de una lesión o con dolor que no se va. Leo papers porque me ayudan a atender mejor, y aquí comparto lo que voy leyendo: qué se estudió, qué se encontró y qué cambia (o no) en la consulta.
               </p>
 
-              <blockquote className="border-l-2 border-[#8b3a2a] pl-4 py-1.5 italic font-serif text-[#8b3a2a] bg-[#f7f4ef] text-lg">
-                "No me interesa entregar certezas dogmáticas; prefiero traducir la ciencia del movimiento con honestidad para quienes sienten dolor y para colegas que buscan razonar mejor."
+              <blockquote className="border-l-[3px] border-[#1D2433] pl-5 py-1 italic font-serif text-[#1D2433] text-[19px]">
+                No tengo todas las respuestas. Prefiero mostrar lo que dice la evidencia, con sus límites, y que cada uno saque sus conclusiones.
               </blockquote>
 
-              <div className="pt-6 border-t border-[#0a0a0c]/10 space-y-6">
-                <h2 className="font-serif text-2xl sm:text-3xl text-[#0a0a0c] font-semibold tracking-tight">
+              <div className="pt-6 border-t border-[#1D2433]/10 space-y-6">
+                <h2 className="font-display text-2xl sm:text-3xl text-[#1D2433] font-semibold tracking-tight">
                   ¿Por qué MyoKine?
                 </h2>
 
@@ -1774,19 +1834,19 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 </p>
 
                 <div className="my-6 space-y-3">
-                  <div className="border border-[#0a0a0c]/10 rounded-xl overflow-hidden bg-[#f7f4ef]/50 p-3 sm:p-4">
+                  <div className="border border-[#1D2433]/10 rounded-xl overflow-hidden bg-[#F6F7F8]/50 p-3 sm:p-4">
                     <img
                       src={exercisePolypillImg}
                       alt="Exercise is the real polypill"
                       className="w-full h-auto rounded-lg max-h-[460px] object-contain mx-auto"
                     />
                   </div>
-                  <p className="text-xs text-[#0a0a0c]/60 font-serif italic text-center">
+                  <p className="text-sm text-[#1D2433]/60 font-serif italic text-center">
                     <strong>Figura 1.</strong> “Exercise is the real polypill” (Fiuza-Luces, C. et al., 2013).
                   </p>
                 </div>
 
-                <p className="border-l-2 border-[#8b3a2a] pl-4 py-1 font-serif italic text-[#0a0a0c]/80">
+                <p className="border-l-2 border-[#0F5C4D] pl-4 py-1 font-serif italic text-[#1D2433]/80">
                   “Esta fue la imagen que conocí por primera vez en segundo año de universidad, me quedó dando vueltas por un tiempo y luego transformó mi visión del movimiento para siempre.”
                 </p>
 
@@ -1803,7 +1863,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 </p>
               </div>
 
-              <p className="border-t border-[#0a0a0c]/10 pt-6 font-serif italic text-sm text-[#8b3a2a] text-right">
+              <p className="border-t border-[#1D2433]/10 pt-6 font-serif italic text-sm text-[#0F5C4D] text-right">
                 — Lukas · MyoKine
               </p>
 
@@ -1817,34 +1877,34 @@ Lee el artículo completo en MyoKine (@myokinecl)
         {/* VIEW 5: BIBLIOTECA */}
         {activeTab === "biblioteca" && !selectedArticle && (
           <div className="space-y-8" id="library-workspace">
-            <div className="border-b border-[#0a0a0c]/10 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="border-b border-[#1D2433]/10 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
-                <h1 className="font-serif text-3xl text-[#0a0a0c] font-medium tracking-tight">
+                <h1 className="font-display text-3xl text-[#1D2433] font-medium tracking-tight">
                   Biblioteca guardada
                 </h1>
-                <p className="text-sm text-[#0a0a0c]/65 mt-1">
+                <p className="text-sm text-[#1D2433]/65 mt-1">
                   Artículos guardados en este dispositivo para consultarlos cuando quieras.
                 </p>
               </div>
-              <span className="text-xs font-mono text-[#0a0a0c]/55 tabular-nums">
+              <span className="text-sm text-[#1D2433]/55 tabular-nums">
                 {bookmarkedArticles.length}{" "}
                 {bookmarkedArticles.length === 1 ? "artículo" : "artículos"}
               </span>
             </div>
 
             {bookmarkedArticles.length === 0 ? (
-              <div className="py-16 text-center bg-white border border-[#0a0a0c]/10 rounded-2xl max-w-lg mx-auto p-8 space-y-4">
-                <Bookmark className="w-10 h-10 text-[#8b3a2a]/40 mx-auto" />
-                <h2 className="font-serif text-lg text-[#0a0a0c]/85">
+              <div className="py-16 text-center bg-white border border-[#1D2433]/10 rounded-2xl max-w-lg mx-auto p-8 space-y-4">
+                <Bookmark className="w-10 h-10 text-[#0F5C4D]/40 mx-auto" />
+                <h2 className="font-display text-lg text-[#1D2433]/85">
                   Aún no tienes artículos guardados
                 </h2>
-                <p className="text-sm text-[#0a0a0c]/60">
+                <p className="text-sm text-[#1D2433]/60">
                   Usa el ícono de marcador en cualquier publicación del Journal para guardarla aquí.
                 </p>
                 <button
                   type="button"
                   onClick={() => navigateToTab("journal")}
-                  className="bg-[#0a0a0c] text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-[#8b3a2a] transition-colors uppercase tracking-widest cursor-pointer"
+                  className="bg-[#1D2433] text-white px-6 py-2.5 rounded-[10px] text-sm font-bold hover:bg-[#0F5C4D] transition-colors cursor-pointer"
                 >
                   Ir al Journal
                 </button>
@@ -1872,22 +1932,22 @@ Lee el artículo completo en MyoKine (@myokinecl)
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.96, opacity: 0 }}
-              className="bg-white border border-[#0a0a0c]/15 rounded-2xl max-w-xl w-full p-5 sm:p-6 space-y-4 my-8 shadow-xl"
+              className="bg-white border border-[#1D2433]/15 rounded-2xl max-w-xl w-full p-5 sm:p-6 space-y-4 my-8 shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8b3a2a] block">
+                  <span className="text-sm font-semibold text-[#0F5C4D] block">
                     {selectedInfografia.topic}
                   </span>
-                  <h2 className="font-serif text-xl font-semibold text-[#0a0a0c] mt-0.5">
+                  <h2 className="font-display text-xl font-semibold text-[#1D2433] mt-0.5">
                     {selectedInfografia.title}
                   </h2>
                 </div>
                 <button
                   type="button"
                   onClick={closeInfografiaModal}
-                  className="p-1.5 rounded-lg hover:bg-[#0a0a0c]/5 text-[#0a0a0c]/60 hover:text-[#0a0a0c] cursor-pointer"
+                  className="p-1.5 rounded-lg hover:bg-[#1D2433]/5 text-[#1D2433]/60 hover:text-[#1D2433] cursor-pointer"
                   aria-label="Cerrar vista previa"
                 >
                   <X className="w-5 h-5" />
@@ -1895,7 +1955,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </div>
 
 
-              <p className="text-xs sm:text-sm text-[#0a0a0c]/70 leading-relaxed">
+              <p className="text-sm sm:text-sm text-[#1D2433]/70 leading-relaxed">
                 {selectedInfografia.description}
               </p>
 
@@ -1903,7 +1963,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 <button
                   type="button"
                   onClick={(e) => downloadInfografia(selectedInfografia, e)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-xs font-semibold transition-colors cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
                   <span>Descargar</span>
@@ -1917,7 +1977,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       e
                     )
                   }
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#0a0a0c]/15 bg-white hover:bg-[#0a0a0c]/5 text-[#0a0a0c] text-xs font-semibold transition-colors cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#1D2433]/15 bg-white hover:bg-[#1D2433]/5 text-[#1D2433] text-sm font-semibold transition-colors cursor-pointer"
                 >
                   {copiedId === `modal-inf-${selectedInfografia.id}` ? (
                     <>
@@ -1937,7 +1997,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 text={`${selectedInfografia.title} — infografía MyoKine\n${SITE_URL}/infografias/${selectedInfografia.slug}`}
               />
 
-              <div className="rounded-xl overflow-hidden border border-[#0a0a0c]/10 bg-[#f7f4ef]">
+              <div className="rounded-xl overflow-hidden border border-[#1D2433]/10 bg-[#F6F7F8]">
                 <img
                   src={selectedInfografia.image}
                   alt={selectedInfografia.title}
@@ -1952,7 +2012,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 if (relatedArticles.length === 0) return null;
                 return (
                   <div className="pt-2 space-y-2">
-                    <span className="text-[#8b3a2a] uppercase text-[11px] font-bold tracking-[0.18em] block">
+                    <span className="text-[#0F5C4D] text-sm font-bold block">
                       Lee la evidencia detrás
                     </span>
                     {relatedArticles.map((a) => (
@@ -1962,9 +2022,9 @@ Lee el artículo completo en MyoKine (@myokinecl)
                         onClick={() => {
                           window.location.hash = `#/articulo/${a.slug}`;
                         }}
-                        className="w-full text-left p-3 rounded-xl border border-[#0a0a0c]/10 hover:border-[#8b3a2a] bg-[#f7f4ef]/50 text-sm font-serif font-semibold text-[#0a0a0c] transition-colors cursor-pointer"
+                        className="w-full text-left p-3 rounded-xl border border-[#1D2433]/10 hover:border-[#0F5C4D] bg-[#F6F7F8]/50 text-sm font-display font-semibold text-[#1D2433] transition-colors cursor-pointer"
                       >
-                        {a.title} <span className="text-[#8b3a2a]">→</span>
+                        {a.title} <span className="text-[#0F5C4D]"></span>
                       </button>
                     ))}
                   </div>
@@ -1989,7 +2049,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               initial={{ scale: 0.96, opacity: 0, y: 12 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.96, opacity: 0, y: 12 }}
-              className="bg-[#0a0a0c] text-white border border-white/10 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 my-8 shadow-2xl relative"
+              className="bg-[#1D2433] text-white border border-white/10 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 my-8 shadow-2xl relative"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
@@ -1998,10 +2058,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     <Instagram className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-white font-serif">
+                    <h3 className="font-bold text-lg text-white font-display">
                       Compartir en Instagram
                     </h3>
-                    <p className="text-xs text-white/60">
+                    <p className="text-sm text-white/60">
                       Post cuadrado 1:1 para @myokinecl
                     </p>
                   </div>
@@ -2016,7 +2076,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
               </div>
 
               <div className="space-y-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-white/60 font-bold block">
+                <span className="text-sm text-white/60 font-bold block">
                   Estilo (1080×1080)
                 </span>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -2024,12 +2084,12 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     {
                       id: "terracotta",
                       name: "Terracotta",
-                      bg: "bg-[#181616] border-[#8b3a2a] text-[#e07a5f]",
+                      bg: "bg-[#181616] border-[#0F5C4D] text-[#F5E663]",
                     },
                     {
                       id: "light",
                       name: "Claro",
-                      bg: "bg-[#f7f4ef] border-[#8b3a2a] text-[#8b3a2a]",
+                      bg: "bg-[#F6F7F8] border-[#0F5C4D] text-[#0F5C4D]",
                     },
                     {
                       id: "dark",
@@ -2039,7 +2099,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     {
                       id: "gradient",
                       name: "Editorial",
-                      bg: "bg-gradient-to-r from-[#2d1810] to-[#8b3a2a] border-[#f5e6d3] text-[#f5e6d3]",
+                      bg: "bg-gradient-to-r from-[#2d1810] to-[#0F5C4D] border-[#FBF6C9] text-[#FBF6C9]",
                     },
                   ].map((theme) => (
                     <button
@@ -2050,7 +2110,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                           theme.id as "terracotta" | "light" | "dark" | "gradient"
                         )
                       }
-                      className={`p-2.5 rounded-xl border text-xs font-bold transition-all text-center cursor-pointer ${
+                      className={`p-2.5 rounded-xl border text-sm font-bold transition-all text-center cursor-pointer ${
                         theme.bg
                       } ${
                         instagramTheme === theme.id
@@ -2067,26 +2127,26 @@ Lee el artículo completo en MyoKine (@myokinecl)
               <div
                 className={`w-full max-w-[400px] aspect-square mx-auto rounded-2xl p-6 sm:p-8 flex flex-col justify-between border select-none ${
                   instagramTheme === "light"
-                    ? "bg-[#f7f4ef] text-[#0a0a0c] border-[#8b3a2a]/40"
+                    ? "bg-[#F6F7F8] text-[#1D2433] border-[#0F5C4D]/40"
                     : instagramTheme === "dark"
                     ? "bg-[#14161c] text-zinc-100 border-zinc-700"
                     : instagramTheme === "gradient"
-                    ? "bg-gradient-to-br from-[#2d1810] via-[#8b3a2a] to-[#120806] text-white border-[#f5e6d3]/40"
-                    : "bg-[#181616] text-[#f9f6f0] border-[#8b3a2a]"
+                    ? "bg-gradient-to-br from-[#2d1810] via-[#0F5C4D] to-[#120806] text-white border-[#FBF6C9]/40"
+                    : "bg-[#181616] text-[#F6F7F8] border-[#0F5C4D]"
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 border-b border-current/15 pb-3">
-                    <span className="text-[11px] font-bold tracking-widest uppercase">
+                    <span className="text-sm font-bold">
                       MYOKINE
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider opacity-65 truncate max-w-[160px]">
+                    <span className="text-[13px] font-bold opacity-65 truncate max-w-[160px]">
                       {instagramModalArticle.categoryLabel}
                     </span>
                   </div>
 
                   <div className="mt-4 space-y-1">
-                    <span className="text-3xl font-serif leading-none block opacity-40">
+                    <span className="text-3xl font-display leading-none block opacity-40">
                       “
                     </span>
                     <p className="font-serif italic text-sm sm:text-base leading-relaxed">
@@ -2096,10 +2156,10 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 </div>
 
                 <div className="pt-3 border-t border-current/15 space-y-1">
-                  <p className="font-bold text-xs truncate">
+                  <p className="font-bold text-sm truncate">
                     {instagramModalArticle.title}
                   </p>
-                  <div className="flex items-center justify-between text-[10px] opacity-70 font-mono">
+                  <div className="flex items-center justify-between text-[13px] opacity-70">
                     <span>Por Lukas · MyoKine</span>
                     <span>@myokinecl</span>
                   </div>
@@ -2158,7 +2218,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                       });
                     } catch {}
                   }}
-                  className="w-full py-2.5 px-4 bg-white/5 hover:bg-white/10 text-white/80 rounded-xl text-xs font-semibold border border-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 px-4 bg-white/5 hover:bg-white/10 text-white/80 rounded-xl text-sm font-semibold border border-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Share2 className="w-4 h-4" />
                   <span>Compartir desde el dispositivo</span>
@@ -2170,36 +2230,36 @@ Lee el artículo completo en MyoKine (@myokinecl)
       </AnimatePresence>
 
       {/* Editorial Footer */}
-      <footer className="border-t border-[#0a0a0c]/10 bg-white/70 py-8 select-none">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] uppercase font-semibold tracking-[0.16em] text-[#0a0a0c]/55">
+      <footer className="border-t border-[#1D2433]/10 bg-white/70 py-8 select-none">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold text-[#1D2433]/55">
           <span>MyoKine · Dolor, fuerza y deporte basados en evidencia</span>
 
           <div className="flex flex-wrap justify-center gap-6">
             <button
               type="button"
               onClick={() => navigateToTab("journal")}
-              className="hover:text-[#8b3a2a] transition-colors cursor-pointer"
+              className="hover:text-[#0F5C4D] transition-colors cursor-pointer"
             >
               Journal
             </button>
             <button
               type="button"
               onClick={() => navigateToTab("infografias")}
-              className="hover:text-[#8b3a2a] transition-colors cursor-pointer"
+              className="hover:text-[#0F5C4D] transition-colors cursor-pointer"
             >
               Infografías
             </button>
             <button
               type="button"
               onClick={() => navigateToTab("pizarra")}
-              className="hover:text-[#8b3a2a] transition-colors cursor-pointer"
+              className="hover:text-[#0F5C4D] transition-colors cursor-pointer"
             >
               Pizarra
             </button>
             <button
               type="button"
               onClick={() => navigateToTab("sobre-mi")}
-              className="hover:text-[#8b3a2a] transition-colors cursor-pointer"
+              className="hover:text-[#0F5C4D] transition-colors cursor-pointer"
             >
               Sobre mí
             </button>

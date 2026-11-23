@@ -1,38 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "@fontsource/bricolage-grotesque/400.css";
+@import "@fontsource/bricolage-grotesque/500.css";
+@import "@fontsource/bricolage-grotesque/600.css";
+@import "@fontsource/bricolage-grotesque/700.css";
+@import "@fontsource/bricolage-grotesque/800.css";
+@import "@fontsource/literata/400.css";
+@import "@fontsource/literata/500.css";
+@import "@fontsource/literata/400-italic.css";
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Literata", Georgia, serif;
 }
 
-/* Base Editorial Styling */
 body {
-  background-color: #f7f4ef;
-  color: #0a0a0c;
+  background-color: #ffffff;
+  color: #1D2433;
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom minimal scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #f7f4ef;
-}
-::-webkit-scrollbar-thumb {
-  background: #8b3a2a;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #0a0a0c;
+/* Destacador: el único color fuerte de MyoKine */
+mark.hl {
+  background: linear-gradient(transparent 12%, #F5E663 12%, #F5E663 88%, transparent 88%);
+  color: inherit;
+  padding: 0 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-/* Selection colour matching terracotta */
 ::selection {
-  background-color: #8b3a2a;
-  color: #f7f4ef;
+  background-color: #F5E663;
+  color: #1D2433;
+}
+
+:focus-visible {
+  outline: 2px solid #0F5C4D;
+  outline-offset: 2px;
 }

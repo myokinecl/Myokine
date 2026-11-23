@@ -18,7 +18,7 @@ const COLORS = [
   { c: "#c0392b", label: "Dolor" },
   { c: "#e67e22", label: "Molestia" },
   { c: "#2563eb", label: "Hormigueo" },
-  { c: "#0a0a0c", label: "Notas" },
+  { c: "#1D2433", label: "Notas" },
 ];
 
 const DIMS_SUGERIDOS = [
@@ -64,8 +64,8 @@ function siluetaPath(view: View) {
 function siluetaSVG(view: View) {
   const { body, detail } = siluetaPath(view);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
-    <path d="${body}" fill="#fbf9f5" stroke="#0a0a0c" stroke-opacity="0.55" stroke-width="3" stroke-linejoin="round"/>
-    <path d="${detail}" fill="none" stroke="#0a0a0c" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="${body}" fill="#F6F7F8" stroke="#1D2433" stroke-opacity="0.55" stroke-width="3" stroke-linejoin="round"/>
+    <path d="${detail}" fill="none" stroke="#1D2433" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
   </svg>`;
 }
 
@@ -137,24 +137,24 @@ function Protectometer({ dims, sims }: { dims: number; sims: number }) {
       ? "Hoy pesa más la seguridad: el sistema necesita proteger menos"
       : "La amenaza y la seguridad están parejas";
   return (
-    <div className="rounded-2xl border border-[#0a0a0c]/10 bg-white p-4 sm:p-5">
+    <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5">
       <div className="flex items-baseline justify-between mb-3">
-        <h3 className="font-serif text-lg font-semibold text-[#0a0a0c]">Protectometer</h3>
-        <span className="text-[11px] uppercase tracking-widest text-[#0a0a0c]/45">
+        <h3 className="font-display text-lg font-semibold text-[#1D2433]">Protectometer</h3>
+        <span className="text-sm text-[#1D2433]/45">
           {dims} DIMs · {sims} SIMs
         </span>
       </div>
-      <div className="relative h-4 rounded-full overflow-hidden" style={{ background: "linear-gradient(90deg,#2f7d5b 0%,#e9e2d0 50%,#c0392b 100%)" }}>
+      <div className="relative h-4 rounded-full overflow-hidden" style={{ background: "linear-gradient(90deg,#2f7d5b 0%,#E3E5E8 50%,#c0392b 100%)" }}>
         <div
-          className="absolute top-1/2 w-6 h-6 -mt-3 -ml-3 rounded-full bg-[#0a0a0c] border-4 border-white shadow transition-all duration-500"
+          className="absolute top-1/2 w-6 h-6 -mt-3 -ml-3 rounded-full bg-[#1D2433] border-4 border-white shadow transition-all duration-500"
           style={{ left: `${pct}%` }}
         />
       </div>
-      <div className="flex justify-between text-[11px] font-semibold uppercase tracking-wider mt-2">
+      <div className="flex justify-between text-sm font-semibold mt-2">
         <span className="text-[#2f7d5b]">Seguridad</span>
         <span className="text-[#c0392b]">Protección / dolor</span>
       </div>
-      <p className="text-sm text-[#0a0a0c]/70 mt-3">{label}</p>
+      <p className="text-sm text-[#1D2433]/70 mt-3">{label}</p>
     </div>
   );
 }
@@ -180,12 +180,12 @@ function ListaDS({
     setItems((prev) => (prev.includes(t) ? prev : [...prev, t]));
   };
   return (
-    <div className="rounded-2xl border border-[#0a0a0c]/10 bg-white p-4 sm:p-5 space-y-3">
+    <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5 space-y-3">
       <div>
-        <h3 className="font-serif text-lg font-semibold" style={{ color }}>
+        <h3 className="font-display text-lg font-semibold" style={{ color }}>
           {isDim ? "DIMs · lo que suma amenaza" : "SIMs · lo que suma seguridad"}
         </h3>
-        <p className="text-xs text-[#0a0a0c]/55">
+        <p className="text-sm text-[#1D2433]/55">
           {isDim ? "Cosas que el cuerpo interpreta como peligro." : "Cosas que el cuerpo interpreta como seguridad."}
         </p>
       </div>
@@ -224,7 +224,7 @@ function ListaDS({
           value={txt}
           onChange={(e) => setTxt(e.target.value)}
           placeholder={isDim ? "Escribe un DIM del paciente" : "Escribe un SIM del paciente"}
-          className="flex-1 min-w-0 px-3 py-2.5 rounded-xl border border-[#0a0a0c]/15 text-sm bg-[#f7f4ef]/50 focus:outline-none focus:border-[#8b3a2a]"
+          className="flex-1 min-w-0 px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
         />
         <button type="submit" className="px-3 rounded-xl text-white" style={{ background: color }} aria-label="Agregar">
           <Plus className="w-4 h-4" />
@@ -239,7 +239,7 @@ function ListaDS({
               key={s}
               type="button"
               onClick={() => add(s)}
-              className="px-2.5 py-1 rounded-full border text-xs text-[#0a0a0c]/70 hover:text-[#0a0a0c] transition-colors"
+              className="px-2.5 py-1 rounded-full border text-sm text-[#1D2433]/70 hover:text-[#1D2433] transition-colors"
               style={{ borderColor: color + "55" }}
             >
               + {s}
@@ -360,15 +360,15 @@ export function Pizarra() {
     cv.width = OW;
     cv.height = OH;
     const ctx = cv.getContext("2d")!;
-    ctx.fillStyle = "#f7f4ef";
+    ctx.fillStyle = "#F6F7F8";
     ctx.fillRect(0, 0, OW, OH);
 
     // Encabezado
-    ctx.fillStyle = "#8b3a2a";
+    ctx.fillStyle = "#0F5C4D";
     ctx.beginPath();
     ctx.arc(70, 78, 10, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = "#0a0a0c";
+    ctx.fillStyle = "#1D2433";
     ctx.font = "700 34px Georgia, serif";
     ctx.fillText("MyoKine", 92, 90);
     ctx.font = "400 24px system-ui, sans-serif";
@@ -379,7 +379,7 @@ export function Pizarra() {
     ctx.fillText(sub, OW - 60, 90);
     ctx.textAlign = "left";
 
-    ctx.fillStyle = "#0a0a0c";
+    ctx.fillStyle = "#1D2433";
     ctx.font = "700 52px Georgia, serif";
     ctx.fillText("Lo que conversamos hoy", 60, 180);
 
@@ -414,7 +414,7 @@ export function Pizarra() {
       ctx.font = "700 30px Georgia, serif";
       ctx.fillText(title, x, y);
       ctx.font = "400 26px system-ui, sans-serif";
-      ctx.fillStyle = "#0a0a0c";
+      ctx.fillStyle = "#1D2433";
       let yy = y + 44;
       const list = items.length ? items : ["—"];
       for (const it of list.slice(0, 7)) {
@@ -423,7 +423,7 @@ export function Pizarra() {
         ctx.beginPath();
         ctx.arc(x + 8, yy - 9, 6, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = "#0a0a0c";
+        ctx.fillStyle = "#1D2433";
         for (const ln of lines) {
           ctx.fillText(ln, x + 26, yy);
           yy += 34;
@@ -443,7 +443,7 @@ export function Pizarra() {
     const bw = OW - 120;
     const grad = ctx.createLinearGradient(bx, 0, bx + bw, 0);
     grad.addColorStop(0, "#2f7d5b");
-    grad.addColorStop(0.5, "#e9e2d0");
+    grad.addColorStop(0.5, "#E3E5E8");
     grad.addColorStop(1, "#c0392b");
     ctx.fillStyle = grad;
     ctx.beginPath();
@@ -454,7 +454,7 @@ export function Pizarra() {
     ctx.beginPath();
     ctx.arc(px, y + 11, 20, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = "#0a0a0c";
+    ctx.fillStyle = "#1D2433";
     ctx.beginPath();
     ctx.arc(px, y + 11, 13, 0, Math.PI * 2);
     ctx.fill();
@@ -469,7 +469,7 @@ export function Pizarra() {
 
     // Nota
     if (nota.trim()) {
-      ctx.fillStyle = "#0a0a0c";
+      ctx.fillStyle = "#1D2433";
       ctx.font = "700 28px Georgia, serif";
       ctx.fillText("Lo que acordamos", 60, y);
       ctx.font = "400 26px system-ui, sans-serif";
@@ -536,11 +536,11 @@ export function Pizarra() {
   return (
     <div className="space-y-6" id="pizarra">
       <div className="space-y-2">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#8b3a2a]">Para usar en la consulta</span>
-        <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0a0a0c] tracking-tight">
+        <span className="text-sm font-bold text-[#0F5C4D]">Para usar en la consulta</span>
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold text-[#1D2433] tracking-tight">
           Pizarra de consulta
         </h1>
-        <p className="text-sm sm:text-base text-[#0a0a0c]/70 max-w-2xl">
+        <p className="text-sm sm:text-base text-[#1D2433]/70 max-w-2xl">
           Dibuja con tu paciente dónde le duele, anoten juntos lo que suma amenaza y lo que suma seguridad, y envíale la
           imagen al terminar. Nada se guarda ni sale de este dispositivo.
         </p>
@@ -548,16 +548,16 @@ export function Pizarra() {
 
       <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 items-start">
         {/* -------- Lienzo -------- */}
-        <div className="rounded-2xl border border-[#0a0a0c]/10 bg-white p-3 sm:p-4 space-y-3 lg:sticky lg:top-20">
+        <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-3 sm:p-4 space-y-3 lg:sticky lg:top-20">
           <div className="flex items-center justify-between gap-2">
-            <div className="inline-flex rounded-xl bg-[#f7f4ef] p-1">
+            <div className="inline-flex rounded-xl bg-[#F6F7F8] p-1">
               {(["frente", "espalda"] as View[]).map((v) => (
                 <button
                   key={v}
                   type="button"
                   onClick={() => setView(v)}
                   className={`px-4 py-1.5 rounded-lg text-sm font-semibold capitalize transition-colors ${
-                    view === v ? "bg-[#0a0a0c] text-white" : "text-[#0a0a0c]/60"
+                    view === v ? "bg-[#1D2433] text-white" : "text-[#1D2433]/60"
                   }`}
                 >
                   {v}
@@ -565,10 +565,10 @@ export function Pizarra() {
               ))}
             </div>
             <div className="flex items-center gap-1">
-              <button type="button" onClick={undo} className="p-2 rounded-lg hover:bg-[#0a0a0c]/5" aria-label="Deshacer">
+              <button type="button" onClick={undo} className="p-2 rounded-lg hover:bg-[#1D2433]/5" aria-label="Deshacer">
                 <Undo2 className="w-5 h-5" />
               </button>
-              <button type="button" onClick={clearView} className="p-2 rounded-lg hover:bg-[#0a0a0c]/5" aria-label="Borrar dibujo de esta vista">
+              <button type="button" onClick={clearView} className="p-2 rounded-lg hover:bg-[#1D2433]/5" aria-label="Borrar dibujo de esta vista">
                 <Trash2 className="w-5 h-5" />
               </button>
             </div>
@@ -597,8 +597,8 @@ export function Pizarra() {
                   setColor(c.c);
                   setErase(false);
                 }}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-xs font-semibold ${
-                  !erase && color === c.c ? "border-[#0a0a0c] bg-[#0a0a0c]/5" : "border-[#0a0a0c]/15"
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-sm font-semibold ${
+                  !erase && color === c.c ? "border-[#1D2433] bg-[#1D2433]/5" : "border-[#1D2433]/15"
                 }`}
               >
                 <span className="w-3.5 h-3.5 rounded-full" style={{ background: c.c }} />
@@ -608,16 +608,16 @@ export function Pizarra() {
             <button
               type="button"
               onClick={() => setErase((e) => !e)}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-xs font-semibold ${
-                erase ? "border-[#0a0a0c] bg-[#0a0a0c]/5" : "border-[#0a0a0c]/15"
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-sm font-semibold ${
+                erase ? "border-[#1D2433] bg-[#1D2433]/5" : "border-[#1D2433]/15"
               }`}
             >
               {erase ? <Eraser className="w-3.5 h-3.5" /> : <Pencil className="w-3.5 h-3.5" />}
               {erase ? "Borrador" : "Lápiz"}
             </button>
-            <label className="flex items-center gap-2 text-xs text-[#0a0a0c]/60 ml-auto">
+            <label className="flex items-center gap-2 text-sm text-[#1D2433]/60 ml-auto">
               Grosor
-              <input type="range" min={6} max={40} value={size} onChange={(e) => setSize(Number(e.target.value))} className="w-24 accent-[#8b3a2a]" />
+              <input type="range" min={6} max={40} value={size} onChange={(e) => setSize(Number(e.target.value))} className="w-24 accent-[#0F5C4D]" />
             </label>
           </div>
         </div>
@@ -628,20 +628,20 @@ export function Pizarra() {
           <ListaDS tipo="SIMs" items={sims} setItems={setSims} sugeridos={SIMS_SUGERIDOS} />
           <Protectometer dims={dims.length} sims={sims.length} />
 
-          <div className="rounded-2xl border border-[#0a0a0c]/10 bg-white p-4 sm:p-5 space-y-3">
-            <h3 className="font-serif text-lg font-semibold text-[#0a0a0c]">Lo que acordamos</h3>
+          <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5 space-y-3">
+            <h3 className="font-display text-lg font-semibold text-[#1D2433]">Lo que acordamos</h3>
             <textarea
               value={nota}
               onChange={(e) => setNota(e.target.value)}
               rows={3}
               placeholder="Ej: caminar 15 minutos al día y volver a agacharme de a poco."
-              className="w-full px-3 py-2.5 rounded-xl border border-[#0a0a0c]/15 text-sm bg-[#f7f4ef]/50 focus:outline-none focus:border-[#8b3a2a]"
+              className="w-full px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
             />
             <input
               value={paciente}
               onChange={(e) => setPaciente(e.target.value)}
               placeholder="Iniciales o nombre (opcional)"
-              className="w-full px-3 py-2.5 rounded-xl border border-[#0a0a0c]/15 text-sm bg-[#f7f4ef]/50 focus:outline-none focus:border-[#8b3a2a]"
+              className="w-full px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
             />
           </div>
 
@@ -650,7 +650,7 @@ export function Pizarra() {
               type="button"
               onClick={share}
               disabled={busy}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#0a0a0c] hover:bg-[#8b3a2a] text-white text-sm font-semibold transition-colors disabled:opacity-60"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors disabled:opacity-60"
             >
               <Send className="w-4 h-4" />
               Enviar al paciente
@@ -659,7 +659,7 @@ export function Pizarra() {
               type="button"
               onClick={downloadClick}
               disabled={busy}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-[#0a0a0c]/15 bg-white text-sm font-semibold hover:border-[#8b3a2a] disabled:opacity-60"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-[#1D2433]/15 bg-white text-sm font-semibold hover:border-[#0F5C4D] disabled:opacity-60"
             >
               <Download className="w-4 h-4" />
               Descargar imagen
@@ -672,12 +672,12 @@ export function Pizarra() {
               setTimeout(() => setResetHint(false), 2000);
               resetAll();
             }}
-            className="w-full inline-flex items-center justify-center gap-2 text-xs text-[#0a0a0c]/50 hover:text-[#8b3a2a] py-2"
+            className="w-full inline-flex items-center justify-center gap-2 text-sm text-[#1D2433]/50 hover:text-[#0F5C4D] py-2"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             {resetHint ? "Toca otra vez para empezar con un paciente nuevo" : "Nuevo paciente (borrar todo)"}
           </button>
-          <p className="text-[11px] text-[#0a0a0c]/45 leading-relaxed">
+          <p className="text-sm text-[#1D2433]/45 leading-relaxed">
             DIMs y SIMs (Danger In Me / Safety In Me) y Protectometer: herramientas de educación en dolor propuestas por
             Moseley y Butler. Esta pizarra es una ayuda para explicar, no una evaluación clínica.
           </p>
