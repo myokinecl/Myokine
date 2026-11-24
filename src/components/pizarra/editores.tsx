@@ -316,6 +316,14 @@ export function Editor({ it, set }: { it: Item; set: Set }) {
           <Lista label="De abajo hacia arriba (zona → cerebro)" items={d.abajo} max={5} onChange={(v) => up({ abajo: v })} />
         </div>
       );
+    case "dato":
+      return (
+        <div className="space-y-4">
+          <Texto label="Número" value={d.numero} onChange={(v) => up({ numero: v })} />
+          <Texto label="Qué significa" area value={d.texto} onChange={(v) => up({ texto: v })} />
+          <Texto label="Fuente" value={d.fuente} onChange={(v) => up({ fuente: v })} />
+        </div>
+      );
     case "camino":
       return <p className="text-[15px] text-[#5A6170]">Este gráfico no tiene datos que editar. Dibuja encima para marcar dónde va la persona.</p>;
     case "fuerza":

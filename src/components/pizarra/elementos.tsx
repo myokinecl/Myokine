@@ -580,6 +580,20 @@ function Camino({ it }: { it: Item }) {
   );
 }
 
+// ---------- Dato de la evidencia ----------
+function Dato({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  return (
+    <Tarjeta w={w} h={h}>
+      <T x={28} y={110} s={96} w={800} c={C.go}>{it.d.numero}</T>
+      {lineas(it.d.texto, 44).slice(0, 4).map((l, i) => (
+        <T key={i} x={28} y={160 + i * 30} s={21}>{l}</T>
+      ))}
+      <Nota x={28} y={h - 18}>{it.d.fuente}</Nota>
+    </Tarjeta>
+  );
+}
+
 export function Elemento({ it }: { it: Item }) {
   switch (it.kind) {
     case "cuerpo": return <Cuerpo it={it} />;
@@ -603,5 +617,6 @@ export function Elemento({ it }: { it: Item }) {
     case "contexto": return <Contexto it={it} />;
     case "arribaabajo": return <ArribaAbajo it={it} />;
     case "camino": return <Camino it={it} />;
+    case "dato": return <Dato it={it} />;
   }
 }

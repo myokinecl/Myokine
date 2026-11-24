@@ -22,7 +22,8 @@ export type Kind =
   | "flecha"
   | "contexto"
   | "arribaabajo"
-  | "camino";
+  | "camino"
+  | "dato";
 
 export interface Item {
   id: string;
@@ -255,7 +256,7 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       return {
         titulo: "Tú, en tu contexto",
         factores: ["Cómo duermes", "Qué comes", "Cuánto te mueves", "Lo que haces cada día", "Qué crees que te pasa", "Estrés y emociones"],
-        frase: "No vemos un hombro: vemos a una persona con dolor.",
+        frase: "Todo esto también cuenta.",
       };
     case "arribaabajo":
       return {
@@ -265,6 +266,10 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       };
     case "camino":
       return {};
+    case "dato":
+      return preset === "hombro"
+        ? { numero: "95%", texto: "de los dolores de hombro se manejan con educación, ejercicio, ajustes en la actividad y tiempo. Las causas graves son raras.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
+        : { numero: "00%", texto: "Escribe aquí lo que significa el dato.", fuente: "Fuente" };
   }
 }
 
@@ -313,6 +318,8 @@ export function base(it: Item): { w: number; h: number } {
       return { w: 680, h: 560 };
     case "camino":
       return { w: 600, h: 380 };
+    case "dato":
+      return { w: 600, h: 300 };
   }
 }
 
@@ -375,6 +382,7 @@ export const CATALOGO: { grupo: string; items: Entrada[] }[] = [
       { kind: "arribaabajo", nombre: "De arriba abajo y de abajo arriba", ayuda: "Cerebro ↔ zona que duele" },
       { kind: "camino", nombre: "La mejora no es lineal", ayuda: "Días mejores y peores" },
       { kind: "plan", preset: "evidencia", nombre: "Lo que dice la evidencia", ayuda: "Primera línea de tratamiento" },
+      { kind: "dato", preset: "hombro", nombre: "Dato de la evidencia", ayuda: "Número grande con su fuente" },
     ],
   },
   {
@@ -429,14 +437,11 @@ export const PLANTILLAS: Plantilla[] = [
       { kind: "contexto", x: 80, y: 170, s: 1.21 },
     ],
     mas: [
+      [{ kind: "arribaabajo", x: 47, y: 200, s: 1.45, d: { zona: "Hombro" } }],
       [
-        { kind: "arribaabajo", x: 64, y: 60, s: 1.4, d: { zona: "Hombro" } },
-        { kind: "titulo", x: 64, y: 900, s: 1, d: { texto: "No vemos un hombro. Vemos a una persona, en su contexto, con un dolor que es suyo." } },
-      ],
-      [
-        { kind: "plan", preset: "evidencia", x: 60, y: 60, s: 1.3 },
-        { kind: "camino", x: 60, y: 560, s: 1.3 },
-        { kind: "nota", x: 60, y: 1090, s: 1, d: { texto: "No es grave. Lo esperable es que mejore.", color: "#F5E663" } },
+        { kind: "plan", preset: "evidencia", x: 60, y: 50, s: 1.15 },
+        { kind: "camino", x: 60, y: 510, s: 1.15 },
+        { kind: "dato", preset: "hombro", x: 60, y: 980, s: 1 },
       ],
     ],
   },
