@@ -2,7 +2,7 @@ import { Instagram, MessageCircle, Dumbbell, HeartPulse, Stethoscope, Graduation
 
 export const WHATSAPP_NUMBER = "56998520291";
 export const INSTAGRAM_URL = "https://www.instagram.com/myokinecl/";
-export const SITE_URL = "https://myokinecl.netlify.app";
+export const SITE_URL = "https://myokine.web.app";
 
 export const whatsappContactUrl = (message = "Hola Lukas, vi MyoKine y quería consultarte por ") =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

@@ -103,7 +103,7 @@ function HojaSVG({
         {iniciales ? `Para ${iniciales} · ${fecha}` : fecha}
       </text>
       <text x={w - 40} y={h - 28} fontFamily={FONT} fontSize={22} fill={C.ink2} textAnchor="end">
-        Lukas · Kinesiólogo · myokinecl.netlify.app
+        Lukas · Kinesiólogo · myokine.web.app
       </text>
       {selIt && (() => {
         const b = base(selIt);

@@ -1,8 +1,11 @@
+# La página se mudó a https://myokine.web.app (Firebase Hosting).
+# Este sitio de Netlify solo redirige ahí, para que los links antiguos sigan funcionando.
 [build]
-  command = "npm run build"
+  command = "mkdir -p dist && echo '<!doctype html><meta http-equiv=refresh content=0;url=https://myokine.web.app/>' > dist/index.html"
   publish = "dist"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "https://myokine.web.app/:splat"
+  status = 301
+  force = true
