@@ -19,7 +19,10 @@ export type Kind =
   | "nota"
   | "titulo"
   | "plan"
-  | "flecha";
+  | "flecha"
+  | "contexto"
+  | "arribaabajo"
+  | "camino";
 
 export interface Item {
   id: string;
@@ -237,12 +240,31 @@ export function datosIniciales(kind: Kind, preset?: string): any {
     case "titulo":
       return { texto: "Título" };
     case "plan":
+      if (preset === "evidencia")
+        return {
+          titulo: "Lo que dice la evidencia",
+          items: ["Entender qué te pasa", "Ejercicio progresivo, adaptado a ti", "Ajustar la carga del día a día", "Cuidar sueño, alimentación y estrés"],
+        };
       return {
         titulo: "Lo que vamos a hacer",
         items: ["Bajar la carga esta semana", "Fuerza 2 veces por semana", "Volver a subir de a poco"],
       };
     case "flecha":
       return { r: 0, color: C.ink };
+    case "contexto":
+      return {
+        titulo: "Tú, en tu contexto",
+        factores: ["Cómo duermes", "Qué comes", "Cuánto te mueves", "Lo que haces cada día", "Qué crees que te pasa", "Estrés y emociones"],
+        frase: "No vemos un hombro: vemos a una persona con dolor.",
+      };
+    case "arribaabajo":
+      return {
+        arriba: ["Lo que crees que pasa", "Miedo o preocupación", "Estrés", "Dormir mal"],
+        abajo: ["Tejido irritado", "Carga del día a día", "Más sensibilidad"],
+        zona: "Hombro",
+      };
+    case "camino":
+      return {};
   }
 }
 
@@ -285,6 +307,12 @@ export function base(it: Item): { w: number; h: number } {
       return { w: 600, h: 100 + it.d.items.length * 62 };
     case "flecha":
       return { w: 260, h: 80 };
+    case "contexto":
+      return { w: 760, h: 820 };
+    case "arribaabajo":
+      return { w: 680, h: 560 };
+    case "camino":
+      return { w: 600, h: 380 };
   }
 }
 
@@ -343,6 +371,10 @@ export const CATALOGO: { grupo: string; items: Entrada[] }[] = [
       { kind: "protecto", nombre: "DIMs y SIMs", ayuda: "Lo que suma peligro y seguridad" },
       { kind: "nota", preset: "alarma", nombre: "El dolor es una alarma", ayuda: "Nota lista" },
       { kind: "torta", preset: "dolor", nombre: "Lo que influye en tu dolor", ayuda: "Torta editable" },
+      { kind: "contexto", nombre: "Tú, en tu contexto", ayuda: "La persona al centro y lo que suma" },
+      { kind: "arribaabajo", nombre: "De arriba abajo y de abajo arriba", ayuda: "Cerebro ↔ zona que duele" },
+      { kind: "camino", nombre: "La mejora no es lineal", ayuda: "Días mejores y peores" },
+      { kind: "plan", preset: "evidencia", nombre: "Lo que dice la evidencia", ayuda: "Primera línea de tratamiento" },
     ],
   },
   {
@@ -383,9 +415,31 @@ export interface Plantilla {
   formato: Formato;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   items: { kind: Kind; preset?: string; x: number; y: number; s: number; d?: any }[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mas?: { kind: Kind; preset?: string; x: number; y: number; s: number; d?: any }[][];
 }
 
 export const PLANTILLAS: Plantilla[] = [
+  {
+    nombre: "Dolor de hombro persistente",
+    ayuda: "La persona en su contexto, de dónde viene el dolor y cómo lo vamos a manejar (3 hojas)",
+    formato: "vertical",
+    items: [
+      { kind: "titulo", x: 60, y: 40, s: 0.85, d: { texto: "Tu dolor de hombro" } },
+      { kind: "contexto", x: 80, y: 170, s: 1.21 },
+    ],
+    mas: [
+      [
+        { kind: "arribaabajo", x: 64, y: 60, s: 1.4, d: { zona: "Hombro" } },
+        { kind: "titulo", x: 64, y: 900, s: 1, d: { texto: "No vemos un hombro. Vemos a una persona, en su contexto, con un dolor que es suyo." } },
+      ],
+      [
+        { kind: "plan", preset: "evidencia", x: 60, y: 60, s: 1.3 },
+        { kind: "camino", x: 60, y: 560, s: 1.3 },
+        { kind: "nota", x: 60, y: 1090, s: 1, d: { texto: "No es grave. Lo esperable es que mejore.", color: "#F5E663" } },
+      ],
+    ],
+  },
   {
     nombre: "Lesión por carga",
     ayuda: "Dónde duele, qué pasó con la carga y qué haremos",

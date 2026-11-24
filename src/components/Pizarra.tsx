@@ -343,15 +343,17 @@ export function Pizarra() {
 
   const usarPlantilla = (p: Plantilla) => {
     commit();
-    const nueva: Hoja = {
+    const armar = (items: Plantilla["items"]): Hoja => ({
       formato: p.formato,
       strokes: [],
-      items: p.items.map((x) => ({ id: nuevoId(), kind: x.kind, x: x.x, y: x.y, s: x.s, d: { ...datosIniciales(x.kind, x.preset), ...(x.d || {}) } })),
-    };
+      items: items.map((x) => ({ id: nuevoId(), kind: x.kind, x: x.x, y: x.y, s: x.s, d: { ...datosIniciales(x.kind, x.preset), ...(x.d || {}) } })),
+    });
+    const nuevas = [armar(p.items), ...(p.mas || []).map(armar)];
     const vacia = hoja.items.length === 0 && hoja.strokes.length === 0;
-    if (vacia) setHojas((hs) => hs.map((h, i) => (i === idx ? nueva : h)));
-    else {
-      setHojas((hs) => [...hs, nueva]);
+    if (vacia) {
+      setHojas((hs) => [...hs.slice(0, idx), ...nuevas, ...hs.slice(idx + 1)]);
+    } else {
+      setHojas((hs) => [...hs, ...nuevas]);
       setIdx(hojas.length);
     }
     setSel(null);
@@ -560,7 +562,7 @@ export function Pizarra() {
             Hoja {i + 1}
           </button>
         ))}
-        {hojas.length < 6 && (
+        {hojas.length < 8 && (
           <>
             <button type="button" onClick={() => nuevaHoja("vertical")} className={btn(false)}>+ Hoja vertical</button>
             <button type="button" onClick={() => nuevaHoja("horizontal")} className={btn(false)}>+ Hoja horizontal</button>

@@ -488,6 +488,98 @@ function Flecha({ it }: { it: Item }) {
   );
 }
 
+// ---------- Tú, en tu contexto ----------
+function Contexto({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  const fac: string[] = it.d.factores.slice(0, 8);
+  const vis: number = it.d.visibles ?? fac.length;
+  const cx = w / 2, cy = 440;
+  const der = Math.ceil(fac.length / 2), izq = fac.length - der;
+  const ang = (n: number, k: number) => (n === 1 ? 0 : -62 + (124 * k) / (n - 1));
+  const pos = fac.map((_, i) => {
+    const a = i < der ? ang(der, i) : 180 - ang(izq, i - der);
+    const r = (a * Math.PI) / 180;
+    return [cx + 270 * Math.cos(r), cy + 300 * Math.sin(r)];
+  });
+  return (
+    <g>
+      <rect x={0} y={0} width={w} height={h} rx={20} fill="#fff" stroke={C.rule} strokeWidth={2} />
+      <T x={28} y={52} s={30} w={700}>{it.d.titulo}</T>
+      {pos.map(([x, y], i) => i < vis && (
+        <line key={"l" + i} x1={x} y1={y} x2={cx + (x - cx) * 0.42} y2={cy + (y - cy) * 0.42} stroke={C.ink2} strokeOpacity={0.4} strokeWidth={2} strokeDasharray="6 6" />
+      ))}
+      <svg x={cx - 115} y={cy - 238} width={230} height={477} viewBox="100 50 400 830">
+        <path d={CUERPO} fill={C.soft} stroke={C.ink} strokeOpacity={0.55} strokeWidth={3} strokeLinejoin="round" />
+        <path d={FRENTE} fill="none" stroke={C.ink} strokeOpacity={0.25} strokeWidth={2.5} strokeLinecap="round" />
+      </svg>
+      {fac.map((f, i) => {
+        if (i >= vis) return null;
+        const ls = lineas(f, 17).slice(0, 2);
+        const bw = Math.min(230, 36 + Math.max(...ls.map((l) => l.length)) * 11);
+        const bh = ls.length > 1 ? 80 : 54;
+        const x = Math.max(8, Math.min(w - 8 - bw, pos[i][0] - bw / 2));
+        const y = pos[i][1] - bh / 2;
+        return (
+          <g key={i}>
+            <rect x={x} y={y} width={bw} height={bh} rx={bh / 2} fill="#E3F0EA" stroke={C.go} strokeOpacity={0.5} strokeWidth={2} />
+            {ls.map((l, k) => (
+              <T key={k} x={x + bw / 2} y={y + (ls.length > 1 ? 34 + k * 26 : 34)} s={20} w={600} a="middle">{l}</T>
+            ))}
+          </g>
+        );
+      })}
+      {vis >= fac.length && <T x={w / 2} y={h - 28} s={24} w={700} a="middle">{it.d.frase}</T>}
+    </g>
+  );
+}
+
+// ---------- De arriba abajo y de abajo arriba ----------
+function ArribaAbajo({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  const cx = w / 2;
+  return (
+    <Tarjeta w={w} h={h} titulo="El dolor se arma en dos direcciones">
+      <ellipse cx={cx} cy={140} rx={84} ry={52} fill="#F3DCE2" stroke={C.ink} strokeOpacity={0.4} strokeWidth={2} />
+      <path d={`M${cx - 50},128 q20,-24 40,0 q20,24 40,0 M${cx - 56},152 q22,18 46,0 q24,-18 50,4 M${cx},92 L${cx},188`} fill="none" stroke={C.ink} strokeOpacity={0.3} strokeWidth={2} />
+      <T x={cx} y={214} s={20} w={700} a="middle">Cerebro</T>
+      <circle cx={cx} cy={430} r={50} fill={C.soft} stroke={C.ink} strokeOpacity={0.4} strokeWidth={2} />
+      <T x={cx} y={437} s={20} w={700} a="middle">{it.d.zona}</T>
+      <path d={`M${cx - 34},236 L${cx - 34},368`} stroke={C.azul} strokeWidth={8} strokeLinecap="round" />
+      <path d={`M${cx - 50},350 L${cx - 34},374 L${cx - 18},350`} fill="none" stroke={C.azul} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M${cx + 34},372 L${cx + 34},240`} stroke={C.rojo} strokeWidth={8} strokeLinecap="round" />
+      <path d={`M${cx + 18},258 L${cx + 34},234 L${cx + 50},258`} fill="none" stroke={C.rojo} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
+      <T x={cx - 60} y={258} s={19} w={700} c={C.azul} a="end">De arriba hacia abajo</T>
+      {it.d.arriba.slice(0, 5).map((t: string, i: number) => (
+        <T key={i} x={cx - 60} y={290 + i * 28} s={18} a="end">{lineas(t, 24)[0]}</T>
+      ))}
+      <T x={cx + 60} y={258} s={19} w={700} c={C.rojo}>De abajo hacia arriba</T>
+      {it.d.abajo.slice(0, 5).map((t: string, i: number) => (
+        <T key={i} x={cx + 60} y={290 + i * 28} s={18}>{lineas(t, 24)[0]}</T>
+      ))}
+      <T x={28} y={h - 24} s={18} c={C.ink2} i>Los dos caminos suman; por eso trabajamos en ambos.</T>
+    </Tarjeta>
+  );
+}
+
+// ---------- La mejora no es lineal ----------
+function Camino({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  const pts = [[50, 290], [100, 250], [140, 272], [190, 220], [230, 240], [280, 205], [320, 250], [370, 180], [410, 200], [460, 150], [500, 168], [550, 120]];
+  return (
+    <Tarjeta w={w} h={h} titulo="La mejora no es una línea recta">
+      <line x1={40} y1={310} x2={w - 30} y2={310} stroke={C.rule} strokeWidth={2} />
+      <T x={w - 30} y={334} s={16} a="end" c={C.ink2}>tiempo</T>
+      <path d="M50,290 L550,120" stroke={C.ink2} strokeWidth={3} strokeDasharray="10 8" />
+      <path d={"M" + pts.map((p) => p.join(",")).join(" L")} fill="none" stroke={C.go} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
+      <T x={60} y={120} s={18} c={C.ink2}>Lo que esperamos</T>
+      <path d="M200,126 L260,126" stroke={C.ink2} strokeWidth={3} strokeDasharray="10 8" />
+      <T x={60} y={150} s={18} w={700} c={C.go}>Lo que pasa de verdad</T>
+      <path d="M262,144 L322,144" stroke={C.go} strokeWidth={6} strokeLinecap="round" />
+      <T x={28} y={h - 18} s={19}>Habrá días mejores y peores; la tendencia es a mejorar.</T>
+    </Tarjeta>
+  );
+}
+
 export function Elemento({ it }: { it: Item }) {
   switch (it.kind) {
     case "cuerpo": return <Cuerpo it={it} />;
@@ -508,5 +600,8 @@ export function Elemento({ it }: { it: Item }) {
     case "titulo": return <Titulo it={it} />;
     case "plan": return <Plan it={it} />;
     case "flecha": return <Flecha it={it} />;
+    case "contexto": return <Contexto it={it} />;
+    case "arribaabajo": return <ArribaAbajo it={it} />;
+    case "camino": return <Camino it={it} />;
   }
 }

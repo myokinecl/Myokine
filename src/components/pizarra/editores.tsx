@@ -299,6 +299,25 @@ export function Editor({ it, set }: { it: Item; set: Set }) {
           </div>
         </div>
       );
+    case "contexto":
+      return (
+        <div className="space-y-4">
+          <Texto label="Título" value={d.titulo} onChange={(v) => up({ titulo: v })} />
+          <Lista label="Lo que puede estar sumando" items={d.factores} max={8} onChange={(v) => up({ factores: v })}
+            sugeridos={["Cómo duermes", "Qué comes", "Cuánto te mueves", "Lo que haces cada día", "Qué crees que te pasa", "Estrés y emociones", "Trabajo", "Experiencias anteriores"]} />
+          <Texto label="Frase de abajo" value={d.frase} onChange={(v) => up({ frase: v })} />
+        </div>
+      );
+    case "arribaabajo":
+      return (
+        <div className="space-y-5">
+          <Texto label="Zona que duele" value={d.zona} onChange={(v) => up({ zona: v })} />
+          <Lista label="De arriba hacia abajo (cerebro → zona)" items={d.arriba} max={5} onChange={(v) => up({ arriba: v })} />
+          <Lista label="De abajo hacia arriba (zona → cerebro)" items={d.abajo} max={5} onChange={(v) => up({ abajo: v })} />
+        </div>
+      );
+    case "camino":
+      return <p className="text-[15px] text-[#5A6170]">Este gráfico no tiene datos que editar. Dibuja encima para marcar dónde va la persona.</p>;
     case "fuerza":
       return <p className="text-[15px] text-[#5A6170]">Este gráfico no tiene datos que editar. Dibuja encima para marcar en qué semana va la persona.</p>;
   }
