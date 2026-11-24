@@ -580,15 +580,18 @@ function ArribaAbajo({ it }: { it: Item }) {
       <ellipse cx={cx} cy={140} rx={84} ry={52} fill="#F3DCE2" stroke={C.ink} strokeOpacity={0.4} strokeWidth={2} />
       <path d={`M${cx - 50},128 q20,-24 40,0 q20,24 40,0 M${cx - 56},152 q22,18 46,0 q24,-18 50,4 M${cx},92 L${cx},188`} fill="none" stroke={C.ink} strokeOpacity={0.3} strokeWidth={2} />
       <T x={cx} y={214} s={20} w={700} a="middle">Cerebro</T>
-      <circle cx={cx} cy={430} r={50} fill={C.soft} stroke={C.ink} strokeOpacity={0.4} strokeWidth={2} />
-      <T x={cx} y={437} s={20} w={700} a="middle">{it.d.zona}</T>
-      <path d={`M${cx - 34},236 L${cx - 34},368`} stroke={C.azul} strokeWidth={8} strokeLinecap="round" />
-      <path d={`M${cx - 50},350 L${cx - 34},374 L${cx - 18},350`} fill="none" stroke={C.azul} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
-      <path d={`M${cx + 34},372 L${cx + 34},240`} stroke={C.rojo} strokeWidth={8} strokeLinecap="round" />
+      <circle cx={cx} cy={448} r={50} fill={C.soft} stroke={C.ink} strokeOpacity={0.4} strokeWidth={2} />
+      <T x={cx} y={455} s={20} w={700} a="middle">{it.d.zona}</T>
+      <path d={`M${cx - 34},236 L${cx - 34},384`} stroke={C.azul} strokeWidth={8} strokeLinecap="round" />
+      <path d={`M${cx - 50},366 L${cx - 34},390 L${cx - 18},366`} fill="none" stroke={C.azul} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M${cx + 34},388 L${cx + 34},240`} stroke={C.rojo} strokeWidth={8} strokeLinecap="round" />
       <path d={`M${cx + 18},258 L${cx + 34},234 L${cx + 50},258`} fill="none" stroke={C.rojo} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
       <T x={cx - 60} y={258} s={19} w={700} c={C.azul} a="end">De arriba hacia abajo</T>
+      <T x={cx - 60} y={282} s={17} c={C.azul} a="end" i>Top-down (descendente)</T>
+      <T x={cx + 60} y={258} s={19} w={700} c={C.rojo}>De abajo hacia arriba</T>
+      <T x={cx + 60} y={282} s={17} c={C.rojo} i>Bottom-up (ascendente)</T>
       {[it.d.arriba, it.d.abajo].map((lista: string[], c: number) => {
-        let y = 290;
+        let y = 318;
         return lista.slice(0, 5).map((t, i) => {
           const ls = lineas(t, 22).slice(0, 3);
           const g = (
@@ -602,7 +605,7 @@ function ArribaAbajo({ it }: { it: Item }) {
           return g;
         });
       })}
-      <T x={28} y={h - 24} s={18} c={C.ink2} i>Los dos caminos suman; por eso trabajamos en ambos.</T>
+      <T x={28} y={h - 24} s={20} w={700} c={C.go}>Podemos trabajar en ambas direcciones.</T>
     </Tarjeta>
   );
 }

@@ -268,7 +268,7 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       return {};
     case "dato":
       return preset === "hombro"
-        ? { numero: "95%", texto: "de los dolores de hombro se manejan con educación, ejercicio, ajustes en la actividad y tiempo. Las causas graves son raras.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
+        ? { numero: "90–95%", texto: "de los dolores de hombro sin golpe ni caída corresponden a dolor subacromial: un cuadro benigno que suele mejorar con el tiempo.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
         : { numero: "00%", texto: "Escribe aquí lo que significa el dato.", fuente: "Fuente" };
   }
 }
@@ -387,7 +387,7 @@ export const CATALOGO: { grupo: string; items: Entrada[] }[] = [
       { kind: "nota", preset: "alarma", nombre: "El dolor es una alarma", ayuda: "Nota lista" },
       { kind: "torta", preset: "dolor", nombre: "Lo que influye en tu dolor", ayuda: "Torta editable" },
       { kind: "contexto", nombre: "Tú, en tu contexto", ayuda: "La persona al centro y lo que suma" },
-      { kind: "arribaabajo", nombre: "De arriba abajo y de abajo arriba", ayuda: "Cerebro ↔ zona que duele" },
+      { kind: "arribaabajo", nombre: "De arriba abajo y de abajo arriba", ayuda: "Top-down y bottom-up" },
       { kind: "camino", nombre: "La mejora no es lineal", ayuda: "Días mejores y peores" },
       { kind: "plan", preset: "evidencia", nombre: "Lo que dice la evidencia", ayuda: "Primera línea de tratamiento" },
       { kind: "dato", preset: "hombro", nombre: "Dato de la evidencia", ayuda: "Número grande con su fuente" },
