@@ -27,11 +27,6 @@ export const SERVICES = [
     title: "Pre y post operatorio",
     desc: "Preparación antes de una cirugía y rehabilitación después, con objetivos medibles en cada etapa.",
   },
-  {
-    icon: GraduationCap,
-    title: "Mentoría a estudiantes",
-    desc: "Para estudiantes de pregrado de kinesiología: razonamiento clínico, lectura de evidencia y práctica.",
-  },
 ];
 
 export function ContactButtons({ compact = false }: { compact?: boolean }) {
@@ -68,7 +63,7 @@ export function ContactBlock({ onServices }: { onServices?: () => void }) {
           ¿Conversamos?
         </span>
         <h3 className="font-display text-xl sm:text-2xl font-medium text-[#1D2433]">
-          Entrenamiento, rehabilitación y mentorías
+          Entrenamiento y rehabilitación
         </h3>
         <p className="text-sm text-[#1D2433]/65">
           Si tienes dolor, una lesión o una cirugía por delante, o eres estudiante y quieres razonar mejor, escríbeme.

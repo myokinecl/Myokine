@@ -1132,7 +1132,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     }}
                     className="border-[1.5px] border-[#1D2433] text-[#1D2433] rounded-[10px] px-6 py-3.5 text-[17px] font-semibold hover:bg-[#1D2433] hover:text-white transition-colors cursor-pointer"
                   >
-                    Atención y mentorías
+                    Atención kinésica
                   </button>
                 </div>
               </div>
@@ -1180,7 +1180,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 {
                   tab: "pizarra" as TabType,
                   title: "Pizarra de consulta",
-                  text: "Dibuja dónde duele, anota DIMs y SIMs y envíaselo a tu paciente.",
+                  text: "Explica con dibujos y gráficos listos: carga, etapas de una lesión, dolor, entrenamiento y nutrición.",
                   cta: "Abrir pizarra",
                   img: (
                     <svg viewBox="0 0 60 120" className="w-[58%] h-[80%]" aria-hidden="true">

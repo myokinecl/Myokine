@@ -53,6 +53,7 @@ const LO_QUE_VIENE = [
   { title: "Kits clínicos para profesionales", desc: "Guías de 2 a 3 páginas por condición: evaluación, cuestionarios, tratamiento y qué decirle al paciente. Ya está disponible el de dolor lumbar; pídelo por mensaje directo." },
   { title: "Perlas clínicas de charlas internacionales", desc: "Lo más útil de charlas de clínicos e investigadores de referencia, resumido en español y con el video original." },
   { title: "Más infografías para pacientes", desc: "Nuevos temas para que puedas explicar y enviar en un minuto." },
+  { title: "Un espacio para estudiantes", desc: "Es una idea que estoy armando con calma. Si estudias kinesiología y te interesa, escríbeme y te aviso cuando esté lista." },
 ];
 
 function Steps({ steps }: { steps: Step[] }) {
@@ -85,32 +86,6 @@ export function ComoTrabajo() {
           className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors"
         >
           Quiero agendar una evaluación
-        </a>
-      </div>
-
-      <div className="pt-6 border-t border-[#1D2433]/10 space-y-4" id="mentoria">
-        <h2 className="font-display text-2xl sm:text-3xl text-[#1D2433] font-semibold tracking-tight">
-          Mentoría para estudiantes de kinesiología
-        </h2>
-        <p className="text-sm text-[#1D2433]/70">
-          Para estudiantes de pregrado que quieren razonar mejor, leer evidencia con criterio y llegar más seguros a la práctica.
-        </p>
-        <Steps steps={MENTORIA} />
-        <div className="rounded-xl bg-[#F6F7F8] border border-[#1D2433]/10 p-5 space-y-2">
-          <h4 className="font-display text-lg font-semibold text-[#1D2433]">Temas que podemos trabajar</h4>
-          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-[#1D2433]/80 list-disc pl-5">
-            {TEMAS_MENTORIA.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </div>
-        <a
-          href={whatsappContactUrl("Hola Lukas, soy estudiante de kinesiología y me interesa la mentoría. Estoy en: ")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors"
-        >
-          Me interesa la mentoría
         </a>
       </div>
 

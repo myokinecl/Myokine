@@ -1,688 +1,649 @@
-import { useEffect, useMemo, useRef, useState, type PointerEvent as RPointerEvent, type Dispatch, type SetStateAction } from "react";
-import { Undo2, Trash2, Eraser, Pencil, Send, Download, Plus, X, RotateCcw } from "lucide-react";
+import { useCallback, useEffect, useRef, useState, type PointerEvent as RPointerEvent } from "react";
+import f400 from "@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-400-normal.woff2?url";
+import f500 from "@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-500-normal.woff2?url";
+import f600 from "@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-600-normal.woff2?url";
+import f700 from "@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-700-normal.woff2?url";
+import f800 from "@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-800-normal.woff2?url";
+import {
+  CATALOGO,
+  C,
+  FONT,
+  PLANTILLAS,
+  TAM,
+  base,
+  datosIniciales,
+  nuevoId,
+  type Entrada,
+  type Formato,
+  type Hoja,
+  type Item,
+  type Plantilla,
+  type Stroke,
+} from "./pizarra/modelo";
+import { Elemento } from "./pizarra/elementos";
+import { Editor } from "./pizarra/editores";
 
-/* ------------------------------------------------------------------ */
-/*  Pizarra de consulta: dibujar sobre una silueta, sumar DIMs y SIMs, */
-/*  ver el Protectometer y enviarle la imagen al paciente.             */
-/*  Nada se guarda ni se envía a ningún servidor.                      */
-/* ------------------------------------------------------------------ */
+type Modo = "mover" | "dibujar" | "borrar";
 
-type Pt = { x: number; y: number };
-type Stroke = { color: string; size: number; erase: boolean; pts: Pt[] };
-type View = "frente" | "espalda";
-
-const W = 600; // sistema de coordenadas de la silueta
-const H = 900;
-
-const COLORS = [
-  { c: "#c0392b", label: "Dolor" },
-  { c: "#e67e22", label: "Molestia" },
-  { c: "#2563eb", label: "Hormigueo" },
-  { c: "#1D2433", label: "Notas" },
+const LS_KEY = "myokine-pizarra-v2";
+const COLORES = [
+  { c: C.rojo, label: "Dolor" },
+  { c: C.naranjo, label: "Molestia" },
+  { c: C.azul, label: "Hormigueo" },
+  { c: C.go, label: "Verde" },
+  { c: C.ink, label: "Negro" },
 ];
 
-const DIMS_SUGERIDOS = [
-  "Miedo a moverme",
-  "Lo que me dijeron de la imagen",
-  "Dormir mal",
-  "Estrés en el trabajo",
-  "Estar mucho rato sentado",
-  "Pensar que algo está dañado",
-  "No entender qué me pasa",
-  "Experiencias de dolor anteriores",
-];
-const SIMS_SUGERIDOS = [
-  "Entender qué me pasa",
-  "Caminar",
-  "Dormir bien",
-  "Ejercicio que disfruto",
-  "Mi familia y amigos",
-  "Tener un plan claro",
-  "Saber que mi cuerpo es fuerte",
-  "Calor / ducha caliente",
-];
+const hojaVacia = (formato: Formato = "vertical"): Hoja => ({ formato, items: [], strokes: [] });
 
-/** Silueta simple y neutra, solo contorno. */
-function siluetaPath(view: View) {
-  // Cuerpo frontal; la vista de espalda usa el mismo contorno con detalles distintos.
-  const body = `
-    M300,60 C333,60 352,86 352,118 C352,152 333,178 300,178 C267,178 248,152 248,118 C248,86 267,60 300,60 Z
-    M272,180 L328,180 L332,206
-    C380,214 418,226 432,262 L470,420 C476,446 482,470 486,500 L492,560
-    C494,574 474,580 468,566 L452,508 C446,486 438,462 430,440 L404,330
-    L400,470 C400,510 404,540 410,580 L422,700 C428,760 430,800 428,850
-    C428,866 404,870 396,856 L372,712 C366,672 358,620 350,580 L300,560
-    L250,580 C242,620 234,672 228,712 L204,856 C196,870 172,866 172,850
-    C170,800 172,760 178,700 L190,580 C196,540 200,510 200,470 L196,330
-    L170,440 C162,462 154,486 148,508 L132,566 C126,580 106,574 108,560
-    L114,500 C118,470 124,446 130,420 L168,262 C182,226 220,214 268,206 Z`;
-  const frente = `M276,300 C290,306 310,306 324,300 M262,560 C280,548 320,548 338,560`;
-  const espalda = `M300,206 L300,520 M240,250 C262,268 282,274 300,276 C318,274 338,268 360,250 M262,540 C280,560 320,560 338,540`;
-  return { body, detail: view === "frente" ? frente : espalda };
+function cargar(): Hoja[] {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (raw) {
+      const h = JSON.parse(raw);
+      if (Array.isArray(h) && h.length) return h;
+    }
+  } catch {
+    /* sin almacenamiento disponible */
+  }
+  return [hojaVacia()];
 }
 
-function siluetaSVG(view: View) {
-  const { body, detail } = siluetaPath(view);
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
-    <path d="${body}" fill="#F6F7F8" stroke="#1D2433" stroke-opacity="0.55" stroke-width="3" stroke-linejoin="round"/>
-    <path d="${detail}" fill="none" stroke="#1D2433" stroke-opacity="0.25" stroke-width="2.5" stroke-linecap="round"/>
-  </svg>`;
-}
-
-function drawStroke(ctx: CanvasRenderingContext2D, s: Stroke, scale: number, ox = 0, oy = 0) {
-  if (s.pts.length === 0) return;
-  ctx.save();
-  ctx.globalCompositeOperation = s.erase ? "destination-out" : "source-over";
-  ctx.strokeStyle = s.color;
-  ctx.fillStyle = s.color;
-  ctx.globalAlpha = s.erase ? 1 : 0.75;
-  ctx.lineWidth = s.size * scale;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.beginPath();
-  const p0 = s.pts[0];
-  ctx.moveTo(ox + p0.x * scale, oy + p0.y * scale);
+function strokePath(s: Stroke) {
   if (s.pts.length === 1) {
-    ctx.arc(ox + p0.x * scale, oy + p0.y * scale, (s.size * scale) / 2, 0, Math.PI * 2);
-    ctx.fill();
-  } else {
-    for (let i = 1; i < s.pts.length; i++) {
-      const a = s.pts[i - 1];
-      const b = s.pts[i];
-      const mx = (a.x + b.x) / 2;
-      const my = (a.y + b.y) / 2;
-      ctx.quadraticCurveTo(ox + a.x * scale, oy + a.y * scale, ox + mx * scale, oy + my * scale);
-    }
-    ctx.stroke();
+    const [x, y] = s.pts[0];
+    return `M${x},${y} L${x + 0.1},${y}`;
   }
-  ctx.restore();
+  return "M" + s.pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L");
 }
 
-function loadImage(src: string) {
-  return new Promise<HTMLImageElement>((res, rej) => {
-    const img = new Image();
-    img.onload = () => res(img);
-    img.onerror = rej;
-    img.src = src;
-  });
-}
-
-function wrapText(ctx: CanvasRenderingContext2D, text: string, maxW: number) {
-  const words = text.split(/\s+/);
-  const lines: string[] = [];
-  let line = "";
-  for (const w of words) {
-    const test = line ? line + " " + w : w;
-    if (ctx.measureText(test).width > maxW && line) {
-      lines.push(line);
-      line = w;
-    } else line = test;
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
-/* ------------------------------ Protectometer ------------------------------ */
-function Protectometer({ dims, sims }: { dims: number; sims: number }) {
-  // -1 (mucha seguridad) a +1 (mucha amenaza)
-  const total = dims + sims;
-  const v = total === 0 ? 0 : (dims - sims) / Math.max(total, 4);
-  const pct = 50 + v * 45;
-  const label =
-    total === 0
-      ? "Agrega DIMs y SIMs para ver el balance"
-      : v > 0.15
-      ? "Hoy pesa más la amenaza: el sistema protege más (más dolor)"
-      : v < -0.15
-      ? "Hoy pesa más la seguridad: el sistema necesita proteger menos"
-      : "La amenaza y la seguridad están parejas";
-  return (
-    <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5">
-      <div className="flex items-baseline justify-between mb-3">
-        <h3 className="font-display text-lg font-semibold text-[#1D2433]">Protectometer</h3>
-        <span className="text-sm text-[#1D2433]/45">
-          {dims} DIMs · {sims} SIMs
-        </span>
-      </div>
-      <div className="relative h-4 rounded-full overflow-hidden" style={{ background: "linear-gradient(90deg,#2f7d5b 0%,#E3E5E8 50%,#c0392b 100%)" }}>
-        <div
-          className="absolute top-1/2 w-6 h-6 -mt-3 -ml-3 rounded-full bg-[#1D2433] border-4 border-white shadow transition-all duration-500"
-          style={{ left: `${pct}%` }}
-        />
-      </div>
-      <div className="flex justify-between text-sm font-semibold mt-2">
-        <span className="text-[#2f7d5b]">Seguridad</span>
-        <span className="text-[#c0392b]">Protección / dolor</span>
-      </div>
-      <p className="text-sm text-[#1D2433]/70 mt-3">{label}</p>
-    </div>
-  );
-}
-
-/* ------------------------------ Lista DIMs/SIMs ------------------------------ */
-function ListaDS({
-  tipo,
-  items,
-  setItems,
-  sugeridos,
+/** Dibujo completo de una hoja. Se usa en pantalla y para exportar la imagen. */
+function HojaSVG({
+  hoja,
+  iniciales,
+  sel,
+  svgRef,
+  live,
+  handlers,
 }: {
-  tipo: "DIMs" | "SIMs";
-  items: string[];
-  setItems: Dispatch<SetStateAction<string[]>>;
-  sugeridos: string[];
-}) {
-  const [txt, setTxt] = useState("");
-  const isDim = tipo === "DIMs";
-  const color = isDim ? "#c0392b" : "#2f7d5b";
-  const add = (v: string) => {
-    const t = v.trim();
-    if (!t) return;
-    setItems((prev) => (prev.includes(t) ? prev : [...prev, t]));
+  hoja: Hoja;
+  iniciales: string;
+  sel?: string | null;
+  svgRef?: (el: SVGSVGElement | null) => void;
+  live?: Stroke | null;
+  handlers?: {
+    onPointerDown: (e: RPointerEvent<SVGSVGElement>) => void;
+    onPointerMove: (e: RPointerEvent<SVGSVGElement>) => void;
+    onPointerUp: (e: RPointerEvent<SVGSVGElement>) => void;
   };
+}) {
+  const { w, h } = TAM[hoja.formato];
+  const fecha = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
+  const selIt = hoja.items.find((i) => i.id === sel);
   return (
-    <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5 space-y-3">
-      <div>
-        <h3 className="font-display text-lg font-semibold" style={{ color }}>
-          {isDim ? "DIMs · lo que suma amenaza" : "SIMs · lo que suma seguridad"}
-        </h3>
-        <p className="text-sm text-[#1D2433]/55">
-          {isDim ? "Cosas que el cuerpo interpreta como peligro." : "Cosas que el cuerpo interpreta como seguridad."}
-        </p>
-      </div>
-
-      {items.length > 0 && (
-        <ul className="flex flex-wrap gap-2">
-          {items.map((it) => (
-            <li
-              key={it}
-              className="inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1.5 rounded-full text-sm font-medium text-white"
-              style={{ background: color }}
-            >
-              {it}
-              <button
-                type="button"
-                aria-label={`Quitar ${it}`}
-                onClick={() => setItems((prev) => prev.filter((x) => x !== it))}
-                className="p-0.5 rounded-full hover:bg-white/20"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          add(txt);
-          setTxt("");
-        }}
-        className="flex gap-2"
-      >
-        <input
-          value={txt}
-          onChange={(e) => setTxt(e.target.value)}
-          placeholder={isDim ? "Escribe un DIM del paciente" : "Escribe un SIM del paciente"}
-          className="flex-1 min-w-0 px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
-        />
-        <button type="submit" className="px-3 rounded-xl text-white" style={{ background: color }} aria-label="Agregar">
-          <Plus className="w-4 h-4" />
-        </button>
-      </form>
-
-      <div className="flex flex-wrap gap-1.5">
-        {sugeridos
-          .filter((s) => !items.includes(s))
-          .map((s) => (
-            <button
-              key={s}
-              type="button"
-              onClick={() => add(s)}
-              className="px-2.5 py-1 rounded-full border text-sm text-[#1D2433]/70 hover:text-[#1D2433] transition-colors"
-              style={{ borderColor: color + "55" }}
-            >
-              + {s}
-            </button>
-          ))}
-      </div>
-    </div>
+    <svg
+      ref={svgRef}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${w} ${h}`}
+      width="100%"
+      style={{ display: "block", touchAction: "none", userSelect: "none" }}
+      {...handlers}
+    >
+      <rect x={0} y={0} width={w} height={h} fill="#fff" />
+      {hoja.items.map((it) => (
+        <g key={it.id} data-item={it.id} transform={`translate(${it.x} ${it.y}) scale(${it.s})`} style={{ cursor: "move" }}>
+          <Elemento it={it} />
+        </g>
+      ))}
+      {hoja.strokes.map((s, i) => (
+        <path key={i} d={strokePath(s)} fill="none" stroke={s.c} strokeWidth={s.w} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />
+      ))}
+      {live && <path d={strokePath(live)} fill="none" stroke={live.c} strokeWidth={live.w} strokeLinecap="round" strokeLinejoin="round" opacity={0.9} />}
+      <text x={40} y={h - 28} fontFamily={FONT} fontSize={22} fill={C.ink2}>
+        {iniciales ? `Para ${iniciales} · ${fecha}` : fecha}
+      </text>
+      <text x={w - 40} y={h - 28} fontFamily={FONT} fontSize={22} fill={C.ink2} textAnchor="end">
+        Lukas · Kinesiólogo · myokinecl.netlify.app
+      </text>
+      {selIt && (() => {
+        const b = base(selIt);
+        const bw = b.w * selIt.s, bh = b.h * selIt.s;
+        return (
+          <g data-ui="1">
+            <rect x={selIt.x - 8} y={selIt.y - 8} width={bw + 16} height={bh + 16} fill="none" stroke={C.go} strokeWidth={3} strokeDasharray="12 8" rx={12} pointerEvents="none" />
+            <g data-handle={selIt.id} style={{ cursor: "nwse-resize" }}>
+              <circle cx={selIt.x + bw + 8} cy={selIt.y + bh + 8} r={30} fill="transparent" />
+              <circle cx={selIt.x + bw + 8} cy={selIt.y + bh + 8} r={18} fill={C.go} stroke="#fff" strokeWidth={4} />
+            </g>
+          </g>
+        );
+      })()}
+    </svg>
   );
 }
 
-/* ================================== Pizarra ================================== */
+let fontCss: string | null = null;
+async function cssFuentes() {
+  if (fontCss !== null) return fontCss;
+  try {
+    const pares: [string, number][] = [[f400, 400], [f500, 500], [f600, 600], [f700, 700], [f800, 800]];
+    const partes = await Promise.all(
+      pares.map(async ([url, w]) => {
+        const buf = await (await fetch(url)).arrayBuffer();
+        let bin = "";
+        const bytes = new Uint8Array(buf);
+        for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+        return `@font-face{font-family:'Bricolage Grotesque';src:url(data:font/woff2;base64,${btoa(bin)}) format('woff2');font-weight:${w}}`;
+      })
+    );
+    fontCss = partes.join("");
+  } catch {
+    fontCss = "";
+  }
+  return fontCss;
+}
+
+async function svgAPng(svg: SVGSVGElement, w: number, h: number): Promise<Blob> {
+  const clon = svg.cloneNode(true) as SVGSVGElement;
+  clon.querySelectorAll("[data-ui]").forEach((n) => n.remove());
+  clon.setAttribute("width", String(w));
+  clon.setAttribute("height", String(h));
+  const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+  style.textContent = await cssFuentes();
+  clon.insertBefore(style, clon.firstChild);
+  const xml = new XMLSerializer().serializeToString(clon);
+  const url = URL.createObjectURL(new Blob([xml], { type: "image/svg+xml;charset=utf-8" }));
+  try {
+    const img = new Image();
+    await new Promise<void>((res, rej) => {
+      img.onload = () => res();
+      img.onerror = () => rej(new Error("img"));
+      img.src = url;
+    });
+    const cv = document.createElement("canvas");
+    cv.width = w;
+    cv.height = h;
+    const ctx = cv.getContext("2d")!;
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, w, h);
+    ctx.drawImage(img, 0, 0, w, h);
+    return await new Promise<Blob>((res, rej) => cv.toBlob((b) => (b ? res(b) : rej(new Error("blob"))), "image/png"));
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
 export function Pizarra() {
-  const [view, setView] = useState<View>("frente");
-  const [strokes, setStrokes] = useState<Record<View, Stroke[]>>({ frente: [], espalda: [] });
-  const [color, setColor] = useState(COLORS[0].c);
-  const [size, setSize] = useState(18);
-  const [erase, setErase] = useState(false);
-  const [dims, setDims] = useState<string[]>([]);
-  const [sims, setSims] = useState<string[]>([]);
-  const [nota, setNota] = useState("");
-  const [paciente, setPaciente] = useState("");
+  const [hojas, setHojas] = useState<Hoja[]>(cargar);
+  const [idx, setIdx] = useState(0);
+  const [sel, setSel] = useState<string | null>(null);
+  const [modo, setModo] = useState<Modo>("mover");
+  const [color, setColor] = useState(C.rojo);
+  const [grosor, setGrosor] = useState(10);
+  const [iniciales, setIniciales] = useState("");
+  const [panel, setPanel] = useState<"agregar" | "plantillas" | null>(null);
+  const [live, setLive] = useState<Stroke | null>(null);
+  const [lapiz, setLapiz] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [aviso, setAviso] = useState("");
+  const [confirmarNueva, setConfirmarNueva] = useState(false);
+  const [exportando, setExportando] = useState(false);
 
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const drawing = useRef<Stroke | null>(null);
+  const svgEl = useRef<SVGSVGElement | null>(null);
+  const exportRefs = useRef<(SVGSVGElement | null)[]>([]);
+  const hist = useRef<string[]>([]);
+  const lastCommit = useRef(0);
+  const drag = useRef<
+    | { tipo: "mover"; id: string; dx: number; dy: number }
+    | { tipo: "escalar"; id: string; s0: number; d0: number; ox: number; oy: number }
+    | { tipo: "dibujar" }
+    | { tipo: "borrar" }
+    | null
+  >(null);
 
-  const silueta = useMemo(
-    () => ({
-      frente: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(siluetaSVG("frente")),
-      espalda: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(siluetaSVG("espalda")),
-    }),
-    []
+  const hoja = hojas[Math.min(idx, hojas.length - 1)];
+  const { w: HW, h: HH } = TAM[hoja.formato];
+
+  // Guardado automático solo en este dispositivo
+  useEffect(() => {
+    const t = setTimeout(() => {
+      try {
+        localStorage.setItem(LS_KEY, JSON.stringify(hojas));
+      } catch {
+        /* almacenamiento lleno o bloqueado */
+      }
+    }, 400);
+    return () => clearTimeout(t);
+  }, [hojas]);
+
+  const commit = useCallback(
+    (forzar = true) => {
+      const now = Date.now();
+      if (!forzar && now - lastCommit.current < 900) return;
+      lastCommit.current = now;
+      hist.current.push(JSON.stringify(hojas));
+      if (hist.current.length > 60) hist.current.shift();
+    },
+    [hojas]
   );
 
-  // Redibuja el lienzo cuando cambian los trazos, la vista o el tamaño
-  const redraw = () => {
-    const cv = canvasRef.current;
-    const wrap = wrapRef.current;
-    if (!cv || !wrap) return;
-    const dpr = window.devicePixelRatio || 1;
-    const cssW = wrap.clientWidth;
-    const cssH = (cssW * H) / W;
-    if (cv.width !== Math.round(cssW * dpr)) {
-      cv.width = Math.round(cssW * dpr);
-      cv.height = Math.round(cssH * dpr);
-      cv.style.width = cssW + "px";
-      cv.style.height = cssH + "px";
-    }
-    const ctx = cv.getContext("2d")!;
-    ctx.clearRect(0, 0, cv.width, cv.height);
-    const scale = cv.width / W;
-    for (const s of strokes[view]) drawStroke(ctx, s, scale);
-    if (drawing.current) drawStroke(ctx, drawing.current, scale);
+  const setHoja = (fn: (h: Hoja) => Hoja) => setHojas((hs) => hs.map((h, i) => (i === idx ? fn(h) : h)));
+  const setItem = (id: string, fn: (it: Item) => Item) => setHoja((h) => ({ ...h, items: h.items.map((it) => (it.id === id ? fn(it) : it)) }));
+
+  const deshacer = () => {
+    const prev = hist.current.pop();
+    if (!prev) return;
+    const hs = JSON.parse(prev) as Hoja[];
+    setHojas(hs);
+    setIdx((i) => Math.min(i, hs.length - 1));
+    setSel(null);
   };
 
-  useEffect(() => {
-    redraw();
-  });
-  useEffect(() => {
-    const onR = () => redraw();
-    window.addEventListener("resize", onR);
-    return () => window.removeEventListener("resize", onR);
-  });
-
-  const toPt = (e: RPointerEvent): Pt => {
-    const r = canvasRef.current!.getBoundingClientRect();
-    return { x: ((e.clientX - r.left) / r.width) * W, y: ((e.clientY - r.top) / r.height) * H };
+  const toBoard = (e: { clientX: number; clientY: number }) => {
+    const svg = svgEl.current!;
+    const pt = svg.createSVGPoint();
+    pt.x = e.clientX;
+    pt.y = e.clientY;
+    const m = svg.getScreenCTM();
+    const p = m ? pt.matrixTransform(m.inverse()) : pt;
+    return [p.x, p.y] as [number, number];
   };
 
-  const onDown = (e: RPointerEvent) => {
-    e.preventDefault();
+  const borrarEn = (x: number, y: number) => {
+    const r = 26;
+    setHoja((h) => ({ ...h, strokes: h.strokes.filter((s) => !s.pts.some(([a, b]) => (a - x) ** 2 + (b - y) ** 2 < (r + s.w / 2) ** 2)) }));
+  };
+
+  const onDown = (e: RPointerEvent<SVGSVGElement>) => {
+    if (e.pointerType === "pen" && !lapiz) setLapiz(true);
+    const usaLapiz = lapiz || e.pointerType === "pen";
+    const dedoConLapiz = usaLapiz && e.pointerType === "touch";
     try {
-      (e.target as Element).setPointerCapture(e.pointerId);
+      e.currentTarget.setPointerCapture(e.pointerId);
     } catch {
-      /* sin captura: igual se dibuja */
+      /* algunos navegadores no lo permiten */
     }
-    drawing.current = { color, size: erase ? size * 1.8 : size, erase, pts: [toPt(e)] };
-    redraw();
+    const [x, y] = toBoard(e);
+    if (modo === "dibujar" && !dedoConLapiz) {
+      commit();
+      drag.current = { tipo: "dibujar" };
+      setLive({ c: color, w: grosor, pts: [[x, y]] });
+      return;
+    }
+    if (modo === "borrar" && !dedoConLapiz) {
+      commit();
+      drag.current = { tipo: "borrar" };
+      borrarEn(x, y);
+      return;
+    }
+    const t = e.target as Element;
+    const handle = t.closest("[data-handle]")?.getAttribute("data-handle");
+    const itemId = t.closest("[data-item]")?.getAttribute("data-item");
+    if (handle) {
+      const it = hoja.items.find((i) => i.id === handle);
+      if (!it) return;
+      commit();
+      drag.current = { tipo: "escalar", id: it.id, s0: it.s, d0: Math.max(20, Math.hypot(x - it.x, y - it.y)), ox: it.x, oy: it.y };
+    } else if (itemId) {
+      const it = hoja.items.find((i) => i.id === itemId);
+      if (!it) return;
+      commit();
+      setSel(it.id);
+      drag.current = { tipo: "mover", id: it.id, dx: x - it.x, dy: y - it.y };
+    } else {
+      setSel(null);
+      drag.current = null;
+    }
   };
-  const onMove = (e: RPointerEvent) => {
-    if (!drawing.current) return;
-    e.preventDefault();
-    drawing.current.pts.push(toPt(e));
-    redraw();
+
+  const onMove = (e: RPointerEvent<SVGSVGElement>) => {
+    const d = drag.current;
+    if (!d) return;
+    const [x, y] = toBoard(e);
+    if (d.tipo === "dibujar") setLive((s) => (s ? { ...s, pts: [...s.pts, [x, y]] } : s));
+    else if (d.tipo === "borrar") borrarEn(x, y);
+    else if (d.tipo === "mover")
+      setItem(d.id, (it) => {
+        const b = base(it);
+        return {
+          ...it,
+          x: Math.max(-b.w * it.s * 0.6, Math.min(HW - b.w * it.s * 0.4, x - d.dx)),
+          y: Math.max(-b.h * it.s * 0.6, Math.min(HH - b.h * it.s * 0.4, y - d.dy)),
+        };
+      });
+    else if (d.tipo === "escalar") {
+      const s = Math.max(0.25, Math.min(3.5, (d.s0 * Math.hypot(x - d.ox, y - d.oy)) / d.d0));
+      setItem(d.id, (it) => ({ ...it, s }));
+    }
   };
+
   const onUp = () => {
-    if (!drawing.current) return;
-    const s = drawing.current;
-    drawing.current = null;
-    setStrokes((prev) => ({ ...prev, [view]: [...prev[view], s] }));
-  };
-
-  const undo = () => setStrokes((p) => ({ ...p, [view]: p[view].slice(0, -1) }));
-  const clearView = () => setStrokes((p) => ({ ...p, [view]: [] }));
-  const resetAll = () => {
-    if (!confirmReset()) return;
-    setStrokes({ frente: [], espalda: [] });
-    setDims([]);
-    setSims([]);
-    setNota("");
-    setPaciente("");
-  };
-  const confirmReset = () => {
-    // Sin diálogos del navegador: se resetea con doble toque en menos de 2 s
-    const now = Date.now();
-    const last = Number((window as any).__mkReset || 0);
-    (window as any).__mkReset = now;
-    return now - last < 2000;
-  };
-  const [resetHint, setResetHint] = useState(false);
-
-  /* -------------------- Componer la imagen para el paciente -------------------- */
-  const buildImage = async (): Promise<Blob> => {
-    const OW = 1080;
-    const OH = 2000;
-    const cv = document.createElement("canvas");
-    cv.width = OW;
-    cv.height = OH;
-    const ctx = cv.getContext("2d")!;
-    ctx.fillStyle = "#F6F7F8";
-    ctx.fillRect(0, 0, OW, OH);
-
-    // Encabezado
-    ctx.fillStyle = "#0F5C4D";
-    ctx.beginPath();
-    ctx.arc(70, 78, 10, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = "#1D2433";
-    ctx.font = "700 34px Georgia, serif";
-    ctx.fillText("MyoKine", 92, 90);
-    ctx.font = "400 24px system-ui, sans-serif";
-    ctx.fillStyle = "rgba(10,10,12,0.55)";
-    const fecha = new Date().toLocaleDateString("es-CL", { day: "numeric", month: "long", year: "numeric" });
-    const sub = (paciente.trim() ? paciente.trim() + " · " : "") + fecha;
-    ctx.textAlign = "right";
-    ctx.fillText(sub, OW - 60, 90);
-    ctx.textAlign = "left";
-
-    ctx.fillStyle = "#1D2433";
-    ctx.font = "700 52px Georgia, serif";
-    ctx.fillText("Lo que conversamos hoy", 60, 180);
-
-    // Siluetas (frente y espalda) con sus trazos
-    const views: View[] = ["frente", "espalda"];
-    const sw = 420;
-    const sh = (sw * H) / W;
-    for (let i = 0; i < 2; i++) {
-      const v = views[i];
-      const ox = 60 + i * (sw + 60) + 30;
-      const oy = 220;
-      const img = await loadImage(silueta[v]);
-      ctx.drawImage(img, ox, oy, sw, sh);
-      const layer = document.createElement("canvas");
-      layer.width = OW;
-      layer.height = OH;
-      const lctx = layer.getContext("2d")!;
-      for (const s of strokes[v]) drawStroke(lctx, s, sw / W, ox, oy);
-      ctx.drawImage(layer, 0, 0);
-      ctx.fillStyle = "rgba(10,10,12,0.5)";
-      ctx.font = "600 20px system-ui, sans-serif";
-      ctx.textAlign = "center";
-      ctx.fillText(v === "frente" ? "FRENTE" : "ESPALDA", ox + sw / 2, oy + sh + 30);
-      ctx.textAlign = "left";
+    const d = drag.current;
+    drag.current = null;
+    if (d?.tipo === "dibujar" && live) {
+      const s = live;
+      setHoja((h) => ({ ...h, strokes: [...h.strokes, s] }));
+      setLive(null);
     }
+  };
 
-    // DIMs y SIMs
-    let y = 220 + sh + 80;
-    const colW = (OW - 120 - 40) / 2;
-    const drawList = (title: string, items: string[], x: number, col: string) => {
-      ctx.fillStyle = col;
-      ctx.font = "700 30px Georgia, serif";
-      ctx.fillText(title, x, y);
-      ctx.font = "400 26px system-ui, sans-serif";
-      ctx.fillStyle = "#1D2433";
-      let yy = y + 44;
-      const list = items.length ? items : ["—"];
-      for (const it of list.slice(0, 7)) {
-        const lines = wrapText(ctx, it, colW - 30);
-        ctx.fillStyle = col;
-        ctx.beginPath();
-        ctx.arc(x + 8, yy - 9, 6, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = "#1D2433";
-        for (const ln of lines) {
-          ctx.fillText(ln, x + 26, yy);
-          yy += 34;
-        }
-        yy += 6;
-      }
-      return yy;
+  const agregar = (en: Entrada) => {
+    commit();
+    const it: Item = { id: nuevoId(), kind: en.kind, x: 0, y: 0, s: 1, d: datosIniciales(en.kind, en.preset) };
+    const b = base(it);
+    it.s = Math.min(1.2, (HW * (en.kind === "cuerpo" || en.kind === "flecha" ? 0.3 : 0.6)) / b.w);
+    const n = hoja.items.length % 6;
+    it.x = Math.round((HW - b.w * it.s) / 2 + n * 24);
+    it.y = Math.round(Math.max(40, (HH - b.h * it.s) / 2 - 120 + n * 24));
+    setHoja((h) => ({ ...h, items: [...h.items, it] }));
+    setSel(it.id);
+    setModo("mover");
+    setPanel(null);
+  };
+
+  const usarPlantilla = (p: Plantilla) => {
+    commit();
+    const nueva: Hoja = {
+      formato: p.formato,
+      strokes: [],
+      items: p.items.map((x) => ({ id: nuevoId(), kind: x.kind, x: x.x, y: x.y, s: x.s, d: { ...datosIniciales(x.kind, x.preset), ...(x.d || {}) } })),
     };
-    const y1 = drawList("Lo que suma amenaza (DIMs)", dims, 60, "#c0392b");
-    const y2 = drawList("Lo que suma seguridad (SIMs)", sims, 60 + colW + 40, "#2f7d5b");
-    y = Math.max(y1, y2) + 20;
-
-    // Protectometer
-    const total = dims.length + sims.length;
-    const v = total === 0 ? 0 : (dims.length - sims.length) / Math.max(total, 4);
-    const bx = 60;
-    const bw = OW - 120;
-    const grad = ctx.createLinearGradient(bx, 0, bx + bw, 0);
-    grad.addColorStop(0, "#2f7d5b");
-    grad.addColorStop(0.5, "#E3E5E8");
-    grad.addColorStop(1, "#c0392b");
-    ctx.fillStyle = grad;
-    ctx.beginPath();
-    (ctx as any).roundRect ? (ctx as any).roundRect(bx, y, bw, 22, 11) : ctx.rect(bx, y, bw, 22);
-    ctx.fill();
-    const px = bx + bw * ((50 + v * 45) / 100);
-    ctx.fillStyle = "#fff";
-    ctx.beginPath();
-    ctx.arc(px, y + 11, 20, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = "#1D2433";
-    ctx.beginPath();
-    ctx.arc(px, y + 11, 13, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.font = "600 20px system-ui, sans-serif";
-    ctx.fillStyle = "#2f7d5b";
-    ctx.fillText("SEGURIDAD", bx, y + 62);
-    ctx.fillStyle = "#c0392b";
-    ctx.textAlign = "right";
-    ctx.fillText("PROTECCIÓN / DOLOR", bx + bw, y + 62);
-    ctx.textAlign = "left";
-    y += 110;
-
-    // Nota
-    if (nota.trim()) {
-      ctx.fillStyle = "#1D2433";
-      ctx.font = "700 28px Georgia, serif";
-      ctx.fillText("Lo que acordamos", 60, y);
-      ctx.font = "400 26px system-ui, sans-serif";
-      ctx.fillStyle = "rgba(10,10,12,0.8)";
-      let yy = y + 40;
-      for (const ln of wrapText(ctx, nota.trim(), OW - 120).slice(0, 4)) {
-        ctx.fillText(ln, 60, yy);
-        yy += 34;
-      }
+    const vacia = hoja.items.length === 0 && hoja.strokes.length === 0;
+    if (vacia) setHojas((hs) => hs.map((h, i) => (i === idx ? nueva : h)));
+    else {
+      setHojas((hs) => [...hs, nueva]);
+      setIdx(hojas.length);
     }
-
-    if (nota.trim()) y += 40 + 34 * Math.min(4, wrapText(ctx, nota.trim(), OW - 120).length);
-
-    // Recorta el alto al contenido y agrega el pie
-    const finalH = Math.min(OH, Math.max(1350, y + 90));
-    const out = document.createElement("canvas");
-    out.width = OW;
-    out.height = finalH;
-    const octx = out.getContext("2d")!;
-    octx.drawImage(cv, 0, 0);
-    octx.fillStyle = "rgba(10,10,12,0.45)";
-    octx.font = "400 20px system-ui, sans-serif";
-    octx.fillText("Lukas · Kinesiólogo · myokinecl.netlify.app", 60, finalH - 44);
-
-    return await new Promise<Blob>((res) => out.toBlob((b) => res(b!), "image/png"));
+    setSel(null);
+    setModo("mover");
+    setPanel(null);
   };
 
-  const fileName = () =>
-    "MyoKine-consulta-" + new Date().toISOString().slice(0, 10) + ".png";
+  const selItem = hoja.items.find((i) => i.id === sel) || null;
 
-  const share = async () => {
-    setBusy(true);
-    try {
-      const blob = await buildImage();
-      const file = new File([blob], fileName(), { type: "image/png" });
-      const nav: any = navigator;
-      if (nav.canShare && nav.canShare({ files: [file] })) {
-        await nav.share({ files: [file], title: "Lo que conversamos hoy · MyoKine" });
-      } else {
-        download(blob);
+  const accionSel = (a: "chico" | "grande" | "duplicar" | "frente" | "eliminar") => {
+    if (!selItem) return;
+    commit();
+    if (a === "eliminar") {
+      setHoja((h) => ({ ...h, items: h.items.filter((i) => i.id !== selItem.id) }));
+      setSel(null);
+    } else if (a === "duplicar") {
+      const c: Item = { ...JSON.parse(JSON.stringify(selItem)), id: nuevoId(), x: selItem.x + 30, y: selItem.y + 30 };
+      setHoja((h) => ({ ...h, items: [...h.items, c] }));
+      setSel(c.id);
+    } else if (a === "frente") {
+      setHoja((h) => ({ ...h, items: [...h.items.filter((i) => i.id !== selItem.id), selItem] }));
+    } else {
+      const f = a === "grande" ? 1.15 : 1 / 1.15;
+      setItem(selItem.id, (it) => ({ ...it, s: Math.max(0.25, Math.min(3.5, it.s * f)) }));
+    }
+  };
+
+  // Teclado en computador: borrar y deshacer
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      if ((e.key === "Backspace" || e.key === "Delete") && sel) {
+        e.preventDefault();
+        accionSel("eliminar");
       }
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        deshacer();
+      }
+    };
+    window.addEventListener("keydown", k);
+    return () => window.removeEventListener("keydown", k);
+  });
+
+  const nuevaHoja = (formato: Formato) => {
+    commit();
+    setHojas((hs) => [...hs, hojaVacia(formato)]);
+    setIdx(hojas.length);
+    setSel(null);
+  };
+
+  const borrarHoja = () => {
+    if (hojas.length === 1) return;
+    commit();
+    setHojas((hs) => hs.filter((_, i) => i !== idx));
+    setIdx((i) => Math.max(0, i - 1));
+    setSel(null);
+  };
+
+  const nuevaPizarra = () => {
+    if (!confirmarNueva) {
+      setConfirmarNueva(true);
+      setTimeout(() => setConfirmarNueva(false), 2500);
+      return;
+    }
+    commit();
+    setHojas([hojaVacia()]);
+    setIdx(0);
+    setSel(null);
+    setIniciales("");
+    setConfirmarNueva(false);
+  };
+
+  const enviar = async () => {
+    setBusy(true);
+    setAviso("");
+    setSel(null);
+    setExportando(true);
+    try {
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      const files: File[] = [];
+      for (let i = 0; i < hojas.length; i++) {
+        const el = exportRefs.current[i];
+        const h = hojas[i];
+        if (!el || (h.items.length === 0 && h.strokes.length === 0)) continue;
+        const { w, h: hh } = TAM[h.formato];
+        const blob = await svgAPng(el, w, hh);
+        files.push(new File([blob], `pizarra-myokine-${i + 1}.png`, { type: "image/png" }));
+      }
+      if (!files.length) {
+        setAviso("La pizarra está vacía. Agrega algo antes de enviar.");
+        return;
+      }
+      const nav = navigator as Navigator & { canShare?: (d: { files: File[] }) => boolean };
+      if (nav.share && nav.canShare?.({ files })) {
+        try {
+          await nav.share({ files, title: "Pizarra MyoKine", text: "Lo que vimos hoy en la consulta" });
+          return;
+        } catch (err) {
+          if ((err as Error).name === "AbortError") return;
+        }
+      }
+      files.forEach((f) => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(f);
+        a.download = f.name;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      });
+      setAviso(files.length > 1 ? `Se descargaron ${files.length} imágenes.` : "Se descargó la imagen.");
     } catch {
-      /* el usuario canceló */
+      setAviso("No se pudo crear la imagen. Prueba de nuevo o toma una captura de pantalla.");
     } finally {
-      setBusy(false);
-    }
-  };
-  const download = (blob: Blob) => {
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = fileName();
-    a.click();
-  };
-  const downloadClick = async () => {
-    setBusy(true);
-    try {
-      download(await buildImage());
-    } finally {
+      setExportando(false);
       setBusy(false);
     }
   };
 
-  /* ---------------------------------- UI ---------------------------------- */
+  const btn = (on: boolean) =>
+    `px-4 py-2.5 rounded-[10px] text-[16px] font-semibold border-[1.5px] transition-colors cursor-pointer ${
+      on ? "bg-[#1D2433] text-white border-[#1D2433]" : "bg-white text-[#1D2433] border-[#E3E5E8] hover:border-[#1D2433]"
+    }`;
+
   return (
     <div className="space-y-6" id="pizarra">
-      <div className="space-y-2">
-        <span className="text-sm font-bold text-[#0F5C4D]">Para usar en la consulta</span>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold text-[#1D2433] tracking-tight">
-          Pizarra de consulta
-        </h1>
-        <p className="text-sm sm:text-base text-[#1D2433]/70 max-w-2xl">
-          Dibuja con tu paciente dónde le duele, anoten juntos lo que suma amenaza y lo que suma seguridad, y envíale la
-          imagen al terminar. Nada se guarda ni sale de este dispositivo.
+      <header className="max-w-3xl">
+        <h1 className="font-display text-[34px] sm:text-5xl font-bold tracking-[-0.03em] text-[#1D2433]">Pizarra de consulta</h1>
+        <p className="font-serif text-[18px] sm:text-[19px] leading-relaxed text-[#5A6170] mt-3">
+          Arma la explicación con dibujos y gráficos listos, escribe o dibuja encima y envíale la imagen a tu paciente. Si no te gusta dibujar, parte con una plantilla.
         </p>
+      </header>
+
+      {/* Barra de herramientas */}
+      <div className="flex flex-wrap items-center gap-2.5">
+        <button type="button" onClick={() => setPanel(panel === "plantillas" ? null : "plantillas")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold bg-[#0F5C4D] text-white cursor-pointer hover:bg-[#0B4A3E]">
+          Plantillas
+        </button>
+        <button type="button" onClick={() => setPanel(panel === "agregar" ? null : "agregar")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold bg-[#0F5C4D] text-white cursor-pointer hover:bg-[#0B4A3E]">
+          Agregar
+        </button>
+        <span className="w-px h-8 bg-[#E3E5E8] mx-1" />
+        <button type="button" className={btn(modo === "mover")} onClick={() => setModo("mover")}>Mover</button>
+        <button type="button" className={btn(modo === "dibujar")} onClick={() => { setModo("dibujar"); setSel(null); }}>Dibujar</button>
+        <button type="button" className={btn(modo === "borrar")} onClick={() => { setModo("borrar"); setSel(null); }}>Borrar trazos</button>
+        <button type="button" className={btn(false)} onClick={deshacer} disabled={!hist.current.length}>Deshacer</button>
       </div>
 
-      <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 items-start">
-        {/* -------- Lienzo -------- */}
-        <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-3 sm:p-4 space-y-3 lg:sticky lg:top-20">
-          <div className="flex items-center justify-between gap-2">
-            <div className="inline-flex rounded-xl bg-[#F6F7F8] p-1">
-              {(["frente", "espalda"] as View[]).map((v) => (
-                <button
-                  key={v}
-                  type="button"
-                  onClick={() => setView(v)}
-                  className={`px-4 py-1.5 rounded-lg text-sm font-semibold capitalize transition-colors ${
-                    view === v ? "bg-[#1D2433] text-white" : "text-[#1D2433]/60"
-                  }`}
-                >
-                  {v}
+      {modo === "dibujar" && (
+        <div className="flex flex-wrap items-center gap-3">
+          {COLORES.map((c) => (
+            <button key={c.c} type="button" onClick={() => setColor(c.c)} className={`flex items-center gap-2 px-3 py-2 rounded-[10px] border-[1.5px] text-[15px] font-semibold cursor-pointer ${color === c.c ? "border-[#1D2433]" : "border-[#E3E5E8]"}`}>
+              <span className="w-4 h-4 rounded-full" style={{ background: c.c }} />
+              {c.label}
+            </button>
+          ))}
+          <label className="flex items-center gap-2 text-[15px] text-[#5A6170]">
+            Grosor
+            <input type="range" min={4} max={28} value={grosor} onChange={(e) => setGrosor(Number(e.target.value))} className="accent-[#0F5C4D]" />
+          </label>
+          {lapiz && <span className="text-[15px] text-[#5A6170]">Lápiz detectado: el lápiz dibuja y el dedo mueve.</span>}
+        </div>
+      )}
+
+      {/* Menús */}
+      {panel && (
+        <div className="rounded-[18px] border-[1.5px] border-[#E3E5E8] bg-white p-5 sm:p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-display text-2xl font-bold text-[#1D2433]">{panel === "agregar" ? "Agregar a la hoja" : "Empezar con una plantilla"}</h2>
+            <button type="button" onClick={() => setPanel(null)} className="text-[16px] font-semibold text-[#0F5C4D] underline underline-offset-4 cursor-pointer">Cerrar</button>
+          </div>
+          {panel === "plantillas" ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {PLANTILLAS.map((p) => (
+                <button key={p.nombre} type="button" onClick={() => usarPlantilla(p)} className="text-left rounded-[14px] bg-[#F6F7F8] p-4 hover:bg-[#EEF0F2] cursor-pointer">
+                  <span className="block font-display text-[19px] font-bold text-[#1D2433]">{p.nombre}</span>
+                  <span className="block text-[15px] text-[#5A6170] mt-1">{p.ayuda}</span>
                 </button>
               ))}
+              <p className="sm:col-span-2 lg:col-span-3 text-[14px] text-[#5A6170]">Si la hoja actual tiene algo, la plantilla se abre en una hoja nueva.</p>
             </div>
-            <div className="flex items-center gap-1">
-              <button type="button" onClick={undo} className="p-2 rounded-lg hover:bg-[#1D2433]/5" aria-label="Deshacer">
-                <Undo2 className="w-5 h-5" />
-              </button>
-              <button type="button" onClick={clearView} className="p-2 rounded-lg hover:bg-[#1D2433]/5" aria-label="Borrar dibujo de esta vista">
-                <Trash2 className="w-5 h-5" />
-              </button>
+          ) : (
+            <div className="space-y-5 max-h-[60vh] overflow-y-auto pr-1">
+              {CATALOGO.map((g) => (
+                <div key={g.grupo}>
+                  <h3 className="font-display text-[18px] font-bold text-[#1D2433] mb-2">{g.grupo}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                    {g.items.map((en) => (
+                      <button key={en.nombre} type="button" onClick={() => agregar(en)} className="text-left rounded-[12px] bg-[#F6F7F8] px-4 py-3 hover:bg-[#EEF0F2] cursor-pointer">
+                        <span className="block text-[16px] font-semibold text-[#1D2433]">{en.nombre}</span>
+                        <span className="block text-[14px] text-[#5A6170]">{en.ayuda}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-
-          <div ref={wrapRef} className="relative w-full mx-auto select-none" style={{ aspectRatio: `${W} / ${H}`, maxWidth: `calc(64vh * ${W / H})` }}>
-            <img src={silueta[view]} alt="" className="absolute inset-0 w-full h-full pointer-events-none" draggable={false} />
-            <canvas
-              ref={canvasRef}
-              className="absolute inset-0 w-full h-full"
-              style={{ touchAction: "none", cursor: erase ? "cell" : "crosshair" }}
-              onPointerDown={onDown}
-              onPointerMove={onMove}
-              onPointerUp={onUp}
-              onPointerCancel={onUp}
-              onPointerLeave={onUp}
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2">
-            {COLORS.map((c) => (
-              <button
-                key={c.c}
-                type="button"
-                onClick={() => {
-                  setColor(c.c);
-                  setErase(false);
-                }}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-sm font-semibold ${
-                  !erase && color === c.c ? "border-[#1D2433] bg-[#1D2433]/5" : "border-[#1D2433]/15"
-                }`}
-              >
-                <span className="w-3.5 h-3.5 rounded-full" style={{ background: c.c }} />
-                {c.label}
-              </button>
-            ))}
-            <button
-              type="button"
-              onClick={() => setErase((e) => !e)}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-sm font-semibold ${
-                erase ? "border-[#1D2433] bg-[#1D2433]/5" : "border-[#1D2433]/15"
-              }`}
-            >
-              {erase ? <Eraser className="w-3.5 h-3.5" /> : <Pencil className="w-3.5 h-3.5" />}
-              {erase ? "Borrador" : "Lápiz"}
-            </button>
-            <label className="flex items-center gap-2 text-sm text-[#1D2433]/60 ml-auto">
-              Grosor
-              <input type="range" min={6} max={40} value={size} onChange={(e) => setSize(Number(e.target.value))} className="w-24 accent-[#0F5C4D]" />
-            </label>
-          </div>
+          )}
         </div>
+      )}
 
-        {/* -------- Panel -------- */}
-        <div className="space-y-4">
-          <ListaDS tipo="DIMs" items={dims} setItems={setDims} sugeridos={DIMS_SUGERIDOS} />
-          <ListaDS tipo="SIMs" items={sims} setItems={setSims} sugeridos={SIMS_SUGERIDOS} />
-          <Protectometer dims={dims.length} sims={sims.length} />
-
-          <div className="rounded-2xl border border-[#1D2433]/10 bg-white p-4 sm:p-5 space-y-3">
-            <h3 className="font-display text-lg font-semibold text-[#1D2433]">Lo que acordamos</h3>
-            <textarea
-              value={nota}
-              onChange={(e) => setNota(e.target.value)}
-              rows={3}
-              placeholder="Ej: caminar 15 minutos al día y volver a agacharme de a poco."
-              className="w-full px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
-            />
-            <input
-              value={paciente}
-              onChange={(e) => setPaciente(e.target.value)}
-              placeholder="Iniciales o nombre (opcional)"
-              className="w-full px-3 py-2.5 rounded-xl border border-[#1D2433]/15 text-sm bg-[#F6F7F8]/50 focus:outline-none focus:border-[#0F5C4D]"
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2.5">
-            <button
-              type="button"
-              onClick={share}
-              disabled={busy}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors disabled:opacity-60"
-            >
-              <Send className="w-4 h-4" />
-              Enviar al paciente
-            </button>
-            <button
-              type="button"
-              onClick={downloadClick}
-              disabled={busy}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-[#1D2433]/15 bg-white text-sm font-semibold hover:border-[#0F5C4D] disabled:opacity-60"
-            >
-              <Download className="w-4 h-4" />
-              Descargar imagen
-            </button>
-          </div>
-          <button
-            type="button"
-            onClick={() => {
-              setResetHint(true);
-              setTimeout(() => setResetHint(false), 2000);
-              resetAll();
-            }}
-            className="w-full inline-flex items-center justify-center gap-2 text-sm text-[#1D2433]/50 hover:text-[#0F5C4D] py-2"
-          >
-            <RotateCcw className="w-3.5 h-3.5" />
-            {resetHint ? "Toca otra vez para empezar con un paciente nuevo" : "Nuevo paciente (borrar todo)"}
+      {/* Hojas */}
+      <div className="flex flex-wrap items-center gap-2">
+        {hojas.map((_, i) => (
+          <button key={i} type="button" onClick={() => { setIdx(i); setSel(null); }} className={btn(i === idx)}>
+            Hoja {i + 1}
           </button>
-          <p className="text-sm text-[#1D2433]/45 leading-relaxed">
-            DIMs y SIMs (Danger In Me / Safety In Me) y Protectometer: herramientas de educación en dolor propuestas por
-            Moseley y Butler. Esta pizarra es una ayuda para explicar, no una evaluación clínica.
-          </p>
-        </div>
+        ))}
+        {hojas.length < 6 && (
+          <>
+            <button type="button" onClick={() => nuevaHoja("vertical")} className={btn(false)}>+ Hoja vertical</button>
+            <button type="button" onClick={() => nuevaHoja("horizontal")} className={btn(false)}>+ Hoja horizontal</button>
+          </>
+        )}
+        {hojas.length > 1 && (
+          <button type="button" onClick={borrarHoja} className="text-[15px] text-[#c0392b] font-semibold underline underline-offset-4 cursor-pointer ml-1">Quitar esta hoja</button>
+        )}
       </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-6 items-start">
+        <div>
+          <div
+            className="mx-auto rounded-[16px] border-[1.5px] border-[#E3E5E8] overflow-hidden bg-white shadow-[0_1px_0_#E3E5E8]"
+            style={{ maxWidth: `calc(76vh * ${HW / HH})` }}
+          >
+            <HojaSVG
+              hoja={hoja}
+              iniciales={iniciales}
+              sel={modo === "mover" || lapiz ? sel : null}
+              live={live}
+              svgRef={(el) => (svgEl.current = el)}
+              handlers={{ onPointerDown: onDown, onPointerMove: onMove, onPointerUp: onUp }}
+            />
+          </div>
+          {hoja.items.length === 0 && hoja.strokes.length === 0 && (
+            <p className="text-center text-[16px] text-[#5A6170] mt-3">Hoja vacía. Toca “Plantillas” o “Agregar” para empezar, o “Dibujar” para hacerlo a mano.</p>
+          )}
+        </div>
+
+        {/* Panel lateral: editar elemento y enviar */}
+        <aside className="space-y-5 lg:sticky lg:top-24">
+          {selItem ? (
+            <div className="rounded-[18px] border-[1.5px] border-[#E3E5E8] bg-white p-5 space-y-5">
+              <div className="flex items-center justify-between">
+                <h2 className="font-display text-xl font-bold text-[#1D2433]">Editar</h2>
+                <button type="button" onClick={() => setSel(null)} className="text-[15px] font-semibold text-[#0F5C4D] underline underline-offset-4 cursor-pointer">Listo</button>
+              </div>
+              <Editor it={selItem} set={(d) => { commit(false); setItem(selItem.id, (it) => ({ ...it, d })); }} />
+              <div className="flex flex-wrap gap-2 pt-1">
+                <button type="button" className={btn(false)} onClick={() => accionSel("chico")}>Más chico</button>
+                <button type="button" className={btn(false)} onClick={() => accionSel("grande")}>Más grande</button>
+                <button type="button" className={btn(false)} onClick={() => accionSel("duplicar")}>Duplicar</button>
+                <button type="button" className={btn(false)} onClick={() => accionSel("frente")}>Al frente</button>
+                <button type="button" onClick={() => accionSel("eliminar")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold border-[1.5px] border-[#c0392b] text-[#c0392b] cursor-pointer">Eliminar</button>
+              </div>
+              <p className="text-[14px] text-[#5A6170]">Arrastra para mover. El círculo verde de la esquina cambia el tamaño.</p>
+            </div>
+          ) : (
+            <div className="rounded-[18px] bg-[#F6F7F8] p-5 text-[16px] text-[#5A6170] leading-relaxed">
+              Toca un elemento para editarlo. Con “Dibujar” marcas encima de todo: dónde duele, flechas o lo que necesites.
+            </div>
+          )}
+
+          <div className="rounded-[18px] border-[1.5px] border-[#E3E5E8] bg-white p-5 space-y-4">
+            <label className="block">
+              <span className="block text-[15px] font-medium text-[#5A6170] mb-1.5">Iniciales del paciente (opcional)</span>
+              <input value={iniciales} maxLength={6} onChange={(e) => setIniciales(e.target.value.toUpperCase())} placeholder="Ej: MP" className="w-full rounded-[10px] border-[1.5px] border-[#E3E5E8] px-3 py-2.5 text-[17px] outline-none focus:border-[#1D2433]" />
+            </label>
+            <button type="button" onClick={enviar} disabled={busy} className="w-full bg-[#0F5C4D] text-white rounded-[10px] px-5 py-3.5 text-[17px] font-semibold hover:bg-[#0B4A3E] disabled:opacity-60 cursor-pointer">
+              {busy ? "Creando imagen…" : hojas.length > 1 ? `Enviar ${hojas.length} hojas` : "Enviar al paciente"}
+            </button>
+            {aviso && <p className="text-[15px] text-[#1D2433]">{aviso}</p>}
+            <button type="button" onClick={nuevaPizarra} className="w-full rounded-[10px] px-5 py-3 text-[16px] font-semibold border-[1.5px] border-[#E3E5E8] text-[#1D2433] cursor-pointer">
+              {confirmarNueva ? "Toca otra vez para borrar todo" : "Nueva pizarra (siguiente paciente)"}
+            </button>
+            <p className="text-[14px] text-[#5A6170] leading-relaxed">
+              Se guarda solo en este dispositivo, para que no pierdas nada si se cierra la página. Usa iniciales, no nombres. Los gráficos son para explicar; no reemplazan tu evaluación.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      {/* Copias ocultas para crear las imágenes */}
+      {exportando && (
+        <div aria-hidden="true" style={{ position: "fixed", left: -10000, top: 0, width: 1600 }}>
+          {hojas.map((h, i) => (
+            <div key={i} style={{ width: TAM[h.formato].w }}>
+              <HojaSVG hoja={h} iniciales={iniciales} svgRef={(el) => (exportRefs.current[i] = el)} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
