@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { C, FONT, PALETA_TORTA, base, lineas, type Item } from "./modelo";
+import { C, FONT, PALETA_TORTA, altoListas, base, filasPlan, filasTiempo, lineas, type Item } from "./modelo";
 
 // Dibujo de cada elemento en sus coordenadas base (sin escalar).
 
@@ -238,20 +238,32 @@ function Tiempo({ it }: { it: Item }) {
   const fases: { n: string; t: string }[] = it.d.fases;
   return (
     <Tarjeta w={w} h={h} titulo={it.d.titulo}>
-      <line x1={52} y1={130} x2={52} y2={130 + (fases.length - 1) * 64} stroke={C.rule} strokeWidth={4} />
-      {fases.map((f, i) => {
-        const y = 130 + i * 64;
-        const hoy = i === Number(it.d.hoy);
+      {(() => {
+        const altos = filasTiempo(fases);
+        const tops = altos.map((_, i) => 100 + altos.slice(0, i).reduce((x, y) => x + y, 0));
+        const cy = (i: number) => tops[i] + altos[i] / 2;
         return (
-          <g key={i}>
-            {hoy && <rect x={80} y={y - 26} width={w - 104} height={48} rx={10} fill={C.hl} />}
-            <circle cx={52} cy={y} r={16} fill={hoy ? C.ink : "#fff"} stroke={C.ink} strokeWidth={3} />
-            <T x={52} y={y + 6} s={16} a="middle" w={700} c={hoy ? "#fff" : C.ink}>{i + 1}</T>
-            <T x={94} y={y + 7} s={21} w={hoy ? 700 : 500}>{lineas(f.n, 34)[0]}</T>
-            <T x={w - 34} y={y + 7} s={18} a="end" c={C.ink2}>{f.t}</T>
-          </g>
+          <>
+            <line x1={52} y1={cy(0)} x2={52} y2={cy(fases.length - 1)} stroke={C.rule} strokeWidth={4} />
+            {fases.map((f, i) => {
+              const hoy = i === Number(it.d.hoy);
+              const ls = lineas(f.n, 34).slice(0, 3);
+              const y0 = tops[i] + (altos[i] - ls.length * 26) / 2 + 20;
+              return (
+                <g key={i}>
+                  {hoy && <rect x={80} y={tops[i] + 6} width={w - 104} height={altos[i] - 12} rx={10} fill={C.hl} />}
+                  <circle cx={52} cy={cy(i)} r={16} fill={hoy ? C.ink : "#fff"} stroke={C.ink} strokeWidth={3} />
+                  <T x={52} y={cy(i) + 6} s={16} a="middle" w={700} c={hoy ? "#fff" : C.ink}>{i + 1}</T>
+                  {ls.map((l, k) => (
+                    <T key={k} x={94} y={y0 + k * 26} s={21} w={hoy ? 700 : 500}>{l}</T>
+                  ))}
+                  <T x={w - 34} y={cy(i) + 7} s={18} a="end" c={C.ink2}>{f.t}</T>
+                </g>
+              );
+            })}
+          </>
         );
-      })}
+      })()}
       <Nota x={28} y={h - 16}>Los plazos son referenciales: avanzamos por cómo respondes, no solo por semanas.</Nota>
     </Tarjeta>
   );
@@ -296,8 +308,8 @@ function Semana({ it }: { it: Item }) {
           <g key={i}>
             <rect x={28 + i * cw + 3} y={80} width={cw - 6} height={140} rx={12} fill={txt ? "#E3F0EA" : C.soft} />
             <T x={28 + i * cw + cw / 2} y={110} s={18} a="middle" w={700}>{d}</T>
-            {lineas(txt, 9).slice(0, 4).map((l, k) => (
-              <T key={k} x={28 + i * cw + cw / 2} y={142 + k * 22} s={16} a="middle" c={C.ink}>{l}</T>
+            {lineas(txt, 9).slice(0, 5).map((l, k) => (
+              <T key={k} x={28 + i * cw + cw / 2} y={140 + k * 19} s={15} a="middle" c={C.ink}>{l}</T>
             ))}
           </g>
         );
@@ -345,18 +357,34 @@ function Protecto({ it }: { it: Item }) {
     <Tarjeta w={w} h={h} titulo="Lo que suma peligro y lo que suma seguridad">
       <T x={28} y={110} s={22} w={700} c={C.rojo}>Peligro (DIMs)</T>
       <T x={56 + col} y={110} s={22} w={700} c={C.verde}>Seguridad (SIMs)</T>
-      {dims.map((d, i) => (
-        <T key={"d" + i} x={28} y={148 + i * 34} s={19}>– {lineas(d, 24)[0]}</T>
-      ))}
-      {sims.map((d, i) => (
-        <T key={"s" + i} x={56 + col} y={148 + i * 34} s={19}>+ {lineas(d, 24)[0]}</T>
-      ))}
-      <rect x={28} y={350} width={w - 56} height={18} rx={9} fill={C.rule} />
-      <rect x={28} y={350} width={(w - 56) / 2} height={18} rx={9} fill={C.rojo} opacity={0.25} />
-      <rect x={28 + (w - 56) / 2} y={350} width={(w - 56) / 2} height={18} rx={9} fill={C.verde} opacity={0.25} />
-      <circle cx={28 + pos * (w - 56)} cy={359} r={17} fill="#fff" stroke={C.ink} strokeWidth={5} />
-      <T x={28} y={398} s={16} c={C.ink2}>Más protección (más dolor)</T>
-      <T x={w - 28} y={398} s={16} c={C.ink2} a="end">Menos protección</T>
+      {[dims, sims].map((lista, c) => {
+        let y = 148;
+        return lista.map((d, i) => {
+          const ls = lineas(d, 24).slice(0, 3);
+          const g = (
+            <g key={c + "-" + i}>
+              {ls.map((l, k) => (
+                <T key={k} x={c === 0 ? 28 : 56 + col} y={y + k * 26} s={19}>{(k === 0 ? (c === 0 ? "– " : "+ ") : "   ") + l}</T>
+              ))}
+            </g>
+          );
+          y += ls.length * 26 + 8;
+          return g;
+        });
+      })}
+      {(() => {
+        const by = 132 + altoListas(dims, sims) + 30;
+        return (
+          <>
+            <rect x={28} y={by} width={w - 56} height={18} rx={9} fill={C.rule} />
+            <rect x={28} y={by} width={(w - 56) / 2} height={18} rx={9} fill={C.rojo} opacity={0.25} />
+            <rect x={28 + (w - 56) / 2} y={by} width={(w - 56) / 2} height={18} rx={9} fill={C.verde} opacity={0.25} />
+            <circle cx={28 + pos * (w - 56)} cy={by + 9} r={17} fill="#fff" stroke={C.ink} strokeWidth={5} />
+            <T x={28} y={by + 48} s={16} c={C.ink2}>Más protección (más dolor)</T>
+            <T x={w - 28} y={by + 48} s={16} c={C.ink2} a="end">Menos protección</T>
+          </>
+        );
+      })()}
       <Nota x={28} y={h - 22}>Protectometer, de Moseley y Butler</Nota>
     </Tarjeta>
   );
@@ -418,9 +446,11 @@ function Torta({ it }: { it: Item }) {
       {arcos}
       {partes.map((p, i) => (
         <g key={i}>
-          <rect x={282} y={118 + i * 48} width={22} height={22} rx={5} fill={PALETA_TORTA[i % PALETA_TORTA.length]} />
-          <T x={314} y={136 + i * 48} s={18}>{lineas(p.n, 23)[0]}</T>
-          <T x={w - 28} y={136 + i * 48} s={19} w={700} a="end">{Math.round((Math.max(0, Number(p.v) || 0) / tot) * 100)}%</T>
+          <rect x={282} y={112 + i * 54} width={22} height={22} rx={5} fill={PALETA_TORTA[i % PALETA_TORTA.length]} />
+          {lineas(p.n, 22).slice(0, 2).map((l, k) => (
+            <T key={k} x={314} y={130 + i * 54 + k * 21} s={17}>{l}</T>
+          ))}
+          <T x={w - 28} y={130 + i * 54} s={19} w={700} a="end">{Math.round((Math.max(0, Number(p.v) || 0) / tot) * 100)}%</T>
         </g>
       ))}
     </Tarjeta>
@@ -468,12 +498,20 @@ function Plan({ it }: { it: Item }) {
   const { w, h } = base(it);
   return (
     <Tarjeta w={w} h={h} titulo={it.d.titulo}>
-      {it.d.items.map((t: string, i: number) => (
-        <g key={i}>
-          <rect x={28} y={88 + i * 62} width={30} height={30} rx={7} fill="#fff" stroke={C.go} strokeWidth={3} />
-          <T x={76} y={112 + i * 62} s={23}>{lineas(t, 36)[0]}</T>
-        </g>
-      ))}
+      {(() => {
+        const altos = filasPlan(it.d.items);
+        return it.d.items.map((t: string, i: number) => {
+          const top = 80 + altos.slice(0, i).reduce((x, y) => x + y, 0);
+          return (
+            <g key={i}>
+              <rect x={28} y={top + 8} width={30} height={30} rx={7} fill="#fff" stroke={C.go} strokeWidth={3} />
+              {lineas(t, 36).slice(0, 3).map((l, k) => (
+                <T key={k} x={76} y={top + 32 + k * 28} s={23}>{l}</T>
+              ))}
+            </g>
+          );
+        });
+      })()}
     </Tarjeta>
   );
 }
@@ -514,16 +552,16 @@ function Contexto({ it }: { it: Item }) {
       </svg>
       {fac.map((f, i) => {
         if (i >= vis) return null;
-        const ls = lineas(f, 17).slice(0, 2);
+        const ls = lineas(f, 17).slice(0, 3);
         const bw = Math.min(230, 36 + Math.max(...ls.map((l) => l.length)) * 11);
-        const bh = ls.length > 1 ? 80 : 54;
+        const bh = 28 + ls.length * 26;
         const x = Math.max(8, Math.min(w - 8 - bw, pos[i][0] - bw / 2));
         const y = pos[i][1] - bh / 2;
         return (
           <g key={i}>
             <rect x={x} y={y} width={bw} height={bh} rx={bh / 2} fill="#E3F0EA" stroke={C.go} strokeOpacity={0.5} strokeWidth={2} />
             {ls.map((l, k) => (
-              <T key={k} x={x + bw / 2} y={y + (ls.length > 1 ? 34 + k * 26 : 34)} s={20} w={600} a="middle">{l}</T>
+              <T key={k} x={x + bw / 2} y={y + 34 + k * 26} s={20} w={600} a="middle">{l}</T>
             ))}
           </g>
         );
@@ -549,13 +587,21 @@ function ArribaAbajo({ it }: { it: Item }) {
       <path d={`M${cx + 34},372 L${cx + 34},240`} stroke={C.rojo} strokeWidth={8} strokeLinecap="round" />
       <path d={`M${cx + 18},258 L${cx + 34},234 L${cx + 50},258`} fill="none" stroke={C.rojo} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" />
       <T x={cx - 60} y={258} s={19} w={700} c={C.azul} a="end">De arriba hacia abajo</T>
-      {it.d.arriba.slice(0, 5).map((t: string, i: number) => (
-        <T key={i} x={cx - 60} y={290 + i * 28} s={18} a="end">{lineas(t, 24)[0]}</T>
-      ))}
-      <T x={cx + 60} y={258} s={19} w={700} c={C.rojo}>De abajo hacia arriba</T>
-      {it.d.abajo.slice(0, 5).map((t: string, i: number) => (
-        <T key={i} x={cx + 60} y={290 + i * 28} s={18}>{lineas(t, 24)[0]}</T>
-      ))}
+      {[it.d.arriba, it.d.abajo].map((lista: string[], c: number) => {
+        let y = 290;
+        return lista.slice(0, 5).map((t, i) => {
+          const ls = lineas(t, 22).slice(0, 3);
+          const g = (
+            <g key={c + "-" + i}>
+              {ls.map((l, k) => (
+                <T key={k} x={c === 0 ? cx - 60 : cx + 60} y={y + k * 24} s={18} a={c === 0 ? "end" : "start"}>{l}</T>
+              ))}
+            </g>
+          );
+          y += ls.length * 24 + 6;
+          return g;
+        });
+      })}
       <T x={28} y={h - 24} s={18} c={C.ink2} i>Los dos caminos suman; por eso trabajamos en ambos.</T>
     </Tarjeta>
   );

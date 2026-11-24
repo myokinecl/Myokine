@@ -77,7 +77,7 @@ export const TIEMPOS: Record<string, { titulo: string; fases: { n: string; t: st
   lca: {
     titulo: "Tu camino después de la cirugía de LCA",
     fases: [
-      { n: "Bajar la inflamación y estirar la rodilla", t: "0–2 sem" },
+      { n: "Bajar la inflamación y extender la rodilla", t: "0–2 sem" },
       { n: "Caminar bien y fuerza básica", t: "2–6 sem" },
       { n: "Fuerza y control", t: "6–12 sem" },
       { n: "Trote y saltos", t: "3–6 meses" },
@@ -289,7 +289,7 @@ export function base(it: Item): { w: number; h: number } {
     case "semaforo":
       return { w: 600, h: 330 };
     case "tiempo":
-      return { w: 640, h: 120 + it.d.fases.length * 64 + 50 };
+      return { w: 640, h: 100 + filasTiempo(it.d.fases).reduce((a, b) => a + b, 0) + 60 };
     case "fuerza":
       return { w: 600, h: 420 };
     case "semana":
@@ -297,7 +297,7 @@ export function base(it: Item): { w: number; h: number } {
     case "escala":
       return { w: 640, h: 190 };
     case "protecto":
-      return { w: 640, h: 470 };
+      return { w: 640, h: 132 + altoListas(it.d.dims, it.d.sims) + 30 + 120 };
     case "barras":
       return { w: 600, h: 420 };
     case "torta":
@@ -309,7 +309,7 @@ export function base(it: Item): { w: number; h: number } {
     case "titulo":
       return { w: 900, h: 20 + lineas(it.d.texto, 28).length * 72 };
     case "plan":
-      return { w: 600, h: 100 + it.d.items.length * 62 };
+      return { w: 600, h: 100 + filasPlan(it.d.items).reduce((a, b) => a + b, 0) };
     case "flecha":
       return { w: 260, h: 80 };
     case "contexto":
@@ -321,6 +321,14 @@ export function base(it: Item): { w: number; h: number } {
     case "dato":
       return { w: 600, h: 300 };
   }
+}
+
+/** Alto de cada fila según cuántas líneas ocupa su texto (para no cortar textos). */
+export const filasTiempo = (fases: { n: string }[]) => fases.map((f) => 40 + Math.min(3, lineas(f.n, 34).length) * 26);
+export const filasPlan = (items: string[]) => items.map((t) => 30 + Math.min(3, lineas(t, 36).length) * 28);
+export function altoListas(a: string[], b: string[]) {
+  const col = (xs: string[]) => xs.slice(0, 5).reduce((acc, t) => acc + Math.min(3, lineas(t, 24).length) * 26 + 8, 0);
+  return Math.max(col(a), col(b));
 }
 
 /** Corte simple de texto por cantidad de caracteres. */
@@ -476,7 +484,7 @@ export const PLANTILLAS: Plantilla[] = [
     items: [
       { kind: "rodilla", x: 60, y: 60, s: 1 },
       { kind: "nota", x: 480, y: 80, s: 1.15, d: { texto: "El LCA ayuda a estabilizar la rodilla al girar y frenar.", color: "#F5E663" } },
-      { kind: "tiempo", preset: "lca", x: 60, y: 560, s: 1.28 },
+      { kind: "tiempo", preset: "lca", x: 60, y: 545, s: 1.2 },
     ],
   },
   {
@@ -486,7 +494,7 @@ export const PLANTILLAS: Plantilla[] = [
     items: [
       { kind: "tendon", x: 60, y: 50, s: 1.4 },
       { kind: "semaforo", x: 60, y: 420, s: 1.1 },
-      { kind: "tiempo", preset: "tendinopatia", x: 60, y: 790, s: 1.15 },
+      { kind: "tiempo", preset: "tendinopatia", x: 60, y: 790, s: 1.08 },
     ],
   },
   {
