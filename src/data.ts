@@ -55,6 +55,269 @@ export const CATEGORIES = {
 
 export const STATIC_ARTICLES: Article[] = [
   {
+    id: '49',
+    slug: 'dolor-hombro-atencion-primaria-haas-2026',
+    title: 'Dolor de hombro: lo que dice la revisión más reciente sobre cómo manejarlo',
+    subtitle: 'Haas, Ibounig y Buchbinder (JAMA Internal Medicine, 2026) resumen qué es el dolor de hombro más frecuente, cuándo preocuparse y por qué casi nunca hace falta partir con una resonancia.',
+    categoryType: 'segmento',
+    categoryValue: 'hombro',
+    categoryLabel: 'Hombro',
+    audience: 'ambos',
+    date: '25 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 6,
+    summary: 'El dolor de hombro es una de las consultas más comunes. La mayoría de las veces viene de tejidos alrededor de la articulación, no es grave y mejora con poco más que información, ajustes y tiempo.',
+    pullQuote: 'La mayoría de las personas con dolor subacromial se recupera por completo con una intervención mínima.',
+    content: `El dolor de hombro es la **tercera consulta musculoesquelética más frecuente** en atención primaria. Romi Haas, Thomas Ibounig y Rachelle Buchbinder publicaron en 2026 una revisión en *JAMA Internal Medicine* para ordenar qué sabemos sobre cómo evaluarlo y tratarlo.
+
+### De dónde viene el dolor, casi siempre
+
+En atención primaria, la mayoría de los casos aparece **sin un golpe ni una caída** y tiene que ver con los tejidos blandos que rodean la articulación. La zona más frecuente es la región subacromial, justo debajo del acromion.
+
+Los autores proponen hablar de **"dolor subacromial"** en vez de usar etiquetas que se superponen y se definen distinto según quién las use: tendinopatía o rotura del manguito, síndrome de pinzamiento o bursitis subacromial. Menos veces el dolor viene de la articulación misma, como en la artrosis glenohumeral o la capsulitis adhesiva (el "hombro congelado").
+
+### Cuándo sí hay que mirar con más cuidado
+
+La evaluación se basa en una buena conversación y un buen examen físico: cómo y cuándo duele, qué movimientos se limitan y, sobre todo, **descartar causas graves**, que son raras. Entre ellas, una infección, un tumor o un dolor que en realidad viene de otro lugar (por ejemplo, del cuello o del corazón).
+
+La derivación a especialista se reserva para la sospecha de algo serio (infección, tumor, fractura o luxación), pérdida importante de función o de fuerza por causa neurológica, signos de una enfermedad inflamatoria sistémica, o un dolor que persiste o empeora a pesar del manejo.
+
+### Por qué no partir con una imagen
+
+Sin un trauma importante ni señales de alarma (fiebre, baja de peso sin explicación o antecedentes de cáncer), **la imagen precoz no está indicada**. Lo que se ve en una resonancia o una ecografía muchas veces no se relaciona con los síntomas, rara vez cambia lo que se hace y puede llevar a sobrediagnóstico y a tratamientos innecesarios.
+
+### Qué se recomienda primero
+
+Una vez descartado lo grave, el tratamiento inicial es parecido para casi todas las personas, igual que en otros dolores musculoesqueléticos:
+
+- **Explicar** que el pronóstico es favorable.
+- **Aliviar los síntomas** y ajustar la actividad si hace falta.
+- **Dar tiempo** con seguimiento (lo que en inglés llaman *watchful waiting*).
+
+La revisión es clara en un punto: hay evidencia de **alta certeza** de que el dolor subacromial **no mejora más con cirugía**.
+
+En la práctica, ese "ajustar la actividad" suele traducirse en un plan de ejercicio progresivo y adaptado a la persona. Otras revisiones sobre el manguito rotador coinciden en que la educación y el ejercicio son la primera línea de tratamiento.
+
+### Qué significa para ti
+
+**Si tienes dolor de hombro:** que una imagen muestre "desgaste" o una rotura no significa que eso explique tu dolor ni que necesites operarte. Lo esperable es mejorar, aunque a veces tome tiempo y tenga altibajos.
+
+**Si eres profesional de la salud:** nuestra explicación es parte del tratamiento. Descartar lo grave, evitar etiquetas que asustan, pedir imágenes solo cuando cambian la conducta y acompañar con un plan claro es, según esta revisión, lo que más ayuda.
+
+### Límites
+
+Es una revisión narrativa para atención primaria, no una revisión sistemática con nuevos datos. Resume la evidencia disponible y la opinión de sus autores, que son referentes en el tema.`,
+    references: [
+      {
+        author: 'Haas R, Ibounig T, Buchbinder R.',
+        year: '2026',
+        journal: 'JAMA Internal Medicine, 186(10):1256-1268',
+        doi: '10.1001/jamainternmed.2026.3135',
+        title: 'Management of Shoulder Pain in Primary Care: A Review'
+      },
+      {
+        author: 'Boland K, Smith C, Bond H, Briggs S, Walton J.',
+        year: '2021',
+        journal: 'Shoulder & Elbow',
+        title: 'Current concepts in the rehabilitation of rotator cuff related disorders'
+      }
+    ]
+  },
+  {
+    id: '48',
+    slug: 'relaciones-sociales-longevidad-holt-lunstad',
+    title: '¿Qué nos hace vivir más? Lo que dicen los estudios sobre las relaciones',
+    subtitle: 'Un metaanálisis de 148 estudios y el estudio de Harvard sobre la vida adulta llegan a una conclusión parecida: las relaciones pesan en la salud tanto como otros factores que sí solemos medir.',
+    categoryType: 'tematica',
+    categoryValue: 'salud-mental',
+    categoryLabel: 'Salud mental y movimiento',
+    audience: 'ambos',
+    date: '25 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 5,
+    summary: 'En 148 estudios con más de 300 mil personas, quienes tenían relaciones sociales más fuertes tuvieron un 50 % más de probabilidad de sobrevivir durante el seguimiento.',
+    pullQuote: 'La influencia de las relaciones sociales sobre la mortalidad es comparable con factores de riesgo bien establecidos.',
+    content: `Cuando pensamos en vivir más y mejor, solemos hablar de ejercicio, alimentación y sueño. Las relaciones casi nunca entran en la conversación clínica, y la evidencia sugiere que deberían.
+
+### El metaanálisis de Holt-Lunstad
+
+En 2010, **Julianne Holt-Lunstad**, Timothy Smith y Bradley Layton reunieron **148 estudios** con **308.849 personas** seguidas en el tiempo. Querían saber cuánto influyen las relaciones sociales en el riesgo de morir.
+
+El resultado: quienes tenían relaciones sociales más fuertes tuvieron un **50 % más de probabilidad de sobrevivir** durante el periodo de seguimiento (OR 1,50; IC 95 % 1,42 a 1,59).
+
+Ese efecto fue parecido sin importar la edad, el sexo, el estado de salud inicial, la causa de muerte o el tiempo de seguimiento.
+
+### No es lo mismo vivir acompañado que estar integrado
+
+El tipo de medición importó mucho:
+
+- La relación fue **más fuerte** cuando se midió la **integración social** de forma completa: tener vínculos, sentirse parte, recibir apoyo (OR 1,91).
+- Fue **más débil** cuando solo se preguntó si la persona vivía sola o acompañada (OR 1,19, sin diferencia clara).
+
+Es decir, no basta con tener gente cerca. Pesa más la calidad y la red de vínculos que la persona siente que tiene.
+
+Los autores concluyen que la influencia de las relaciones sobre la mortalidad es **comparable con factores de riesgo bien establecidos**.
+
+### El estudio de Harvard
+
+El **Estudio de Harvard sobre el Desarrollo Adulto** sigue a sus participantes desde 1938. Robert Waldinger, su director actual, y Marc Schulz resumieron sus hallazgos en el libro *The Good Life* (2023). La idea que más repiten es que la calidad de las relaciones estuvo entre lo que mejor acompañó una vida más sana y satisfactoria.
+
+### Qué tiene que ver esto con la kinesiología
+
+Mucho más de lo que parece:
+
+- **El dolor persistente aísla.** Dejar de hacer lo que uno disfrutaba muchas veces significa dejar de ver a otros. Recuperar actividad también es recuperar vínculos.
+- **El ejercicio en compañía** suele sostenerse mejor en el tiempo. Un plan que se hace con un amigo o en grupo puede ser más útil que uno "perfecto" que se hace solo.
+- **Preguntar por la red de apoyo** es parte de una evaluación centrada en la persona, no un tema aparte.
+
+### Límites
+
+Son estudios observacionales: muestran asociación, no prueban que las relaciones causen por sí solas una vida más larga. Las personas con más vínculos también pueden diferir en otros hábitos o condiciones. Aun así, el efecto se repite en poblaciones y contextos muy distintos.`,
+    references: [
+      {
+        author: 'Holt-Lunstad J, Smith TB, Layton JB.',
+        year: '2010',
+        journal: 'PLoS Medicine, 7(7):e1000316',
+        doi: '10.1371/journal.pmed.1000316',
+        title: 'Social relationships and mortality risk: a meta-analytic review'
+      },
+      {
+        author: 'Waldinger RJ, Schulz MS.',
+        year: '2023',
+        journal: 'Simon & Schuster (libro)',
+        title: 'The Good Life: Lessons from the World’s Longest Scientific Study of Happiness'
+      }
+    ]
+  },
+  {
+    id: '47',
+    slug: 'modelo-transteorico-cambio-adherencia',
+    title: '¿Por qué una persona no cambia aunque sepa lo que tiene que hacer? El modelo transteórico',
+    subtitle: 'Prochaska y DiClemente describieron el cambio de conducta como un proceso por etapas. Reconocer en cuál está tu paciente cambia qué decir y qué prescribir.',
+    categoryType: 'tematica',
+    categoryValue: 'rehabilitacion-razonamiento',
+    categoryLabel: 'Razonamiento clínico',
+    audience: 'clinico',
+    date: '25 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 6,
+    summary: 'La falta de adherencia rara vez es solo falta de información. El modelo transteórico ayuda a ajustar la intervención al momento en que está cada persona.',
+    pullQuote: 'Un buen programa de carga entregado en el momento equivocado puede quedar sin hacerse.',
+    content: `Le explicaste todo con claridad, le diste una rutina bien pensada y a la semana siguiente vuelve sin haberla hecho. Es fácil concluir que "no tiene motivación". El **modelo transteórico** propone otra lectura: quizás la persona no estaba en el momento de actuar.
+
+### Las etapas del cambio
+
+James Prochaska y Carlo DiClemente describieron el cambio de conducta como un proceso que pasa por etapas:
+
+1. **Precontemplación.** No ve el problema o no planea cambiar pronto.
+2. **Contemplación.** Reconoce el problema, pero duda y pesa pros y contras.
+3. **Preparación.** Quiere actuar pronto y da los primeros pasos.
+4. **Acción.** Cambia su conducta de forma activa y visible.
+5. **Mantenimiento.** Sostiene el cambio y trabaja para no recaer.
+
+Algunas versiones agregan una sexta etapa, la terminación. Lo importante es que **volver a una etapa anterior es parte habitual del proceso**. La mayoría de las personas recorre el ciclo varias veces antes de consolidar un cambio.
+
+En poblaciones en riesgo, Prochaska y Velicer describieron una regla aproximada: cerca de **40 %** está en precontemplación, **40 %** en contemplación y solo **20 %** en preparación. O sea, la mayoría de quienes nos consultan no está lista para "la acción" el primer día.
+
+### Cómo ajustar lo que hacemos
+
+- **Contemplación:** explorar dudas, expectativas, pros y contras antes de sumar ejercicios.
+- **Preparación:** acordar un primer paso pequeño y concreto: qué día, cuánto y dónde.
+- **Acción:** dar retroalimentación, progresar la carga y reforzar lo logrado.
+- **Mantenimiento:** anticipar los días difíciles y acordar qué hacer si se corta la rutina.
+
+### En dolor persistente
+
+Kerns y colaboradores desarrollaron el *Pain Stages of Change Questionnaire*, que mide qué tan dispuesta está una persona a autogestionar su dolor. Jensen y colaboradores observaron que, durante un tratamiento multidisciplinario, aumentar esa disposición se asoció con cambios en las estrategias de afrontamiento y con mejoría.
+
+### Lo que cambia en la consulta
+
+- **El mismo plan, otro resultado.** Un buen programa entregado en el momento equivocado puede quedar sin hacerse.
+- **La recaída deja de ser un fracaso.** Pasa a ser parte esperable del ciclo y se puede planificar con la persona, sin culpa.
+- **Las habilidades de comunicación pesan tanto como la técnica.** Saber escuchar, preguntar y acordar es parte del tratamiento.
+
+### Límites
+
+El modelo es muy usado y útil para ordenar la conversación, pero también ha sido criticado: las etapas no siempre son tan separadas en la vida real, y las intervenciones "por etapa" no han mostrado ventajas consistentes en todas las conductas. Sirve como mapa para conversar, no como receta.`,
+    references: [
+      {
+        author: 'Prochaska JO, Velicer WF.',
+        year: '1997',
+        journal: 'American Journal of Health Promotion, 12(1):38-48',
+        doi: '10.4278/0890-1171-12.1.38',
+        title: 'The transtheoretical model of health behavior change'
+      },
+      {
+        author: 'Prochaska JO, DiClemente CC, Norcross JC.',
+        year: '1992',
+        journal: 'American Psychologist, 47(9):1102-1114',
+        title: 'In search of how people change: applications to addictive behaviors'
+      },
+      {
+        author: 'Kerns RD, Rosenberg R, Jamison RN, Caudill MA, Haythornthwaite J.',
+        year: '1997',
+        journal: 'Pain, 72(1-2):227-234',
+        title: 'Readiness to adopt a self-management approach to chronic pain: the Pain Stages of Change Questionnaire (PSOCQ)'
+      }
+    ]
+  },
+  {
+    id: '46',
+    slug: 'creatina-inmovilizacion-rehabilitacion-pratt-2026',
+    title: 'Creatina durante la inmovilización y la rehabilitación: lo que sabemos y lo que no',
+    subtitle: 'Una revisión sistemática de Pratt y colaboradores (Experimental Physiology, 2026) reunió los ensayos que probaron creatina cuando un brazo o una pierna estuvo inmovilizado.',
+    categoryType: 'tematica',
+    categoryValue: 'nutricion',
+    categoryLabel: 'Nutrición y composición',
+    audience: 'ambos',
+    date: '25 de Noviembre, 2026',
+    author: 'Lukas · MyoKine',
+    readingTime: 6,
+    summary: 'La creatina no parece evitar la pérdida de músculo durante la inmovilización. Durante la rehabilitación con ejercicio de fuerza hay señales de beneficio, pero la evidencia todavía es poca.',
+    pullQuote: 'La creatina podría ayudar cuando vuelve la carga, pero no reemplaza al ejercicio.',
+    content: `Después de una lesión o una cirugía, es común pasar días o semanas con una pierna o un brazo inmovilizado. En ese tiempo el músculo se achica rápido. La creatina tiene buena evidencia junto al entrenamiento de fuerza, así que la pregunta es lógica: **¿sirve también cuando no podemos entrenar?**
+
+### El estudio
+
+**Jedd Pratt** y su equipo (con Darren Candow, Eric Rawson, Scott Forbes y Konstantinos Prokopidis) hicieron una revisión sistemática hasta marzo de 2026. Encontraron **6 ensayos aleatorizados con placebo**, con **118 participantes** jóvenes (edad promedio entre 15 y 24 años) inmovilizados entre **1 y 2 semanas**. La dosis típica fue de 20 g al día por 5 a 7 días, seguida de 3 a 5 g al día.
+
+### Durante la inmovilización
+
+- **Tamaño del músculo:** dos estudios que midieron el cuádriceps con tomografía o resonancia encontraron **pérdidas parecidas** con creatina y con placebo (−5,6 % vs −5,5 % y −11,0 % vs −9,4 %).
+- **Masa magra:** otros dos estudios mostraron menos pérdida con creatina, pero se midió con DXA o bioimpedancia. Estos métodos se afectan por el agua, y la creatina retiene agua dentro del músculo. Los autores advierten que eso podría explicar la diferencia **sin que realmente se haya conservado más músculo**.
+- **Fuerza y rendimiento:** resultados mezclados. Hubo algo de beneficio en estudios de miembro superior, pero no en miembro inferior.
+
+### Durante la rehabilitación
+
+Cuatro estudios siguieron la recuperación, y tres usaron ejercicio de fuerza. Dos encontraron **mayores ganancias con creatina**:
+
+- Tamaño del cuádriceps: **21,3 % vs 14,3 %**.
+- Masa magra de la pierna: 5,6 % vs 3,8 %.
+- Potencia: 52,2 % vs 35,2 %.
+- Fuerza: 28,7 % vs 22,8 %.
+
+Otros dos estudios no mostraron diferencias en la recuperación de la fuerza máxima.
+
+### Qué significa para ti
+
+**Si estás inmovilizado:** la creatina no parece evitar la atrofia por sí sola. Lo que más ayuda sigue siendo volver a cargar el músculo apenas se pueda, de forma segura y progresiva.
+
+**Si estás en rehabilitación:** acompañada de ejercicio de fuerza, la creatina podría sumar algo. Pero la evidencia todavía no permite afirmarlo con seguridad. Si te interesa usarla, conversa con tu equipo de salud, sobre todo si tienes alguna enfermedad renal o tomas otros medicamentos.
+
+### Límites
+
+Son pocos estudios, pequeños, en personas jóvenes y sanas, con inmovilizaciones cortas. Justamente quienes más músculo pierden al estar quietos (personas mayores y pacientes hospitalizados) **no han sido estudiados**. Los autores piden ensayos en esas poblaciones antes de sacar conclusiones.`,
+    references: [
+      {
+        author: 'Pratt J, Candow DG, Rawson ES, Forbes SC, Prokopidis K.',
+        year: '2026',
+        journal: 'Experimental Physiology',
+        doi: '10.1113/EP093965',
+        title: 'Effects of creatine supplementation on lean mass, muscle size and muscle performance during immobilisation and rehabilitation: A systematic review'
+      }
+    ]
+  },
+  {
     id: '45',
     slug: 'decision-cirugia-hombro-manguito-rotador-malliaras-2021',
     title: '"El kinesiólogo no va a reparar un tendón roto": cómo deciden operarse las personas con dolor de hombro',

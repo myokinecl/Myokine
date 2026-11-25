@@ -268,7 +268,7 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       return {};
     case "dato":
       return preset === "hombro"
-        ? { numero: "90–95%", texto: "de los dolores de hombro sin golpe ni caída corresponden a dolor subacromial: un cuadro benigno que suele mejorar con el tiempo.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
+        ? { numero: "La mayoría", texto: "de las personas con dolor subacromial se recupera por completo con una intervención mínima. Las causas graves son raras.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
         : { numero: "00%", texto: "Escribe aquí lo que significa el dato.", fuente: "Fuente" };
   }
 }
