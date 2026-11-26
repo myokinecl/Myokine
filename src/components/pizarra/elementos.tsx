@@ -663,12 +663,12 @@ function Escucha({ it }: { it: Item }) {
         ))}
       {it.d.frases.map((t: string, i: number) => {
         const top = 92 + om + altos.slice(0, i).reduce((x, y) => x + y, 0);
-        const ls = lineas(`“${t}”`, 40).slice(0, 4);
+        const ls = lineas(it.d.comillas === false ? t : `“${t}”`, 40).slice(0, 4);
         return (
           <g key={i}>
             <rect x={28} y={top + 6} width={6} height={ls.length * 32 + 4} rx={3} fill={C.go} />
             {ls.map((l, k) => (
-              <T key={k} x={52} y={top + 32 + k * 32} s={25} i>{l}</T>
+              <T key={k} x={52} y={top + 32 + k * 32} s={25} i={it.d.comillas !== false}>{l}</T>
             ))}
           </g>
         );
