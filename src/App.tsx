@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { STATIC_ARTICLES, CATEGORIES, Article } from "./data";
 import { INFOGRAFIAS, Infografia } from "./data/infografias";
+import { InfografiaCompartir, descargarPdfInfografia, linkInfografia } from "./components/InfografiaCompartir";
 import { CLINICAL_QUESTIONS, ClinicalQuestion } from "./questions";
 import { AnimatePresence, motion } from "motion/react";
 import { MarkdownRenderer } from "./components/MarkdownRenderer";
@@ -1425,22 +1426,24 @@ Lee el artículo completo en MyoKine (@myokinecl)
                     <div className="px-5 pb-5 pt-2 flex items-center gap-2.5">
                       <button
                         type="button"
-                        onClick={(e) => downloadInfografia(item, e)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          descargarPdfInfografia(item);
+                        }}
                         className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors cursor-pointer"
                       >
                         <Download className="w-3.5 h-3.5" />
-                        <span>Descargar</span>
+                        <span>Descargar PDF</span>
                       </button>
 
                       <button
                         type="button"
-                        onClick={(e) =>
-                          copyShareLink(
-                            `#/infografias/${item.slug}`,
-                            `inf-${item.id}`,
-                            e
-                          )
-                        }
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigator.clipboard?.writeText(linkInfografia(item.slug)).catch(() => {});
+                          setCopiedId(`inf-${item.id}`);
+                          setTimeout(() => setCopiedId((prev) => (prev === `inf-${item.id}` ? null : prev)), 2200);
+                        }}
                         className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-[#1D2433]/15 bg-white hover:bg-[#1D2433]/5 text-[#1D2433]/80 text-sm font-semibold transition-colors cursor-pointer"
                       >
                         {isCopied ? (
@@ -1965,43 +1968,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
                 {selectedInfografia.description}
               </p>
 
-              <div className="flex items-center gap-3 pt-1">
-                <button
-                  type="button"
-                  onClick={(e) => downloadInfografia(selectedInfografia, e)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#1D2433] hover:bg-[#0F5C4D] text-white text-sm font-semibold transition-colors cursor-pointer"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Descargar</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={(e) =>
-                    copyShareLink(
-                      `#/infografias/${selectedInfografia.slug}`,
-                      `modal-inf-${selectedInfografia.id}`,
-                      e
-                    )
-                  }
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#1D2433]/15 bg-white hover:bg-[#1D2433]/5 text-[#1D2433] text-sm font-semibold transition-colors cursor-pointer"
-                >
-                  {copiedId === `modal-inf-${selectedInfografia.id}` ? (
-                    <>
-                      <Check className="w-4 h-4 text-emerald-700" />
-                      <span className="text-emerald-700">Link copiado</span>
-                    </>
-                  ) : (
-                    <>
-                      <Link2 className="w-4 h-4" />
-                      <span>Copiar link</span>
-                    </>
-                  )}
-                </button>
-              </div>
-              <WhatsAppShareButton
-                label="Enviar por WhatsApp"
-                text={`${selectedInfografia.title} — infografía MyoKine\n${SITE_URL}/infografias/${selectedInfografia.slug}`}
-              />
+              <InfografiaCompartir item={selectedInfografia} />
 
               <div className="rounded-xl overflow-hidden border border-[#1D2433]/10 bg-[#F6F7F8]">
                 <img

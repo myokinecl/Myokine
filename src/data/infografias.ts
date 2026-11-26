@@ -36,6 +36,8 @@ export interface Infografia {
  * Infografías para pacientes de MyoKine.
  * Para agregar una: copia la imagen en src/assets/images/infografias/,
  * impórtala arriba y añade un objeto con un `slug` único (es el link compartible).
+ * Después corre: python3 scripts/infografias_compartir.py (crea el PDF, las dos partes
+ * para WhatsApp, la vista previa del link y la página /i/<slug>).
  */
 export const INFOGRAFIAS: Infografia[] = [
   {
