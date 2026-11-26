@@ -23,7 +23,8 @@ export type Kind =
   | "contexto"
   | "arribaabajo"
   | "camino"
-  | "dato";
+  | "dato"
+  | "escucha";
 
 export interface Item {
   id: string;
@@ -266,6 +267,12 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       };
     case "camino":
       return {};
+    case "escucha":
+      return {
+        titulo: "Lo que me contaste",
+        frases: ["Me duele al levantar el brazo para tomar cosas altas", "Tengo miedo de que sea algo grave"],
+        meta: "Volver a jugar tenis con mi hijo",
+      };
     case "dato":
       return preset === "hombro"
         ? { numero: "La mayoría", texto: "de las personas con dolor subacromial se recupera por completo con una intervención mínima. Las causas graves son raras.", fuente: "Haas, Ibounig y Buchbinder · JAMA Intern Med 2026" }
@@ -320,12 +327,17 @@ export function base(it: Item): { w: number; h: number } {
       return { w: 600, h: 380 };
     case "dato":
       return { w: 600, h: 300 };
+    case "escucha":
+      return { w: 640, h: 96 + altoMotivo(it.d.motivo) + filasEscucha(it.d.frases).reduce((a, b) => a + b, 0) + altoMeta(it.d.meta) + 12 };
   }
 }
 
 /** Alto de cada fila según cuántas líneas ocupa su texto (para no cortar textos). */
 export const filasTiempo = (fases: { n: string }[]) => fases.map((f) => 40 + Math.min(3, lineas(f.n, 34).length) * 26);
 export const filasPlan = (items: string[]) => items.map((t) => 30 + Math.min(3, lineas(t, 36).length) * 28);
+export const filasEscucha = (frases: string[]) => frases.map((t) => 22 + Math.min(4, lineas(`“${t}”`, 40).length) * 32);
+export const altoMotivo = (m?: string) => (m && m.trim() ? Math.min(4, lineas(m, 46).length) * 28 + 22 : 0);
+export const altoMeta = (meta: string) => (meta && meta.trim() ? 70 + Math.min(4, lineas(meta, 36).length) * 34 + 24 : 16);
 export function altoListas(a: string[], b: string[]) {
   const col = (xs: string[]) => xs.slice(0, 5).reduce((acc, t) => acc + Math.min(3, lineas(t, 24).length) * 26 + 8, 0);
   return Math.max(col(a), col(b));
@@ -391,6 +403,7 @@ export const CATALOGO: { grupo: string; items: Entrada[] }[] = [
       { kind: "camino", nombre: "La mejora no es lineal", ayuda: "Días mejores y peores" },
       { kind: "plan", preset: "evidencia", nombre: "Lo que dice la evidencia", ayuda: "Primera línea de tratamiento" },
       { kind: "dato", preset: "hombro", nombre: "Dato de la evidencia", ayuda: "Número grande con su fuente" },
+      { kind: "escucha", nombre: "Lo que me contaste", ayuda: "Sus palabras y lo que le importa" },
     ],
   },
   {

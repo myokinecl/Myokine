@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type PointerEvent as RPointerEvent } from "react";
 import { svgAPng } from "../lib/exportarSvg";
+import { PanelEvaluacion } from "./pizarra/PanelEvaluacion";
 import {
   CATALOGO,
   C,
@@ -126,7 +127,7 @@ export function Pizarra() {
   const [color, setColor] = useState(C.rojo);
   const [grosor, setGrosor] = useState(10);
   const [iniciales, setIniciales] = useState("");
-  const [panel, setPanel] = useState<"agregar" | "plantillas" | null>(null);
+  const [panel, setPanel] = useState<"agregar" | "plantillas" | "evaluacion" | null>(null);
   const [live, setLive] = useState<Stroke | null>(null);
   const [lapiz, setLapiz] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -306,6 +307,21 @@ export function Pizarra() {
     setPanel(null);
   };
 
+  const usarEvaluacion = (nuevas: Hoja[]) => {
+    commit();
+    const vacia = hoja.items.length === 0 && hoja.strokes.length === 0;
+    if (vacia) {
+      setHojas((hs) => [...hs.slice(0, idx), ...nuevas, ...hs.slice(idx + 1)]);
+    } else {
+      setHojas((hs) => [...hs, ...nuevas]);
+      setIdx(hojas.length);
+    }
+    setSel(null);
+    setModo("mover");
+    setPanel(null);
+    setTimeout(() => document.getElementById("pizarra")?.scrollIntoView({ behavior: "smooth" }), 50);
+  };
+
   const selItem = hoja.items.find((i) => i.id === sel) || null;
 
   const accionSel = (a: "chico" | "grande" | "duplicar" | "frente" | "eliminar") => {
@@ -437,6 +453,9 @@ export function Pizarra() {
         <button type="button" onClick={() => setPanel(panel === "plantillas" ? null : "plantillas")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold bg-[#0F5C4D] text-white cursor-pointer hover:bg-[#0B4A3E]">
           Plantillas
         </button>
+        <button type="button" onClick={() => setPanel(panel === "evaluacion" ? null : "evaluacion")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold bg-[#0F5C4D] text-white cursor-pointer hover:bg-[#0B4A3E]">
+          Desde mi evaluación
+        </button>
         <button type="button" onClick={() => setPanel(panel === "agregar" ? null : "agregar")} className="px-4 py-2.5 rounded-[10px] text-[16px] font-semibold bg-[#0F5C4D] text-white cursor-pointer hover:bg-[#0B4A3E]">
           Agregar
         </button>
@@ -467,10 +486,12 @@ export function Pizarra() {
       {panel && (
         <div className="rounded-[18px] border-[1.5px] border-[#E3E5E8] bg-white p-5 sm:p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-display text-2xl font-bold text-[#1D2433]">{panel === "agregar" ? "Agregar a la hoja" : "Empezar con una plantilla"}</h2>
+            <h2 className="font-display text-2xl font-bold text-[#1D2433]">{panel === "agregar" ? "Agregar a la hoja" : panel === "evaluacion" ? "Armar desde mi evaluación" : "Empezar con una plantilla"}</h2>
             <button type="button" onClick={() => setPanel(null)} className="text-[16px] font-semibold text-[#0F5C4D] underline underline-offset-4 cursor-pointer">Cerrar</button>
           </div>
-          {panel === "plantillas" ? (
+          {panel === "evaluacion" ? (
+            <PanelEvaluacion onArmar={usarEvaluacion} />
+          ) : panel === "plantillas" ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {PLANTILLAS.map((p) => (
                 <button key={p.nombre} type="button" onClick={() => usarPlantilla(p)} className="text-left rounded-[14px] bg-[#F6F7F8] p-4 hover:bg-[#EEF0F2] cursor-pointer">

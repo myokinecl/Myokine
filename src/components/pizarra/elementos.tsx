@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { C, FONT, PALETA_TORTA, altoListas, base, filasPlan, filasTiempo, lineas, type Item } from "./modelo";
+import { C, FONT, PALETA_TORTA, altoListas, altoMeta, altoMotivo, base, filasEscucha, filasPlan, filasTiempo, lineas, type Item } from "./modelo";
 
 // Dibujo de cada elemento en sus coordenadas base (sin escalar).
 
@@ -504,7 +504,11 @@ function Plan({ it }: { it: Item }) {
           const top = 80 + altos.slice(0, i).reduce((x, y) => x + y, 0);
           return (
             <g key={i}>
-              <rect x={28} y={top + 8} width={30} height={30} rx={7} fill="#fff" stroke={C.go} strokeWidth={3} />
+              {it.d.vineta === "punto" ? (
+                <circle cx={43} cy={top + 24} r={9} fill={C.go} />
+              ) : (
+                <rect x={28} y={top + 8} width={30} height={30} rx={7} fill="#fff" stroke={C.go} strokeWidth={3} />
+              )}
               {lineas(t, 36).slice(0, 3).map((l, k) => (
                 <T key={k} x={76} y={top + 32 + k * 28} s={23}>{l}</T>
               ))}
@@ -643,6 +647,45 @@ function Dato({ it }: { it: Item }) {
   );
 }
 
+// ---------- Lo que me contaste ----------
+function Escucha({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  const altos = filasEscucha(it.d.frases);
+  const mot = String(it.d.motivo || "").trim();
+  const om = altoMotivo(mot);
+  const finFrases = 96 + om + altos.reduce((a, b) => a + b, 0);
+  const meta = String(it.d.meta || "").trim();
+  return (
+    <Tarjeta w={w} h={h} titulo={it.d.titulo}>
+      {mot &&
+        lineas(mot, 46).slice(0, 4).map((l, k) => (
+          <T key={"m" + k} x={28} y={96 + k * 28} s={21} c={C.ink2}>{l}</T>
+        ))}
+      {it.d.frases.map((t: string, i: number) => {
+        const top = 92 + om + altos.slice(0, i).reduce((x, y) => x + y, 0);
+        const ls = lineas(`“${t}”`, 40).slice(0, 4);
+        return (
+          <g key={i}>
+            <rect x={28} y={top + 6} width={6} height={ls.length * 32 + 4} rx={3} fill={C.go} />
+            {ls.map((l, k) => (
+              <T key={k} x={52} y={top + 32 + k * 32} s={25} i>{l}</T>
+            ))}
+          </g>
+        );
+      })}
+      {meta && (
+        <g>
+          <rect x={20} y={finFrases + 6} width={w - 40} height={altoMeta(meta) - 16} rx={14} fill={C.hl} />
+          <T x={44} y={finFrases + 46} s={19} w={700} c={C.ink2}>Lo que más te importa</T>
+          {lineas(meta, 36).slice(0, 4).map((l, k) => (
+            <T key={k} x={44} y={finFrases + 84 + k * 34} s={28} w={700}>{l}</T>
+          ))}
+        </g>
+      )}
+    </Tarjeta>
+  );
+}
+
 export function Elemento({ it }: { it: Item }) {
   switch (it.kind) {
     case "cuerpo": return <Cuerpo it={it} />;
@@ -667,5 +710,6 @@ export function Elemento({ it }: { it: Item }) {
     case "arribaabajo": return <ArribaAbajo it={it} />;
     case "camino": return <Camino it={it} />;
     case "dato": return <Dato it={it} />;
+    case "escucha": return <Escucha it={it} />;
   }
 }

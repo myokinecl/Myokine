@@ -324,6 +324,15 @@ export function Editor({ it, set }: { it: Item; set: Set }) {
           <Texto label="Fuente" value={d.fuente} onChange={(v) => up({ fuente: v })} />
         </div>
       );
+    case "escucha":
+      return (
+        <div className="space-y-4">
+          <Texto label="Título" value={d.titulo} onChange={(v) => up({ titulo: v })} />
+          <Texto label="Por qué consultó (opcional)" area value={d.motivo || ""} onChange={(v) => up({ motivo: v })} />
+          <Lista label="Sus palabras (frases que te dijo)" items={d.frases} max={6} onChange={(v) => up({ frases: v })} />
+          <Texto label="Lo que más le importa" area value={d.meta} onChange={(v) => up({ meta: v })} />
+        </div>
+      );
     case "camino":
       return <p className="text-[15px] text-[#5A6170]">Este gráfico no tiene datos que editar. Dibuja encima para marcar dónde va la persona.</p>;
     case "fuerza":
