@@ -477,7 +477,7 @@ Es una revisión narrativa del estado del arte, no una revisión sistemática. V
     readingTime: 13,
     summary: '¿Cómo reprograma el ejercicio nuestro organismo a escala molecular? Una revisión en MedComm explica las señales (exerquinas, vesículas extracelulares, cambios genéticos) que conectan el ejercicio con la salud de todo el cuerpo.',
     pullQuote: 'El ejercicio físico no es simplemente un gasto de calorías; es una intervención molecular y celular sistémica que activa programas biológicos evolutivamente conservados para combatir la enfermedad y el envejecimiento.',
-    content: `Durante décadas, el ejercicio físico fue investigado primordialmente desde variables fisiológicas tradicionales: consumo de oxígeno ($\text{V}\text{O}_{2\text{max}}$), fuerza muscular isométrica y parámetros hemodinámicos. Sin embargo, la irrupción de las ciencias multiómicas (genómica, transcriptómica, proteómica, metabolómica) y la biología celular de alta resolución ha transformado radicalmente nuestro entendimiento: **el ejercicio es una potente señal biológica sistémica capaz de reprogramar la homeostasis tisular**.
+    content: `Durante décadas, el ejercicio físico fue investigado primordialmente desde variables fisiológicas tradicionales: consumo de oxígeno (VO₂máx), fuerza muscular isométrica y parámetros hemodinámicos. Sin embargo, la irrupción de las ciencias multiómicas (genómica, transcriptómica, proteómica, metabolómica) y la biología celular de alta resolución ha transformado radicalmente nuestro entendimiento: **el ejercicio es una potente señal biológica sistémica capaz de reprogramar la homeostasis tisular**.
 
 En esta magna revisión publicada en **MedComm (2026)**, un equipo internacional liderado por **Peifeng Ying, Huilin Wang y Shukuan Ling** integra las redes de transducción de señales, la secreción de exoquinas (*exerkines*) y la comunicación interorgánica que median los beneficios del ejercicio sobre los sistemas musculoesquelético, cardiovascular, nervioso, inmunitario y metabólico.
 
@@ -485,24 +485,24 @@ En esta magna revisión publicada en **MedComm (2026)**, un equipo internacional
 
 ### 1. Sistema Musculoesquelético: Mecanotransducción y Diálogo Hueso-Músculo
 
-#### Mecanobiología Ósea: Piezo1 y la Vía Wnt/$\beta$-Catenina
-El hueso es un tejido extremadamente plástico que percibe las deformaciones mecánicas cíclicas a través del canal iónico mecanosensible **Piezo1** en los osteocitos. Su activación provoca un influjo inmediato de $\text{Ca}^{2+}$ que activa quinasas clave (CaMKII, ERK1/2, pAKT) y transloca a los coactivadores **YAP/TAZ** al núcleo.
+#### Mecanobiología Ósea: Piezo1 y la Vía Wnt/β-Catenina
+El hueso es un tejido extremadamente plástico que percibe las deformaciones mecánicas cíclicas a través del canal iónico mecanosensible **Piezo1** en los osteocitos. Su activación provoca un influjo inmediato de Ca²⁺ que activa quinasas clave (CaMKII, ERK1/2, pAKT) y transloca a los coactivadores **YAP/TAZ** al núcleo.
 
-Simultáneamente, la carga mecánica inhibe la secreción de **esclerostina (SOST)**, liberando a los correceptores LRP5/6 y encendiendo la cascada **Wnt/$\beta$-catenina**. La $\beta$-catenina nuclear induce los factores de transcripción osteogénicos **Runx2 y Osterix** en las células madre mesenquimales (BMSCs), favoreciendo la diferenciación a osteoblastos e inhibiendo la adipogénesis (vía represión de PPAR$\gamma$). En el eje osteoclástico, el ejercicio eleva la **osteoprotegerina (OPG)**, un receptor señuelo que bloquea a RANKL, frenando la resorción ósea.
+Simultáneamente, la carga mecánica inhibe la secreción de **esclerostina (SOST)**, liberando a los correceptores LRP5/6 y encendiendo la cascada **Wnt/β-catenina**. La β-catenina nuclear induce los factores de transcripción osteogénicos **Runx2 y Osterix** en las células madre mesenquimales (BMSCs), favoreciendo la diferenciación a osteoblastos e inhibiendo la adipogénesis (vía represión de PPARγ). En el eje osteoclástico, el ejercicio eleva la **osteoprotegerina (OPG)**, un receptor señuelo que bloquea a RANKL, frenando la resorción ósea.
 
 #### Músculo Esquelético: Biogénesis Mitocondrial y Síntesis Proteica
-1. **El Sensor Energético AMPK / PGC-1$\alpha$:** El consumo de ATP durante la contracción muscular eleva la relación intracelular AMP/ATP, activando a **AMPK**, que fosforila e induce al coactivador maestro **PGC-1$\alpha$**. Esta vía orquesta la replicación del ADN mitocondrial, la translocación de transportadores **GLUT4** independientes de insulina y la transición fenotípica hacia fibras oxidativas resistentes a la fatiga.
+1. **El Sensor Energético AMPK / PGC-1α:** El consumo de ATP durante la contracción muscular eleva la relación intracelular AMP/ATP, activando a **AMPK**, que fosforila e induce al coactivador maestro **PGC-1α**. Esta vía orquesta la replicación del ADN mitocondrial, la translocación de transportadores **GLUT4** independientes de insulina y la transición fenotípica hacia fibras oxidativas resistentes a la fatiga.
 2. **La Vía IGF-1 / PI3K / AKT / mTORC1:** La tensión mecánica activa la síntesis de IGF-1, reclutando a la quinasa AKT y al complejo **mTORC1**. Esto desactiva al represor 4E-BP1, permitiendo la iniciación de la traducción ribosómica por eIF4E y reprimiendo a los factores FoxO (disminuyendo las ubiquitina-ligasas atróficas MAFbx y MuRF-1).
-3. **Células Satélite y Reparación:** El ejercicio activa las células madre del músculo mediante la inducción de **MyoD y miogenina**, reguladas epigenéticamente por la metiltransferasa Mettl3 ($m^6A$).
+3. **Células Satélite y Reparación:** El ejercicio activa las células madre del músculo mediante la inducción de **MyoD y miogenina**, reguladas epigenéticamente por la metiltransferasa Mettl3 (m⁶A).
 
 #### Crosstalk Bidireccional Hueso-Músculo
-El músculo secreta **irisina** (vía vesículas extracelulares) que estimula la supervivencia del osteocito mediante integrinas $\alpha_V/\beta_5$, mientras que el hueso responde liberando **osteocalcina no carboxilada (ucOCN)** y $\text{PGE}_2$ (a través de hemicanales de conexina 43), los cuales promueven la captación de glucosa y la miogénesis en el músculo.
+El músculo secreta **irisina** (vía vesículas extracelulares) que estimula la supervivencia del osteocito mediante integrinas αV/β₅, mientras que el hueso responde liberando **osteocalcina no carboxilada (ucOCN)** y PGE₂ (a través de hemicanales de conexina 43), los cuales promueven la captación de glucosa y la miogénesis en el músculo.
 
 ---
 
 ### 2. Sistema Cardiovascular: Flujo de Cizallamiento y Angiogénesis
-* **Endotelio Vascular:** El aumento del flujo sanguíneo genera tensión de cizallamiento (*shear stress*) laminar sobre el endotelio, fosforilando a la óxido nítrico sintasa endotelial (**eNOS**) y aumentando la biodisponibilidad de óxido nítrico ($\text{NO}$), revirtiendo la rigidez arterial.
-* **Autofagia y Placa Ateromatosa:** AMPK estimula a Beclin-1 y LC3, promoviendo la fagocitosis y eliminación de células espumosas en las lesiones vasculares y suprimiendo a NF-$\kappa$B, VCAM-1 e ICAM-1.
+* **Endotelio Vascular:** El aumento del flujo sanguíneo genera tensión de cizallamiento (*shear stress*) laminar sobre el endotelio, fosforilando a la óxido nítrico sintasa endotelial (**eNOS**) y aumentando la biodisponibilidad de óxido nítrico (NO), revirtiendo la rigidez arterial.
+* **Autofagia y Placa Ateromatosa:** AMPK estimula a Beclin-1 y LC3, promoviendo la fagocitosis y eliminación de células espumosas en las lesiones vasculares y suprimiendo a NF-κB, VCAM-1 e ICAM-1.
 * **Corazón y Mitofagia:** El entrenamiento continuo activa la vía **PINK1/Parkin** para degradar selectivamente mitocondrias cardíacas senescentes dañadas, al tiempo que activa al factor antioxidante **Nrf2/ARE** e induce angiogénesis coronaria a través de VEGF y FSTL1.
 
 ---
@@ -515,8 +515,8 @@ El ejercicio induce en el músculo la expresión de la proteína FNDC5, cuyo fra
 El BDNF se une a receptores **TrkB**, estimulando la plasticidad sináptica (LTP), el crecimiento dendrítico y la neurogénesis en el giro dentado.
 
 #### Protección Frente a Patologías Neurodegenerativas
-* **Enfermedad de Alzheimer:** El ejercicio estimula enzimas que degradan el péptido $\beta$-amiloide (como la neprilisina y la enzima degradadora de insulina - IDE) y desactiva a la enzima GSK3$\beta$ (vía PI3K/AKT), frenando la hiperfosforilación de la proteína Tau.
-* **Enfermedad de Parkinson:** Favorece la depuración autofágica de agregados de $\alpha$-sinucleína, protege la vía nigroestriatal dopaminérgica y eleva el factor neurotrófico derivado de la glía (GDNF).
+* **Enfermedad de Alzheimer:** El ejercicio estimula enzimas que degradan el péptido β-amiloide (como la neprilisina y la enzima degradadora de insulina - IDE) y desactiva a la enzima GSK3β (vía PI3K/AKT), frenando la hiperfosforilación de la proteína Tau.
+* **Enfermedad de Parkinson:** Favorece la depuración autofágica de agregados de α-sinucleína, protege la vía nigroestriatal dopaminérgica y eleva el factor neurotrófico derivado de la glía (GDNF).
 * **Accidente Cerebrovascular (ACV):** El ejercicio moderado temprano tras un evento isquémico acelera la angiogénesis cerebral dependiente de VEGFR2 y la sinaptogénesis mediada por BDNF, reduciendo el volumen del infarto.
 
 ---
@@ -529,8 +529,8 @@ El BDNF se une a receptores **TrkB**, estimulando la plasticidad sináptica (LTP
 ---
 
 ### 5. Envejecimiento, Telómeros y Medicina de Precisión
-* **Mantenimiento Telomérico:** Aunque el ejercicio no alarga los telómeros directamente, frena drásticamente su desgaste prematuro al silenciar el estrés oxidativo tisular y mantener la expresión de ARN telomérico (TERRA) vía la cascada AMPK/PGC-1$\alpha$/NRF1.
-* **Fármacos "Miméticos del Ejercicio" (Exercise Pills):** Moléculas experimentales como activadores de AMPK (AICAR) o agonistas de PPAR$\delta$ (GW501516) han intentado replicar los efectos del ejercicio; sin embargo, no logran reproducir la intrincada sincronización multiorgánica ni el perfil de seguridad del movimiento real, demostrando que **el ejercicio es una sinfonía biológica irreemplazable por un único fármaco**.
+* **Mantenimiento Telomérico:** Aunque el ejercicio no alarga los telómeros directamente, frena drásticamente su desgaste prematuro al silenciar el estrés oxidativo tisular y mantener la expresión de ARN telomérico (TERRA) vía la cascada AMPK/PGC-1α/NRF1.
+* **Fármacos "Miméticos del Ejercicio" (Exercise Pills):** Moléculas experimentales como activadores de AMPK (AICAR) o agonistas de PPARδ (GW501516) han intentado replicar los efectos del ejercicio; sin embargo, no logran reproducir la intrincada sincronización multiorgánica ni el perfil de seguridad del movimiento real, demostrando que **el ejercicio es una sinfonía biológica irreemplazable por un único fármaco**.
 
 ### Conclusión
 Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
@@ -577,8 +577,8 @@ El **Weight-Bearing Lunge Test (WBLT)** es el estándar de oro para medir la dor
 4. **Palpación continua del talón:** Monitorizar digitalmente la almohadilla plantar posterior para detener la medición en el instante milimétrico exacto en que el calcáneo comienza a despegarse.
 
 #### Métricas de Referencia y Cambio Mínimo Detectable (MDC)
-* **Valores Normativos Esperados:** Distancia dedo-pared $> 9 - 10\text{ cm}$ o inclinación tibial $> 40 - 42^\circ$.
-* **Déficit Clínicamente Relevante:** Asimetría entre miembros $> 1.5\text{ cm}$ o $> 4.7^\circ$ de inclinación tibial.
+* **Valores Normativos Esperados:** Distancia dedo-pared > 9–10 cm o inclinación tibial > 40–42°.
+* **Déficit Clínicamente Relevante:** Asimetría entre miembros > 1.5 cm o > 4.7° de inclinación tibial.
 
 #### Mapeo Cualitativo: Las 5 Zonas de Dolor o Bloqueo
 Además de medir los centímetros o grados, el clínico debe preguntar al deportista **dónde localiza el tope o disconfort** al final del rango:
@@ -594,17 +594,17 @@ Además de medir los centímetros o grados, el clínico debe preguntar al deport
 Una vez localizada la zona sospechosa, se aplican pruebas ortopédicas y biomecánicas específicas para aislar la estructura diana:
 
 * **Para la Zona Anterior (Astrágalo vs. Mediotié):**
-  * *Posterior Talar Glide Test (PTGT):* Paciente sentado con rodilla flexionada y pie en flexión dorsal máxima; el terapeuta fija el astrágalo y flexiona pasivamente la rodilla con inclinómetro en la tibia. Asimetrías $> 4.7^\circ$ confirman pérdida del deslizamiento posterior astragalino.
+  * *Posterior Talar Glide Test (PTGT):* Paciente sentado con rodilla flexionada y pie en flexión dorsal máxima; el terapeuta fija el astrágalo y flexiona pasivamente la rodilla con inclinómetro en la tibia. Asimetrías > 4.7° confirman pérdida del deslizamiento posterior astragalino.
   * *Maniobra del Mediotié:* Si el PTGT es normal, se aplica un deslizamiento caudal/plantar manual al navicular y cuboides mientras se repite el WBLT. Si el bloqueo anterior desaparece o mejora el rango, la diana es el mediopié.
 * **Para la Zona Anterolateral (Tibioperonea Inferior):**
   * Deslizamiento anteroposterior pasivo del peroné distal. Si la movilización posterior del maléolo externo durante la dorsiflexión desbloquea el movimiento, confirma implicación sindesmal/tibioperonea.
 * **Para la Zona Retromaleolar Medial (FHL vs. Subtalar):**
-  * *WBLT Modificado con Hallux en Extensión Máxima:* Al extender pasivamente el 1.er dedo se tensiona el FHL en su paso por el túnel fibroóseo retromaleolar. Una pérdida $> 1.5\text{ cm}$ o $> 4.7^\circ$ respecto al WBLT basal confirma rigidez del FHL.
+  * *WBLT Modificado con Hallux en Extensión Máxima:* Al extender pasivamente el 1.er dedo se tensiona el FHL en su paso por el túnel fibroóseo retromaleolar. Una pérdida > 1.5 cm o > 4.7° respecto al WBLT basal confirma rigidez del FHL.
   * Si la prueba del FHL es negativa, se evalúa el juego articular medio-lateral y látero-medial de la articulación subtalar.
 * **Para la Zona Retromaleolar Lateral (Peronéos):**
-  * *WBLT Modificado en Inversión:* Se realiza el lunge sobre una cuña inclinada a ~25° de inversión. Si el rango se reduce significativamente ($> 1.5\text{ cm}$ o $> 4.7^\circ$), se confirma acortamiento de los tendones peronéos.
+  * *WBLT Modificado en Inversión:* Se realiza el lunge sobre una cuña inclinada a ~25° de inversión. Si el rango se reduce significativamente (> 1.5 cm o > 4.7°), se confirma acortamiento de los tendones peronéos.
 * **Para la Zona Posterior (Tríceps Sural vs. Nervio Tibial):**
-  * *SLR Modificado / Slump con Neurodinámica del Tibial:* Prueba de elevación de pierna recta o Slump combinada con dorsiflexión, eversión del retropié y abducción del antepié. Una asimetría $> 7.0^\circ$ o reproducción de síntomas urentes/tirantes en la pantorrilla indica mecanosensibilidad del nervio tibial. Si es negativa, la causa primaria es rigidez del tejido miofascial del tríceps sural.
+  * *SLR Modificado / Slump con Neurodinámica del Tibial:* Prueba de elevación de pierna recta o Slump combinada con dorsiflexión, eversión del retropié y abducción del antepié. Una asimetría > 7.0° o reproducción de síntomas urentes/tirantes en la pantorrilla indica mecanosensibilidad del nervio tibial. Si es negativa, la causa primaria es rigidez del tejido miofascial del tríceps sural.
 
 ---
 
@@ -616,9 +616,9 @@ El cuadro siguiente sintetiza las técnicas recomendadas por el consenso, su vol
 | **Astrágalo (Anterior)** | Deslizamiento A-P pasivo (Maitland Grado III-IV) o Movilización con Movimiento (MWM Mulligan) con cincha | • **Agudo:** 4 series de 15 oscilaciones (60 totales) o 4 series de 10 MWM (mantenimiento 5 s).<br>• **Crónico:** 8 series de 15 oscilaciones (120 totales) o 4 series de 15 MWM. | 2 a 3 sesiones / semana (hasta normalizar WBLT) |
 | **Tarsiana Transversa** | Deslizamiento caudal de cuboides/navicular (oscilatorio o MWM en carga) | • Idéntica dosificación que la movilización astragalina (60 a 120 oscilaciones según cronicidad). | 2 a 3 sesiones / semana |
 | **Tibioperonea Inferior** | Deslizamiento A-P (supino) o P-A (prono) del maléolo lateral | • Oscilaciones rítmicas de 1 segundo (Grado III-IV), 60 a 120 repeticiones por sesión. | 2 a 3 sesiones / semana |
-| **Flexor Largo Hallux (FHL)** | Estiramiento crónico en WBLT con cuña bajo el 1.er radio | • **Intensidad:** Entre punto de disconfort y umbral de dolor.<br>• **Volumen:** $> 200\text{ s}$ bajo tensión por sesión (ej. 3 series de 75 s con 30 s de descanso). | 5 a 7 días / semana ($> 1.200\text{ s}$ acumulados por semana; mín. 5 semanas) |
-| **Tendones Peronéos** | Estiramiento crónico en WBLT con pie en inversión | • Idéntico protocolo de alta intensidad y pausas cortas ($> 200\text{ s}$ por sesión). | 5 a 7 días / semana ($> 1.200\text{ s}$/semana; mín. 5 semanas) |
-| **Tríceps Sural** | Estiramiento crónico estático en WBLT con antepié elevado | • $> 200\text{ s}$ por sesión (3 series de 75 s con 30 s descanso). | 5 a 7 días / semana ($> 1.200\text{ s}$/semana) |
+| **Flexor Largo Hallux (FHL)** | Estiramiento crónico en WBLT con cuña bajo el 1.er radio | • **Intensidad:** Entre punto de disconfort y umbral de dolor.<br>• **Volumen:** > 200 s bajo tensión por sesión (ej. 3 series de 75 s con 30 s de descanso). | 5 a 7 días / semana (> 1.200 s acumulados por semana; mín. 5 semanas) |
+| **Tendones Peronéos** | Estiramiento crónico en WBLT con pie en inversión | • Idéntico protocolo de alta intensidad y pausas cortas (> 200 s por sesión). | 5 a 7 días / semana (> 1.200 s/semana; mín. 5 semanas) |
+| **Tríceps Sural** | Estiramiento crónico estático en WBLT con antepié elevado | • > 200 s por sesión (3 series de 75 s con 30 s descanso). | 5 a 7 días / semana (> 1.200 s/semana) |
 | **Nervio Tibial (Posterior)** | Técnicas de tensión neurodinámica en Slump / SLR con dorsiflexión y eversión | • 80 a 100 segundos totales bajo tensión por sesión (2 series de 10 repeticiones con 5 s de mantenimiento). | 3 sesiones / semana |
 
 ---
@@ -629,7 +629,7 @@ Una vez desbloqueado el rango pasivo o articular, la dorsiflexión recuperada de
 ### Conclusión
 Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
 - Medir únicamente los centímetros del WBLT es insuficiente: interrogar y palpar el sitio anatómico del bloqueo es la clave diagnóstica.
-- Cada tejido requiere un estímulo mecánico específico: el hueso y la cápsula responden a oscilaciones accesorias de alta cadencia; el tendón a estiramientos prolongados acumulados ($> 1.200\text{ s}$ semanales); y el nervio periférico a deslizamiento y tensión neurodinámica suave dosificada.`,
+- Cada tejido requiere un estímulo mecánico específico: el hueso y la cápsula responden a oscilaciones accesorias de alta cadencia; el tendón a estiramientos prolongados acumulados (> 1.200 s semanales); y el nervio periférico a deslizamiento y tensión neurodinámica suave dosificada.`,
     references: [
       {
         author: 'Tourillon R, M’Baye M, Smith M.',
@@ -662,7 +662,7 @@ En el octavo y culminante editorial de la serie **Pain Science in Practice**, el
 
 ### 1. Descriptores Mecanísticos vs. Mecanismos del Dolor
 Es imprescindible no confundir un **mecanismo biológico** con un **descriptor mecanístico**:
-* **Mecanismo Biológico:** Son los procesos moleculares, sinápticos e inmunes que impulsan el dolor (por ejemplo: fosforilación de canales $\text{Na}_V1.7$, pérdida de magnesio en receptores NMDA, activación microglial, degeneración axonal).
+* **Mecanismo Biológico:** Son los procesos moleculares, sinápticos e inmunes que impulsan el dolor (por ejemplo: fosforilación de canales NaV1.7, pérdida de magnesio en receptores NMDA, activación microglial, degeneración axonal).
 * **Descriptor Mecanístico:** Es una etiqueta clínica descriptiva utilizada para clasificar presentaciones clínicas en grupos que presumiblemente comparten procesos fisiopatológicos predominantes, con el fin de guiar el tratamiento hacia intervenciones específicas.
 
 ---
@@ -728,7 +728,7 @@ Para evaluar el estado del DPMS se emplean varios protocolos de prueba sensorial
    * Es el análogo humano del fenómeno DNIC. Se aplica un **estímulo test (TS)** —por ejemplo, el umbral de dolor a la presión con un manguito o algómetro en una extremidad— antes y durante la aplicación simultánea de un **estímulo condicionante doloroso (CS)** remoto (como agua helada a 4°C o isquemia en el brazo opuesto).
    * En aproximadamente el 80% de los adultos sanos, el dolor del estímulo test disminuye significativamente (efecto CPM positivo). En pacientes con fibromialgia, dolor lumbar persistente o neuropatía diabética, el efecto suele estar deprimido o abolido.
 2. **Sumación Temporal del Dolor (TSP):**
-   * Evalúa la facilitación espinal mediante estímulos nociceptivos idénticos repetidos a ritmo constante ($> 1\text{ por segundo}$, como 10 toques con monofilamento rígido). Un aumento desproporcionado de la intensidad del dolor traduce hiperactividad de receptores NMDA.
+   * Evalúa la facilitación espinal mediante estímulos nociceptivos idénticos repetidos a ritmo constante (> 1 por segundo, como 10 toques con monofilamento rígido). Un aumento desproporcionado de la intensidad del dolor traduce hiperactividad de receptores NMDA.
 3. **Analgesia por Desfase (*Offset Analgesia*):**
    * Fenómeno en el que un incremento térmico temporal de 1°C seguido de un retorno a la temperatura previa genera un alivio del dolor desproporcionadamente mayor que la disminución térmica administrada, reflejando un filtrado temporal dinámico del SNC.
 4. **Analgesia por Placebo:**
@@ -738,9 +738,9 @@ Para evaluar el estado del DPMS se emplean varios protocolos de prueba sensorial
 
 ### 2. Farmacología y Reclutamiento del DPMS
 Comprender la neurociencia del DPMS ilumina el mecanismo de acción de los principales analgésicos prescritos en dolor crónico:
-* **Opioides:** Se unen preferentemente a receptores opioides $\mu$ (MOR) en el asta dorsal y en las células OFF de la RVM. En presinapsis atenúan la liberación de glutamato; en postsinapsis hiperpolarizan la neurona nociceptiva.
-* **Gabapentinoides (Pregabalina, Gabapentina):** A pesar de su nombre, no actúan sobre receptores GABA. Se unen a la subunidad $\alpha_2\delta$ de los canales de calcio dependientes de voltaje en neuronas espinales, frenando la exocitosis de neurotransmisores y reduciendo la facilitación descendente mediada por receptores $5-\text{HT}_3$.
-* **Antidepresivos Inhibidores de la Recaptación de Serotonina y Noradrenalina (ISRN - ej. Duloxetina):** Prolongan la permanencia de noradrenalina en la hendidura sináptica del asta dorsal, potenciando la activación de receptores $\alpha_2$-adrenérgicos que frenan la transmisión del dolor.
+* **Opioides:** Se unen preferentemente a receptores opioides μ (MOR) en el asta dorsal y en las células OFF de la RVM. En presinapsis atenúan la liberación de glutamato; en postsinapsis hiperpolarizan la neurona nociceptiva.
+* **Gabapentinoides (Pregabalina, Gabapentina):** A pesar de su nombre, no actúan sobre receptores GABA. Se unen a la subunidad α₂δ de los canales de calcio dependientes de voltaje en neuronas espinales, frenando la exocitosis de neurotransmisores y reduciendo la facilitación descendente mediada por receptores 5-HT₃.
+* **Antidepresivos Inhibidores de la Recaptación de Serotonina y Noradrenalina (ISRN - ej. Duloxetina):** Prolongan la permanencia de noradrenalina en la hendidura sináptica del asta dorsal, potenciando la activación de receptores α₂-adrenérgicos que frenan la transmisión del dolor.
 
 ### Conclusión
 Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
@@ -834,9 +834,9 @@ En la quinta parte de la serie **Pain Science in Practice**, el Dr. **Morten Hoe
 ---
 
 ### 1. Wind-Up: El Descubrimiento de Mendell y Wall (1965)
-Cuando una fibra C aferente primaria se estimula repetitivamente a frecuencias bajas constantes ($< 5\text{ Hz}$), la neurona de segundo orden del asta dorsal no mantiene una respuesta plana, sino que experimenta una **despolarización acumulativa progresiva** que aumenta el número de potenciales de acción emitidos por estímulo ("más respuesta por el mismo estímulo").
+Cuando una fibra C aferente primaria se estimula repetitivamente a frecuencias bajas constantes (< 5 Hz), la neurona de segundo orden del asta dorsal no mantiene una respuesta plana, sino que experimenta una **despolarización acumulativa progresiva** que aumenta el número de potenciales de acción emitidos por estímulo ("más respuesta por el mismo estímulo").
 
-* **Mecanismo Bioquímico:** Inicialmente, el glutamato activa receptores AMPA. Si la estimulación persiste, la despolarización progresiva de la membrana expulsa el ión de magnesio ($\text{Mg}^{2+}$) que bloquea el poro del receptor **NMDA**. Al desobstruirse el canal, penetran iones de $\text{Na}^+$ y $\text{Ca}^{2+}$, disparando la excitabilidad.
+* **Mecanismo Bioquímico:** Inicialmente, el glutamato activa receptores AMPA. Si la estimulación persiste, la despolarización progresiva de la membrana expulsa el ión de magnesio (Mg²⁺) que bloquea el poro del receptor **NMDA**. Al desobstruirse el canal, penetran iones de Na⁺ y Ca²⁺, disparando la excitabilidad.
 * **Cronología:** El *wind-up* es un fenómeno estrictamente **homosináptico** de muy corta duración; cesa a los pocos segundos de detener el estímulo. Su correlato en humanos es la **sumación temporal del dolor (TSP)**, utilizada como marcador indirecto de excitabilidad sináptica.
 
 ---
@@ -850,7 +850,7 @@ A diferencia del *wind-up*, la sensibilización central clásica es **heterosin�
 
 ### 3. Potenciación a Largo Plazo (LTP) en el Asta Dorsal
 Descrita originalmente en el hipocampo para explicar la memoria y el aprendizaje, la LTP espinal representa un fortalecimiento sináptico duradero (de horas a semanas):
-* El influjo masivo de $\text{Ca}^{2+}$ a través de canales dependientes de voltaje (VGCC) y receptores NMDA activa kinasas intracelulares clave: Proteína Kinasa C (**PKC**) y **CaMKII**.
+* El influjo masivo de Ca²⁺ a través de canales dependientes de voltaje (VGCC) y receptores NMDA activa kinasas intracelulares clave: Proteína Kinasa C (**PKC**) y **CaMKII**.
 * Estas enzimas fosforilan los receptores existentes y promueven la inserción de nuevos receptores AMPA en la membrana postsináptica, reduciendo de forma duradera el umbral de activación.
 * En presencia de activación glial, la LTP puede volverse independiente de la aferencia inicial, constituyendo un mecanismo plausible para el dolor persistente que sobrevive a la cicatrización tisular.
 
@@ -917,7 +917,7 @@ Para comprender cómo se manifiesta clínicamente la sensibilización central, e
 
 ### 3. Células Gliales: ¿La Mitad Olvidada de la Ecuación?
 Tradicionalmente se consideraba que las neuronas eran las únicas protagonistas de la transmisión nociceptiva. La investigación actual demuestra que las **células gliales (microglía y astrocitos)** son determinantes:
-* **Microglía:** Actúa como los macrófagos residentes del SNC. Ante señales de alarma o lesión axonal periférica, la microglía adopta un estado reactivo y secreta citocinas proinflamatorias ($\text{IL}-1\beta$, $\text{TNF}-\alpha$) y quimiocinas que aumentan la fosforilación de receptores de glutamato.
+* **Microglía:** Actúa como los macrófagos residentes del SNC. Ante señales de alarma o lesión axonal periférica, la microglía adopta un estado reactivo y secreta citocinas proinflamatorias (IL-1β, TNF-α) y quimiocinas que aumentan la fosforilación de receptores de glutamato.
 * **Astrocitos:** Regulan la recaptación de glutamato de la hendidura sináptica y mantienen la integridad de la barrera hematoencefálica. En estados reactivos crónicos, disminuyen la recaptación de neurotransmisores excitatorios, favoreciendo un estado hiperpolarizado e hiperexcitable que genera una auténtica "huella de memoria" en las vías nociceptivas.
 
 ### Conclusión
@@ -972,9 +972,9 @@ Este mecanismo es un proceso fisiológico adaptativo indispensable para la repar
 ---
 
 ### 3. Cascada Intracelular de Segundos Mensajeros
-Cuando el tejido sufre una sobrecarga o traumatismo, se vierten a la matriz extracelular factores proinflamatorios y algógenos: factor de necrosis tumoral alfa ($\text{TNF}-\alpha$), interleucinas, $\text{PGE}_2$ y factor de crecimiento nervioso (NGF).
-* Estos algógenos se unen a receptores en la membrana del nociceptor y activan sistemas de **segundos mensajeros** intracelulares: $\text{Ca}^{2+}$, $\text{AMPc}$ e inositol trifosfato ($\text{IP}_3$).
-* Estos mensajeros activan quinasas enzimáticas (Proteína Kinasa A - **PKA**, Fosfolipasa C - **PLC**, CaMK), las cuales **fosforilan los canales de sodio dependientes de voltaje ($\text{Na}_V1.7$, $\text{Na}_V1.8$, $\text{Na}_V1.9$) y el canal TRPV1**.
+Cuando el tejido sufre una sobrecarga o traumatismo, se vierten a la matriz extracelular factores proinflamatorios y algógenos: factor de necrosis tumoral alfa (TNF-α), interleucinas, PGE₂ y factor de crecimiento nervioso (NGF).
+* Estos algógenos se unen a receptores en la membrana del nociceptor y activan sistemas de **segundos mensajeros** intracelulares: Ca²⁺, AMPc e inositol trifosfato (IP₃).
+* Estos mensajeros activan quinasas enzimáticas (Proteína Kinasa A - **PKA**, Fosfolipasa C - **PLC**, CaMK), las cuales **fosforilan los canales de sodio dependientes de voltaje (NaV1.7, NaV1.8, NaV1.9) y el canal TRPV1**.
 * La fosforilación disminuye drásticamente el umbral de apertura del canal, permitiendo que estímulos mecánicos o térmicos de baja intensidad desencadenen trenes continuos de potenciales de acción hacia la médula.
 
 ### Conclusión
@@ -1018,8 +1018,8 @@ Un **canal iónico** es una proteína transmembrana con compuerta que permite el
    * Funcionan como una "llave en su cerradura". La unión del ligando abre instantáneamente el poro del canal iónico acoplado.
    * *Ejemplo clave:* El receptor **NMDA** y **AMPA** activados por glutamato en la médula espinal, esenciales en la transmisión rápida y en fenómenos de plasticidad como el *wind-up*.
 2. **Receptores Metabotrópicos (Acoplados a Proteínas G - GPCRs):**
-   * Actúan a través de segundos mensajeros intracelulares (AMPc, $\text{IP}_3$, $\text{Ca}^{2+}$) e inducen cambios metabólicos rápidos y cascadas enzimáticas.
-   * *Ejemplo clave:* El receptor de prostaglandina **$\text{EP}_2$**, activado por $\text{PGE}_2$, y el receptor **$\text{NK}_1$**, activado por Sustancia P, inductores primarios de sensibilización periférica y central.
+   * Actúan a través de segundos mensajeros intracelulares (AMPc, IP₃, Ca²⁺) e inducen cambios metabólicos rápidos y cascadas enzimáticas.
+   * *Ejemplo clave:* El receptor de prostaglandina **EP₂**, activado por PGE₂, y el receptor **NK₁**, activado por Sustancia P, inductores primarios de sensibilización periférica y central.
 3. **Receptores Tirosina Quinasa (Trk):**
    * Median la respuesta neuronal a factores de crecimiento tisular y neurotrofinas.
    * *Ejemplo clave:* **TrkA** (activado por Factor de Crecimiento Nervioso / NGF) y **TrkB** (activado por BDNF), protagonistas centrales de la neuroplasticidad maladaptativa y la regeneración axónica.
@@ -1034,7 +1034,7 @@ En clínica, cuando un paciente pregunta *"¿por qué me duele al moverme?"*, la
 ---
 
 ### 3. Efectos Específicos e Inespecíficos: Vías Compartidas
-La farmacología opera mediante moléculas diseñadas para actuar directamente como agonistas o antagonistas sobre receptores específicos (por ejemplo, los AINEs bloquean las enzimas COX reduciendo la producción de $\text{PGE}_2$, aliviando la activación del receptor $\text{EP}_2$).
+La farmacología opera mediante moléculas diseñadas para actuar directamente como agonistas o antagonistas sobre receptores específicos (por ejemplo, los AINEs bloquean las enzimas COX reduciendo la producción de PGE₂, aliviando la activación del receptor EP₂).
 
 Las terapias no farmacológicas (ejercicio terapéutico, educación en dolor, terapia manual, modificación de hábitos de sueño) no actúan mediante un fármaco único, pero **desencadenan cascadas químicas endógenas idénticas**: promueven la liberación de opioides endógenos, endocannabinoides y monoaminas que se unen a estos mismos receptores inhibidores, normalizando la excitabilidad sináptica con un perfil de seguridad infinitamente superior.
 
@@ -1088,7 +1088,7 @@ Por tanto, **la activación de una fibra sensorial no conduce automáticamente a
 El trayecto de la información nociceptiva involucra tres fases fundamentales:
 
 1. **Transducción:** Transformación de una forma de energía del entorno (química, térmica o mecánica) en energía eléctrica (potenciales de acción neuronales). Los nociceptores son receptores de alto umbral ubicados en las terminaciones libres de axones periféricos (fibras C amielínicas y fibras A-delta débilmente mielinizadas).
-2. **Transmisión:** Propagación del potencial de acción a lo largo del axón mediante canales iónicos dependientes de voltaje. Entre ellos, el canal de sodio **$\text{Na}_V1.7$** (codificado por el gen *SCN9A*) cumple un rol crítico: mutaciones de pérdida de función en este gen causan insensibilidad congénita al dolor en humanos, mientras que mutaciones con ganancia de función provocan eritromelalgia primaria (crisis de dolor urente extremo).
+2. **Transmisión:** Propagación del potencial de acción a lo largo del axón mediante canales iónicos dependientes de voltaje. Entre ellos, el canal de sodio **NaV1.7** (codificado por el gen *SCN9A*) cumple un rol crítico: mutaciones de pérdida de función en este gen causan insensibilidad congénita al dolor en humanos, mientras que mutaciones con ganancia de función provocan eritromelalgia primaria (crisis de dolor urente extremo).
 3. **Modulación y Liberación Sináptica:** Cuando el potencial de acción alcanza el terminal central en el asta dorsal de la médula espinal, la apertura de canales de calcio dependientes de voltaje permite la exocitosis de neurotransmisores (como glutamato y sustancia P) hacia la hendidura sináptica para activar neuronas de segundo orden en el haz espinotalámico.
 
 ---
@@ -1157,7 +1157,7 @@ Mediante secuenciación profunda de ARN pequeño (*sRNA deep sequencing*) y expe
 ### 4. Protección Frente a la Obesidad y Salud Metabólica
 Cuando la descendencia fue sometida a una dieta rica en grasas (*High-Fat Diet*), los hijos de padres ejercitados (F1-Et-HFD) o microinyectados con sRNAs de esperma ejercitado mostraron:
 * **Tolerancia a la Glucosa e Insulina Preservada:** Menores picos de glucemia y mayor sensibilidad a la insulina.
-* **Mayor Captación de Glucosa Muscular:** Demostrado in vivo mediante tomografía PET/CT con $^{18}\text{F-FDG}$, con un incremento marcado en la fosforilación de AKT y la traslocación del transportador GLUT4 en el músculo esquelético.
+* **Mayor Captación de Glucosa Muscular:** Demostrado in vivo mediante tomografía PET/CT con ¹⁸F-FDG, con un incremento marcado en la fosforilación de AKT y la traslocación del transportador GLUT4 en el músculo esquelético.
 * **Menor Acumulación de Grasa:** Preservación de la flexibilidad metabólica a pesar de la sobrecarga calórica.
 
 ---
@@ -1211,14 +1211,14 @@ Los participantes sostuvieron durante 30 segundos tres posturas isométricas est
 Se registró la actividad electromiográfica del músculo **longísimo (LG)**, **oblicuo externo (OE)**, **glúteo medio (GM)** y **bíceps femoral (BF)** de forma bilateral (lado ipsilateral y contralateral a la banda de resistencia):
 
 1. **Longísimo (Eractor Espinal / LG):**
-   * El ejercicio **Stack (rotacional)** generó los niveles más altos de activación muscular cuando la resistencia elástica se situó en el lado ipsilateral ($p < 0.002$).
+   * El ejercicio **Stack (rotacional)** generó los niveles más altos de activación muscular cuando la resistencia elástica se situó en el lado ipsilateral (p < 0.002).
    * En el ejercicio *Drive* (tensión posterior), situar la resistencia en el lado ipsilateral incrementó significativamente la actividad del longísimo para mantener la postura erguida.
 2. **Oblicuo Externo (OE):**
    * Mostró una activación significativamente superior durante el ejercicio **Stack** en comparación con *Drive* y *Drag*, demostrando su rol primario en la desaceleración y control de torques rotacionales.
 3. **Glúteo Medio (GM):**
-   * En el ejercicio **Stack**, la ubicación contralateral de la resistencia elástica incrementó de forma significativa la actividad del glúteo medio ($p = 0.038$), actuando como estabilizador de la pelvis en el plano frontal y transversal.
+   * En el ejercicio **Stack**, la ubicación contralateral de la resistencia elástica incrementó de forma significativa la actividad del glúteo medio (p = 0.038), actuando como estabilizador de la pelvis en el plano frontal y transversal.
 4. **Bíceps Femoral (BF):**
-   * Durante **Drag** (tensión anterior), la activación del bíceps femoral fue máxima cuando la resistencia estaba en el lado ipsilateral ($p < 0.001$), coadyuvando en la extensión de cadera contra el momento flexor anterior.
+   * Durante **Drag** (tensión anterior), la activación del bíceps femoral fue máxima cuando la resistencia estaba en el lado ipsilateral (p < 0.001), coadyuvando en la extensión de cadera contra el momento flexor anterior.
    * Durante **Stack** y **Drive**, el bíceps femoral contralateral registró mayor actividad para estabilizar la cadena cinética cerrada del miembro inferior.
 
 ---
@@ -1269,8 +1269,8 @@ Los autores expusieron a los participantes a mensajes de salud con argumentos id
 
 ---
 
-### 2. Resultados Principales: La Interacción Pericia $\\times$ Cortesía
-* **El "Efecto Dr. House" en Expertos:** Cuando el emisor era percibido como un experto técnico de alto nivel, la versión con lenguaje **directo e impolítico resultó significativamente más persuasiva** y generó actitudes más favorables hacia el mensaje que la versión suave o hiper-cortés ($p < 0.05$).
+### 2. Resultados Principales: La Interacción Pericia × Cortesía
+* **El "Efecto Dr. House" en Expertos:** Cuando el emisor era percibido como un experto técnico de alto nivel, la versión con lenguaje **directo e impolítico resultó significativamente más persuasiva** y generó actitudes más favorables hacia el mensaje que la versión suave o hiper-cortés (p < 0.05).
 * **El Efecto en No Expertos:** En contraste, cuando el emisor era un no experto, la cortesía y la amabilidad fueron indispensables para lograr persuasión. La impaciencia en un no experto redujo drásticamente la confianza percibida y la credibilidad.
 * **Mecanismos Evaluados:** El efecto se mantuvo robusto al controlar por la relevancia del tema, la intención persuasiva percibida o los niveles de procesamiento consciente del oyente.
 
@@ -1316,7 +1316,7 @@ En esta revisión clave publicada en **Biochimica et Biophysica Acta** (2015), J
 ---
 
 ### 1. Actores Principales de la Mecanodetección
-* **Integrinas:** Proteínas transmembrana heterodiméricas (subunidades $\\alpha$ y $\\beta$) que conectan la matriz extracelular (MEC) con el citoesqueleto celular. Muestran comportamientos de enlace tipo *slip-bond* (cuya vida media disminuye con la fuerza) y *catch-bond* (cuya vida media se incrementa bajo tensión mecánica, como en la integrina $\\alpha 5 \\beta 1$).
+* **Integrinas:** Proteínas transmembrana heterodiméricas (subunidades α y β) que conectan la matriz extracelular (MEC) con el citoesqueleto celular. Muestran comportamientos de enlace tipo *slip-bond* (cuya vida media disminuye con la fuerza) y *catch-bond* (cuya vida media se incrementa bajo tensión mecánica, como en la integrina α 5 β 1).
 * **Adhesiones Focales (FA):** Complejos multiproteicos (talin, vinculina, p130Cas, paxilina) que se reclutan y maduran cuando la célula genera fuerza de tracción. Bajo tensión, la proteína talin se despliega exponiendo sitios de unión para vinculina, actuando como un sensor directo de fuerza.
 * **Citoesqueleto (CSK):** Compuesto por filamentos de actina, microtúbulos y filamentos intermedios (como la vimentina). La contractilidad actomiosínica (mediada por miosina II) genera las fuerzas de tracción que permiten a la célula sondear la rigidez de su matriz.
 
