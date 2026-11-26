@@ -1,4 +1,5 @@
 import React from "react";
+import { FiguraArticulo } from "./FiguraArticulo";
 
 interface MarkdownRendererProps {
   content: string;
@@ -8,6 +9,7 @@ type Block =
   | { type: "h1" | "h2" | "h3" | "h4" | "p" | "blockquote"; lines: string[] }
   | { type: "ul" | "ol"; lines: string[] }
   | { type: "hr" }
+  | { type: "figura"; id: string }
   | { type: "table"; head: string[]; rows: string[][] };
 
 /** Estilos en línea: **negrita**, *cursiva*, _cursiva_, `código`, [enlace](url) y <br>. */
@@ -79,6 +81,13 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       continue;
     }
 
+    const fig = t.match(/^\[\[figura:([\w-]+)\]\]$/);
+    if (fig) {
+      blocks.push({ type: "figura", id: fig[1] });
+      cur = null;
+      continue;
+    }
+
     if (/^(-{3,}|\*{3,}|_{3,})$/.test(t)) {
       blocks.push({ type: "hr" });
       cur = null;
@@ -134,6 +143,8 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       {blocks.map((b, idx) => {
         const key = `b-${idx}`;
         switch (b.type) {
+          case "figura":
+            return <FiguraArticulo key={key} id={b.id} />;
           case "h1":
             return <h1 key={key} className="font-display text-3xl font-bold text-[#1D2433] pt-4">{inline(b.lines[0], key)}</h1>;
           case "h2":

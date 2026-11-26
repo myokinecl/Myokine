@@ -147,6 +147,8 @@ El resultado: quienes tenían relaciones sociales más fuertes tuvieron un **50 
 
 Ese efecto fue parecido sin importar la edad, el sexo, el estado de salud inicial, la causa de muerte o el tiempo de seguimiento.
 
+[[figura:relaciones-integracion]]
+
 ### No es lo mismo vivir acompañado que estar integrado
 
 El tipo de medición importó mucho:
@@ -169,6 +171,26 @@ Mucho más de lo que parece:
 - **El dolor persistente aísla.** Dejar de hacer lo que uno disfrutaba muchas veces significa dejar de ver a otros. Recuperar actividad también es recuperar vínculos.
 - **El ejercicio en compañía** suele sostenerse mejor en el tiempo. Un plan que se hace con un amigo o en grupo puede ser más útil que uno "perfecto" que se hace solo.
 - **Preguntar por la red de apoyo** es parte de una evaluación centrada en la persona, no un tema aparte.
+
+### ¿Qué tan grande es el efecto?
+
+Para dimensionarlo, los autores compararon su resultado con otros factores de riesgo conocidos. La magnitud de la asociación entre relaciones sociales débiles y mortalidad fue comparable a la de factores como el tabaquismo o el consumo excesivo de alcohol, y mayor que la de otros como la inactividad física o la obesidad. Es una comparación aproximada entre estudios distintos, pero ayuda a entender por qué este tema no es menor.
+
+### ¿Por qué las relaciones influirían en la salud?
+
+Los autores mencionan varios caminos posibles, que pueden actuar al mismo tiempo:
+
+- **Amortiguar el estrés.** Tener apoyo reduce la respuesta del cuerpo ante situaciones difíciles.
+- **Influir en los hábitos.** Las personas cercanas pueden animarnos a cuidarnos, a ir al médico o a movernos más.
+- **Dar sentido y propósito.** Sentirse parte de algo y tener roles que importan.
+- **Ayuda práctica.** Alguien que acompañe a una consulta, que ayude cuando estamos enfermos o que note que algo no anda bien.
+
+### Lo que puedo hacer como kinesiólogo
+
+- **Preguntar.** "¿Con quién vives?", "¿quién te acompaña en esto?", "¿has dejado de ver a alguien por el dolor?". Son preguntas cortas que abren mucha información.
+- **Incluir a otros cuando tiene sentido.** Invitar a un familiar a una sesión, proponer actividades en pareja o en grupo, o conectar a la persona con talleres o clubes.
+- **Usar las metas sociales.** Muchas veces la mejor motivación no es "bajar el dolor", sino volver a jugar con los nietos, salir a caminar con amigos o volver al equipo.
+- **Notar el aislamiento.** Si alguien está muy solo, vale la pena considerarlo parte del cuadro y, si corresponde, sugerir apoyo de otros profesionales.
 
 ### Límites
 
@@ -219,6 +241,8 @@ Algunas versiones agregan una sexta etapa, la terminación. Lo importante es que
 
 En poblaciones en riesgo, Prochaska y Velicer describieron una regla aproximada: cerca de **40 %** está en precontemplación, **40 %** en contemplación y solo **20 %** en preparación. O sea, la mayoría de quienes nos consultan no está lista para "la acción" el primer día.
 
+[[figura:etapas-cambio]]
+
 ### Cómo ajustar lo que hacemos
 
 - **Contemplación:** explorar dudas, expectativas, pros y contras antes de sumar ejercicios.
@@ -235,6 +259,33 @@ Kerns y colaboradores desarrollaron el *Pain Stages of Change Questionnaire*, qu
 - **El mismo plan, otro resultado.** Un buen programa entregado en el momento equivocado puede quedar sin hacerse.
 - **La recaída deja de ser un fracaso.** Pasa a ser parte esperable del ciclo y se puede planificar con la persona, sin culpa.
 - **Las habilidades de comunicación pesan tanto como la técnica.** Saber escuchar, preguntar y acordar es parte del tratamiento.
+
+### Más allá de las etapas
+
+El modelo no se limita a describir dónde está la persona. También propone qué ayuda a avanzar:
+
+- **Balance decisional.** En las primeras etapas, las desventajas de cambiar suelen pesar más que las ventajas. A medida que la persona avanza, ese balance se invierte. Prochaska y Velicer encontraron este patrón de forma consistente en 12 conductas de salud distintas.
+- **Autoeficacia.** La confianza en poder sostener el cambio, incluso en situaciones difíciles, crece a medida que la persona avanza.
+- **Tentaciones.** Las situaciones que empujan a volver a la conducta anterior, como el cansancio, el estrés o la falta de tiempo.
+- **Procesos de cambio.** Los autores identificaron diez, desde tomar conciencia del problema hasta reorganizar el entorno o buscar apoyo. En las etapas tempranas ayudan más los procesos de reflexión; en las tardías, los de acción.
+
+### Un ejemplo en la consulta
+
+Imagina a dos personas con dolor lumbar crónico a las que les propones caminar 20 minutos al día.
+
+- **La primera** dice: "no creo que caminar me sirva, lo mío es un disco". Probablemente está en precontemplación o contemplación. Darle una rutina detallada puede no servir de mucho. Primero vale la pena conversar sobre qué entiende de su dolor y qué espera.
+- **La segunda** dice: "quiero hacerlo, pero no sé cómo partir con mi horario". Está en preparación. Aquí sí conviene acordar algo concreto: qué días, a qué hora, con quién y qué hará si llueve.
+
+Mismo diagnóstico, mismo consejo, pero una conversación muy distinta.
+
+### Preguntas que me sirven
+
+- "¿Qué tan importante es esto para ti ahora, del 0 al 10?"
+- "¿Y qué tan seguro te sientes de poder hacerlo?"
+- "¿Qué te haría pasar de un 4 a un 6?"
+- "¿Qué podría hacer que lo dejes, y qué haríamos en ese caso?"
+
+Son preguntas simples que ayudan a ubicar la etapa sin aplicar un cuestionario y a que la persona sea parte de la decisión.
 
 ### Límites
 
@@ -298,11 +349,37 @@ Cuatro estudios siguieron la recuperación, y tres usaron ejercicio de fuerza. D
 
 Otros dos estudios no mostraron diferencias en la recuperación de la fuerza máxima.
 
+[[figura:creatina-rehab]]
+
 ### Qué significa para ti
 
 **Si estás inmovilizado:** la creatina no parece evitar la atrofia por sí sola. Lo que más ayuda sigue siendo volver a cargar el músculo apenas se pueda, de forma segura y progresiva.
 
 **Si estás en rehabilitación:** acompañada de ejercicio de fuerza, la creatina podría sumar algo. Pero la evidencia todavía no permite afirmarlo con seguridad. Si te interesa usarla, conversa con tu equipo de salud, sobre todo si tienes alguna enfermedad renal o tomas otros medicamentos.
+
+### Por qué se pensó que podía ayudar
+
+La creatina aumenta las reservas de fosfocreatina del músculo, una fuente rápida de energía para esfuerzos cortos e intensos. Junto al entrenamiento de fuerza, se ha asociado a más ganancias de masa magra y fuerza en muchos estudios. Por eso se planteó que, en un período sin entrenamiento, quizás podría frenar la pérdida de músculo o ayudar a recuperarlo después.
+
+Los resultados de esta revisión muestran que esa idea funciona mejor en la teoría que en los datos actuales, al menos durante la inmovilización.
+
+### La trampa de la medición
+
+Este punto merece una explicación. La creatina hace que el músculo retenga más agua dentro de sus células. Métodos como la bioimpedancia o el DXA no distinguen bien entre agua y tejido muscular, así que pueden mostrar "más masa magra" sin que haya realmente más músculo.
+
+Por eso los autores dan más peso a los estudios que midieron el tamaño del cuádriceps con tomografía o resonancia. Y en esos estudios, la pérdida de músculo fue prácticamente igual con creatina y con placebo.
+
+### Lo que sí parece claro
+
+Lo que más protege el músculo durante y después de una inmovilización no es un suplemento, sino:
+
+- **Moverse lo antes posible**, dentro de lo que permita la lesión.
+- **Activar el músculo** aunque la articulación esté inmovilizada, con contracciones isométricas si están permitidas.
+- **Entrenar la pierna o el brazo sano**, que también ayuda a mantener la fuerza del lado inmovilizado por efectos del sistema nervioso.
+- **Comer suficiente proteína** y energía.
+- **Volver a cargar de forma progresiva** en cuanto se pueda.
+
+La creatina, si se usa, sería un complemento de todo esto, no un reemplazo.
 
 ### Límites
 
@@ -1309,35 +1386,63 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 12,
     summary: '¿Cómo "sienten" las células la rigidez del tejido y la tensión mecánica? Exploramos la mecanotransducción a través de integrinas, matriz extracelular (2D vs 3D) y citoesqueleto.',
     pullQuote: 'Las células no solo responden a señales químicas; exploran activamente la rigidez de su matriz ejerciendo fuerzas de tracción y traduciendo la física tisular en decisiones genéticas.',
-    content: `La mecanobiología es una disciplina emergente que analiza cómo las fuerzas físicas y las propiedades mecánicas de los tejidos modulan el comportamiento celular, la diferenciación y la homeostasis. Tanto en tejidos sanos como en estados patológicos (como la fibrosis o los tumores), la rigidez del entorno celular juega un papel determinante.
+    content: `Cuando le decimos a un paciente que "la carga ayuda al tendón a adaptarse", estamos resumiendo en una frase un proceso fascinante: las células de nuestro cuerpo **sienten las fuerzas mecánicas** y responden a ellas, cambiando lo que producen, cómo se mueven e incluso en qué se convierten.
 
-En esta revisión clave publicada en **Biochimica et Biophysica Acta** (2015), Jansen et al. ofrecen una guía integral sobre los componentes celulares y moleculares de la mecanodetección (*mechanosensing*) y mecanotransducción (*mechanotransduction*).
+Ese campo se llama **mecanobiología**. Karin Jansen y colaboradores, de varios centros de investigación en Países Bajos, publicaron en *Biochimica et Biophysica Acta* (2015) una guía introductoria sobre cómo las células detectan y procesan la información mecánica. Es un texto de biología celular y biofísica, pero tiene mucho que decirle a quien prescribe ejercicio.
 
----
+### La idea central
 
-### 1. Actores Principales de la Mecanodetección
-* **Integrinas:** Proteínas transmembrana heterodiméricas (subunidades α y β) que conectan la matriz extracelular (MEC) con el citoesqueleto celular. Muestran comportamientos de enlace tipo *slip-bond* (cuya vida media disminuye con la fuerza) y *catch-bond* (cuya vida media se incrementa bajo tensión mecánica, como en la integrina α 5 β 1).
-* **Adhesiones Focales (FA):** Complejos multiproteicos (talin, vinculina, p130Cas, paxilina) que se reclutan y maduran cuando la célula genera fuerza de tracción. Bajo tensión, la proteína talin se despliega exponiendo sitios de unión para vinculina, actuando como un sensor directo de fuerza.
-* **Citoesqueleto (CSK):** Compuesto por filamentos de actina, microtúbulos y filamentos intermedios (como la vimentina). La contractilidad actomiosínica (mediada por miosina II) genera las fuerzas de tracción que permiten a la célula sondear la rigidez de su matriz.
+Las células no solo responden a señales químicas, como hormonas o factores de crecimiento. También perciben y procesan la información mecánica de su entorno para tomar decisiones sobre cuánto crecer, hacia dónde moverse y en qué tipo de célula convertirse.
 
----
+Los autores dan algunos ejemplos de por qué esto importa:
 
-### 2. Rigidez de la Matriz Extracelular (2D vs. 3D)
-* **Comportamiento Strain-Stiffening:** A diferencia de geles sintéticos homogéneos, las matrices naturales de colágeno y fibrina se endurecen no linealmente cuando sufren deformación o tracción celular (*strain-stiffening*), lo que permite transmitir fuerzas a largas distancias.
-* **Dimensiones y Porosidad:** En entornos 3D, el tamaño de poro de la matriz y la deformabilidad del núcleo celular condicionan la migración. Las células adoptan morfologías fusiformes o dendríticas que difieren de la forma aplanada clásica observada en sustratos 2D rígidos.
+- La **rigidez de la matriz** que rodea a las células influye en su función normal, en la diferenciación de las células madre y en el equilibrio de los tejidos.
+- Cuando esa rigidez se altera, puede contribuir a enfermedades como la **fibrosis** o el **cáncer**. Un tejido tumoral puede ser hasta 10 veces más rígido que uno sano.
+- Las células reciben fuerzas todo el tiempo: el roce del flujo sanguíneo, la respiración y la tensión y compresión de la contracción muscular.
 
----
+### Los protagonistas
 
-### 3. Vías de Señalización y Transcripción Génica
-Las fuerzas mecánicas se convierten en respuestas bioquímicas y cambios en la expresión génica a través de varias vías clave:
-* **Rho GTPasas (RhoA, Rac1, Cdc42):** Regulan la polimerización de actina y la contractilidad. RhoA/ROCK incrementa la tensión muscular e induce la maduración de adhesiones focales.
-* **Vía Hippo (YAP/TAZ):** La rigidez de la matriz y la alta contractilidad promueven la translocación de YAP/TAZ al núcleo, activando programas de proliferación y diferenciación celular (p. ej., osteogénesis en matrices rígidas vs. adipogénesis en matrices blandas).
-* **Coactivador MRTF-A / SRF:** La polimerización de actina liberada por tensión mecánica permite que MRTF-A migre al núcleo y active el factor de respuesta al suero (SRF).
+**La matriz extracelular.** Es la red que rodea a las células, formada por fibras como el colágeno y por moléculas que retienen agua. Su organización depende del tejido: en el tendón, las fibras de colágeno son gruesas y alineadas para resistir tensión; en la córnea, son finas y ordenadas para ser transparentes. Bajo fuerza, algunas proteínas de la matriz pueden cambiar de forma y exponer sitios ocultos o liberar factores de crecimiento.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- El conocimiento mecanobiológico explica cómo la dosificación de carga mecánica induce remodelación en tendones, cartílagos y tejido conectivo.
-- Comprender la sensibilidad celular a la rigidez y a la estructura 3D orienta la prescripción de ejercicio y la terapia regenerativa.`,
+**Las integrinas.** Son proteínas que atraviesan la membrana de la célula y la conectan con la matriz por fuera y con su esqueleto interno por dentro. Algunas de esas uniones se vuelven **más fuertes cuando se tensan**, en vez de soltarse.
+
+**Las adhesiones focales.** Son grupos de proteínas que se forman donde la célula se agarra a la matriz. Una de ellas, la talina, se despliega cuando se estira y expone sitios para que se unan otras proteínas. Funciona como un sensor directo de fuerza.
+
+**El citoesqueleto.** Es el andamiaje interno de la célula, formado por filamentos de actina, microtúbulos y filamentos intermedios. Gracias a la miosina, la célula puede **tirar** de la matriz y, así, "probar" qué tan rígida es.
+
+### De la fuerza a los genes
+
+Las fuerzas se transforman en señales químicas y, finalmente, en cambios en la expresión de genes. Algunas vías importantes:
+
+- **Rho y ROCK:** regulan la contracción y la formación de adhesiones.
+- **YAP y TAZ:** cuando la matriz es más rígida o la célula se estira, estas proteínas se trasladan al núcleo y activan programas de crecimiento y diferenciación. En cultivos, las células madre tienden a diferenciarse hacia hueso en superficies rígidas y hacia grasa en superficies blandas.
+- **MRTF-A y SRF:** otro camino que conecta los cambios en la actina con la expresión de genes.
+
+### 2D versus 3D
+
+Una parte importante del artículo compara lo que pasa cuando las células crecen sobre una superficie plana (2D) con lo que pasa dentro de una matriz tridimensional (3D), que se parece más a un tejido real. En 3D, el tamaño de los poros, la deformabilidad del núcleo y la forma en que las fibras se endurecen al estirarse cambian cómo la célula se mueve y responde. Las matrices naturales, como el colágeno, se vuelven más rígidas cuando se deforman, lo que permite transmitir fuerzas a distancia.
+
+### El puente hacia la clínica: la mecanoterapia
+
+Karim Khan y Alex Scott, en el *British Journal of Sports Medicine* (2009), tradujeron estas ideas a la práctica. Propusieron llamar **mecanoterapia** al uso del ejercicio para estimular la reparación y remodelación de tendones, músculos, cartílago y hueso a través de la mecanotransducción.
+
+Esto ayuda a entender por qué:
+
+- **La carga progresiva** es la base del tratamiento de las tendinopatías.
+- **La inmovilización prolongada** debilita los tejidos, no solo los músculos.
+- **El movimiento temprano y controlado** suele favorecer la recuperación después de muchas lesiones.
+
+### Lo que hay que tener presente
+
+Gran parte de lo que describe esta guía viene de estudios en células y en laboratorio. Es una base biológica sólida, pero no se traduce de forma directa en una dosis de ejercicio. Saber que las células del tendón responden a la carga no nos dice cuántas series o qué peso necesita un paciente concreto. Para eso necesitamos estudios clínicos y, sobre todo, la respuesta de cada persona.
+
+### Cómo lo uso
+
+Me sirve para explicar, con palabras simples, por qué el ejercicio no es solo "fortalecer":
+
+"Tus tejidos están hechos de células que sienten la carga. Cuando les das un estímulo adecuado, responden adaptándose y volviéndose más capaces. Cuando no reciben estímulo, se debilitan. Por eso vamos a cargar de a poco, pero de forma constante."
+
+Es una forma de mostrar que la carga, bien dosificada, no es el enemigo del tejido. Es el mensaje que necesita para adaptarse.`,
     references: [
       {
         author: 'Jansen KA, Donato DM, Balcioglu HE, Schmidt T, Danen EHJ, Koenderink GH.',
@@ -1345,6 +1450,13 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
         journal: 'Biochimica et Biophysica Acta',
         doi: '10.1016/j.bbamcr.2015.05.007',
         title: 'A guide to mechanobiology: Where biology and physics meet'
+      },
+      {
+        author: 'Khan KM, Scott A.',
+        year: '2009',
+        journal: 'British Journal of Sports Medicine',
+        doi: '10.1136/bjsm.2008.054239',
+        title: 'Mechanotherapy: how physical therapists\' prescription of exercise promotes tissue repair'
       }
     ]
   },
@@ -1424,23 +1536,60 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 10,
     summary: 'El recto femoral se involucra frecuentemente en acciones de golpeo de balón y aceleración. Analizamos la guía de Aspetar basada en criterios objetivos para la fuerza excéntrica y la progresión del golpeo.',
     pullQuote: 'Debido a su naturaleza biarticular, el entrenamiento del recto femoral requiere ejercicios excéntricos en longitudes musculares específicas.',
-    content: `Las lesiones del cuádriceps ocurren con frecuencia en disciplinas que exigen golpeos de balón, aceleraciones y sprints. Dentro de este grupo, el recto femoral es el músculo afectado con mayor frecuencia.
+    content: `Cuando hablamos de lesiones musculares del muslo, casi siempre pensamos en los isquiotibiales. Pero las lesiones de cuádriceps son frecuentes en deportes donde se patea y se esprinta, y suelen ser más graves que otras lesiones musculares de la pierna. En el fútbol de élite representan cerca del 6% de todas las lesiones, y nueve de cada diez lesiones de cuádriceps son del **recto femoral**.
 
-El reporte clínico de **Aspetar** (2026) detalla una guía orientada por criterios para la rehabilitación y el retorno deportivo.
+Además, se repiten: alrededor del 20% se vuelve a lesionar, y más de la mitad de esas recaídas ocurre en los dos primeros meses. Aun así, hay poca evidencia de calidad sobre cómo rehabilitarlas. Parte del problema es que un equipo tiene, en promedio, tres o menos lesiones de recto femoral por temporada, así que es difícil acumular experiencia.
 
-### 1. Biomecánica y Consideraciones Anatómicas
-- **Músculo Biarticular:** Actúa como flexor de cadera y extensor de rodilla, experimentando mayores demandas mecánicas durante la fase de preparación y aceleración del golpeo de balón.
-- **Aponeurosis Central:** La presencia del tendón intramuscular requiere una progresión gradual de las cargas de cizallamiento.
+Por eso el equipo de Aspetar, que recibe muchos atletas de élite al año, propuso un camino de rehabilitación específico. Lo publicaron Simon Wallace, Dermot Simpson, Helen McKeever, Rod Whiteley y Enda King en *JOSPT Open* (2026), junto con su versión para isquiotibiales.
 
-### 2. Principios de Fortalecimiento y Control
-- **Trabajo Excéntrico:** Ejercicios que combinan extensión de cadera y flexión de rodilla para adaptar el tejido en longitudes musculares mayores.
-- **Sinergia con el Iliopsoas:** Fortalecer el psoas ilíaco evita la sobrecarga compensatoria del recto femoral durante la flexión de cadera.
-- **Progresión del Golpeo de Balón:** Reintroducción gradual variando el tipo de balón, la distancia de pase y la intensidad de ejecución.
+[[figura:recto-femoral-cifras]]
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- La recuperación del recto femoral se beneficia de la combinación entre fuerza excéntrica en rangos amplios, control de cadera y progresión gradual del golpeo.
-- Monitorizar la respuesta al ejercicio y cumplir con criterios objetivos facilita un retorno seguro a la práctica deportiva.`,
+### Qué hicieron
+
+Clínicos con experiencia diseñaron el camino con un marco de implementación (*Knowledge-to-Action*) y lo enviaron a 32 profesionales que asistieron al taller previo a la conferencia de Aspetar 2024. Respondieron 27. Cada sección se evaluó con una escala de acuerdo de 5 puntos, y se definió de antemano que un 75% o más significaba acuerdo alto.
+
+El camino tiene ocho secciones: evaluación, hitos, fuerza, control motor, explosividad y fuerza reactiva, carrera, pateo y planificación semanal.
+
+### Resultados
+
+- Acuerdo general: **89%**. Desacuerdo: 2%.
+- Carrera tuvo el mayor acuerdo (94%).
+- Fuerza tuvo el menor desacuerdo (0%).
+- La planificación semanal fue la única sección que no alcanzó el umbral (67%).
+- Explosividad y fuerza reactiva tuvo el mayor desacuerdo (6%).
+
+### Lo que propone el camino
+
+**Evaluar antes de empezar.** Una frase clínica del artículo lo dice bien: antes de iniciar la rehabilitación, define y mide las variables que vas a usar para decidir cada transición y la vuelta al juego. Si no lo haces, puedes retrasar la vuelta y aumentar el riesgo de recaída. Igual que en isquiotibiales, hay preguntas con valor pronóstico: dolor al lesionarse, días hasta caminar sin dolor y cuánto cree el atleta que va a tardar. También importa su carga previa de entrenamiento y partidos.
+
+**Avanzar por hitos.** Cada fase termina con criterios claros que combinan pruebas de varios componentes. Los autores proponen que esto mejora los resultados, la comunicación y la adherencia, porque el atleta tiene metas cortas y concretas. Reconocen que muchos umbrales se basan en la experiencia del grupo, porque falta evidencia de alto nivel.
+
+**Fuerza en las dos funciones del músculo.** El recto femoral cruza la cadera y la rodilla, así que el programa usa cuatro líneas de ejercicios: flexión de cadera y extensión de rodilla, cada una en posición corta y larga. Se prioriza la sobrecarga excéntrica y el trabajo en posición alargada, por su efecto en el crecimiento muscular, en la longitud de los fascículos y en estructuras como el tendón y la aponeurosis.
+
+Dos detalles prácticos que me gustaron:
+
+- Ajustar el ejercicio para que realmente cargue el recto femoral. Por ejemplo, reclinar el tronco a unos 40° de flexión de cadera en la extensión de rodilla.
+- Preguntar "¿dónde lo sientes?" para individualizar la posición y evitar que otros músculos hagan el trabajo.
+
+**Carrera como habilidad.** La carrera se introduce temprano para mantener una carga crónica alta y evitar aumentos bruscos más adelante. Las velocidades altas y las aceleraciones intensas se reservan para fases tardías, porque exigen mucho al muslo. La técnica se trabaja en varias líneas (despegue, apoyo medio, control rotacional, aceleración, desaceleración y cambios de dirección), con énfasis en la calidad y en la variabilidad para aprender. Al final, el atleta se expone a los momentos más intensos de un partido, que suelen preceder a las lesiones musculares.
+
+**Pateo progresivo.** Patear es el principal mecanismo de lesión del recto femoral: explica más de la mitad de las lesiones y cerca del 70% de las recaídas. El camino lo reintroduce temprano y aumenta de forma gradual la intensidad, el volumen y el "caos" (situaciones menos predecibles). Al inicio se reduce la exigencia cambiando la presión o el tipo de balón. Los autores sugieren medir la demanda del pateo por velocidad y no solo por distancia, porque la distancia subestima cuántos pateos son realmente exigentes.
+
+### La planificación semanal, el punto débil
+
+Que la semana tipo haya tenido solo un 67% de acuerdo tiene sentido. Cada deporte, club y atleta tiene restricciones distintas: calendario, viajes, cantidad de personal, otras sesiones. Una plantilla semanal fija choca con esa realidad.
+
+### Límites
+
+Los propios autores lo dicen con claridad:
+
+- El acuerdo entre expertos no demuestra que el camino funcione.
+- No se midieron resultados clínicos como tiempo de vuelta o recaídas.
+- El camino se desarrolló y evaluó en la misma institución, lo que puede introducir sesgo.
+
+### Qué me llevo
+
+El recto femoral no es "un cuádriceps más". Es biarticular, se lesiona sobre todo pateando y esprintando, y recae pronto. Rehabilitarlo bien implica cargarlo en sus dos funciones, en posiciones largas, con alta intención, y devolverle progresivamente el gesto que lo lesionó. Si trabajas con futbolistas, la progresión del pateo merece tanta planificación como la de la carrera.`,
     references: [
       {
         author: 'Wallace S, Simpson D, McKeever H, Whiteley R, King E.',
@@ -1465,21 +1614,65 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 11,
     summary: 'Las lesiones de isquiotibiales presentan tasas de recurrencia relevantes en deportes de campo. Analizamos el protocolo multifactorial basado en criterios de Aspetar para el retorno seguro al deporte.',
     pullQuote: 'El retorno al deporte tras una lesión de isquiotibiales debe guiarse por el cumplimiento de hitos clínicos y de rendimiento neuromuscular.',
-    content: `Las lesiones musculares de los isquiotibiales son frecuentes en deportes con demandas de carrera a alta velocidad. Este documento de **Aspetar** (2026) presenta un marco de rehabilitación estructurado en criterios objetivos.
+    content: `Las lesiones de isquiotibiales son de las más frecuentes en los deportes de campo, y tienen un problema que todos los que trabajamos en deporte conocemos: vuelven. En el deporte de élite, hasta uno de cada cuatro atletas se vuelve a lesionar dentro del primer año, muchas veces en los primeros dos meses después de volver a jugar. Quien ya tuvo una lesión de isquiotibiales tiene un riesgo 3,6 veces mayor de tener otra.
 
-### 1. Indicadores de Progresión y Criterios Clínicos
-- **Rol de las Imágenes:** La resonancia magnética aporta información estructural inicial, pero la progresión del tratamiento y la decisión de alta se basan en criterios clínicos y de rendimiento funcional.
-- **Hitos Objetivos:** Se evalúan el dolor, la fuerza muscular isométrica y excéntrica, y el control neuromuscular lumbopélvico.
+En veinte años de investigación hemos aprendido mucho, pero las cifras de recaída casi no han bajado. El equipo de rehabilitación de Aspetar, en Doha, propuso una respuesta: un camino de rehabilitación por criterios que reúne lo que ya sabemos en una sola estructura. Lo publicaron Dermot Simpson, Simon Wallace, Enda King, Helen McKeever y Rod Whiteley en *JOSPT Open* (2026).
 
-### 2. Fases de la Rehabilitación
-1. **Fase Inicial:** Control sintomático y ejercicios isométricos en rangos protegidos.
-2. **Carga Progresiva:** Reintroducción de fuerza excéntrica y carrera lineal progresiva.
-3. **Alta Velocidad y Exposición Deportiva:** Reintegración progresiva al sprint y simulación de demandas específicas del juego.
+### Qué hicieron
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- Estructurar la rehabilitación en hitos progresivos disminuye el riesgo de relesión.
-- Se recomienda evaluar objetivamente la fuerza excéntrica y la tolerancia a la velocidad antes de autorizar el retorno competitivo sin restricciones.`,
+Un grupo de clínicos senior de Aspetar diseñó el camino usando un marco de implementación llamado *Knowledge-to-Action*, que consiste en desarrollar, aplicar en la práctica real y ajustar. Luego lo enviaron a 32 profesionales que trabajan en deporte de élite, antes de un taller en la conferencia internacional de Aspetar 2024. Respondieron 24 (75%), en su mayoría de fútbol y fútbol australiano, y casi todos con magíster o doctorado.
+
+Cada sección se evaluó con una escala de acuerdo de 5 puntos. El acuerdo general fue del 92%, y el desacuerdo, del 1%.
+
+Es importante entender bien qué mide esto: **no es un ensayo clínico**. Muestra que profesionales con experiencia consideran el camino razonable y aplicable, no que reduzca las recaídas.
+
+### Las seis fases
+
+El camino se divide en seis fases, y para avanzar de una a otra hay que cumplir criterios, no esperar una cantidad de días:
+
+1. **Foundation** (base)
+2. **Reload** (recarga)
+3. **Accumulation** (acumulación)
+4. **Transition** (transición)
+5. **Simulation** (simulación)
+6. **Resilience** (resiliencia)
+
+Cada fase tiene requisitos mínimos de dolor, rango de movimiento, fuerza, carrera y rendimiento. Progresar por criterios se ha asociado a menos recaídas que progresar por tiempo, y además mejora la comunicación entre el equipo y el atleta.
+
+[[figura:aspetar-isquios-fases]]
+
+### Lo que me parece más valioso
+
+**Una evaluación completa desde el inicio.** Preguntas simples tienen valor pronóstico: cuántos días tardó en caminar sin dolor, cuánto le dolió al lesionarse y cuánto cree el propio atleta que va a tardar en volver. También importa saber su historial de cargas de entrenamiento y su velocidad máxima. Una de sus frases clínicas lo resume bien: lo que no encuentras al principio suele aparecer después.
+
+**La resonancia no decide el alta.** Las clasificaciones por imagen describen la estructura lesionada, pero predicen mal los tiempos de vuelta. Hay mucha superposición entre lesiones con y sin compromiso del tendón intramuscular. Pedir resonancias seriadas puede aumentar la ansiedad del jugador y retrasar su vuelta sin mejorar los resultados. La decisión se apoya en criterios clínicos y de rendimiento.
+
+**Fuerza de cadera y de rodilla.** Los isquiotibiales cruzan dos articulaciones, así que el programa combina ejercicios dominantes de cadera y de rodilla, y suma glúteo mayor y aductor mayor. Se agregó una prueba de fuerza de extensión de cadera porque la debilidad isométrica en ese gesto se ha relacionado con lesiones. El nórdico no se usa para decidir la progresión, porque al ser bilateral puede esconder déficits de un lado.
+
+**Excéntricos en posición alargada.** El trabajo excéntrico con el músculo largo (por ejemplo, con la cadera flectada) favorece el aumento de la longitud de los fascículos, que se asocia a menos recaídas. Y un detalle práctico: si el atleta no siente el ejercicio en el músculo que buscas, revisa técnica, selección, carga y si realmente estás llegando a la zona.
+
+**Estiramiento temprano.** Introducir antes los ejercicios de elongación de isquiotibiales se ha asociado a una vuelta más rápida.
+
+**Correr temprano y prepararse para lo peor.** El camino propone empezar a correr pronto para construir carga crónica, y avanzar de forma gradual. Tanto los picos bruscos de carrera como la falta de carga se relacionan con más lesiones. Más adelante, el atleta se expone a sus "peores escenarios": los 1, 3 o 5 minutos más intensos de un partido, calculados con datos GPS de sus propios partidos. Además, se trabaja la técnica de carrera en seis líneas: despegue, apoyo medio, antirrotación, aceleración, desaceleración y cambios de dirección.
+
+**Explosividad y fuerza reactiva.** Muchas lesiones ocurren al final del balanceo durante el sprint, cuando el músculo tiene que absorber fuerza muy rápido y luego devolverla. Por eso se entrena la capacidad de producir y absorber fuerza rápidamente, desde la fase de acumulación.
+
+### La parte con menos acuerdo
+
+La "semana Aspetar", que organiza cuántas sesiones de cada tipo hacer, tuvo el acuerdo más bajo (85%), sobre todo en la frecuencia de las sesiones. Los participantes explicaron que depende mucho de cada atleta y de lo que el club puede ofrecer. Un comentario lo dice claro: algunos jugadores necesitan seis sesiones de cardio sin impacto y otros tres; algunos toleran fuerza todos los días y otros necesitan periodizar.
+
+### Límites
+
+- Es una encuesta de acuerdo, no un estudio de resultados. No hay datos de recaídas ni de tiempos de vuelta.
+- Muchos participantes venían del fútbol australiano, que tiene demandas de carrera particulares.
+- Un 25% de los invitados no respondió, lo que puede sesgar los resultados.
+- Fue una sola ronda de encuesta, no un Delphi con varias rondas.
+
+Los autores insisten en que el camino debe apoyar el razonamiento clínico, no reemplazarlo.
+
+### Qué me llevo
+
+Aunque no trabajes en élite, la lógica sirve: evaluar bien al inicio, avanzar por criterios y no por calendario, cargar el músculo en posición alargada, correr desde temprano y preparar al atleta para lo que realmente le va a pedir su deporte. La recaída suele aparecer cuando el atleta vuelve a jugar preparado para entrenar, pero no para competir.`,
     references: [
       {
         author: 'Simpson D, Wallace S, King E, McKeever H, Whiteley R.',
@@ -1539,6 +1732,8 @@ Los autores describen, de forma tentativa, dos fenotipos en los extremos:
 - *Costo posible:* más tensión sobre los tejidos por movimientos excesivos o mal controlados.
 
 En ambos casos hay una carga anormal sobre los tejidos de la espalda, pero por mecanismos distintos. Y en ambos queda abierta la pregunta de si la ventaja de corto plazo compensa el costo de largo plazo. Probablemente depende de la persona, de las tareas que hace y del estado de sus tejidos.
+
+[[figura:control-motor-espectro]]
 
 ### Por qué aparece cada patrón
 
@@ -1639,6 +1834,8 @@ En esta etapa los cambios se han explicado por desuso: cambios en la forma de mo
 
 Un dato interesante: en personas en remisión, el área muscular parece recuperarse con el tiempo desde el último episodio, pero la grasa intramuscular era mayor y se relacionaba con la frecuencia de los episodios. Es decir, el tamaño puede volver, pero la calidad del tejido no siempre.
 
+[[figura:multifido-fases]]
+
 ### Los cambios en la activación
 
 En los episodios agudos, la activación de las fibras profundas del multífido tiende a disminuir. En personas con dolor recurrente o crónico, el patrón se vuelve más sistemático: el multífido profundo se activa menos y empieza a funcionar más como extensor que como regulador fino, mientras que los músculos más superficiales (como el erector espinal) suelen activarse **más**.
@@ -1731,6 +1928,8 @@ Esta es probablemente la parte más importante para contarle a un paciente.
 - En el **crónico** el pronóstico es menos favorable: el dolor promedio cambió poco en seis semanas (de 56 a 48), aunque igual un **42% se recupera en 12 meses**.
 
 Dicho de otra forma: el cuerpo suele resolver bien el dolor agudo. Nuestro trabajo es no estorbar ese proceso y detectar a quienes tienen más riesgo de que se haga persistente.
+
+[[figura:lumbar-pronostico]]
 
 ### La evaluación
 
@@ -1883,17 +2082,74 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 8,
     summary: '¿Qué dosis y tipo de ejercicio son eficaces en dolor? Analizamos la síntesis de evidencia con más de 200,000 participantes.',
     pullQuote: 'Los datos confirman que programas graduales y accesibles ofrecen alivio clínicamente significativo del dolor.',
-    content: `Un metanálisis paraguas publicado en **PAIN Reports** (2026) por **Ben Singh et al.** sintetizó **157 revisiones sistemáticas** (2,736 ensayos clínicos y 221,279 participantes) para evaluar el efecto del ejercicio en el dolor clínico.
+    content: `"El ejercicio ayuda con el dolor." Es una frase que repetimos tanto que a veces parece un eslogan. Pero si un paciente te pregunta cuánto ayuda, en qué condiciones, qué tipo de ejercicio y cuánto tiene que hacer, la respuesta suele ser más vaga.
 
-### Resultados Principales
-- **Magnitud del Efecto:** Se observó una disminución del dolor clínicamente relevante (SMD = -0.59).
-- **Dosificación e Intensidad:** Programas de intensidad moderada o baja y duraciones semanales moderadas mostraron buena efectividad, destacando la importancia de la adherencia y la accesibilidad.
-- **Mecanismos Biológicos:** La actividad física modula la modulación endógena del dolor a través de vías neuroquímicas, inmunológicas y conductuales.
+Ben Singh y su equipo de la Universidad de Adelaida intentaron responder esas preguntas con el análisis más grande que se ha hecho sobre el tema, publicado en *PAIN Reports* (2026). Es una revisión paraguas con meta-metaanálisis: en vez de reunir ensayos, reúne revisiones sistemáticas que ya habían reunido ensayos.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- La prescripción debe adaptarse a las preferencias y capacidades individuales.
-- El ejercicio representa una herramienta segura e integral dentro del abordaje terapéutico.`,
+### El tamaño del estudio
+
+- **157 revisiones sistemáticas** con metaanálisis.
+- **2.736 ensayos clínicos aleatorizados**.
+- **221.279 participantes**.
+- Búsqueda en 11 bases de datos hasta agosto de 2024.
+
+Solo incluyeron revisiones de ensayos que comparaban ejercicio con un grupo control, con dolor clínico como resultado. Dejaron fuera el dolor inducido en laboratorio. Evaluaron la calidad de cada revisión (AMSTAR-2) y la certeza de la evidencia (GRADE).
+
+### Lo que encontraron
+
+El ejercicio redujo el dolor frente a los controles, con una diferencia de medias estandarizada de **−0,59**. Para tener una referencia, un efecto de 0,5 se considera moderado. La certeza general de la evidencia fue **moderada**.
+
+El efecto apareció en casi todo:
+
+- **Dolor crónico** (−0,57) y también **dolor agudo** (−0,87).
+- Condiciones musculoesqueléticas, neurológicas, inflamatorias y oncológicas.
+- Aeróbico, fuerza, yoga, pilates y tai chi. Todos funcionaron.
+
+Algunos ejemplos por condición: artrosis (entre −0,30 y −0,50, en 48 metaanálisis), migraña y cefalea (−1,13) y dismenorrea primaria (−2,09). Los autores advierten que los efectos más grandes, como el de dismenorrea, la migraña o el baile en fibromialgia, venían de una sola revisión cada uno, así que hay que tomarlos con cautela.
+
+### La parte sorprendente: menos fue más
+
+Los programas que mostraron más alivio fueron:
+
+- De **menor intensidad**.
+- **De menos de 12 semanas**.
+- De **menos de 120 minutos por semana**.
+
+Y no hubo diferencias entre hacer 1 o 2 sesiones semanales y hacer 3 o más.
+
+Esto no significa que el ejercicio deje de funcionar con el tiempo. Los autores dan una explicación razonable: en muchos ensayos largos, el apoyo formal se retira y las personas terminan haciendo menos ejercicio. El efecto más pequeño probablemente refleja menos exposición, no menos beneficio.
+
+Lo que sí sugiere es algo muy útil para la práctica: **empezar con dosis manejables**. Para alguien con dolor crónico, una meta de 150 minutos semanales puede sentirse inalcanzable y generar miedo a empeorar. Empezar con poco construye confianza, mejora la adherencia y reduce el temor a las crisis. Después se puede progresar.
+
+[[figura:ejercicio-dolor-dosis]]
+
+### ¿Cómo alivia el dolor el ejercicio?
+
+Los autores mencionan cuatro mecanismos principales:
+
+1. Liberación de **opioides endógenos**, que aumentan la tolerancia al dolor.
+2. Más **serotonina y noradrenalina**, que participan en el ánimo y en la modulación del dolor.
+3. Menor **inflamación sistémica**.
+4. Activación del **sistema endocannabinoide**.
+
+A esto se suma algo que no aparece en un tubo de ensayo: moverse sin que pase nada malo cambia lo que la persona espera de su cuerpo.
+
+### Cómo se compara con los fármacos
+
+Los autores señalan que el efecto es comparable o mayor al de muchos tratamientos farmacológicos para el dolor, con mucho menos riesgo y con beneficios adicionales para la salud mental y la función. Por eso proponen que el ejercicio sea una base del manejo del dolor, dentro de un enfoque multimodal y centrado en la persona.
+
+### Límites
+
+- Una revisión paraguas depende de la calidad de las revisiones que incluye, y muchas no eran de alta calidad.
+- Puede haber sesgo de publicación.
+- Los ensayos de ejercicio no pueden ser "ciegos": la persona sabe que está haciendo ejercicio.
+- Mezclar condiciones tan distintas da una visión amplia, pero no reemplaza la evidencia específica de cada una.
+
+### Qué cambia en la consulta
+
+**Si eres paciente:** no necesitas un programa perfecto ni intenso para que el ejercicio te ayude con el dolor. El que disfrutes y puedas sostener es un buen punto de partida, aunque sean dos sesiones cortas a la semana.
+
+**Si eres clínico:** la pregunta deja de ser "¿qué ejercicio es el mejor?" y pasa a ser "¿qué ejercicio va a hacer esta persona?". Empieza por una dosis que la persona sienta posible, explica que un poco de molestia durante el ejercicio puede ser normal y planifica cómo mantener el hábito cuando termine el programa. Ahí es donde suele perderse el efecto.`,
     references: [
       {
         author: 'Singh B, Miatke A, Dumuid D, Curtis R, Szeto K, Dankiw K, Eglitis E, Petersen J, Zhou M, Simpson C, Matricciani L, Braithwaite F, Stanton T, Maher C.',
@@ -1925,44 +2181,84 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 7,
     summary: '¿Cómo reduce el dolor el movimiento? Analizamos la fisiología de la analgesia inducida por el ejercicio, la mecanotransducción y la vía endógena opioide.',
     pullQuote: 'El ejercicio promueve la activación de vías opioides y serotoninérgicas descendentes que regulan la sensibilidad nociceptiva a nivel espinal.',
-    content: `El ejercicio activo es una intervención recomendada para el manejo del dolor musculoesquelético persistente. Aunque tradicionalmente sus beneficios se atribuían a adaptaciones estructurales o mecánicas, la evidencia actual muestra que la modulación del dolor ocurre mediante vías fisiológicas complejas.
+    content: `Hay una paradoja que muchos pacientes con dolor persistente conocen bien: el ejercicio regular les ayuda, pero una sesión puede dejarlos con más dolor. ¿Cómo puede ser que algo que alivia también duela?
 
-### 1. Mecanotransducción
-La mecanotransducción es el proceso mediante el cual los estímulos mecánicos sobre el tejido (tendón, ligamento, músculo) se convierten en señales bioquímicas intracelulares, estimulando la síntesis de matriz extracelular y modulando el microambiente inflamatorio local.
+Kathleen Sluka, Laura Frey-Law y Marie Hoeger Bement abordaron esa pregunta en una revisión publicada en la revista *PAIN* (2018). Explican qué hace el ejercicio en el sistema nervioso y en el sistema inmune, y por qué la respuesta puede ser distinta en personas sanas y en personas con dolor crónico.
 
-### 2. Analgesia Inducida por el Ejercicio (EIA)
-El ejercicio desencadena una disminución temporal en la sensibilidad nociceptiva mediada por:
-- **Sistema Opioide Endógeno:** Liberación de betaendorfinas y encefalinas en estructuras centrales como la sustancia gris periacueductal (PAG).
-- **Vías Descendentes Inhibitorias:** Proyección de señales serotoninérgicas y noradrenérgicas desde el tronco encefálico hacia el asta dorsal de la médula espinal.
+### Dos efectos que parecen contradictorios
 
-### 3. Mioquinas e Inmunomodulación
-Durante la contracción muscular se liberan mioquinas (como la IL-6 de origen muscular), que ejercen efectos antiinflamatorios sistémicos y estimulan la producción de citoquinas reguladoras (IL-1ra e IL-10).
+**Una sesión aislada** de actividad física puede aumentar el dolor en algunas personas con dolor crónico.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- La prescripción del ejercicio se beneficia de considerar la dosis, la progresión y las expectativas del paciente.
-- La combinación de ejercicio con educación sobre el dolor favorece la respuesta analgésica y la adherencia.`,
+**El ejercicio regular**, en cambio, es uno de los tratamientos más efectivos para muchas condiciones de dolor.
+
+Entender por qué ocurren ambos efectos ayuda a prescribir mejor y a explicar mejor.
+
+### Analgesia inducida por el ejercicio
+
+En personas sanas, una sesión de ejercicio suele **reducir la sensibilidad al dolor** durante un rato. A esto se le llama analgesia o hipoalgesia inducida por el ejercicio. Se produce, entre otras cosas, por:
+
+- **El sistema opioide endógeno**, con la liberación de sustancias como las endorfinas.
+- **Las vías inhibitorias descendentes**, que van desde el tronco encefálico hacia la médula y frenan las señales de dolor. Participan la serotonina y la noradrenalina.
+- **El sistema endocannabinoide**, otro mecanismo propio del cuerpo para regular el dolor.
+
+En algunas personas con dolor crónico, sobre todo con fibromialgia o dolor generalizado, esta respuesta puede estar **disminuida o incluso invertida**. En vez de bajar el dolor, una sesión intensa puede aumentarlo. Esto no significa que el ejercicio les haga daño. Significa que su sistema de modulación está funcionando distinto.
+
+### Lo que cambia con el ejercicio regular
+
+Sluka y colaboradores describen, con datos de estudios en humanos y animales:
+
+- **El sedentarismo** se asocia a más excitabilidad y menos inhibición en el sistema nervioso central, en zonas del tronco encefálico que regulan el dolor.
+- **La actividad física regular** hace lo contrario: **reduce la excitabilidad y mejora la inhibición**.
+- Algo parecido ocurre en el **sistema inmune**. El sedentarismo favorece un perfil más inflamatorio, mientras que el ejercicio regular promueve un perfil más antiinflamatorio, por ejemplo, en el tipo de macrófagos que predominan en el músculo.
+- También influye en **factores psicológicos** asociados al dolor, como el miedo, la catastrofización y la autoeficacia.
+
+### El músculo como órgano que se comunica
+
+Bente Pedersen y Mark Febbraio propusieron hace años que el músculo funciona como un **órgano secretor**. Al contraerse, libera cientos de moléculas llamadas **miocinas**, que actúan sobre el propio músculo y sobre otros órganos, como el hígado, el tejido graso, el hueso y el cerebro. Algunas tienen efectos antiinflamatorios. Como muchas dependen de la contracción, la inactividad altera esa comunicación, lo que podría ayudar a explicar la relación entre sedentarismo y enfermedades crónicas.
+
+### La carga como estímulo para los tejidos
+
+Karim Khan y Alex Scott recuperaron el término **mecanoterapia** para describir cómo el ejercicio, a través de la **mecanotransducción**, promueve la reparación y remodelación de tendones, músculos, cartílago y hueso. Las células sienten la carga mecánica y responden produciendo proteínas y ajustando el tejido. Este es otro camino, más lento, por el que el ejercicio ayuda: no solo modula el dolor, también mejora la capacidad del tejido.
+
+### Qué significa para la prescripción
+
+Sluka y colaboradores entregan recomendaciones prácticas, sobre todo para personas con dolor crónico:
+
+- **Empezar con poco** y progresar de forma gradual.
+- **Evitar sesiones demasiado intensas al inicio**, que pueden provocar más dolor y desmotivar.
+- **Explicar que algo de aumento del dolor puede ser esperable** al comenzar, y que no significa daño.
+- **Buscar la regularidad**, porque los beneficios más importantes aparecen con el tiempo.
+- **Elegir actividades que la persona disfrute** y pueda sostener.
+- **Combinar el ejercicio con educación** sobre el dolor, para reducir el miedo y mejorar la adherencia.
+
+### Cómo lo explico a un paciente
+
+"Es posible que al principio sientas algo más de dolor después de entrenar. Eso no significa que te estés dañando. Tu sistema de alarma está sensible y necesita tiempo para acostumbrarse. Vamos a empezar suave, y a medida que tu cuerpo se adapte, el ejercicio va a ir ayudando a calmar esa alarma."
+
+### Para cerrar
+
+El ejercicio alivia el dolor por muchos caminos: el sistema nervioso, el sistema inmune, los tejidos y la mente. Pero en personas con dolor persistente, la dosis importa. Empezar con poco, avanzar de a poco y sostener en el tiempo es, probablemente, la mejor forma de que el movimiento se convierta en un aliado y no en una amenaza.`,
     references: [
       {
-        author: 'Nijs J, Kosek E, Van Oosterwijck J, et al.',
-        year: '2012',
-        journal: 'Manual Therapy',
-        doi: '10.1016/j.math.2012.01.008',
-        title: 'Exercise-induced analgesia; how to activate the endogenous pain inhibitory mechanisms using exercise'
+        author: 'Sluka KA, Frey-Law L, Hoeger Bement M.',
+        year: '2018',
+        journal: 'PAIN',
+        doi: '10.1097/j.pain.0000000000001235',
+        title: 'Exercise-induced pain and analgesia? Underlying mechanisms and clinical translation'
       },
       {
         author: 'Pedersen BK, Febbraio MA.',
         year: '2012',
-        journal: 'Physiological Reviews',
-        doi: '10.1152/physrev.00100.2011',
+        journal: 'Nature Reviews Endocrinology',
+        doi: '10.1038/nrendo.2012.49',
         title: 'Muscles, exercise and obesity: skeletal muscle as a secretory organ'
       },
       {
         author: 'Khan KM, Scott A.',
         year: '2009',
         journal: 'British Journal of Sports Medicine',
-        doi: '10.1136/bjsm.2008.051060',
-        title: 'Mechanotransduction: how physical therapy is translating to clinical prescription of exercise'
+        doi: '10.1136/bjsm.2008.054239',
+        title: 'Mechanotherapy: how physical therapists\' prescription of exercise promotes tissue repair'
       }
     ]
   },
@@ -1980,25 +2276,71 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 8,
     summary: '¿Cómo evaluar de manera ordenada y personalizada el dolor musculoesquelético? Walton y Elliott proponen un modelo visual basado en un gráfico de radar de 7 dominios clave y el método de la triangulación.',
     pullQuote: 'Agrupar a los pacientes en categorías rígidas o basarse en un solo examen clínico simplifica la complejidad del dolor. Se propone avanzar hacia el reconocimiento de patrones mediante la triangulación multidimensional.',
-    content: `En la práctica de kinesiología y rehabilitación, las afecciones musculoesqueléticas comunes —como el dolor lumbar, el síndrome de dolor miofascial, los trastornos asociados al latigazo cervical (WAD), la artrosis y las tendinopatías— representan un desafío habitual.
+    content: `Una de las cosas más difíciles al empezar a atender personas con dolor es ordenar la información. La entrevista, los cuestionarios, el examen físico, las imágenes: todo entrega datos, pero ¿cómo se juntan? ¿Qué pesa más? ¿Por dónde empezar el tratamiento?
 
-En su artículo *"A new clinical model for facilitating the development of pattern recognition skills in clinical pain assessment"*, publicado en *Musculoskeletal Science and Practice* (2018), **David M. Walton** y **James M. Elliott** proponen un marco de análisis clínico orientado a desarrollar habilidades de **reconocimiento de patrones** mediante la integración de información procedente de múltiples fuentes (**triangulación**).
+Los clínicos con experiencia suelen hacerlo casi sin pensarlo. Reconocen patrones. David Walton y James Elliott propusieron en *Musculoskeletal Science and Practice* (2018) una herramienta para enseñar ese razonamiento a estudiantes y clínicos jóvenes: un **gráfico de radar** combinado con el principio de **triangulación**.
 
-### Los 7 Dominios del Gráfico de Radar del Dolor
-Walton y Elliott proponen caracterizar la experiencia del dolor de cada persona según la disfunción en siete dominios relevantes y potencialmente modificables, graficados en un diagrama de radar:
+### El problema que intentan resolver
 
-1. **Aferencias Nociceptivas [Nociceptive Input]:** Dolor proporcional al estímulo mecánico o inflamatorio en los tejidos periféricos.
-2. **Neuropatía Periférica [Peripheral Neuropathy]:** Dolor asociado a alteración o lesión del sistema somatosensorial periférico (parestesias, alodinia, cambios en la conducción neural).
-3. **Cambios Nociplásticos Centrales [Central Nociplastic Change]:** Modulación alterada de la nocicepción a nivel central (sensibilización, dolor en reposo, respuesta no mecánica).
-4. **Disregulación Emocional [Emotional Dysregulation]:** Presencia de distrés afectivo o fluctuaciones del estado de ánimo asociadas al dolor.
-5. **Cogniciones o Creencias Desadaptativas [Maladaptive Cognitions/Beliefs]:** Creencias sobre el dolor (como kinesiofobia o catastrofización) que influyen en el comportamiento y la actividad.
-6. **Contexto Socioambiental [Socioenvironmental Context]:** Factores del entorno familiar, laboral o social.
-7. **Salud General y Estilo de Vida:** Sueño, actividad física habitual y comorbilidades.
+Los ensayos clínicos comparan promedios de grupos. Eso es valioso, pero aplicar esos resultados de la misma forma a todos los pacientes puede llevar a tratar de más o de menos a una persona concreta.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- El modelo del radar permite visualizar de manera equilibrada los factores biológicos y psicosociales en el dolor.
-- La triangulación de información favorece un plan de tratamiento adaptado a la persona.`,
+Las clasificaciones en subgrupos ayudan, sobre todo al principio. Pero en la clínica pocas personas calzan exactamente en una categoría. Los autores, citando a Patricia Benner, recuerdan que pasar de novato a experto implica depender menos de reglas fijas y más de patrones aprendidos con la experiencia, y sentirse más cómodo con la ambigüedad.
+
+### El radar de siete dominios
+
+La propuesta es ubicar a cada persona en un gráfico de siete ejes. Cada eje representa un posible "motor" de su experiencia de dolor:
+
+1. **Entrada nociceptiva.** Dolor producido sobre todo por estímulos en los tejidos periféricos, lo que a veces llamamos dolor mecánico o inflamatorio.
+2. **Neuropatía periférica.** Dolor causado por una lesión o enfermedad del sistema nervioso periférico.
+3. **Cambio nociplástico central.** Amplificación o desinhibición de las señales en el sistema nervioso central. Los autores usan el término nociplástico porque sugiere que es un proceso reversible.
+4. **Alteración emocional.** Síntomas o trastornos como depresión o ansiedad. El dolor empeora el ánimo, y el ánimo bajo amplifica el dolor.
+5. **Cogniciones desadaptativas.** Creencias, pensamientos o conductas poco precisas sobre el dolor, como la catastrofización o el miedo excesivo al movimiento.
+6. **Contexto socioambiental.** Relaciones, cultura, lenguaje sobre el dolor, roles de género, experiencias tempranas, exigencias del entorno y estrés. También influye en el acceso a atención y en cómo se reporta el dolor.
+7. **Desintegración sensoriomotora.** Desajuste entre el cuerpo percibido y el real, o entre distintas fuentes sensoriales.
+
+Los ejes se eligieron porque cada uno se puede abordar con intervenciones distintas, incluso cuando no hay un diagnóstico claro. La herramienta **no es diagnóstica**: no busca ponerle un nombre a la condición, sino estimar qué dominios pesan más en esta persona, ahora.
+
+[[figura:radar-walton]]
+
+### Triangulación: tres fuentes antes de decidir
+
+Para ubicar a la persona en cada eje con algo de confianza, los autores proponen usar **al menos tres fuentes de información** por dominio. Por ejemplo, el relato del paciente, un cuestionario y una prueba clínica.
+
+Cuando fuentes muy distintas apuntan en la misma dirección, la confianza aumenta. Lo explican con razones de verosimilitud: tres pruebas de validez baja a moderada, si coinciden, pueden mover bastante la probabilidad de que un dominio sea relevante.
+
+Y no todas las fuentes tienen que ser tests complejos. Una buena pregunta directa puede servir.
+
+### Cómo se ve en la práctica
+
+Imagina dos personas con dolor cervical después de un accidente de tránsito.
+
+- La primera tiene dolor localizado que cambia con el movimiento, poco miedo, buen ánimo y apoyo en casa. Su radar se carga hacia la **entrada nociceptiva**.
+- La segunda tiene dolor más difuso, sensibilidad aumentada en zonas lejanas, mucha preocupación por lo que le pasa, mal sueño y un conflicto laboral por el accidente. Su radar se extiende hacia lo **nociplástico**, lo **cognitivo**, lo **emocional** y lo **socioambiental**.
+
+El diagnóstico médico puede ser el mismo. El plan de tratamiento, claramente no.
+
+### Lo que me gusta de este modelo
+
+- **Es visual.** Ayuda a ver de un vistazo qué está pasando.
+- **Prioriza lo modificable** en vez de las etiquetas.
+- **Facilita la comunicación** con el paciente y con otros profesionales.
+- **Permite ver cambios.** Repetir el radar en el tiempo muestra qué dominios mejoraron.
+
+### Sus límites, según los propios autores
+
+Los autores lo presentan como un concepto emergente, no como una fórmula validada. Reconocen que:
+
+- Es **reduccionista**: asume límites claros entre dominios que en la realidad se superponen.
+- No considera las **interacciones** entre dominios.
+- Su utilidad como herramienta de enseñanza se basa en su experiencia, no en estudios formales.
+
+Y advierten algo importante: no quieren que se convierta en un algoritmo rígido, porque eso podría reducir las habilidades de razonamiento clínico que justamente buscan desarrollar.
+
+### Cómo lo uso
+
+No dibujo el radar con cada paciente, pero sí me hago sus preguntas. ¿Qué tanto pesa aquí lo que pasa en el tejido? ¿Hay señales de sensibilización? ¿Cómo está su ánimo, qué cree que le pasa, qué está pasando en su vida? Y antes de concluir, busco al menos tres pistas que apunten en la misma dirección.
+
+Es una forma simple de recordar que el dolor tiene varias dimensiones y que, para tratar bien a una persona, primero hay que mirarla completa.`,
     references: [
       {
         author: 'Walton DM, Elliott JM.',
@@ -2023,26 +2365,66 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 6,
     summary: '¿Por qué el ejercicio reduce el dolor si no se debe solo a que te haces más fuerte? Un artículo en BJSM (2025) muestra que ganar fuerza no explica, por sí solo, el alivio del dolor musculoesquelético.',
     pullQuote: 'La fuerza es excelente para tu salud y longevidad, pero no es el mecanismo causal por el cual el ejercicio alivia el dolor musculoesquelético. Debemos abandonar narrativas de debilidad y fragilidad.',
-    content: `En rehabilitación, se asumía con frecuencia que los beneficios del ejercicio terapéutico en dolor musculoesquelético se debían exclusivamente a aumentos en la fuerza muscular o corrección de desbalances.
+    content: `"Tienes que fortalecer." Es probablemente la frase más repetida en kinesiología musculoesquelética. La usamos para el hombro, la rodilla, la espalda y el tendón. Y detrás hay una idea simple: el dolor aparece porque falta fuerza, y desaparece cuando la recuperamos.
 
-En un editorial publicado en el *British Journal of Sports Medicine (BJSM)* (2025), **Jared Powell, Lianne Wood, Aidan G. Cashin y Jeremy S. Lewis** revisan los estudios de mediación que evalúan la relación entre cambios en fuerza y reducción del dolor.
+Jared Powell, Lianne Wood, Aidan Cashin y Jeremy Lewis publicaron en 2025 un editorial en el *British Journal of Sports Medicine* que cuestiona esa idea. No dicen que la fuerza no importe. Dicen que hemos asumido un mecanismo que la evidencia no respalda del todo.
 
-### La evidencia sobre fuerza y dolor
-Los análisis de mediación en diversas condiciones muestran que la ganancia de fuerza no explica por completo la disminución sintomática:
-- **Tendinopatía de Aquiles y Patelar:** Los cambios sintomáticos no están mediados directamente por aumentos en la fuerza muscular del cuádriceps o tríceps sural.
-- **Dolor de Hombro y Patelofemoral:** Las ganancias de fuerza no explican por sí solas la reducción del dolor.
-- **Artrosis de Rodilla:** Los estudios de mediación indican que la fuerza explica un porcentaje reducido del efecto clínico global del ejercicio sobre el dolor.
+### La pregunta de fondo
 
-### Mecanismos propuestos
-El ejercicio modula el dolor mediante múltiples vías:
-- **Autoeficacia y confianza:** Favorece la exposición gradual y disminuye el miedo al movimiento.
-- **Modulación neurofisiológica:** Estimula vías descendentes de analgesia y desensibilización central.
-- **Efectos metabólicos e inmunitarios:** Promueve la liberación de miocinas con efecto antiinflamatorio sistémico.
+Que el ejercicio funcione en el dolor musculoesquelético está bastante claro. La pregunta es **por qué** funciona. Para responderla se usan los **análisis de mediación**: estudios que analizan si el efecto de un tratamiento pasa a través de un cambio específico, como la fuerza.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación. Al prescribir ejercicio:
-- El enfoque se centra en la adaptabilidad y en la restauración de la función y la confianza.
-- La selección de ejercicios considera las preferencias del paciente para favorecer la adherencia y el bienestar integral.`,
+Si la fuerza fuera el mecanismo principal, esperaríamos que los pacientes que más ganan fuerza fueran los que más mejoran, y que la ganancia de fuerza explicara buena parte del efecto.
+
+### Lo que muestran los estudios
+
+Los autores revisan análisis de mediación en distintas condiciones:
+
+- **Artrosis de rodilla y cadera.** Con datos individuales de 12 ensayos y más de 1.400 personas, Runhaar y colaboradores (2023) encontraron que la fuerza de extensión de rodilla explicó solo **alrededor del 2%** del efecto del ejercicio sobre el dolor y la función en artrosis de rodilla. En cadera, no explicó nada. El 98% del efecto sigue sin explicación.
+- **Dolor patelofemoral.** En un ensayo con 218 personas, los ejercicios de cadera aumentaron la fuerza, pero esa fuerza **no explicó** la mejoría en el dolor ni en las sentadillas sin dolor (Holden y colaboradores, 2021).
+- **Tendinopatía rotuliana.** El beneficio de la carga progresiva no se explicó por cambios en la fuerza, el salto, el rango de tobillo ni la imagen del tendón (Deng y colaboradores, 2025).
+- **Tendinopatía de Aquiles.** Una revisión sistemática no encontró ningún estudio que relacionara los cambios musculares con los cambios en el dolor (Murphy y colaboradores, 2023).
+- **Dolor subacromial.** En un ensayo de estabilización escapular, ni la cinemática ni la fuerza de la escápula explicaron el efecto (Hotta y colaboradores, 2022).
+
+En cambio, en dolor lumbar crónico, algunos estudios encuentran que factores como la **catastrofización** y la **kinesiofobia** sí median parte de la mejoría, por ejemplo con pilates o con programas de educación y reentrenamiento sensoriomotor.
+
+[[figura:fuerza-mediacion]]
+
+### Entonces, ¿la fuerza no sirve?
+
+Sí sirve, y mucho. Los autores lo dejan claro. La fuerza muscular se asocia a **menos mortalidad**, a **menos caídas** en personas mayores, a un **envejecimiento más saludable** y a mejor función después de lesiones como la reconstrucción del ligamento cruzado anterior. Es una cualidad valiosa en sí misma.
+
+El punto es otro: no conviene presentar la ganancia de fuerza como **la** explicación de por qué va a dejar de doler. Esa explicación puede ser incorrecta y, además, tiene efectos secundarios:
+
+- Si la persona no gana fuerza, puede pensar que el tratamiento está fallando, aunque esté mejorando.
+- Si la persona cree que su dolor es por "debilidad", puede sentirse frágil.
+- Puede llevarnos a elegir ejercicios por su efecto en un músculo y no por lo que la persona necesita o disfruta.
+
+### Otros mecanismos posibles
+
+El ejercicio probablemente actúa por varias vías a la vez:
+
+- **Efectos sobre el sistema nervioso** y la modulación del dolor.
+- **Exposición gradual** a movimientos y actividades que la persona evitaba, con menos miedo y más confianza.
+- **Mayor autoeficacia**: sentirse capaz de hacer cosas.
+- Cambios en las **expectativas** y en la interpretación del dolor.
+- Efectos **metabólicos e inmunitarios**.
+- El contexto terapéutico y la relación con el profesional.
+
+Una revisión realista de Wood y colaboradores (2024) sobre dolor lumbar persistente apunta en esa dirección: el contexto, los mecanismos conductuales y la forma de prescribir influyen en los resultados tanto como el tipo de ejercicio.
+
+### Qué cambia en la práctica
+
+**Explicar mejor.** En vez de "tu hombro duele porque está débil", algo como: "el ejercicio es una de las mejores herramientas para el dolor de hombro; ayuda de varias maneras, y además ganar fuerza te va a servir para muchas cosas".
+
+**Elegir ejercicios con más libertad.** Si el mecanismo no es solo la fuerza, la preferencia del paciente, la adherencia y la relevancia para su vida pesan más. En dolor subacromial, por ejemplo, un ensayo no encontró diferencias entre ejercicio específico y general.
+
+**Medir otras cosas.** Además de la fuerza, vale la pena observar el miedo, la confianza, la función en tareas reales y lo que la persona espera.
+
+**No abandonar la fuerza.** Seguir cargando de forma progresiva, porque tiene beneficios propios y porque muchas personas necesitan esa capacidad para volver a sus actividades.
+
+### Para cerrar
+
+La fuerza es importante, pero no lo explica todo. Reconocerlo no le quita valor al ejercicio. Al contrario: nos permite usarlo con más flexibilidad, explicarlo con más honestidad y dejar de medir el éxito de un tratamiento solo con un dinamómetro.`,
     references: [
       {
         author: 'Powell J, Wood L, Cashin AG, Lewis JS.',
@@ -2050,6 +2432,41 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
         journal: 'British Journal of Sports Medicine',
         doi: '10.1136/bjsports-2025-110372',
         title: 'It is not all about strength: rethinking mechanistic assumptions in exercise-based rehabilitation for musculoskeletal pain relief'
+      },
+      {
+        author: 'Runhaar J, Holden MA, Hattle M, et al.',
+        year: '2023',
+        journal: 'RMD Open',
+        doi: '10.1136/rmdopen-2023-003220',
+        title: 'Mechanisms of action of therapeutic exercise for knee and hip OA remain a black box phenomenon: an individual patient data mediation study with the OA Trial Bank'
+      },
+      {
+        author: 'Holden S, Matthews M, Rathleff MS, Kasza J, Vicenzino B.',
+        year: '2021',
+        journal: 'Journal of Orthopaedic & Sports Physical Therapy',
+        doi: '10.2519/jospt.2021.10674',
+        title: 'How Do Hip Exercises Improve Pain in Individuals With Patellofemoral Pain? Secondary Mediation Analysis of Strength and Psychological Factors as Mechanisms'
+      },
+      {
+        author: 'Deng J, Runhaar J, Breda SJ, Oei EHG, Eygendaal D, de Vos RJ.',
+        year: '2025',
+        journal: 'Journal of Science and Medicine in Sport',
+        doi: '10.1016/j.jsams.2024.12.006',
+        title: 'Do physical or imaging changes explain the effectiveness of progressive tendon loading exercises? A causal mediation analysis of athletes with patellar tendinopathy'
+      },
+      {
+        author: 'Murphy MC, Travers M, Chivers P, Debenham J, Docking SI, Rio EK, Gibson W, Ardern C.',
+        year: '2023',
+        journal: 'Journal of Science and Medicine in Sport',
+        doi: '10.1016/j.jsams.2023.03.007',
+        title: 'Can we really say getting stronger makes your tendon feel better? No current evidence of a relationship between change in Achilles tendinopathy pain or disability and changes in Triceps Surae structure or function when completing rehabilitation: A systematic review'
+      },
+      {
+        author: 'Hotta GH, Alaiti RK, Ribeiro DC, McQuade KJ, de Oliveira AS.',
+        year: '2022',
+        journal: 'Archives of Physiotherapy',
+        doi: '10.1186/s40945-022-00138-1',
+        title: 'Causal mechanisms of a scapular stabilization intervention for patients with subacromial pain syndrome: a secondary analysis of a randomized controlled trial'
       }
     ]
   },
@@ -2067,24 +2484,71 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 8,
     summary: '¿Por qué explicar al paciente la fisiología de su sistema nervioso alivia el dolor? La revisión de Louw et al. (2016) encontró que la educación en neurociencia del dolor reduce el miedo, la catastrofización y el uso de recursos de salud.',
     pullQuote: 'Cuando un paciente comprende que el dolor es una alarma del sistema nervioso sensibilizado y no una medida exacta de daño tisular, la amenaza disminuye, el cerebro libera analgésicos naturales y el movimiento vuelve a ser seguro.',
-    content: `En la literatura de rehabilitación y dolor, el enfoque biomédico tradicional tendía a asumir que el dolor siempre guarda relación proporcional directa con el daño tisular. Sin embargo, en cuadros de dolor persistente, el tejido puede estar cicatrizado mientras el sistema de procesamiento continúa sensibilizado.
+    content: `Durante mucho tiempo, explicarle el dolor a un paciente se reducía a nombrar una estructura: "es el disco", "es el tendón", "está inflamado". La educación en neurociencia del dolor (PNE, por sus siglas en inglés) propone otra cosa: enseñarle a la persona cómo funciona su sistema nervioso, por qué el dolor puede persistir aunque los tejidos hayan sanado y qué factores lo amplifican o lo calman.
 
-En una revisión sistemática publicada en *Physiotherapy Theory and Practice* (2016), **Adriaan Louw, Kory Zimney, Emilio J. Puentedura e Ina Diener** examinaron la efectividad de la **Educación en Neurociencia del Dolor (PNE)** en afecciones musculoesqueléticas.
+¿Funciona? Adriaan Louw, Kory Zimney, Emilio Puentedura e Ina Diener revisaron esa pregunta en una revisión sistemática publicada en *Physiotherapy Theory and Practice* (2016).
 
-### Elementos de la PNE
-La PNE es una estrategia educativa orientada a explicar la neurofisiología del procesamiento del dolor:
-- **Enfoque en el procesamiento:** Explica cómo el sistema nervioso procesa y modula las señales de dolor.
-- **Uso de metáforas claras:** Facilita la comprensión de la sensibilización del sistema nervioso mediante ejemplos cotidianos.
-- **Reducción de creencias amenazantes:** Ayuda a disminuir la catastrofización y el miedo al movimiento.
+### Qué hicieron
 
-### Resultados de la revisión
-- **Afrontamiento:** Se observa reducción del miedo al movimiento (*kinesiophobia*) y de pensamientos catastrofistas al comprender que el dolor no siempre refleja daño tisular activo.
-- **Combinación con ejercicio:** La evidencia señala que la educación alcanza su máximo beneficio al combinarse con ejercicio activo y gradual.
+Buscaron en 11 bases de datos ensayos clínicos aleatorizados que evaluaran la PNE en adultos con dolor musculoesquelético crónico. Incluyeron **13 ensayos** con un total de **734 pacientes**: dolor lumbar crónico, fatiga crónica, fibromialgia, dolor cervical crónico, cirugía por radiculopatía lumbar y otras condiciones.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación. La educación en neurociencia del dolor:
-- Proporciona herramientas para comprender la naturaleza del dolor.
-- Se integra con la prescripción de ejercicio activo adaptado a la persona.`,
+Como los estudios usaban instrumentos y comparaciones muy distintos, no pudieron combinar los resultados en un metaanálisis. Hicieron una síntesis narrativa por tipo de resultado.
+
+### Lo que encontraron
+
+Los autores concluyeron que la evidencia apoya el uso de la PNE en dolor musculoesquelético crónico para:
+
+- **Reducir el dolor.**
+- **Mejorar el conocimiento** sobre el dolor.
+- **Mejorar la función** y reducir la discapacidad.
+- **Disminuir la catastrofización** y el miedo al movimiento.
+- **Mejorar el movimiento** y el rendimiento físico.
+- **Reducir el uso de servicios de salud.**
+
+Un dato importante: **ningún estudio mostró que la PNE empeorara algún resultado** frente al control. La relación entre beneficio y riesgo es claramente favorable.
+
+### El hallazgo que más me importa
+
+Hay una observación en la discusión que cambia cómo se aplica la PNE en la práctica.
+
+- En **cinco estudios** la intervención fue **solo educación**. **Ninguno** logró reducir el dolor.
+- En **seis estudios** la educación se combinó con una intervención física (ejercicio, exposición gradual a actividades, terapia manual, ejercicio acuático, entre otras). **Cinco de los seis** redujeron el dolor de forma significativa.
+
+Los autores lo dicen claramente: la educación sola podría no ser suficiente para el cambio. Y advierten que muchos clínicos creen que la PNE es "solo hablar", o la ven como un enfoque "sin manos". Esta revisión sugiere lo contrario: **combinarla con movimiento** parece clave.
+
+Tiene sentido. Explicarle a alguien que su espalda es fuerte ayuda. Pero que lo compruebe agachándose, cargando peso y viendo que no pasa nada probablemente convence mucho más.
+
+[[figura:pne-con-movimiento]]
+
+### Otro hallazgo interesante
+
+Tres estudios mostraron que la PNE aumentaba el conocimiento sobre el dolor, pero ese conocimiento todavía no se había relacionado directamente con menos dolor o discapacidad. En dos de ellos, más conocimiento sí se acompañó de menos catastrofización.
+
+Esto sugiere que no se trata de que la persona "apruebe un examen" sobre el dolor. Lo que importa es que la nueva comprensión cambie cómo interpreta lo que siente y lo que se atreve a hacer.
+
+### Límites
+
+- Los estudios fueron muy distintos en diseño, población, instrumentos de medición y forma de entregar la educación.
+- Pocos estudios tuvieron seguimientos largos. Solo uno superó el año.
+- No se pudieron combinar los datos en un metaanálisis.
+
+Revisiones posteriores, con metaanálisis, han encontrado efectos más modestos de la educación en dolor por sí sola, sobre todo a largo plazo. Eso refuerza el mensaje central: la educación funciona mejor como parte de un tratamiento activo, no como reemplazo.
+
+### Cómo lo aplico
+
+**No doy una charla y ya.** La educación se mezcla con el resto de la sesión. Explico algo, lo probamos con movimiento y conversamos sobre lo que sintió.
+
+**Uso ejemplos y metáforas.** Comparar el sistema nervioso con una alarma que se volvió muy sensible, o hablar del dolor como un sistema de protección, ayuda a muchas personas.
+
+**Adapto el contenido a la persona.** No todos necesitan lo mismo. Hay pacientes que quieren entender los mecanismos y otros que solo necesitan saber que pueden moverse con seguridad.
+
+**Reviso lo que entendió.** Al final pregunto: "¿cómo le explicarías esto a alguien de tu familia?". Así veo si la idea quedó clara o si hay algo que corregir.
+
+**Conecto con sus metas.** La educación tiene más sentido cuando abre la puerta a algo que la persona quiere volver a hacer: jugar con sus hijos, trabajar sin miedo, volver a entrenar.
+
+### Para cerrar
+
+Explicar el dolor es una intervención. Pero esta revisión nos recuerda que las palabras funcionan mejor cuando van acompañadas de experiencia. Enseñar cómo funciona el dolor y, en la misma sesión, ayudar a la persona a moverse con más confianza, es probablemente la combinación más potente.`,
     references: [
       {
         author: 'Louw A, Zimney K, Puentedura EJ, Diener I.',
@@ -2135,6 +2599,8 @@ La imagen sí tiene lugar en estas situaciones:
 - **Radiculopatía o estenosis** en alguien que es candidato a cirugía o a un procedimiento.
 
 También deja claro cuándo no hace falta: si no hay criterios de alarma, si el dolor mejoró tras un mes de tratamiento o si ya existe una imagen previa y nada ha cambiado.
+
+[[figura:lumbar-cuando-imagen]]
 
 ### Fármacos: menos de lo que parece
 
@@ -2196,33 +2662,82 @@ Es una revisión narrativa basada en guías y metaanálisis, no un estudio nuevo
     readingTime: 6,
     summary: '¿Crees que entrenar una hora al día te inmuniza contra estar sentado el resto de la jornada? Analizamos el estudio de Dempsey et al. (2026) sobre el comportamiento sedentario y el fenómeno biológico de la resistencia al ejercicio.',
     pullQuote: 'La actividad física y el sedentarismo no son opuestos lineales que se cancelan entre sí, sino comportamientos interdependientes con vías fisiológicas distintas. Sentarse por más de 10 horas crea resistencia a los beneficios del ejercicio.',
-    content: `Durante décadas, la recomendación habitual ha sido realizar actividad física regular. Sin embargo, se ha extendido la noción de que 30 minutos de ejercicio diario compensan permanecer sentado el resto del día. 
+    content: `Muchas personas tienen esta lógica: "trabajo ocho horas sentado, pero salgo a trotar media hora, así que estoy compensando". ¿Es realmente así?
 
-En un artículo publicado en *Medicine & Science in Sports & Exercise* (2026), los investigadores **Paddy C. Dempsey, Christian J. Brakenridge, Dorothea Dumuid y Neville Owen** analizan este modelo de compensación y muestran que la relación entre actividad física y sedentarismo es interdependiente.
+En 2026, la revista *Medicine & Science in Sports & Exercise* publicó un debate entre dos grupos de investigadores sobre esta pregunta. Por un lado, Paddy Dempsey, Christian Brakenridge, Dorothea Dumuid y Neville Owen argumentaron que **la actividad física no compensa completamente** los riesgos del sedentarismo. Por otro, Ulf Ekelund y colaboradores sostuvieron que **sí puede compensarlos**, si la dosis es suficiente. Ambos grupos publicaron respuestas al otro.
 
-### El fenómeno de la "Resistencia al Ejercicio"
-Un concepto abordado en la literatura (Coyle et al.) es la **resistencia al ejercicio**:
-- Tras un día de inactividad muscular prolongada, la respuesta metabólica al ejercicio del día siguiente puede verse atenuada.
-- Los efectos benéficos del ejercicio en parámetros metabólicos se optimizan cuando existe movimiento tónico distribuido a lo largo de la jornada (como interrupciones regulares del sedentarismo).
-- Esto sugiere que una sesión de ejercicio aislado no contrarresta por completo los efectos de periodos prolongados de inmovilidad continua.
+Que dos grupos serios lleguen a conclusiones distintas con datos parecidos ya dice mucho. Vale la pena entender ambos lados.
 
-### Vías fisiológicas distintas
-El ejercicio estructurado y el comportamiento sedentario modulan la biología a través de mecanismos diferentes:
-- **El comportamiento sedentario prolongado:** Reduce la actividad contráctil tónica muscular, afectando la actividad enzimática local y disminuyendo el flujo vascular.
-- **El ejercicio estructurado:** Estimula adaptaciones sistémicas (capacidad cardiorrespiratoria, fuerza muscular).
+### El argumento a favor de la compensación
 
-### Conclusión
-Los autores proponen un enfoque integrado del movimiento durante el día:
-1. **Distribución del movimiento:** Incorporar pausas de movimiento activo a lo largo de la jornada laboral.
-2. **Metas graduales:** Promover pequeñas interrupciones del sedentarismo en pacientes con limitaciones o dolor.
-3. **Pausas activas:** Recomendar pausas breves cada 60 minutos para mantener activos los receptores musculares.`,
+La postura de Ekelund se apoya en un metaanálisis que su grupo publicó en *The Lancet* (2016), con datos de más de un millón de personas. Encontraron que quienes hacían mucha actividad física moderada, alrededor de **60 a 75 minutos al día**, no tenían el mayor riesgo de mortalidad asociado a estar mucho tiempo sentados. Es decir, con suficiente actividad, el exceso de riesgo del sedentarismo prácticamente desaparecía.
+
+Pero hay un matiz importante en ese mismo estudio: esa dosis es bastante más alta que la recomendación mínima, y el efecto fue menor para el tiempo frente a la televisión.
+
+### El argumento en contra
+
+Dempsey y colaboradores plantean que la compensación no es completa. Sus razones principales:
+
+- **Pocas personas alcanzan esa dosis.** Una hora o más de actividad moderada todos los días está lejos de lo que hace la mayoría.
+- **Estar sentado y moverse no son extremos de una misma línea.** El día tiene 24 horas, y el tiempo que dedicamos a dormir, estar sentados, movernos suave y hacer ejercicio se reparte entre sí. Cambiar uno cambia los demás.
+- **La forma de medir importa.** Muchos estudios usaban cuestionarios, que tienden a sobrestimar la actividad y subestimar el tiempo sentado. Con acelerómetros, el panorama puede cambiar.
+- **Los mecanismos son distintos.** Estar sentado mucho tiempo sin interrupción reduce la actividad de los músculos grandes de las piernas, lo que afecta el manejo de la glucosa y las grasas después de comer. Las pausas frecuentes ayudan en esos marcadores, incluso si son cortas.
+
+### ¿Qué es la "resistencia al ejercicio"?
+
+Un concepto que aparece en esta discusión es la llamada resistencia al ejercicio. Estudios de laboratorio (entre ellos los del grupo de Edward Coyle) han observado que, después de un día casi completo sentado, algunos beneficios metabólicos de una sesión de ejercicio, como la reducción de las grasas en sangre después de comer, pueden verse atenuados.
+
+Son estudios pequeños y de corto plazo, así que no se pueden extrapolar sin cuidado. Pero sugieren que lo que hacemos el resto del día puede influir en cuánto aprovechamos el ejercicio.
+
+### En qué coinciden
+
+Más allá del debate, hay puntos de acuerdo:
+
+- **Moverse más es mejor que moverse menos.** Para casi cualquier persona.
+- **Algo es mejor que nada.** Cualquier aumento de actividad ayuda, especialmente en quienes hacen muy poco.
+- **Las recomendaciones actuales** (como las de la Organización Mundial de la Salud) ya sugieren tanto aumentar la actividad física como reducir el tiempo sentado.
+
+### Qué hago con esto en la consulta
+
+**No pongo a competir el ejercicio con las pausas.** Le digo al paciente que las dos cosas suman: entrenar es muy valioso, y moverse a lo largo del día también.
+
+**Busco pausas realistas.** Pararse a caminar unos minutos cada cierto tiempo, subir escaleras, hacer algunas llamadas de pie, caminar después de comer. No hace falta un programa perfecto.
+
+**Me adapto a las personas con dolor.** Para alguien con dolor persistente, una hora de ejercicio diario puede ser inalcanzable. Pequeñas interrupciones del tiempo sentado pueden ser una puerta de entrada más amable, y además ayudan a que el cuerpo no se rigidice.
+
+**Uso el enfoque de las 24 horas.** Dormir bien, moverse durante el día y hacer ejercicio son partes de un mismo sistema. Mejorar una puede facilitar las otras.
+
+### Para cerrar
+
+¿El ejercicio compensa el sedentarismo? Con una dosis alta, puede que sí en gran parte. Pero para la mayoría de las personas, la respuesta práctica es otra: no hay que elegir. Entrenar y pasar menos tiempo sentado son dos herramientas distintas que, juntas, funcionan mejor.`,
     references: [
       {
         author: 'Dempsey PC, Brakenridge CJ, Dumuid D, Owen N.',
         year: '2026',
         journal: 'Medicine & Science in Sports & Exercise',
         doi: '10.1249/MSS.0000000000004055',
-        title: 'Physical Activity Does Not Fully Offset the Health Risks of Sedentary Behaviour'
+        title: 'Physical Activity Does Not Fully Offset the Health Risks of Sedentary Behavior'
+      },
+      {
+        author: 'Ekelund U, Dalene KE, Husøy A, Tarp J.',
+        year: '2026',
+        journal: 'Medicine & Science in Sports & Exercise',
+        doi: '10.1249/MSS.0000000000004056',
+        title: 'Physical Activity Fully Offsets the Health Risks of Sedentary Behavior: Response to Dempsey and Colleagues'
+      },
+      {
+        author: 'Dempsey PC, Brakenridge CJ, Dumuid D, Owen N.',
+        year: '2026',
+        journal: 'Medicine & Science in Sports & Exercise',
+        doi: '10.1249/MSS.0000000000004057',
+        title: 'Physical Activity Does Not Fully Offset the Health Risks of Sedentary Behavior: Response to Ekelund and Colleagues'
+      },
+      {
+        author: 'Ekelund U, Steene-Johannessen J, Brown WJ, et al.',
+        year: '2016',
+        journal: 'The Lancet',
+        doi: '10.1016/S0140-6736(16)30370-1',
+        title: 'Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women'
       }
     ]
   },
@@ -2240,29 +2755,77 @@ Los autores proponen un enfoque integrado del movimiento durante el día:
     readingTime: 7,
     summary: '¿Cómo se transforma el estrés psicológico en enfermedad física real? Revisamos el trabajo de Agorastos y Chrousos (2021) sobre los ejes del estrés (HPA y SAM) y el concepto de cacostasis.',
     pullQuote: 'El estrés crónico no es simplemente una sensación mental, sino un estado de cacostasis activa donde la sobrecarga sostenida de los sistemas glucocorticoides y autonómicos degrada de forma silenciosa la fisiología celular y tisular.',
-    content: `El estrés es un fenómeno biológico que modula diversos sistemas de nuestro organismo. En su revisión publicada en *Molecular Psychiatry* (2021), los doctores **Agorastos Agorastos** y **George P. Chrousos** proponen un modelo integrativo y neuroendocrino que detalla el continuo a través del cual la adaptación al estrés (alostasis) evoluciona hacia estados prolongados.
+    content: `Muchas personas con dolor persistente cuentan que su dolor empeora en épocas de estrés: problemas en el trabajo, en la casa, de plata o de salud. A veces eso se interpreta como "es psicológico". Pero el estrés no ocurre solo en la cabeza. Es una respuesta del cuerpo entero.
 
-Este marco teórico ofrece elementos para comprender cómo la desregulación emocional o el estrés sostenido influyen en la percepción del dolor y la fatiga.
+Agorastos Agorastos y George Chrousos, de la Universidad Aristóteles de Tesalónica y de la Universidad de Atenas, publicaron en *Molecular Psychiatry* (2021) una revisión sobre la neuroendocrinología del estrés. Proponen entender el estrés como un **continuo** que va desde una respuesta adaptativa y útil hasta un estado que contribuye a la enfermedad crónica.
 
-### Del equilibrio homeodinámico a la cacostasis
-Los seres vivos dependen de mantener un equilibrio biológico dentro de un rango fisiológico óptimo. Los autores describen la siguiente terminología:
+### Qué es el estrés, según los autores
 
-1. **Homeostasis / Eustasis:** El estado de balance biológico en reposo.
-2. **Alostasis:** El proceso activo mediante el cual el organismo se adapta a demandas ambientales o estresores.
-3. **Eustress (Estrés positivo):** Estresores breves que conducen a una adaptación saludable.
-4. **Hyperstasis:** Un estado de resiliencia y adaptabilidad alcanzado tras superar estresores adaptativos.
-5. **Cacostasis:** Cuando la intensidad o duración de los estresores sobrepasa la capacidad de regulación del organismo.
-6. **Carga Cacostática:** El costo fisiológico acumulado al intentar compensar este desequilibrio.
+Lo definen como un estado en que el **equilibrio homeodinámico** del organismo se ve amenazado por estímulos internos o externos, reales o percibidos. A esos estímulos se les llama **estresores**.
 
-### La vía neuroendocrina: Los sistemas HPA y SAM
-La respuesta biológica al estrés está coordinada por dos sistemas reguladores:
-- **El eje Hipotálamo-Pituitaria-Adrenal (HPA):** Su activación culmina con la liberación de glucocorticoides (principalmente **cortisol**). En agudo, el cortisol moviliza energía y modula la inflamación. En estados prolongados, el exceso de cortisol altera la sensibilidad celular.
-- **El sistema Simpático-Adrenal-Medular (SAM):** Conduce a la liberación de catecolaminas (norepinefrina y adrenalina), elevando la frecuencia cardíaca, la presión arterial y el tono muscular.
+Para mantener ese equilibrio, el cuerpo tiene un **sistema del estrés** que redistribuye la energía según lo que se necesita en cada momento.
 
-### Conclusión
-Para los profesionales de la salud del movimiento, el modelo de Agorastos y Chrousos destaca la importancia de evaluar el contexto general del paciente:
-- El volumen e intensidad del ejercicio deben adaptarse considerando la capacidad total de adaptación de la persona.
-- Estrategias de regulación autonómica, educación en higiene del sueño y comunicación clínica abierta contribuyen a restaurar la homeostasis del sistema nervioso.`,
+### Los dos brazos del sistema del estrés
+
+**El eje hipotálamo-hipófisis-suprarrenal (HPA).** Termina en la liberación de **cortisol**, que moviliza energía, regula la inflamación y prepara al cuerpo para responder.
+
+**El sistema simpático.** Libera **adrenalina y noradrenalina**, que aumentan la frecuencia cardíaca, la presión arterial, la alerta y el tono muscular.
+
+Ambos están conectados con otros sistemas: el sueño, el metabolismo, el sistema inmune, la reproducción y el crecimiento.
+
+### Del estrés útil al estrés que enferma
+
+Los autores proponen un continuo con varios estados:
+
+- **Eustasis:** el equilibrio óptimo.
+- **Estrés breve y manejable:** estresores repetidos, cortos y motivadores generan **respuestas adaptativas** y acostumbramiento. Es el tipo de estrés que nos fortalece, como el del entrenamiento.
+- **Hiperstasis:** un estado de mayor resiliencia y capacidad de adaptación, alcanzado al superar estresores manejables.
+- **Cacostasis:** cuando el estrés es inadecuado, excesivo, aversivo o prolongado, supera la capacidad de regulación del organismo y produce respuestas que ya no ayudan.
+- **Carga cacostática:** el costo acumulado de vivir en ese estado alterado, que aumenta el riesgo de enfermedades mentales y físicas.
+
+[[figura:estres-continuo]]
+
+### Por qué algunas personas son más vulnerables
+
+Según los autores, la respuesta al estrés depende de:
+
+- **El momento de la vida** en que ocurre. El estrés en la infancia o la adolescencia puede dejar huellas más profundas.
+- **La duración.**
+- **La hora del día**, porque el cortisol sigue un ritmo diario.
+- **El tipo de estresor.**
+
+Con el tiempo, esto puede generar un fenotipo vulnerable, con un sistema del estrés que reacciona de más o de menos, una señalización alterada del cortisol y una carga acumulada que eleva el riesgo de enfermedad.
+
+### Qué tiene que ver con el dolor
+
+El artículo no se enfoca específicamente en el dolor, pero sus ideas ayudan a entenderlo:
+
+- El sistema del estrés y el sistema de modulación del dolor comparten estructuras y mensajeros.
+- El estrés sostenido altera el **sueño**, que a su vez aumenta la sensibilidad al dolor.
+- Puede favorecer un **perfil inflamatorio** de bajo grado.
+- Aumenta la **tensión muscular** y la vigilancia sobre el cuerpo.
+
+Por eso, cuando un paciente dice que le duele más cuando está estresado, no está exagerando. Está describiendo una realidad biológica.
+
+### Qué hacer con esto en la consulta
+
+**Preguntar por el contexto.** Cómo está durmiendo, qué está pasando en su vida, qué le preocupa. No es un tema aparte del dolor; es parte del cuadro.
+
+**Ajustar la carga total, no solo la del ejercicio.** Si la persona está pasando por un período muy estresante, quizás no sea el momento de subir mucho la intensidad del entrenamiento. El cuerpo tiene una capacidad de adaptación total que se reparte entre todo lo que vive.
+
+**Usar el ejercicio como estrés bueno.** El ejercicio bien dosificado es un estresor breve y controlado que puede mejorar la resiliencia. Lo importante es que sea manejable para la persona.
+
+**Sumar herramientas de regulación.** Respiración lenta, actividades al aire libre, rutinas de sueño, contacto social. Son intervenciones simples que ayudan a bajar la activación del sistema del estrés.
+
+**Derivar cuando corresponde.** Si el estrés es intenso, prolongado o hay síntomas de ansiedad o depresión, trabajar junto a un profesional de salud mental puede marcar una gran diferencia.
+
+### Límites
+
+Es una revisión narrativa que integra mucha investigación básica y clínica. Propone un modelo conceptual útil, pero no es un estudio que pruebe una intervención. Términos como "cacostasis" o "hiperstasis" son propuestas de los autores y no se usan de forma universal.
+
+### Para cerrar
+
+El estrés no es el enemigo. En dosis breves y manejables nos ayuda a adaptarnos y crecer. El problema aparece cuando es excesivo o no termina. Entender ese continuo nos permite mirar al paciente completo y ajustar el tratamiento a la carga real que está viviendo, no solo a la que vemos en el gimnasio.`,
     references: [
       {
         author: 'Agorastos A, Chrousos GP.',
@@ -2287,28 +2850,72 @@ Para los profesionales de la salud del movimiento, el modelo de Agorastos y Chro
     readingTime: 6,
     summary: '¿Necesitas cambios drásticos para vivir más y mejor? Koemel et al. (2026) revelan que un enfoque sinérgico (SPAN) con micro-ajustes diarios de 5 min de sueño, 2 min de ejercicio y media porción de vegetales suma un año entero de vida.',
     pullQuote: 'Por separado, hacen falta cambios grandes en ejercicio o sueño para notar efecto en la longevidad. Combinados, pequeños ajustes en sueño, actividad y alimentación suman mucho más con poco esfuerzo.',
-    content: `La modificación de conductas de salud representa una herramienta efectiva para extender la expectativa de vida y los años libres de enfermedades crónicas. No obstante, el enfoque tradicional suele abordar de forma aislada el sueño, la actividad física o la nutrición.
+    content: `Cuando alguien quiere cuidar su salud, muchas veces piensa en cambios grandes: entrenar todos los días, dormir ocho horas sí o sí, cambiar por completo su alimentación. Y como esos cambios cuestan, muchos ni siquiera empiezan.
 
-Un estudio de cohorte poblacional liderado por **Nicholas A. Koemel, Emmanuel Stamatakis y colaboradores (2026)**, publicado en la revista *eClinicalMedicine*, examinó las dosis combinadas de **Sueño, Actividad Física Moderada-Vigorosa (MVPA) y Nutrición (SPAN)**.
+Un grupo de la Universidad de Sídney, liderado por Nicholas Koemel y Emmanuel Stamatakis, se hizo otra pregunta: **¿cuál es el cambio mínimo, combinando sueño, actividad física y alimentación, que se asocia a vivir más y con mejor salud?** A esa combinación la llamaron **SPAN** (por *sleep, physical activity and nutrition*). Publicaron dos estudios en 2026 con datos del UK Biobank.
 
-### Sinergia biológica: El poder de la combinación
-El hallazgo central del estudio reside en el concepto de **sinergia fisiológica y conductual**. Al realizar pequeños ajustes concurrentes en los tres pilares del acrónimo SPAN, los requerimientos individuales disminuyen.
+### Cómo lo midieron
 
-#### Intervención aislada vs. Sinérgica (SPAN)
-Basándose en modelos multivariables, el estudio detalla los siguientes hallazgos:
+Ambos estudios usaron un subgrupo del UK Biobank que usó un acelerómetro en la muñeca durante 7 días. Con eso midieron de forma objetiva:
 
-1. **Para aumentar 1 año de expectativa de vida:**
-   - **En aislamiento:** Se requeriría aumentar el sueño en **25 minutos al día** adicionales o incrementar la actividad física.
-   - **Enfoque sinérgico SPAN:** Basta con añadir **5 minutos/día de sueño**, realizar **1.9 minutos/día de MVPA** extra e incrementar la calidad de la dieta en **5 puntos** en el Score de Calidad Dietaria.
+- **Sueño**, en horas por día.
+- **Actividad física moderada a vigorosa**, en minutos por día.
 
-2. **Para ganar 4 años libres de enfermedades crónicas:**
-   - **En aislamiento:** Requeriría un incremento de **189 minutos/día de sueño** o un cambio dietario considerable.
-   - **Enfoque sinérgico SPAN:** Se logra con **24 minutos/día adicionales de sueño**, **3.7 minutos/día de MVPA** y un aumento de **23 puntos** en el score dietario.
+La alimentación se evaluó con un **puntaje de calidad de la dieta** de 10 ítems (0 a 100), que considera verduras, frutas, cereales, carnes, pescado, lácteos, aceites y bebidas azucaradas.
 
-### Conclusión
-Para los profesionales de la salud del movimiento, este estudio ofrece pautas prácticas para la educación del paciente:
-- Prescribir metas acumulativas de pequeñas modificaciones multisectoriales: hábitos de sueño regulares, incremento progresivo de pasos y ajustes dietarios sencillos.
-- La consistencia en pequeñas decisiones diarias promueve adaptaciones a largo plazo.`,
+### Estudio 1: años de vida y años de vida sana
+
+Publicado en *eClinicalMedicine*, incluyó a **59.078 personas** (mediana de edad 64 años), seguidas por unos 8 años. Estimaron dos cosas: la **esperanza de vida** y la **esperanza de vida sin enfermedad** (sin enfermedad cardiovascular, cáncer, diabetes tipo 2, EPOC ni demencia).
+
+**La mejor combinación** (7,2 a 8 horas de sueño, más de 42 minutos diarios de actividad moderada a vigorosa y un buen puntaje de dieta), comparada con la peor, se asoció a:
+
+- **9,35 años más de vida**.
+- **9,45 años más de vida sana**.
+
+**El cambio mínimo** que se asoció a **un año más de vida** fue sorprendentemente pequeño, sumado entre los tres hábitos:
+
+- **5 minutos más de sueño** al día.
+- **1,9 minutos más** de actividad moderada a vigorosa al día.
+- **5 puntos más** en la calidad de la dieta, por ejemplo, media porción más de verduras al día.
+
+Para **cuatro años más de vida sana**, el cambio combinado fue mayor: 24 minutos más de sueño, 3,7 minutos más de actividad y 23 puntos más en la dieta.
+
+[[figura:span-minimo]]
+
+### Estudio 2: el corazón
+
+Publicado en el *European Journal of Preventive Cardiology*, incluyó a **53.242 personas** y se enfocó en **eventos cardiovasculares mayores** (infarto, insuficiencia cardíaca y accidente cerebrovascular). En 8 años ocurrieron 2.034 eventos.
+
+- **La mejor combinación** (8 a 9,4 horas de sueño, 42 a 104 minutos de actividad y buena dieta) se asoció a un **57% menos de riesgo** de eventos cardiovasculares, comparada con la peor.
+- Un **puntaje SPAN intermedio** ya se asoció a un **41% menos** de riesgo.
+- **Un cambio pequeño** se asoció a un 10% menos de riesgo: unos 11 minutos más de sueño, 4,5 minutos más de actividad y 3 puntos más en la dieta (como un cuarto de taza extra de verduras).
+
+### ¿Hay "sinergia"?
+
+Es tentador decir que los tres hábitos juntos se potencian entre sí. Pero el estudio cardiovascular lo evaluó formalmente y **no encontró una interacción sinérgica**: los efectos se sumaron, pero no se multiplicaron.
+
+Lo que sí muestran ambos estudios es que **pequeños cambios repartidos en varios hábitos** suman beneficios que, por separado, requerirían cambios mucho más grandes en uno solo.
+
+### Lo que no dicen estos estudios
+
+- Son **estudios observacionales**. Muestran asociación, no prueban que añadir 5 minutos de sueño cause un año más de vida.
+- Las personas con mejores hábitos pueden ser distintas en otros aspectos (ingresos, acceso a salud, otras conductas), aunque los autores ajustaron por muchos factores.
+- El UK Biobank incluye personas más sanas que la población general, y los hábitos se midieron en una sola semana.
+- Las cifras mínimas son estimaciones estadísticas, no una receta exacta.
+
+### Por qué me gusta para la consulta
+
+Porque cambia la conversación. En vez de pedir cambios enormes, puedo proponer algo posible:
+
+- **Acostarse un poco antes**, aunque sean diez minutos.
+- **Moverse algo más**, como subir escaleras o caminar rápido unos minutos.
+- **Agregar una porción de verduras** a una comida.
+
+Para alguien con dolor, cansancio o poco tiempo, esto es mucho más alcanzable que un programa ideal. Y una vez que la persona siente que puede cambiar algo, es más fácil construir lo siguiente.
+
+### Para cerrar
+
+No hace falta una transformación total para cuidar la salud. Estos estudios sugieren que pequeños ajustes en sueño, movimiento y alimentación, sumados y sostenidos en el tiempo, se asocian a vivir más y mejor. Es un mensaje simple, realista y esperanzador.`,
     references: [
       {
         author: 'Koemel NA, Biswas RK, Ahmadi MN, Teixeira-Pinto A, Hamer M, Rezende LFM, Mitchell J, Leech RM, Sawan M, Allman-Farinelli M, Dumuid D, Bauman A, Maher C, Barrett S, Chow C, Gibson AA, Raubenheimer D, Hocking SL, Williams K, Cistulli PA, Simpson SJ, Stamatakis E.',
@@ -2316,6 +2923,13 @@ Para los profesionales de la salud del movimiento, este estudio ofrece pautas pr
         journal: 'eClinicalMedicine',
         doi: '10.1016/j.eclinm.2025.103741',
         title: 'Minimum combined sleep, physical activity, and nutrition variations associated with lifeSPAN and healthSPAN improvements: a population cohort study'
+      },
+      {
+        author: 'Koemel NA, Biswas RK, Simpson SJ, et al.',
+        year: '2026',
+        journal: 'European Journal of Preventive Cardiology',
+        doi: '10.1093/eurjpc/zwag141',
+        title: 'Sleep, physical activity, nutrition, and cardiovascular risk: minimum combined variations associated with major adverse cardiovascular events'
       }
     ]
   },
@@ -2333,27 +2947,69 @@ Para los profesionales de la salud del movimiento, este estudio ofrece pautas pr
     readingTime: 6,
     summary: 'El modelo estructural no logra explicar bien el dolor patelofemoral. Revisamos la idea del "envelope of function" (sobre de función) de Scott Dye y cómo la pérdida de equilibrio en los tejidos se relaciona con el dolor.',
     pullQuote: 'El dolor patelofemoral no responde a un daño estructural inerte del cartílago, sino a una perturbación metabólica activa de la homeostasis celular en los tejidos inervados como la sinovial y el hueso subcondral.',
-    content: `El dolor fémororrotuliano o patelofemoral (PFP) ha constituido un desafío clínico durante mucho tiempo. El abordaje tradicional insistió en un modelo puramente **Estructural, Anatómico y Biomecánico (S/A/B)**, prescribiendo intervenciones para corregir el "mal alineamiento" patelar o limar el cartílago bajo el diagnóstico de condromalacia. 
+    content: `El dolor en la parte anterior de la rodilla es uno de los motivos de consulta más frecuentes en traumatología y kinesiología. Y, sin embargo, durante más de un siglo ha sido un enigma. Se le atribuyó al "desgaste" del cartílago de la rótula, a una rótula "mal alineada" o que "no corre bien por su riel". Se propusieron cirugías para realinearla y programas para corregir su recorrido. Muchos no funcionaron, y algunos dejaron rodillas peor de lo que estaban.
 
-Sin embargo, en su artículo de revisión de 2018 publicado en *Annals of Joint*, el Dr. Scott F. Dye expone un enfoque centrado en la **homeostasis de la articulación**.
+Scott Dye, cirujano de rodilla de la Universidad de California en San Francisco, propuso hace años otra forma de entender este dolor. En un artículo publicado con Christopher Dye en *Annals of Joint* (2018), resume esa perspectiva: la **homeostasis tisular** y la **envoltura de función** de la rodilla.
 
-### El análisis de la explicación estructural (S/A/B)
-Durante décadas, encontrar "condromalacia de patela" (desgaste del cartílago) en un examen de resonancia magnética (RMN) se consideró el hallazgo principal del dolor de rodilla. No obstante, el Dr. Scott Dye aporta datos biológicos relevantes:
-- El cartílago articular es una estructura **aneural y avascular**, por lo que no transmite directamente señales de dolor al cerebro.
-- El propio Dr. Dye documentó mediante resonancias magnéticas presentar **condromalacia patelar de grado 3+ bilateral** durante más de 18 años, transcurriendo ese periodo sin dolor ni limitación funcional a pesar de mantener niveles de actividad normales.
-- Muchos casos de dolor persistente no derivan de la estructura articular inicial, sino de intervenciones repetidas destinadas a corregir una alineación funcional.
+### El problema con la mirada estructural
 
-### El concepto de "Envelope of Function" (Sobre de Función)
-En lugar de ver la articulación como piezas mecánicas rígidas que se desalinean, Dye propone analizarla como un **sistema vivo de transmisión biológica**. Cada articulación posee un **Envelope of Function (EOF)** o Sobre de Función:
-- El EOF es la distribución de carga y frecuencia que el organismo es capaz de aceptar y disipar de manera saludable, manteniendo el tejido en estado de homeostasis.
-- Cuando realizamos actividades de alta repetición a las que el sistema no está adaptado de forma progresiva, situamos los tejidos **fuera de su Sobre de Función**.
-- Esto genera una pérdida de homeostasis tisular en componentes inervados, cuyos elementos principales son la **sinovitis sintomática** (irritación de la membrana sinovial) y la **sobrecarga de hueso subcondral**.
+Dye plantea que el error histórico fue mirar el dolor patelofemoral solo desde la estructura, la anatomía y la biomecánica. Si la imagen mostraba condromalacia o una rótula inclinada, eso se asumía como la causa.
 
-### Conclusión
-El plan de rehabilitación se centra en restaurar la homeostasis:
-1. **Modular la carga para reingresar al EOF actual:** Educar al paciente en que ajustar temporalmente sus actividades para evitar el dolor agudo es un paso necesario en el proceso.
-2. **Respetar los tiempos biológicos:** La restauración de la homeostasis es un proceso biológico que requiere paciencia y progresiones graduales.
-3. **Entrenamiento de fuerza dentro del rango tolerable:** Fortalecimiento progresivo de cuádriceps, glúteos e isquiotibiales dentro del rango de tolerancia de la persona.`,
+Pero hay un problema: la condromalacia puede no doler. Dye relata que él mismo tiene condromalacia rotuliana avanzada en ambas rodillas desde hace al menos 18 años y sigue sin dolor en ninguna de sus actividades. También cuenta que, en experimentos hechos en sus propias rodillas, sintió dolor intenso al presionar la membrana sinovial sin anestesia y al aumentar la presión dentro de su rótula. El cartílago, en cambio, no tiene inervación.
+
+Su conclusión es clara: encontrar condromalacia en una resonancia no significa que esa sea la causa del dolor, y no debería usarse por sí sola como justificación para operar.
+
+### La rodilla como transmisión biológica
+
+Dye propone ver las articulaciones como **sistemas vivos** diseñados para aceptar, transferir y disipar cargas repetidas, como una transmisión biológica. Cada tejido (sinovial, hueso, grasa, ligamentos) tiene un rango normal de funcionamiento, que él llama **homeostasis tisular**.
+
+Su idea central es esta:
+
+- Si una articulación está en homeostasis, por definición no duele.
+- Si duele, algún tejido perdió su homeostasis.
+
+En el dolor patelofemoral, los tejidos que más suelen estar involucrados son la **membrana sinovial irritada** y el **hueso sobrecargado**, más que el cartílago.
+
+### La envoltura de función
+
+Este es el concepto que más me sirve en la consulta. La **envoltura de función** es el rango de cargas y repeticiones que una rodilla puede tolerar sin dolor y manteniendo su homeostasis.
+
+La articulación patelofemoral soporta fuerzas muy altas, varias veces el peso corporal, incluso en actividades cotidianas. Cuando una carga supera la envoltura de función, por ejemplo después de muchas sentadillas, una caminata larga cuesta abajo o subir muchas escaleras, la rodilla pierde su homeostasis y aparece el dolor.
+
+Lo que suele pasar en el dolor persistente es que, cuando la rodilla está empezando a recuperarse, llega una segunda o tercera sobrecarga. La envoltura se achica tanto que hasta las actividades diarias empiezan a doler: subir escaleras, sentarse y pararse, arrodillarse o estar mucho rato sentado con las rodillas dobladas.
+
+[[figura:envoltura-funcion]]
+
+### Cómo se presenta
+
+Según Dye, en la historia suele haber un evento o una serie de eventos que iniciaron el dolor: sentadillas o estocadas repetidas, caminatas en cerros, escaleras, cargar peso, arrodillarse o un golpe directo. Los síntomas suelen ir y venir según la carga, con períodos sin dolor.
+
+En el examen, puede haber sensibilidad alrededor de la rótula, algo de calor o un pequeño derrame. Y recomienda descartar siempre otras fuentes de dolor, como problemas de cadera o una neuropatía de la rama infrapatelar del nervio safeno, que según él es más frecuente de lo que se cree.
+
+También señala que la sensación de que la rodilla "se va" muchas veces no es inestabilidad real, sino una inhibición refleja del cuádriceps por dolor, como cuando soltamos una olla caliente.
+
+### Qué propone para el tratamiento
+
+El objetivo es **devolver la rodilla dentro de su envoltura de función** y dejar que los tejidos recuperen su homeostasis. Para Dye, esto explica gran parte de la mejoría.
+
+- **Bajar la carga** a un nivel que la rodilla tolere. Por ejemplo, evitar sillas muy bajas o usar un asiento de baño más alto.
+- **Medidas para calmar la irritación**, como frío local, y tratamientos médicos cuando corresponda.
+- **Kinesiología con progresión cuidadosa**: fortalecimiento, elongación suave, trabajo de tronco y cadera, y vendaje si ayuda.
+- **Ampliar la envoltura de a poco**, a medida que la rodilla tolera más.
+
+Y advierte algo sobre la cirugía: cualquier operación es una nueva lesión para la rodilla, que necesita tiempo para recuperarse.
+
+### Un matiz desde la evidencia actual
+
+Dye recomienda evitar las actividades que causen dolor durante la recuperación. Hoy, muchas guías de dolor patelofemoral y de tendinopatías aceptan un nivel bajo de dolor durante el ejercicio, siempre que no aumente al día siguiente. Las dos ideas no están tan lejos: ambas buscan cargar dentro de lo que el tejido tolera. La diferencia está en cuánto margen se acepta.
+
+También vale la pena decir que el artículo es una revisión basada en la experiencia del autor y en su modelo, no un estudio clínico. Sus ideas han sido muy influyentes, pero no todas han sido comprobadas en ensayos.
+
+### Por qué me gusta este modelo
+
+Porque es fácil de explicar a un paciente. En vez de "tu rótula está desalineada" o "tienes el cartílago gastado", puedo decir: "tu rodilla está sensible porque recibió más carga de la que podía tolerar. Vamos a bajarla un poco para que se calme y luego la vamos a ir subiendo para que tolere cada vez más".
+
+Es un mensaje que no asusta, que no depende de una imagen y que le da a la persona un rol activo en su recuperación.`,
     references: [
       {
         author: 'Dye SF, Dye CC.',
@@ -2436,21 +3092,51 @@ Antes de adoptar tablas de "factores de riesgo modificables" para diseñar progr
     readingTime: 5,
     summary: 'Un análisis sociológico de la kinesiología adaptativa basada en la investigación cualitativa de Bolling et al. (2019) sobre percepciones de lesión deportiva.',
     pullQuote: 'Para un deportista de elite, el dolor no equivale a lesión. Se perciben como "lesionados" de forma exclusiva cuando la alteración del sistema interrumpe directamente su nivel de rendimiento.',
-    content: `Los investigadores en medicina deportiva han intentado encontrar un límite unificado para catalogar cuándo un deportista está "lesionado": pérdida de tiempo, necesidad de atención médica, asimetrías o dolor evidente sobre la camilla de evaluación. Sin embargo, esta clasificación choca con la realidad subjetiva compartida en el terreno de juego.
+    content: `¿Cuándo está lesionado un deportista? Parece una pregunta fácil, pero no lo es. En investigación, una lesión puede definirse por el tiempo perdido de entrenamiento, por haber necesitado atención médica o por cualquier molestia reportada. Cada definición cambia cuántas lesiones contamos y cómo las interpretamos.
 
-Un estudio cualitativo publicado por Caroline Bolling y sus colaboradores (2019) en *Translational Sports Medicine* exploró este choque cognitivo entre atletas olímpicos, entrenadores y kinesiólogos.
+Y en la práctica, el problema es aún mayor: el atleta, el entrenador y el kinesiólogo pueden tener ideas muy distintas sobre qué es una lesión. Si no hablan el mismo idioma, es difícil prevenir, detectar a tiempo o decidir cuándo volver.
 
-### El dolor como compañero ordinario de entrenamiento
-La investigación revela que:
-- Atletas, entrenadores y preparadores físicos coinciden en que **"el dolor no equivale a estar lesionado"**. En el alto rendimiento, lidiar con molestias menores se considera parte del proceso de entrenamiento.
-- El verdadero disparador de la percepción de lesión es la **limitación funcional del rendimiento**. El atleta se asume lesionado cuando su cuerpo le impide ejecutar su gesto técnico de forma efectiva.
+### Qué hizo el estudio
 
-### Modulaciones contextuales del dolor y reporte de síntomas
-El estudio demostró que la decisión de reportar un síntoma clínico está influenciada por factores externos:
-- **Importancia de la competencia:** Ante finales de torneos o clasificatorios olímpicos inminentes, los deportistas recurren al uso de analgésicos para continuar compitiendo, elevando su tolerancia al riesgo.
-- **Relación de confianza:** La comunicación con el equipo transdisciplinario determina si el atleta revela sus molestias a tiempo o no.
+Caroline Bolling, Saulo Delfino Barboza, Willem van Mechelen y Roeline Pasman, del Amsterdam Collaboration on Health & Safety in Sports, publicaron en 2019 en *Translational Sports Medicine* un estudio cualitativo sobre cómo perciben una lesión deportiva quienes viven el deporte de élite.
 
-Esto demuestra que la lesión no es meramente un daño tisular pasivo aislado: es un fenómeno condicionado por el contexto.`,
+Entrevistaron a atletas, entrenadores y fisioterapeutas de distintos deportes olímpicos, de nivel internacional. En vez de imponer una definición, les preguntaron qué significa para ellos estar lesionado.
+
+### Lo que encontraron
+
+**El dolor no equivale a lesión.** En el alto rendimiento, convivir con molestias se considera parte del entrenamiento. Los atletas distinguen entre el dolor "normal" del esfuerzo y algo que les preocupa.
+
+**Lo que define una lesión es no poder rendir.** El atleta se considera lesionado cuando el problema le impide entrenar o competir como necesita, cuando afecta su gesto técnico o su rendimiento. Es decir, la definición es funcional, no tisular.
+
+**El contexto cambia la decisión de reportar.** Que un atleta cuente o no una molestia depende de muchas cosas: la cercanía de una competencia importante, el miedo a perder un lugar en el equipo, la confianza con el cuerpo técnico. Antes de competencias clave, algunos atletas toleran más riesgo o usan analgésicos para seguir.
+
+**La relación con el equipo importa.** Cuando hay confianza y buena comunicación, los atletas reportan antes. Cuando sienten que hablar puede tener consecuencias negativas, callan.
+
+### Lo que dice un estudio complementario
+
+El mismo grupo publicó en el *British Journal of Sports Medicine* (2020) un estudio con 19 atletas, entrenadores y fisioterapeutas de deportes olímpicos sobre cómo se previenen las lesiones en la élite. Encontraron que los participantes ven el riesgo de lesión como parte del deporte, porque mejorar implica empujar los límites. La prevención se describió como un **proceso de aprendizaje** que cambia con la experiencia y con las lesiones vividas, y la **comunicación** entre atleta, entrenador y fisioterapeuta apareció como un componente clave. Algo muy revelador: para ellos, el objetivo central es el **rendimiento**, y la prevención es un medio para lograrlo, no un fin en sí mismo.
+
+### Por qué esto importa
+
+**Las definiciones de investigación no siempre calzan con la realidad.** Si contamos solo las lesiones que hacen perder tiempo, dejamos fuera muchos problemas que el atleta arrastra mientras sigue entrenando. Esos problemas, que reducen el rendimiento sin sacarlo de la cancha, son muy comunes.
+
+**El silencio también es un dato.** Si un atleta no reporta, no es necesariamente porque no le pase nada. Puede ser por miedo, por la presión del calendario o por desconfianza.
+
+**La prevención depende de la conversación.** Ningún protocolo funciona si el atleta no cuenta lo que siente a tiempo.
+
+### Qué me llevo a la práctica
+
+**Preguntar por el rendimiento, no solo por el dolor.** En vez de "¿te duele?", preguntas como "¿esto te está impidiendo entrenar como quieres?" o "¿sientes que rindes igual?" pueden revelar más.
+
+**Construir confianza.** El atleta tiene que sentir que contar una molestia no lo va a dejar automáticamente fuera, sino que le ayudará a seguir rindiendo.
+
+**Hablar el idioma del rendimiento.** Si la prevención se presenta como algo que ayuda a rendir más y por más tiempo, es más probable que el atleta y el entrenador la adopten.
+
+**Ponerse de acuerdo en las palabras.** Vale la pena conversar con el equipo qué entendemos por "lesión", "molestia" y "estar disponible", para tomar decisiones con criterios comunes.
+
+### Para cerrar
+
+Una lesión no es solo un daño en un tejido. Es una experiencia que depende del contexto, de las relaciones y de lo que está en juego. Entender cómo la viven el atleta y su entorno es el primer paso para detectarla a tiempo y acompañar mejor su recuperación.`,
     references: [
       {
         author: 'Bolling C, Barboza SD, van Mechelen W, Pasman HR.',
@@ -2458,6 +3144,13 @@ Esto demuestra que la lesión no es meramente un daño tisular pasivo aislado: e
         journal: 'Translational Sports Medicine',
         doi: '10.1002/tsm2.53',
         title: 'How elite athletes, coaches, and physiotherapists perceive a sports injury'
+      },
+      {
+        author: 'Bolling C, Delfino Barboza S, van Mechelen W, Pasman HR.',
+        year: '2020',
+        journal: 'British Journal of Sports Medicine',
+        doi: '10.1136/bjsports-2019-100773',
+        title: 'Letting the cat out of the bag: athletes, coaches and physiotherapists share their perspectives on injury prevention in elite sports'
       }
     ]
   },
@@ -2475,19 +3168,60 @@ Esto demuestra que la lesión no es meramente un daño tisular pasivo aislado: e
     readingTime: 5,
     summary: 'Un análisis clínico crítico del manguito rotador basado en Cook, Lewis y Powell (2026). Revisamos qué tan útil es realmente medir la fuerza máxima para diagnosticar.',
     pullQuote: 'La aparente debilidad detectada en un test de fuerza de manguito rotador refleja con frecuencia una inhibición cortical temporal secundaria al dolor, no una pérdida real de capacidad contráctil estructural del tejido.',
-    content: `Cuando nos enfrentamos a un paciente con dolor de hombro relacionado al manguito rotador (RCRSP), la rutina clínica tradicional nos empuja a tomar de inmediato un dinamómetro de mano (Handheld Dynamometer - HHD) o recurrir a pruebas musculares manuales (MMT). Buscamos identificar qué músculo específico del manguito presenta "debilidad" para etiquetar su lesión y diseñar un plan centrado exclusivamente en combatir esa deficiencia.
+    content: `Cuando alguien llega con dolor de hombro relacionado con el manguito rotador, uno de los primeros pasos de la evaluación suele ser medir la fuerza. Con las manos o con un dinamómetro, probamos la rotación externa, la abducción, la rotación interna. Si un movimiento sale más débil, lo anotamos y, muchas veces, construimos el tratamiento alrededor de ese hallazgo.
 
-Este reduccionismo biomédico ha sido analizado por Tim Cook, Jeremy Lewis y Jared Powell (2026) en un artículo de opinión en el *Journal of Manual & Manipulative Therapy*.
+Tim Cook, Jeremy Lewis y Jared Powell publicaron en 2026, en el *Journal of Manual & Manipulative Therapy*, un editorial que cuestiona esta costumbre. Su título lo resume con humor: una tradición clínica que "carece de músculo".
 
-### ¿Debilidad real o epifenómeno de inhibición?
-Los investigadores postulan observaciones clínicas clave:
-1. **La barrera protectora del tono nociceptivo:** Estudios controlados demuestran que al inyectar un anestésico local transitorio en el espacio subacromial de sujetos con RCRSP doloroso, la debilidad registrada de inmediato disminuye o desaparece, y el sujeto incrementa su fuerza registrada en el HHD. La fuerza estaba allí: era el dolor bloqueando el acceso a ella.
-2. **El sesgo de los tests mono-planares aislados:** La función real del hombro es un fenómeno dinámico en múltiples planos coordenados. Un test isométrico estático de abducción a 90° en camilla no predice la tolerancia del hombro para cargar objetos o realizar actividades cotidianas.
+### La idea central
 
-### Conclusión
-Medir la fuerza es una herramienta útil, pero no debe convertirse en una guía ciega. No atribuyas pequeños desequilibrios de fuerza a causas graves del dolor de hombro. 
-- Enfoca el programa terapéutico en restaurar la tolerancia al rango de movimiento con cargas cómodas progresivas.
-- Promueve la autoeficacia motriz y la ganancia de confianza para favorecer la recuperación.`,
+Los autores no dicen que medir la fuerza no sirva. Plantean que solemos interpretar esos números con más certeza de la que realmente tienen, y que eso puede llevarnos a conclusiones equivocadas.
+
+Estos son los puntos que me parecen más importantes.
+
+### 1. Debilidad no siempre significa músculo débil
+
+Cuando un hombro duele, la fuerza que la persona puede expresar cae. El dolor y la amenaza frenan la producción de fuerza. Por eso, un test que sale "débil" en un hombro doloroso puede reflejar dolor o protección, no necesariamente un músculo que perdió capacidad.
+
+Una forma de verlo en la práctica es cuando la fuerza mejora rápido, en la misma sesión o en pocos días, apenas baja el dolor. Esos cambios son demasiado rápidos para explicarse por cambios en el músculo.
+
+### 2. Los tests no identifican un músculo aislado
+
+Las pruebas clásicas se presentan como si evaluaran un músculo específico: el supraespinoso, el infraespinoso, el subescapular. Pero en cualquier movimiento del hombro participan varios músculos a la vez. Un test "de supraespinoso" también involucra al deltoides, al resto del manguito y a los estabilizadores de la escápula.
+
+Por eso es difícil saber qué músculo está fallando a partir de un test manual o con dinamómetro.
+
+### 3. Un test estático dice poco de la función real
+
+Medir una contracción isométrica en camilla o de pie, en una sola posición, entrega un dato útil, pero limitado. La vida diaria pide otra cosa: levantar una bolsa, alcanzar un estante, lanzar, empujar, repetir un gesto muchas veces. Un buen número en el dinamómetro no garantiza tolerancia en esas tareas, y un mal número no siempre significa incapacidad.
+
+### 4. La fuerza no explica por qué mejoran los pacientes
+
+Esto se conecta con otros trabajos de Powell y Lewis. Los análisis de mediación en dolor de hombro y en otras condiciones muestran que la ganancia de fuerza explica poco de la mejoría que produce el ejercicio. Si alguien mejora sin ganar fuerza, eso no significa que el tratamiento haya fallado.
+
+### Entonces, ¿dejo de medir la fuerza?
+
+No. Medir la fuerza puede ser útil para:
+
+- **Comparar en el tiempo** a la misma persona, siempre con el mismo método.
+- **Orientar la carga** del ejercicio.
+- **Preparar el regreso** a actividades exigentes, como el deporte o un trabajo físico.
+- **Detectar señales de alerta**, como una debilidad marcada después de un trauma, que puede sugerir una rotura importante y necesitar otra evaluación.
+
+Lo que conviene evitar es usar un test aislado para concluir qué músculo "está malo" y construir todo el tratamiento y la explicación alrededor de eso.
+
+### Cómo lo aplico
+
+**Interpreto la fuerza junto al dolor.** Si un test duele, anoto que la fuerza puede estar limitada por el dolor.
+
+**Uso tareas que importan a la persona.** Además de la fuerza en camilla, observo cómo hace las actividades que le cuestan: subir el brazo para peinarse, levantar algo sobre la cabeza, dormir sobre ese lado.
+
+**Cuido lo que digo.** Decirle a alguien "tu manguito está débil" puede hacerle sentir que su hombro es frágil. Prefiero algo como: "tu hombro está sensible y por eso le cuesta hacer fuerza; con ejercicio progresivo va a ir tolerando más".
+
+**Elijo ejercicios por lo que la persona necesita.** Un programa de carga progresiva y bien dosificado ayuda en el dolor de hombro relacionado con el manguito rotador. No necesita estar dirigido a un músculo en particular para funcionar.
+
+### Para cerrar
+
+Medir la fuerza es útil, pero un número no cuenta toda la historia de un hombro con dolor. Interpretarlo con humildad nos ayuda a evaluar mejor, a explicar mejor y a no convertir una debilidad pasajera en un diagnóstico que acompañe a la persona más tiempo del necesario.`,
     references: [
       {
         author: 'Cook T, Lewis J, Powell J.',
@@ -2537,6 +3271,8 @@ Esta es la parte más honesta del artículo: **no sabemos si la columna presenta
 Los autores sí reconocen que, en una columna lesionada, la laxitud articular, la inhibición neural y la menor fuerza y resistencia muscular podrían crear condiciones para inestabilidad si todos esos factores coinciden. Y aun cuando no la causen, aumentan las demandas para mantener la estabilidad, lo que podría contribuir al dolor por fatiga o por más carga sobre los tejidos.
 
 En resumen: la inestabilidad es un concepto relevante para investigar, pero rara vez es un diagnóstico que podamos hacer con seguridad en la consulta. Y las pruebas clínicas que se usan para "detectarla" tienen limitaciones importantes.
+
+[[figura:inestabilidad-mensaje]]
 
 ### Cuando la protección se vuelve el problema
 
@@ -2595,19 +3331,74 @@ Los autores no dicen que la inestabilidad sea un mito absoluto. Dicen algo más 
     readingTime: 6,
     summary: 'Cómo se carga el injerto de LCA en cada ejercicio, según la revisión biomecánica de Escamilla et al. (2012).',
     pullQuote: 'Los ejercicios en cadena cinética abierta como la extensión de rodilla sentado cargan significativamente más el LCA entre los 10° y 50° de flexión que los ejercicios de cadena cerrada como las sentadillas o prensa.',
-    content: `La reconstrucción quirúrgica del ligamento cruzado anterior (LCA) somete al injerto a un proceso de adaptación biológica llamado "ligamentización". Durante las primeras semanas postquirúrgicas, el injerto y sus puntos de anclaje óseo están en fase de maduración. Por ello, la rehabilitación debe equilibrar la necesidad de fortalecer el cuádriceps de forma activa y evitar atrofias por desuso con el resguardo del injerto ante cargas mecánicas cizallantes excesivas.
+    content: `Después de una reconstrucción del ligamento cruzado anterior (LCA), una de las preguntas que más se repiten en la rehabilitación es: ¿este ejercicio es seguro para el injerto? Queremos cargar lo suficiente para recuperar fuerza y función, pero sin estirar en exceso un injerto que todavía se está integrando.
 
-Una guía clínica que detalla esta interacción biomecánica fue publicada por Rafael F. Escamilla y col. (2012) en el *Journal of Orthopaedic & Sports Physical Therapy (JOSPT)*.
+Rafael Escamilla, Toran MacLeod, Kevin Wilk, Lonnie Paulos y James Andrews publicaron en el *Journal of Orthopaedic & Sports Physical Therapy* (2012) una revisión que sigue siendo muy útil para responder esa pregunta. Reunieron los estudios que midieron cuánto se carga el LCA durante distintos ejercicios.
 
-### Fuerzas de cizallamiento: Abiertos vs Cerrados (NWB vs WB)
-La investigación demuestra que:
-- **Ejercicios con carga de peso (Weight-Bearing / Cadena Cerrada):** Sentadillas (squats), prensa de pierna (leg press) y estocadas (lunges) producen fuerzas de cizallamiento anterior **cercanas a cero**. Esto se debe a la coactivación automática de la musculatura isquiotibial, la cual tracciona la tibia hacia atrás, neutralizando la fuerza anterior del cuádriceps.
-- **Ejercicios sin soporte de peso (Non-Weight-Bearing / Cadena Abierta):** La extensión de rodilla sentado ejerce una tensión directa sobre el LCA, especialmente en el rango final del movimiento entre **10° y 50° de flexión** (alcanzando su punto máximo entre los 10° y 30°). Más allá de los 60° de flexión, la extensión de rodilla sentado no somete el ligamento a una carga apreciable.
+### Cómo se mide la carga sobre el LCA
 
-### Estrategias de modificación de técnica para protección del injerto
-Si necesitas disminuir la tensión en el LCA durante la rehabilitación temprana, puedes emplear estas dos estrategias biomecánicas eficaces:
-1. **Inclinación del tronco hacia adelante:** Al descender en una sentadilla o dar una estocada, inclinar el tronco 30° o 40° hacia adelante aumenta la actividad del grupo isquiotibial, reduciendo la carga sobre el injerto de LCA.
-2. **Posición de la almohadilla de resistencia:** Al realizar extensiones de rodilla en cadena abierta, colocar la almohadilla de la máquina en una zona más proximal de la tibia aminora el brazo de palanca y disminuye la tensión ligamentosa.`,
+Se ha estimado de tres formas:
+
+- **Fuerza de cizalla anterior** en la rodilla, calculada con técnicas de dinámica inversa. Es la fuerza que tiende a desplazar la tibia hacia adelante, y que el LCA principalmente frena.
+- **Tensión (strain) del LCA medida directamente**, con sensores colocados en el ligamento de personas vivas. Se expresa como el porcentaje de alargamiento respecto de su longitud original.
+- **Fuerza de tensión estimada** con modelos matemáticos y computacionales.
+
+Como referencia, una prueba de Lachman con 150 newtons de fuerza produce una tensión de alrededor del 3,5% en el LCA.
+
+### Los tres hallazgos principales
+
+**1. El ángulo de la rodilla es lo que más importa.**
+Tanto en ejercicios con carga de peso como sin ella, el LCA se carga más entre **10° y 50° de flexión**, con un máximo generalmente entre **10° y 30°**. Desde los 30° a los 60° la carga baja de forma progresiva, y **más allá de los 60° prácticamente no hay carga sobre el LCA**.
+
+**2. Los ejercicios sin carga de peso cargan más el LCA en ese rango.**
+La extensión de rodilla sentado entre 10° y 50° produce bastante más carga sobre el LCA que ejercicios con carga de peso en el mismo rango, como sentadillas, prensa, estocadas, subir escaleras, step-ups o bicicleta. En la extensión sentada, la tensión máxima del LCA va de 3,2% a 4,4%, entre 10° y 30° de flexión.
+
+**3. La técnica cambia la carga.**
+
+- **Sentadilla con las rodillas muy adelante de los pies y los talones levantados:** tiende a aumentar la carga sobre el LCA.
+- **Sentadilla y estocada con el tronco inclinado hacia adelante:** tienden a disminuirla, probablemente porque aumenta la activación de los isquiotibiales, que ayudan a frenar el desplazamiento de la tibia.
+- **Extensión de rodilla sentado:** la carga sobre el LCA baja cuando la resistencia se ubica más cerca de la rodilla, en vez de en el tobillo.
+
+[[figura:lca-angulo]]
+
+### Algunos ejercicios en detalle
+
+**Prensa de piernas.** No se registraron fuerzas de tensión sobre el LCA ni siquiera con la carga más pesada que permitía 12 repeticiones, y tampoco al cambiar la posición o el ancho de los pies. Los autores la consideran un ejercicio muy útil para reclutar músculos de rodilla y cadera con poca carga sobre el LCA. Sugieren empezar con poca carga entre 0° y 45°, y aumentar el rango hacia 90° y la carga a medida que disminuye la inflamación y mejora la fuerza.
+
+**Bicicleta, escaleras y estocadas.** Generan tensiones bajas a moderadas, en general menores que la extensión sentada en el mismo rango.
+
+**Ejercicios con carga de peso en general.** Además de cargar menos el LCA, tienen la ventaja de reclutar músculos importantes de la cadera, como los extensores y abductores.
+
+### Cuánto tarda en integrarse el injerto
+
+Los autores recuerdan estudios en animales que sugieren que la integración de injertos de tejido blando en el hueso toma alrededor de **8 a 12 semanas**. Antes de ese período, la unión entre el injerto y el hueso es el punto más débil.
+
+Pero también reconocen el mayor desafío: **no sabemos cuál es la cantidad óptima de tensión** para un injerto durante su integración y maduración. Algo de carga probablemente es necesaria para que el tejido se adapte; demasiada podría ser perjudicial.
+
+### Las limitaciones que conviene tener presentes
+
+Los propios autores piden interpretar los datos con cautela:
+
+- **Ningún estudio** incluyó personas recién operadas del LCA, ni personas con debilidad importante. Los datos corresponden a ligamentos sanos, en rodillas sin dolor, inflamación ni pérdida de movilidad.
+- Los estudios con sensores directos usaron pocas personas, generalmente no deportistas, con carga corporal o resistencias livianas.
+- Los modelos computacionales permiten probar más ejercicios, pero dependen de supuestos.
+
+### Qué cambió desde entonces
+
+La práctica actual ha avanzado. Hoy muchos programas incluyen la extensión de rodilla en cadena abierta desde etapas tempranas, en un rango limitado (por ejemplo, de 90° a 45°), y luego amplían el rango de forma progresiva. Algunos ensayos, como el de Fukuda y colaboradores (2013), no encontraron más laxitud del injerto al introducir este ejercicio antes. El cuádriceps suele quedar débil después de la cirugía, y este ejercicio es una de las mejores formas de fortalecerlo de manera aislada.
+
+La revisión de Escamilla no contradice esto. Más bien entrega el mapa para hacerlo con criterio: qué rangos cargan más, qué técnicas cargan menos y cómo progresar.
+
+### Cómo lo uso
+
+- **En las primeras semanas:** priorizo ejercicios con carga de peso y prensa en rangos cómodos. Si hago extensión sentada, empiezo en rangos de mayor flexión y con la resistencia más proximal.
+- **Ajusto la técnica:** una leve inclinación del tronco en sentadillas y estocadas reduce la carga sobre el LCA y aumenta el trabajo de cadera e isquiotibiales.
+- **Progreso por criterios:** inflamación, dolor, rango y fuerza, más que solo por semanas.
+- **Respeto la decisión del equipo quirúrgico:** el tipo de injerto, las lesiones asociadas (como meniscos) y el protocolo del cirujano también influyen.
+
+### Para cerrar
+
+Saber cuánto carga cada ejercicio sobre el LCA no es para tenerle miedo al movimiento, sino para dosificarlo mejor. Con esa información, podemos cargar el cuádriceps desde temprano, elegir la técnica adecuada y acompañar al injerto en su maduración sin frenar la recuperación.`,
     references: [
       {
         author: 'Escamilla RF, Macleod TD, Wilk KE, Paulos L, Andrews JR.',
@@ -2615,6 +3406,13 @@ Si necesitas disminuir la tensión en el LCA durante la rehabilitación temprana
         journal: 'Journal of Orthopaedic & Sports Physical Therapy',
         doi: '10.2519/jospt.2012.3768',
         title: 'Anterior Cruciate Ligament Strain and Tensile Forces for Weight-Bearing and Non-Weight-Hearing Exercises: A Guide to Exercise Selection'
+      },
+      {
+        author: 'Fukuda TY, Fingerhut D, Moreira VC, et al.',
+        year: '2013',
+        journal: 'American Journal of Sports Medicine',
+        doi: '10.1177/0363546513476482',
+        title: 'Open kinetic chain exercises in a restricted range of motion after anterior cruciate ligament reconstruction: a randomized controlled clinical trial'
       }
     ]
   },
@@ -2632,23 +3430,65 @@ Si necesitas disminuir la tensión en el LCA durante la rehabilitación temprana
     readingTime: 6,
     summary: 'El metanálisis de Murphy et al. (2023) muestra que la mejoría del dolor en la tendinopatía de Aquiles no se relaciona de forma clara con los cambios musculares.',
     pullQuote: 'No existe actualmente evidencia científica sólida que vincule de forma causal la mejoría en el dolor o la discapacidad de la tendinopatía con cambios estructurales o de fuerza neuromuscular en el Triceps Surae.',
-    content: `Durante décadas, la rehabilitación de la tendinopatía de Aquiles de porción media se ha centrado en el enfoque del "reacondicionamiento tisular". Prescribimos programas excéntricos o de resistencia lenta pesada (HSR) asumiendo dos metas: primero, que debemos modificar mecánicamente el tendón; y segundo, que el aumento de fuerza máxima del Triceps Surae actuará como protección.
+    content: `Cuando alguien tiene una tendinopatía de Aquiles, el plan suele ser claro: ejercicios de carga, como los excéntricos o la resistencia lenta y pesada. Y la explicación que damos también suele ser clara: "vamos a fortalecer el tendón y la pantorrilla, y cuando estén más fuertes, va a doler menos".
 
-Sin embargo, una revisión sistemática publicada por Myles C. Murphy y sus colegas (2023) en el *Journal of Science and Medicine in Sport* ha puesto en tela de juicio esta narrativa.
+Es una explicación razonable. El problema es que, cuando alguien fue a buscar la evidencia que la respalda, no la encontró.
 
-### Los hallazgos del metanálisis de Murphy (2023)
-Al sintetizar los datos de múltiples ensayos clínicos, los investigadores encontraron que:
-- La mayoría de los pacientes demostraron mejorías clínicas significativas e inmediatas en el dolor y la función a las pocas semanas de iniciar la carga.
-- Estas mejorías clínicas ocurrieron **mucho antes** de que se pudiera documentar cualquier adaptación estructural en el músculo o tendón.
-- No se halló ninguna correlación matemática entre el incremento en la fuerza de flexión plantar y el nivel de alivio del dolor.
+### Qué hizo el estudio
 
-### Explicación clínica
-Si el tendón no se restructura por completo ni la fuerza es la causa directa del alivio, ¿por qué mejoran nuestros pacientes? La kinesiología actual apunta a fenómenos neurobiológicos y cognitivos integrativos:
-1. **Analgesia inducida por ejercicio:** La carga mecánica isométrica pesada o isotónica progresiva modula el sistema modulador de dolor central y periférico, disminuyendo el tono nociceptivo espinal.
-2. **Plasticidad cortical e inhibición:** El dolor crónico altera la excitabilidad motor. El entrenamiento estimula la variabilidad neuromuscular y desensibiliza el cerebro frente al movimiento.
-3. **Factores biocomportamentales:** El aumento de la autoeficacia motriz, la disminución de la kinesiofobia y el trabajo activo sobre creencias que limitan aumentan el umbral de tolerancia adaptativa de la persona.
+Myles Murphy y su equipo publicaron en 2023, en el *Journal of Science and Medicine in Sport*, una revisión sistemática con un título bastante directo: *¿Podemos realmente decir que ponerse más fuerte hace que el tendón se sienta mejor?*
 
-Por lo tanto, la carga sigue siendo la primera línea de tratamiento, no porque actúe como una pieza mecánica que se parcha, sino mediante una reorganización neurológica y biocomportamental.`,
+Querían saber si las mejoras en dolor y discapacidad de personas con tendinopatía de Aquiles de porción media se relacionan con cambios en la estructura o la función del tríceps sural (gemelos y sóleo) durante la rehabilitación con ejercicio.
+
+Buscaron en seis bases de datos y en literatura gris, e incluyeron 17 estudios.
+
+### Lo que encontraron
+
+Los resultados son más llamativos por lo que **no** encontraron:
+
+- **Ningún estudio** había analizado directamente la relación entre los cambios en el músculo y los cambios en el dolor o la discapacidad.
+- Doce estudios midieron la estructura o función muscular antes y después.
+- Solo **tres** mostraron mejoras en la fuerza después del tratamiento.
+- **Ocho** no mostraron cambios en la estructura ni en la función del músculo.
+- Todos los estudios fueron de **baja calidad**.
+
+Su conclusión: no está claro si los protocolos actuales de ejercicio para la tendinopatía de Aquiles mejoran siquiera la estructura o la función muscular. Y, por lo tanto, tampoco podemos afirmar que esas mejoras expliquen el alivio del dolor.
+
+### Cómo leer esto sin exagerar
+
+Este estudio **no** dice que el ejercicio no sirva. El ejercicio de carga sigue siendo el tratamiento de primera línea en las guías de tendinopatía de Aquiles, y las personas suelen mejorar con él.
+
+Tampoco demuestra que la fuerza no tenga nada que ver. Lo que muestra es un vacío: hemos asumido un mecanismo sin haberlo comprobado.
+
+Hay algo más. Si muchos programas no lograron aumentar la fuerza, cabe preguntarse si la dosis era suficiente. Es posible que algunos protocolos no hayan cargado lo bastante como para generar cambios musculares, y eso también es útil para la práctica.
+
+### Otros estudios apuntan en la misma dirección
+
+En tendinopatía rotuliana, un análisis de mediación de Jie Deng y colaboradores (2025) encontró que el beneficio de un programa de carga progresiva **no se explicó** por cambios en la fuerza del cuádriceps, el rango de tobillo, el salto, el grosor del tendón ni la neovascularización.
+
+Algo parecido se ha visto en dolor patelofemoral y en artrosis de rodilla: el ejercicio ayuda, pero la fuerza explica solo una pequeña parte del efecto.
+
+### Entonces, ¿por qué mejoran las personas?
+
+No lo sabemos con certeza, pero hay varias explicaciones posibles que pueden actuar juntas:
+
+- **Efectos del ejercicio sobre el dolor**, que no requieren cambios estructurales.
+- **Más tolerancia a la carga** del tendón y de la persona.
+- **Menos miedo** a usar la pierna y más confianza al caminar, correr o saltar.
+- **Mejor manejo de la carga diaria**, porque durante la rehabilitación también ajustamos cuánto y cómo entrena la persona.
+- El **curso natural** de la condición, que en muchos casos tiende a mejorar con el tiempo.
+
+### Qué cambia en la consulta
+
+**Cambia la explicación, no el tratamiento.** La carga progresiva sigue siendo la base. Pero en vez de prometer "cuando estés más fuerte no te va a doler", puedo decir algo más honesto: "el ejercicio de carga es lo que mejor funciona para el tendón; ayuda a que tolere más y a que duela menos, y a la vez vamos a ir ajustando tu entrenamiento".
+
+**Medir la fuerza sigue siendo útil.** Sirve para saber si la persona está preparada para volver a correr o saltar, y para verificar que la dosis realmente está generando un estímulo. Lo que no conviene es usarla como la única explicación del dolor.
+
+**Mirar más allá del tendón.** El miedo, la carga de entrenamiento, el sueño y las expectativas también influyen en cómo evoluciona una tendinopatía.
+
+### Para cerrar
+
+Que algo funcione no significa que sepamos por qué funciona. Este estudio nos invita a ser más humildes con nuestras explicaciones, sin dejar de lado algo que sí sabemos: cargar el tendón, de forma progresiva y sostenida, sigue siendo el mejor camino.`,
     references: [
       {
         author: 'Murphy MC, Travers M, Chivers P, Debenham J, Docking SI, Rio EK, Gibson W, Ardern C.',
@@ -2656,6 +3496,13 @@ Por lo tanto, la carga sigue siendo la primera línea de tratamiento, no porque 
         journal: 'Journal of Science and Medicine in Sport',
         doi: '10.1016/j.jsams.2023.03.007',
         title: 'Can we really say getting stronger makes your tendon feel better? No current evidence of a relationship between change in Achilles tendinopathy pain or disability and changes in Triceps Surae structure or function when completing rehabilitation: A systematic review'
+      },
+      {
+        author: 'Deng J, Runhaar J, Breda SJ, Oei EHG, Eygendaal D, de Vos RJ.',
+        year: '2025',
+        journal: 'Journal of Science and Medicine in Sport',
+        doi: '10.1016/j.jsams.2024.12.006',
+        title: 'Do physical or imaging changes explain the effectiveness of progressive tendon loading exercises? A causal mediation analysis of athletes with patellar tendinopathy'
       }
     ]
   },
@@ -2673,21 +3520,86 @@ Por lo tanto, la carga sigue siendo la primera línea de tratamiento, no porque 
     readingTime: 5,
     summary: 'Un análisis clínico de las fases biomecánicas de los pliométricos. Analizamos las guías de dosificación de volumen y progresión basándonos en Davies et al. (2015).',
     pullQuote: 'El componente clave del ejercicio pliométrico es la fase de amortización (tiempo de rebote). Si esta fase se prolonga, la energía elástica almacenada se disipa en forma de calor y el reflejo de estiramiento se inoficializa.',
-    content: `El ejercicio pliométrico ha dejado de considerarse una simple actividad de salto para convertirse en un componente integral de la fase tardía de rehabilitación. Como postulan Davies, Riemann y Manske (2015), los ejercicios pliométricos constituyen el "eslabón perdido" entre la fuerza básica y el retorno seguro al rendimiento deportivo competitivo.
+    content: `En las últimas etapas de una rehabilitación deportiva, la fuerza ya no basta. Un futbolista, una basquetbolista o un corredor necesitan producir fuerza **rápido**: saltar, frenar, cambiar de dirección, lanzar. Esa capacidad se llama potencia, y una de las mejores formas de entrenarla es la **pliometría**.
 
-### Las tres fases del Ciclo Estiramiento-Acortamiento (SSC)
-La biomecánica del movimiento pliométrico se fundamenta en tres fases secuenciales:
-1. **Fase excéntrica de pre-estiramiento:** Estires el huso muscular y almacena energía elástica en los componentes elásticos en serie (SEC) y en paralelo (PEC). Tres variables regulan su efectividad: magnitud, tasa y duración del estiramiento.
-2. **Fase de amortización (Tiempo de rebote):** El retraso electromecánico fundamental entre el final del pre-estiramiento excéntrico y el inicio de la contracción concéntrica. Mantener esta fase lo más corta posible es el secreto funcional; de lo contrario, la energía elástica se pierde como calor.
-3. **Fase concéntrica de acortamiento:** La fase de liberación y aceleración resultante del vector de fuerza.
+George Davies, Bryan Riemann y Robert Manske publicaron en el *International Journal of Sports Physical Therapy* (2015) una revisión clínica sobre la pliometría en rehabilitación: qué es, cómo funciona, cuándo empezar, cómo progresar y cuándo no usarla.
 
-### Directrices de dosificación clínica y progresión
-La progresión debe ser prudente, avanzando desde ejercicios de baja a alta intensidad. Davies et al. (2015) proponen organizar los movimientos según niveles de estrés:
-- **Beginner (Bajo):** Squat jumps, bilateral mini-jumps, skipping, lateral bounding.
-- **Intermediate (Medio):** Jump and reach, medial/lateral jumps, zigzag jumps, box jumps moderados.
-- **Advanced (Alto):** Depth jumps, single-leg hops, drop jumps repetitivos.
+### Qué es la pliometría
 
-En términos de volumen (contactos con el pie por sesión), se recomiendan de 80 a 100 contactos para principiantes, de 100 a 120 para intermedios y de 120 a 140 para atletas avanzados. La frecuencia ideal para permitir la reparación y el descanso del colágeno es de 48 a 72 horas entre cada sesión.`,
+Un ejercicio pliométrico usa el **ciclo de estiramiento-acortamiento**: un estiramiento rápido del músculo (fase excéntrica) seguido de inmediato por una contracción (fase concéntrica). Es lo que haces cuando bajas un poco antes de saltar, o cuando caes de un salto y rebotas.
+
+Los autores lo dividen en tres fases:
+
+1. **Preestiramiento excéntrico.** El músculo se alarga bajo carga. Se estimulan los husos musculares y los componentes elásticos del músculo y el tendón. La magnitud, la velocidad y la duración de ese estiramiento influyen en el resultado.
+2. **Amortiguación o tiempo de rebote.** Es el tiempo entre el final del estiramiento y el inicio de la contracción. Es la fase clave: **mientras más corta, más potente es el movimiento**, porque se aprovecha la energía elástica almacenada. Si se demora, esa energía se pierde como calor y no se aprovecha el reflejo de estiramiento.
+3. **Acortamiento concéntrico.** Es la fase de producción de potencia, que suma la contracción muscular y el retroceso elástico.
+
+### Antes de empezar: los prerrequisitos
+
+Este es probablemente el punto más importante del artículo. Para los autores, **la contraindicación más relevante es no tener una base de fuerza y entrenamiento suficiente**. Sin esa base, faltan la coordinación y el control para avanzar a ejercicios exigentes.
+
+Entre los criterios que mencionan (de distintos autores) para iniciar pliometría de extremidad inferior:
+
+- Rango de movimiento completo.
+- Base adecuada de fuerza, resistencia y control neuromuscular, para hacer los ejercicios sin síntomas.
+- Mantenerse 30 segundos en un pie, con ojos abiertos y cerrados.
+- Una media sentadilla a una pierna de buena calidad.
+- Algunos autores proponen umbrales de fuerza más exigentes, como hacer una sentadilla con 1,5 a 2,5 veces el peso corporal, o 5 sentadillas con el 60% del peso corporal en 5 segundos.
+
+Los autores reconocen que estos criterios no están bien establecidos y que el juicio clínico sigue siendo insustituible. En la práctica, los umbrales más altos son difíciles de cumplir para muchos pacientes, así que los uso más como orientación que como requisito absoluto.
+
+Otras contraindicaciones que mencionan: dolor, inflamación, esguinces o desgarros agudos o subagudos, inestabilidad articular y limitaciones de los tejidos después de una cirugía.
+
+### Cómo progresar
+
+La regla general es ir de **intensidad baja a media y luego alta**.
+
+**Intensidad baja**
+- Subir y bajar escalones hacia adelante, atrás y al lado, aumentando la altura de forma gradual.
+- Saltos con los dos pies en el lugar.
+- Desplazamientos laterales y carioca para ver cómo tolera la carga.
+
+**Intensidad media**
+- Saltos verticales y horizontales con los dos pies.
+- Saltos laterales.
+- Trote en el lugar y luego carrera.
+
+**Intensidad alta**
+- Saltos a una pierna.
+- Saltos en profundidad desde un cajón.
+- Ejercicios específicos del deporte.
+
+Saltar con los dos pies a un cajón es de baja intensidad; saltar desde un cajón a una pierna es de alta intensidad. Cambiar la altura, el apoyo, la dirección o la velocidad cambia mucho la exigencia.
+
+[[figura:pliometria-progresion]]
+
+### Cuánto y con qué frecuencia
+
+- **Volumen.** En la extremidad inferior se suele contar en contactos con el suelo. Unos **50 contactos** por sesión se consideran volumen bajo; **más de 200**, volumen alto. El aumento debe ser progresivo.
+- **Intensidad.** Para reclutar fibras rápidas, los ejercicios deben hacerse con alta intención. Importa más la **velocidad** del estiramiento que su amplitud.
+- **Calidad antes que cantidad.** Si la técnica se deteriora, probablemente hay fatiga y conviene terminar la parte pliométrica de la sesión.
+- **Recuperación.** No hay evidencia clara sobre el descanso óptimo, pero los autores recomiendan **48 a 72 horas** entre sesiones pliométricas intensas.
+- **Especificidad.** Los ejercicios deben parecerse cada vez más al deporte y la posición del atleta.
+
+### Extremidad superior
+
+La pliometría también se usa para el hombro, especialmente en deportes de lanzamiento. Los autores proponen ir desde ejercicios en cadena cerrada, como flexiones contra la pared, hacia flexiones pliométricas, y luego a ejercicios en cadena abierta, como lanzamientos de balón medicinal, primero con varias articulaciones y luego más aislados.
+
+### Cómo lo aplico
+
+**No empiezo por los saltos.** Primero me aseguro de que la persona tenga buena fuerza, control en un pie y tolere bien las tareas básicas sin dolor ni inflamación.
+
+**Uso la pliometría también para evaluar.** Cómo cae, si frena bien, si duda o se protege. Todo eso me da información sobre su preparación.
+
+**Cuido la técnica de aterrizaje.** Caer suave, con buena alineación y sin quedarse rígido.
+
+**Progreso según la respuesta.** Si al día siguiente hay más dolor o inflamación, ajusto el volumen o la intensidad.
+
+**La hago parte del regreso al deporte.** Sin trabajo de potencia, un atleta puede volver con buena fuerza en el gimnasio, pero sin la capacidad para tolerar los gestos rápidos de su deporte, que es justamente donde suelen ocurrir las lesiones.
+
+### Para cerrar
+
+La pliometría no es un ejercicio de moda, sino una forma de entrenar cómo los músculos y tendones almacenan y devuelven energía. Bien dosificada y bien progresada, es el puente entre recuperar la fuerza y volver a competir.`,
     references: [
       {
         author: 'Davies G, Riemann BL, Manske R.',
@@ -2823,43 +3735,69 @@ Si tienes un diagnóstico de artrosis en tu rodilla, no asumas que tu cuerpo se 
     readingTime: 6,
     summary: '¿Crees que entrenar la fuerza es solo ganar músculo? Descubre cómo tu sistema nervioso se reorganiza desde las primeras sesiones clínicas.',
     pullQuote: 'Las ganancias iniciales de fuerza obtenidas durante las primeras 3 a 5 semanas de entrenamiento clínico ocurren de forma virtual sin ningún aumento apreciable en el área transversal del músculo. Es el cerebro aprendiendo a sintonizar su propio motor.',
-    content: `En la práctica de la rehabilitación musculoesquelética actual, el entrenamiento de fuerza ha dejado de ser una herramienta exclusiva de la preparación deportiva para convertirse en una piedra angular metabólica y molecular. Sin embargo, la prescripción a menudo sigue anclada en un modelo puramente miocéntrico: hacemos ejercicio terapéutico con el fin exclusivo de "fortalecer el músculo débil" o "crear hipertrofia".
+    content: `Cuando alguien empieza a entrenar fuerza, suele ganar fuerza bastante rápido. En pocas semanas levanta más peso, aunque al mirarse al espejo no note músculos más grandes. ¿De dónde sale esa fuerza?
 
-La realidad es más interesante. Las respuestas plásticas iniciales al entrenamiento con carga no pertenecen principalmente a la esfera muscular, sino al territorio de la neurofisiología central. El músculo es simplemente el transductor de un comando que se genera en tu corteza motora.
+Una parte importante viene del **sistema nervioso**. Antes de que el músculo crezca de forma visible, el cerebro y la médula aprenden a usarlo mejor. Dos revisiones clásicas ayudan a entender este proceso: la de Timothy Carroll, Stephan Riek y Richard Carson (2001) en *Sports Medicine*, y la de Jacques Duchateau, John Semmler y Roger Enoka (2006) en el *Journal of Applied Physiology*.
 
-### La autopista neuronal del movimiento
+### Dónde puede adaptarse el sistema nervioso
 
-Cuando un sujeto comienza una intervención con cargas (incluso con intensidades moderadas adecuadas para el tejido en recuperación), ocurren cambios drásticos en varios niveles de la cadena neuronal:
+Carroll y colaboradores describen que muchos niveles del sistema nervioso tienen potencial de adaptarse al entrenamiento de fuerza:
 
-1. **Facilitación cortical:** Aumenta la excitabilidad de la vía corticoespinal. Tu cerebro aprende a reclutar unidades motoras de alto umbral con una menor demanda de esfuerzo autopercibido.
-2. **Coordinación e inhibición recíproca:** Disminuye la coactivación innecesaria de la musculatura antagonista, optimizando el vector de fuerza resultante en la articulación diana.
-3. **Mecanismos reflejos medulares:** Se modula la sensibilidad del reflejo miotático y disminuye la inhibición provocada por los órganos tendinosos de Golgi, permitiendo que el músculo exprima su capacidad contráctil innata sin frenos de seguridad biológicos sobreexpresados por desuso.
+- Los **centros supraespinales**, es decir, la corteza y otras áreas del cerebro que planifican y ordenan el movimiento.
+- Las **vías descendentes** que llevan esas órdenes hacia la médula.
+- Los **circuitos de la médula espinal**.
+- La **unión entre la motoneurona y la fibra muscular**.
 
-### ¿Por qué esto es vital para un paciente con dolor persistente?
+Pero agregan algo que muchas veces se omite: son pocos los estudios que han identificado experimentalmente **dónde** ocurren exactamente esas adaptaciones. Gran parte de la evidencia es indirecta. Sabemos que el sistema nervioso cambia, pero todavía no conocemos todo el mapa.
 
-El dolor altera la firma cortical del movimiento. Ante una molestia articular persistente, la corteza motora tiende a homogenizar e inhibir la variabilidad del movimiento, una estrategia de protección a corto plazo que cobra una alta factura neuromuscular a largo plazo. 
+También plantean una idea práctica: el entrenamiento de fuerza probablemente modifica la forma en que reclutamos los músculos en **tareas parecidas** a las entrenadas. Por eso la transferencia depende tanto de qué y cómo entrenamos.
 
-El entrenamiento de fuerza progresivo, especialmente aquel que desafía constructivamente el control del paciente (utilizando focos de atención externos y velocidades controladas), rompe este patrón protector defensivo. Al demandar un control consciente e interactuar con cargas mecánicas reales, el cerebro se ve obligado a mapear de nuevo esa región del cuerpo que antes percibía como frágil y amenazante.
+### Qué pasa con las unidades motoras
 
-### La dosis clínica recomendada
+Duchateau y colaboradores se enfocaron en las unidades motoras, que son una motoneurona y las fibras musculares que activa. El sistema nervioso regula la fuerza de dos maneras: reclutando más unidades y aumentando la frecuencia con que descargan.
 
-Debemos perder el miedo a utilizar intensidades eficaces en la clínica. Si nos limitamos de forma permanente a realizar series eternas con bandas elásticas ultralivianas de 30 repeticiones, nunca expondremos lo suficiente al sistema nervioso para que reclute unidades motoras de alto umbral ni estimularemos la remodelación estructural del tendón. 
+Sus conclusiones:
 
-El estímulo clínico debe ser progresivo, con una dosificación basada en el carácter del esfuerzo (RPE / RIR) y con la mirada siempre puesta en restaurar la autoconfianza motriz de nuestro paciente. Fuerza no es solo volumen muscular; es resiliencia conectiva y plasticidad cortical en acción.`,
+- La **activación voluntaria** del músculo puede aumentar levemente con el entrenamiento de fuerza, aunque no se sabe bien cómo cambian las descargas para lograrlo.
+- Ese aumento **no parece deberse a una mayor sincronización** entre unidades motoras, una explicación que se repetía mucho.
+- El entrenamiento sí puede aumentar la **velocidad de desarrollo de la fuerza** y la **frecuencia de descarga** de las unidades motoras. Esto es clave para gestos rápidos.
+- Tanto el entrenamiento de fuerza como practicar tareas de precisión cambian la forma en que descargan las unidades motoras, y eso influye en qué tan estable es la fuerza en contracciones submáximas. Es decir, también afecta actividades cotidianas que requieren control fino.
+
+### Por qué esto importa en rehabilitación
+
+**Explica las ganancias tempranas.** En las primeras semanas de un programa, buena parte de la mejoría probablemente es neural. Esto ayuda a ajustar expectativas: alguien puede sentirse más fuerte antes de que haya cambios visibles en el músculo.
+
+**La especificidad importa.** Si las adaptaciones son en parte un aprendizaje, el tipo de ejercicio, la posición, la velocidad y la intención con que se hace influyen en lo que se gana. No es lo mismo un ejercicio lento en máquina que un gesto rápido de pie.
+
+**La intención de moverse rápido cuenta.** Si queremos mejorar la velocidad de desarrollo de la fuerza, por ejemplo en un adulto mayor que necesita reaccionar para no caerse o en un deportista que vuelve a saltar, conviene incluir ejercicios hechos con intención de máxima velocidad.
+
+**La carga tiene que ser suficiente.** Para reclutar las unidades motoras de mayor umbral hace falta un esfuerzo alto, ya sea con cargas pesadas o con series llevadas cerca del fallo. Series eternas con bandas muy livianas, lejos del esfuerzo real, probablemente no alcanzan ese estímulo. Usar escalas como el esfuerzo percibido o las repeticiones en reserva ayuda a dosificar sin necesidad de pesos máximos.
+
+### Un matiz importante
+
+Es tentador decir que "la fuerza está en el cerebro" y quedarse ahí. Pero los propios autores son prudentes: muchas de estas adaptaciones son difíciles de medir, la evidencia directa es limitada y todavía no sabemos cuánto aporta cada nivel (corteza, médula, propiedades de la motoneurona) a los cambios observados.
+
+Además, con el tiempo la hipertrofia sí aporta a la fuerza. El cambio neural no reemplaza al muscular; ocurren juntos, con distinto peso según la etapa del entrenamiento.
+
+### Cómo lo explico a un paciente
+
+"Las primeras semanas, tu cuerpo aprende a usar mejor los músculos que ya tienes. Por eso vas a sentir que puedes más antes de notar cambios en el tamaño. Si seguimos progresando, el músculo también se va a adaptar. Lo importante es que el ejercicio sea lo suficientemente desafiante y que lo hagas con intención."
+
+Entrenar fuerza no es solo hacer crecer un músculo. Es enseñarle al sistema nervioso a usarlo mejor, y esa es una gran noticia para cualquiera que esté empezando, incluso con dolor.`,
     references: [
       {
-        author: 'Carroll TJ, Riek S, Carson RG',
+        author: 'Carroll TJ, Riek S, Carson RG.',
         year: '2001',
         journal: 'Sports Medicine',
-        doi: '10.2165/00007256-200131120-00002',
-        title: 'The sites of neuromuscular adaptation to resistance training in humans'
+        doi: '10.2165/00007256-200131120-00001',
+        title: 'Neural adaptations to resistance training: implications for movement control'
       },
       {
         author: 'Duchateau J, Semmler JG, Enoka RM.',
         year: '2006',
         journal: 'Journal of Applied Physiology',
-        doi: '10.1152/japplphysiol.00192.2005',
-        title: 'Training-induced modifications in the behavior of active motor units'
+        doi: '10.1152/japplphysiol.00543.2006',
+        title: 'Training adaptations in the behavior of human motor units'
       }
     ]
   },
@@ -2877,42 +3815,89 @@ El estímulo clínico debe ser progresivo, con una dosificación basada en el ca
     readingTime: 5,
     summary: '¿Es la falta de rotación ascendente o la diskinesia escapular la verdadera culpable del dolor de hombro? Los datos cuestionan la idea de que el hombro debe moverse de forma simétrica.',
     pullQuote: 'La obsesión con corregir la diskinesia escapular a menudo ignora que el 61% de los atletas de alto rendimiento asintomáticos presentan diskinesia visible. La asimetría podría no ser un defecto, sino una adaptación adaptativa funcional.',
-    content: `Durante más de dos décadas, evaluar el hombro significaba examinar de reojo la escápula del paciente mientras descendía los brazos, buscando cualquier pequeña alteración en su ritmo dinámico. Diagnosticábamos de inmediato una **diskinesia escapular** y diseñábamos planes con bandas elásticas pensados exclusivamente para activar el serrato anterior o el trapecio inferior. La premisa era lógica: una escápula asimétrica altera la rotación ascendente, pinza el espacio subacromial y genera dolor. 
+    content: `Durante años, evaluar un hombro con dolor incluía casi siempre lo mismo: pedirle a la persona que subiera y bajara los brazos, mirar su escápula y buscar alguna asimetría. Si una escápula se despegaba un poco o rotaba distinto, aparecía el diagnóstico de **diskinesia escapular**, y con él, un programa centrado en "corregirla".
 
-Sin embargo, cuando contrastamos esta hipótesis intuitiva con los datos cinemáticos tridimensionales reales, la teoría empieza a tambalearse. Las asimetrías de movimiento no solo resultan extremadamente comunes en poblaciones asintomáticas, sino que a menudo constituyen una respuesta adaptativa exitosa al gesto técnico repetitivo de cada disciplina.
+La idea tenía lógica: si la escápula no rota bien hacia arriba, el espacio bajo el acromion se reduce y el hombro duele. Pero cuando miramos la evidencia completa, la historia es más matizada. La diskinesia no es irrelevante, pero tampoco es la explicación de todo.
 
-### ¿Qué nos dicen los estudios de cohortes?
+### Qué dice el consenso
 
-Las investigaciones acumuladas en la última década sugieren un panorama mucho más flexible. Un estudio de Plummer et al. (2017) evaluó la cinemática escapular tridimensional en nadadores y beisbolistas competitivos. Encontraron que la diskinesia escapular observable no se asocia de forma causal con el inicio de síntomas de dolor de hombro a mediano plazo.
+En 2013, un grupo internacional de expertos liderado por W. Ben Kibler publicó en el *British Journal of Sports Medicine* el consenso de la "Scapular Summit". Sus conclusiones principales fueron:
 
-Además, los estudios de intervención muestran un fenómeno curioso: los programas dirigidos a "corregir" la posición escapular mediante ejercicios específicos son sumamente efectivos para aliviar el dolor, pero **no cambian la cinemática de la escápula**. En otras palabras, los pacientes mejoran de forma sustancial y recuperan su función, pero su escápula sigue moviéndose de forma asimétrica. 
+- La diskinesia escapular aparece en un **alto porcentaje** de las lesiones de hombro.
+- **No está claro** su rol exacto en causar o agravar el problema.
+- Los síntomas de pinzamiento parecen especialmente relacionados con ella.
+- Conviene verla como un **posible impedimento** de la función del hombro, no como un diagnóstico.
+- Existe un método de observación clínica confiable para evaluarla.
+- Los programas que trabajan la posición y el movimiento escapular pueden ser efectivos **dentro de una rehabilitación más completa** del hombro.
 
-### Honestidad científica: ¿Por qué mejoran?
+Fíjate en el tono: "posible", "no está claro", "dentro de". Es un consenso prudente.
 
-La respuesta no está en la simetría cinemática milimétrica. Los pacientes que realizan rutinas de fortalecimiento mejoran principalmente debido a adaptaciones neurofisiológicas no estructurales:
-1. Incremento de la tolerancia a la carga metabólica y mecánica del manguito rotador.
-2. Modulación de las aferencias propioceptivas cerebrales.
-3. Desensibilización periférica y adaptaciones en la rigidez contráctil del tejido fascial y miotendinoso.
+### ¿Aumenta el riesgo de dolor?
 
-Por lo tanto, la "diskinesia escapular" puede considerarse en la gran mayoría de las personas como una variante morfológica y motora benigna. Pretender homogeneizar el movimiento de todos los hombros bajo un estándar estático e idealizado ignora la naturaleza plástica y diversa de la biomecánica humana.
+Aquí hay un dato que vale la pena conocer. Darren Hickey y su equipo (2018) hicieron un metaanálisis de estudios prospectivos en atletas **sin dolor**, a quienes evaluaron la escápula y luego siguieron en el tiempo.
 
-### Herramienta pragmática para la clínica
+- 5 estudios, 419 atletas.
+- De los que tenían diskinesia, el **35%** tuvo dolor de hombro durante el seguimiento.
+- De los que no la tenían, el **25%**.
+- Eso equivale a un riesgo **43% mayor** en un período de 9 a 24 meses.
 
-En lugar de infundir miedo al paciente explicando que su escápula "funciona mal" o "está desalineada" (lo cual actúa como un potente nocebo cognitivo), concéntrate en construir un hombro fuerte, robusto y confiado. Entrena el hombro en todo su rango dinámico útil, dosifica la carga basándote en la tolerancia de los tejidos y deja que el sistema neuromuscular halle su propio camino metabólico eficiente, simétrico o no.`,
+Este hallazgo importa porque desarma una idea que a veces se repite: que la diskinesia es "solo una variante normal" sin ninguna relación con el dolor. Sí hay una asociación. Pero también hay que leerla en perspectiva: tres de cada cuatro atletas con diskinesia **no** tuvieron dolor, y uno de cada cuatro sin diskinesia **sí** lo tuvo. Es un factor de riesgo, no una sentencia.
+
+[[figura:diskinesia-riesgo]]
+
+### ¿El ejercicio funciona porque corrige la escápula?
+
+Esta es la otra pregunta importante. Gisele Hotta y colaboradores (2022) analizaron un ensayo con 60 personas con dolor subacromial que hicieron ejercicios de estabilización escapular o de fortalecimiento periescapular durante 8 semanas. Querían saber si la mejoría se explicaba por cambios en el movimiento, la posición o la fuerza de la escápula.
+
+La respuesta fue que **no**. Ninguno de esos factores explicó el efecto del tratamiento sobre el dolor o la discapacidad. Eso sí, una mayor fuerza del serrato anterior y del trapecio se asoció con menos discapacidad.
+
+En otras palabras, las personas mejoran con el ejercicio, pero no necesariamente porque su escápula empiece a moverse "mejor".
+
+### Entonces, ¿por qué mejoran?
+
+Probablemente por varias razones a la vez:
+
+- El hombro recupera **tolerancia a la carga**.
+- El ejercicio tiene **efectos sobre el dolor** que no dependen de la mecánica.
+- La persona gana **confianza** para usar el brazo.
+- Cambia lo que espera de su hombro.
+
+Esto se parece a lo que muestran otros estudios en tendinopatías y dolor de rodilla: el ejercicio funciona, pero sus mecanismos son más amplios que "corregir" una estructura.
+
+### Cómo lo uso en la consulta
+
+**Observo la escápula, pero no la convierto en el diagnóstico.** Es una pieza más de información, sobre todo útil si al modificarla cambian los síntomas.
+
+**Pruebo si su corrección cambia el dolor.** Pruebas como la de asistencia escapular o la de retracción escapular ayudan a ver si ajustar la escápula alivia el gesto doloroso. Si cambia, es una pista para el tratamiento. Si no cambia, probablemente no sea la prioridad.
+
+**Cuido el lenguaje.** Decirle a alguien que su escápula "está mal" o "desalineada" puede hacer que se sienta frágil. Prefiero algo como: "tu escápula se mueve un poco distinto, y eso es frecuente; vamos a trabajar para que el hombro tolere más".
+
+**Entreno el hombro completo.** Fuerza del manguito y de los músculos escapulares, en distintos rangos y posiciones, con progresión. En atletas, especialmente lanzadores, el trabajo escapular puede ser parte de la prevención, junto con el control de la carga de entrenamiento.
+
+### Para cerrar
+
+La diskinesia escapular no es un mito, pero tampoco es la llave que abre todos los hombros dolorosos. Se asocia a más riesgo de dolor en atletas, aparece en muchas lesiones y puede ser un objetivo útil del tratamiento. Pero el hombro mejora por muchas vías, y obsesionarse con la simetría puede hacernos perder de vista a la persona que tiene adelante.`,
     references: [
       {
-        author: 'Kibler WB, Ludewig PM, McClure PW, Michener LA, Bak K, Cools AM.',
+        author: 'Kibler WB, Ludewig PM, McClure PW, Michener LA, Bak K, Sciascia AD.',
         year: '2013',
         journal: 'British Journal of Sports Medicine',
         doi: '10.1136/bjsports-2013-092425',
-        title: 'Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement'
+        title: 'Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement from the Scapular Summit'
       },
       {
-        author: 'Plummer HA, Michener LA, et al.',
-        year: '2017',
-        journal: 'Journal of Shoulder and Elbow Surgery',
-        doi: '10.1016/j.jse.2016.11.004',
-        title: 'Scapular dyskinesis in throwing athletes: association with shoulder injury over a competitive season'
+        author: 'Hickey D, Solvig V, Cavalheri V, Harrold M, Mckenna L.',
+        year: '2018',
+        journal: 'British Journal of Sports Medicine',
+        doi: '10.1136/bjsports-2017-097559',
+        title: 'Scapular dyskinesis increases the risk of future shoulder pain by 43% in asymptomatic athletes: a systematic review and meta-analysis'
+      },
+      {
+        author: 'Hotta GH, Alaiti RK, Ribeiro DC, McQuade KJ, de Oliveira AS.',
+        year: '2022',
+        journal: 'Archives of Physiotherapy',
+        doi: '10.1186/s40945-022-00138-1',
+        title: 'Causal mechanisms of a scapular stabilization intervention for patients with subacromial pain syndrome: a secondary analysis of a randomized controlled trial'
       }
     ]
   },
@@ -2952,6 +3937,8 @@ La pregunta era simple: si alguien sin dolor se hace una resonancia, ¿qué va a
 Hay que leer esta tabla con calma. A los 20 años, más de un tercio de las personas sin dolor ya tiene algún grado de degeneración discal. A los 50, son ocho de cada diez. A los 80, prácticamente todos.
 
 Los autores lo resumen así: muchos de estos hallazgos forman parte del envejecimiento normal y no se asocian necesariamente con dolor. Se parecen más a las canas o a las arrugas que a una lesión.
+
+[[figura:imagen-lumbar-edad]]
 
 ### Por qué esto importa en la consulta
 
