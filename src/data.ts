@@ -1504,20 +1504,80 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 10,
     summary: '¿Cómo varían los patrones de movimiento en personas con dolor lumbar? Analizamos el modelo que identifica respuestas mecánicas de control rígido vs. control laxo.',
     pullQuote: 'Reconocer las diferencias individuales en el control motor ayuda a personalizar la selección de ejercicios en personas con dolor lumbar.',
-    content: `La respuesta neuromuscular al dolor lumbar muestra variabilidad entre individuos. Este artículo de revisión en JOSPT describe dos patrones principales de adaptación biomecánica:
+    content: `Si observas a varias personas con dolor lumbar moverse, vas a notar algo curioso. Algunas se mueven como un bloque: tronco rígido, músculos tensos, todo muy controlado. Otras parecen moverse con menos control, con más oscilación y respuestas más lentas. Ambas tienen dolor lumbar. ¿Tiene sentido darles el mismo ejercicio?
 
-### 1. Fenotipo de "Control Rígido" (Tight Control)
-- **Características:** Co-contracción muscular elevada, rigidez articular incrementada y menor variabilidad de movimiento.
-- **Abordaje:** Estrategias orientadas a reducir la tensión muscular excesiva, restaurar la movilidad fluida y promover la confianza en el movimiento.
+Esa es la pregunta de fondo del artículo de Jaap van Dieën, Peter Reeves, Greg Kawchuk, Linda van Dillen y Paul Hodges publicado en *JOSPT* (2019). Es un comentario clínico que revisa décadas de estudios sobre control motor del tronco y propone una forma de ordenar resultados que, a primera vista, parecían contradecirse.
 
-### 2. Fenotipo de "Control Laxo" (Loose Control)
-- **Características:** Menor activación de la musculatura profunda y respuestas estabilizadoras atenuadas.
-- **Abordaje:** Ejercicios de control motor específico, fortalecimiento progresivo y mejora de la propiocepción lumbopélvica.
+### El problema que intentan resolver
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- La evaluación individualizada permite diferenciar las necesidades de movilidad o de control muscular.
-- Adaptar el tratamiento al fenotipo funcional optimiza los resultados terapéuticos.`,
+Durante años, los estudios sobre control motor en dolor lumbar mostraron resultados opuestos. Algunos encontraban **más** actividad muscular en personas con dolor; otros encontraban **menos**. Algunos describían movimientos más rígidos; otros, más variables.
+
+La conclusión fácil habría sido "los estudios no se ponen de acuerdo". Los autores proponen otra lectura: quizá no hay un solo patrón, sino un espectro, y distintas personas se ubican en distintos puntos de ese espectro.
+
+### Cómo controlamos el tronco
+
+Para entender la propuesta conviene recordar algo básico. El tronco recibe perturbaciones todo el tiempo: el propio "ruido" del sistema nervioso, la respiración, el impacto de cada paso al caminar. El sistema nervioso las maneja de tres formas:
+
+- **Rigidez de base:** actividad muscular sostenida que vuelve el tronco más rígido.
+- **Control anticipatorio:** activar músculos antes de una perturbación esperada, como al levantar un brazo.
+- **Control por retroalimentación:** corregir en base a la información de la propiocepción, la vista, el tacto y el sistema vestibular.
+
+El sistema tiene mucha flexibilidad para elegir qué músculos y articulaciones usar en cada tarea. Por eso no hay una única forma "correcta" de moverse.
+
+### Los dos extremos del espectro
+
+Los autores describen, de forma tentativa, dos fenotipos en los extremos:
+
+**Control rígido (tight control).** Mayor excitabilidad, más coactivación de los músculos del tronco y menos movimiento.
+
+- *Ventaja a corto plazo:* evita movimientos grandes y no controlados que podrían someter a los tejidos a mucha deformación.
+- *Costo posible:* más compresión sobre la columna por la contracción muscular sostenida, más fatiga y menos variabilidad.
+
+**Control laxo (loose control).** Menor excitabilidad, respuestas musculares atenuadas y más movimiento del tronco.
+
+- *Ventaja a corto plazo:* evita fuerzas musculares altas y la compresión que generan.
+- *Costo posible:* más tensión sobre los tejidos por movimientos excesivos o mal controlados.
+
+En ambos casos hay una carga anormal sobre los tejidos de la espalda, pero por mecanismos distintos. Y en ambos queda abierta la pregunta de si la ventaja de corto plazo compensa el costo de largo plazo. Probablemente depende de la persona, de las tareas que hace y del estado de sus tejidos.
+
+### Por qué aparece cada patrón
+
+Los autores plantean dos posibles orígenes, que pueden coexistir:
+
+1. **Adaptación protectora:** el sistema nervioso cambia la estrategia para proteger la zona.
+2. **Interferencia directa:** el dolor y los cambios asociados alteran el control motor sin que eso sea "útil".
+
+Hay un detalle clave. Factores no específicos como el **miedo** pueden producir cambios en el control motor muy parecidos a los que produce el dolor. Y si el miedo no está justificado, esa adaptación no protege nada: solo agrega carga y rigidez sin beneficio. Esto conecta el control motor con las creencias del paciente, y es un puente directo entre la biomecánica y la educación.
+
+### Qué cambia en la evaluación y el tratamiento
+
+Si existen estos fenotipos, los objetivos del ejercicio podrían ser **distintos e incluso opuestos** según la persona.
+
+**Para alguien con control rígido**, tendría sentido:
+
+- Reducir la coactivación innecesaria y la protección excesiva.
+- Recuperar movimiento y variabilidad.
+- Trabajar la confianza en moverse (relajar, exponer gradualmente a movimientos evitados).
+
+**Para alguien con control laxo**, tendría sentido:
+
+- Mejorar el control y la respuesta muscular del tronco.
+- Progresar en fuerza y resistencia.
+- Entrenar tareas que exijan coordinación ante perturbaciones.
+
+Imagina dos pacientes con dolor al agacharse. Uno se agacha sin flectar nada la columna, con la respiración contenida y todo apretado. El otro flecta de golpe, sin control, y le cuesta volver. Un programa genérico de "estabilización del core" podría ayudar al segundo, pero empeorar la rigidez del primero.
+
+### Las precauciones de los propios autores
+
+Esto es importante y los autores lo dicen claramente: su interpretación **requiere validación** y no puede traducirse directamente en guías clínicas. Es un marco para la investigación y el razonamiento clínico, no una receta.
+
+Además, los fenotipos son extremos de un espectro. La mayoría de las personas estará en algún punto intermedio, y una misma persona puede comportarse distinto según la tarea. Todavía no sabemos si elegir el ejercicio según el fenotipo da mejores resultados que un buen programa general.
+
+### Cómo lo uso en la práctica
+
+No etiqueto a nadie como "rígido" o "laxo" en la primera sesión. Lo que sí hago es mirar cómo se mueve la persona en tareas que le importan: agacharse, levantar algo, girar, sentarse y pararse. Me pregunto si su estrategia parece protegerla o si le está costando más de lo que le da. Y converso sobre lo que teme, porque muchas veces el patrón rígido se explica mejor por el miedo que por la columna.
+
+El mensaje que me llevo es simple: no todas las personas con dolor lumbar necesitan lo mismo. A veces el trabajo es dar más control; otras veces, soltar.`,
     references: [
       {
         author: 'van Dieën JH, Reeves NP, Kawchuk G, van Dillen LR, Hodges PW.',
@@ -1542,22 +1602,80 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 11,
     summary: '¿Cómo se adaptan los músculos de la espalda durante el dolor lumbar? Hodges y Danneels revisan los cambios desde la inhibición refleja en fases iniciales hasta adaptaciones tisulares en fases persistentes.',
     pullQuote: 'En la fase inicial predomina la inhibición refleja del multífido profundo, mientras que en estadios prolongados ocurren cambios estructurales que requieren fortalecimiento progresivo.',
-    content: `La musculatura lumbar profunda participa en el control de la columna. El dolor lumbar inespecífico altera la activación y la respuesta de estos músculos.
+    content: `Es común escuchar que las personas con dolor lumbar tienen "el multífido atrofiado" o "infiltrado de grasa". Y es verdad que muchos estudios lo han encontrado. Pero si uno revisa la literatura con calma, aparece un problema: los resultados no son uniformes. Algunos estudios encuentran atrofia, otros no. Algunos ven menos activación, otros ven más.
 
-**Paul Hodges** y **Lieven Danneels** consolidan la evidencia sobre las adaptaciones musculares en función del tiempo de evolución del dolor.
+Paul Hodges y Lieven Danneels, en un comentario clínico publicado en *JOSPT* (2019), proponen una explicación que ordena gran parte de esa confusión: **los cambios en los músculos de la espalda dependen del tiempo**. Lo que pasa en la primera semana no es lo mismo que pasa a los seis meses, y tampoco se explica por el mismo mecanismo.
 
-### 1. Organización Anatómica
-- **Multífido Profundo:** Control segmentario y coordinación fina intervertebral.
-- **Multífido Superficial y Erectores Espinales:** Brazos de palanca largos orientados al movimiento del tronco y el control de cargas externas.
+### Por qué importan estos músculos
 
-### 2. Modelo Temporal de Adaptación
-- **Fase Inicial:** Inhibición neural refleja que reduce la activación del multífido profundo local. Se aborda mediante activación muscular suave y ejercicios de control motor.
-- **Fase Persistente:** Modificaciones en la composición tisular que se benefician de programas de fortalecimiento progresivo.
+La salud de la columna depende en parte de que sus músculos funcionen bien, y eso depende de su estructura y de cómo se activan. El multífido, en particular, tiene fibras profundas que cruzan pocos segmentos y fibras más superficiales que actúan más como extensoras. Las fibras profundas parecen tener un rol fino en el control de cada segmento.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- Evaluar el tiempo de evolución orienta la selección entre ejercicios de activación sutil o de carga progresiva.
-- El ejercicio adaptado contribuye a recuperar la función muscular lumbopélvica.`,
+Cuando hablamos de "cambios" en el multífido, nos referimos a tres cosas: tamaño (atrofia), calidad del tejido (grasa y tejido conectivo) y patrón de activación.
+
+### Un modelo en tres fases
+
+A partir de estudios en humanos y de modelos animales con lesión del disco intervertebral, los autores proponen esta secuencia:
+
+**1. Fase aguda: inhibición y regeneración (primeros días a semanas)**
+
+- Inhibición refleja del multífido.
+- Reducción rápida del área muscular, del lado y el nivel del dolor. Se observa en personas durante un episodio agudo unilateral y aparece a los pocos días en modelos animales.
+- Activación temprana de tejido adiposo.
+
+Esta reducción es tan rápida que no puede explicarse por desuso. Responde más bien a mecanismos reflejos y vasculares.
+
+**2. Fase subaguda y crónica temprana: inflamación (semanas a meses)**
+
+- Aumento de citoquinas proinflamatorias en el músculo.
+- Cambio de fibras lentas (tipo I) a fibras rápidas (tipo II).
+- Inicio de fibrosis e infiltración de grasa.
+
+**3. Fase crónica: desuso y desacondicionamiento (meses a años)**
+
+- Atrofia de las fibras musculares.
+- Más fibrosis y más grasa.
+
+En esta etapa los cambios se han explicado por desuso: cambios en la forma de moverse que "protegen" al multífido de la carga, evitación por dolor o miedo, y desacondicionamiento general.
+
+Un dato interesante: en personas en remisión, el área muscular parece recuperarse con el tiempo desde el último episodio, pero la grasa intramuscular era mayor y se relacionaba con la frecuencia de los episodios. Es decir, el tamaño puede volver, pero la calidad del tejido no siempre.
+
+### Los cambios en la activación
+
+En los episodios agudos, la activación de las fibras profundas del multífido tiende a disminuir. En personas con dolor recurrente o crónico, el patrón se vuelve más sistemático: el multífido profundo se activa menos y empieza a funcionar más como extensor que como regulador fino, mientras que los músculos más superficiales (como el erector espinal) suelen activarse **más**.
+
+Esto se relaciona con lo que otros autores describen como estrategias de protección: más tensión superficial, menos control fino.
+
+### Qué implica para la rehabilitación
+
+Si el mecanismo cambia con el tiempo, el tratamiento también debería cambiar. Los autores proponen:
+
+- **En la fase aguda:** entrenamiento de control motor para contrarrestar la inhibición y restaurar el patrón de activación.
+- **En la fase subaguda:** ejercicio que favorezca un efecto antiinflamatorio y la transición de fibras rápidas a lentas.
+- **En la fase crónica:** primero recuperar la activación si está alterada, y luego **entrenamiento de fuerza y resistencia** con sobrecarga progresiva para recuperar el tamaño muscular y reducir la grasa y el tejido conectivo.
+
+Este último punto es importante. Un estudio del grupo de Danneels mostró que el entrenamiento de control motor a baja carga **no fue suficiente** para recuperar el área del multífido. Se necesitó agregar sobrecarga progresiva para lograr hipertrofia y reducir dolor y discapacidad. Y como hay menos fibras tipo I, también hace falta trabajo de resistencia.
+
+### ¿Y el debate entre ejercicio específico y general?
+
+Los autores lo abordan con honestidad. Las revisiones sistemáticas muestran que el control motor funciona en el dolor lumbar crónico, pero **no mejor que el ejercicio general**. Ellos proponen algunas razones:
+
+- Los estudios suelen aplicar el control motor a grupos con dolor lumbar inespecífico, sin individualizar.
+- La variación entre personas es grande, y no todas tienen las mismas alteraciones musculares.
+- El control motor no es para todos. En personas cuyo dolor se mantiene sobre todo por sensibilización central, probablemente no sea la prioridad.
+
+Y agregan algo que me parece central: en algunas personas, los factores psicosociales serán el blanco principal del tratamiento, y pueden interactuar con los cambios musculares. El peso relativo de cada abordaje depende de la persona.
+
+### Cómo lo traduzco a la consulta
+
+Primero, el tiempo de evolución importa. No es lo mismo un dolor de cinco días que uno de un año, aunque la persona lo describa igual.
+
+Segundo, si alguien lleva meses con dolor, el ejercicio suave de activación probablemente no alcance. Hay que llegar a cargar: fuerza y resistencia de los extensores, con progresión real.
+
+Tercero, no hace falta una resonancia para tomar estas decisiones. La evaluación de cómo se mueve la persona, qué evita y cómo responde a la carga entrega mucha información.
+
+### Límites
+
+Gran parte del modelo se apoya en estudios animales y en estudios transversales en humanos, que no permiten establecer causa. Los propios autores piden estudios longitudinales para confirmar los mecanismos de la fase crónica. Es un modelo plausible y útil para razonar, no una certeza.`,
     references: [
       {
         author: 'Hodges PW, Danneels L.',
@@ -1582,22 +1700,86 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 12,
     summary: 'El dolor lumbar es la principal causa de discapacidad en el mundo. Esta revisión en JAMA analiza el manejo del dolor lumbar inespecífico y las pautas de tratamiento recomendadas.',
     pullQuote: 'Aproximadamente el 90% de los pacientes con dolor lumbar tienen dolor inespecífico. Los hallazgos en imágenes son comunes en personas sin dolor y reflejan cambios asociados a la edad.',
-    content: `El dolor lumbar afecta a una proporción importante de la población mundial. Esta revisión publicada en **JAMA** sintetiza la evidencia sobre el abordaje del dolor lumbar inespecífico en el entorno ambulatorio.
+    content: `El dolor lumbar es la principal causa de años vividos con discapacidad en el mundo. Afecta a unos 619 millones de personas. Casi todos lo vamos a tener alguna vez, y muchos lo vamos a tener más de una vez.
 
-### 1. Dolor Lumbar Inespecífico
-Alrededor del **90%** de las consultas por dolor lumbar corresponden a presentaciones inespecíficas, en las cuales no se identifica una causa patológica grave única. Su origen involucra factores biológicos, psicológicos y sociales.
+Aun así, sigue siendo un tema lleno de mitos: que hay que hacer reposo, que la resonancia dice qué tienes, que el disco "se salió", que hay que fortalecer el core para que no vuelva. La revisión de Aidan Cashin, Roger Chou, Melissa Weimer y James McAuley en *JAMA* (2026) ordena lo que hoy sabemos. Aquí va un panorama completo, pensado tanto para pacientes como para clínicos.
 
-### 2. Uso de Imágenes Diagnósticas
-Las guías recomiendan no realizar exámenes de imagen de rutina en ausencia de signos de alarma ("banderas rojas"), ya que los hallazgos degenerativos son frecuentes en personas asintomáticas.
+### Qué es y cómo se clasifica
 
-### 3. Opciones Terapéuticas
-- **Manejo Inicial:** Educación sobre la condición, estímulo a mantener la actividad habitual y evitar el reposo prolongado.
-- **Intervenciones Activas:** Prescripción de ejercicio adaptado a la persona y abordaje biopsicosocial cuando sea necesario.
+La revisión define el dolor lumbar como el dolor ubicado entre el borde inferior de las costillas y el pliegue de los glúteos, con o sin dolor en la pierna.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación.
-- La educación y el ejercicio activo constituyen las herramientas centrales del tratamiento.
-- El uso prudente de exámenes de imagen evita intervenciones innecesarias y favorece una recuperación confiada.`,
+Cerca del 90% de las personas que consultan tienen **dolor lumbar inespecífico**: no se asocia a una condición puntual como radiculopatía, estenosis, fractura, espondiloartritis axial, infección o cáncer. Según su duración:
+
+- **Agudo:** menos de 6 semanas.
+- **Subagudo:** entre 6 y 12 semanas.
+- **Crónico:** más de 12 semanas.
+
+La prevalencia es mayor en mujeres (9.330 por 100.000 frente a 5.520 por 100.000 en hombres) y aumenta con la edad.
+
+### Factores de riesgo
+
+La revisión menciona obesidad, síntomas depresivos, exposiciones laborales como levantar peso con frecuencia, tabaquismo, enfermedades crónicas como la diabetes y, el más potente, haber tenido dolor lumbar antes.
+
+Fíjate que en la lista aparecen factores biológicos, psicológicos y de estilo de vida. El dolor lumbar no depende de una sola estructura.
+
+### Cómo evoluciona
+
+Esta es probablemente la parte más importante para contarle a un paciente.
+
+- En el dolor **agudo**, cerca del **72% se recupera dentro de 12 meses**. En una revisión de 60 cohortes con casi 18.000 personas, el dolor promedio bajó de 56 a 26 puntos (sobre 100) en solo seis semanas.
+- En el **subagudo** también hay una mejoría importante: de 63 a 29 puntos en seis semanas.
+- En el **crónico** el pronóstico es menos favorable: el dolor promedio cambió poco en seis semanas (de 56 a 48), aunque igual un **42% se recupera en 12 meses**.
+
+Dicho de otra forma: el cuerpo suele resolver bien el dolor agudo. Nuestro trabajo es no estorbar ese proceso y detectar a quienes tienen más riesgo de que se haga persistente.
+
+### La evaluación
+
+La primera tarea es descartar lo poco frecuente pero importante. Las señales de alerta incluyen antecedente de cáncer, fiebre, trauma importante, déficit neurológico que progresa y cambios nuevos en vejiga o intestino. El síndrome de cauda equina es raro (alrededor del 0,1% en atención primaria), pero exige resonancia inmediata y derivación urgente.
+
+La revisión también recuerda que pocas banderas rojas sirven por sí solas; la combinación de varias es lo que debería aumentar la sospecha.
+
+Para estimar el riesgo de que el dolor se vuelva persistente existen herramientas como el **STarT Back Tool** (5 ítems que clasifican el riesgo psicosocial en bajo, medio o alto) y el **cuestionario Örebro**. No son perfectas, pero ayudan a decidir cuánta intervención necesita cada persona. Quien tiene bajo riesgo suele necesitar poco más que buena información; quien tiene alto riesgo se beneficia de un abordaje más intensivo.
+
+**Imágenes:** no se recomiendan de rutina. Los cambios degenerativos son casi igual de frecuentes en personas con y sin dolor (77,8% frente a 74,4% en un estudio de 3.369 adultos). Se reservan para déficit neurológico grave o progresivo, sospecha de condición seria o candidatos a cirugía.
+
+### El tratamiento
+
+**Para todos, sin importar la duración:**
+
+- Explicar que es poco probable una enfermedad seria.
+- Conversar sobre cuánto suele tardar la recuperación.
+- Mantenerse activo, seguir con las actividades y el trabajo, evitar el reposo prolongado.
+- Automanejo: calor local y dosificar la actividad (mantenerla o subirla de a poco).
+
+**Dolor agudo, primera línea:**
+
+- Calor local.
+- Manipulación espinal, masaje o acupuntura, con beneficios pequeños y de corto plazo.
+- Antiinflamatorios o relajantes musculares si hacen falta, por poco tiempo.
+
+Un dato que llama la atención: el ejercicio estructurado o supervisado **no se recomienda de rutina en el agudo**, porque su efecto ahí es limitado. En esa etapa, mantenerse activo en la vida diaria pesa más que un programa formal.
+
+**Dolor crónico, primera línea:**
+
+- **Ejercicio**, de cualquier tipo. Ninguna modalidad ha mostrado ser superior a otra, así que conviene elegir la que la persona disfrute, pueda costear y tenga a mano. La revisión sugiere una dosis acumulada de al menos 20 horas en 8 a 12 semanas.
+- **Terapias psicológicas** como la terapia cognitivo-conductual. Incluso una sola sesión de dos horas con educación en dolor, mindfulness y habilidades de manejo fue similar a un programa de ocho sesiones a los tres meses.
+- **Enfoques que integran ejercicio y psicología**, como la terapia cognitivo funcional (educación individual, exposición gradual al movimiento y cambios de estilo de vida), que redujo dolor y discapacidad hasta un año.
+- **Rehabilitación multidisciplinaria** para quienes tienen mucha discapacidad o no mejoran.
+- Manipulación y acupuntura como complementos.
+
+Los antiinflamatorios quedan en segunda línea. El paracetamol, los corticoides, los relajantes musculares y los antiepilépticos no se recomiendan en el crónico.
+
+### Qué me llevo como kinesiólogo
+
+Lo primero es la importancia de las palabras. Gran parte del tratamiento de primera línea es conversación: tranquilizar, explicar, ajustar expectativas. Eso no es "solo hablar"; es intervención.
+
+Lo segundo es que el ejercicio en el dolor crónico no necesita ser perfecto ni específico. Necesita ser suficiente y sostenido. La mejor rutina es la que la persona va a hacer.
+
+Lo tercero es que el dolor lumbar persistente casi nunca se explica solo por la columna. Sueño, ánimo, miedo, trabajo y creencias forman parte del cuadro, y el tratamiento funciona mejor cuando los toma en cuenta.
+
+### Límites
+
+Es una revisión narrativa que integra guías y metaanálisis. Muchos efectos de los tratamientos son pequeños, y las guías no coinciden en todos los puntos (por ejemplo, en el uso de opioides). Pero el mensaje central es sólido y consistente: buena información, mantenerse activo y ejercicio sostenido, con menos imágenes y menos fármacos.`,
     references: [
       {
         author: 'Cashin AG, Chou R, Weimer MB, McAuley JH.',
@@ -1927,24 +2109,69 @@ Todo lo mencionado acá está respaldado por los papers que se dejan a continuac
     readingTime: 7,
     summary: '¿Tu resonancia lumbar muestra "desgaste"? Una revisión en JAMA (2026) recuerda que alrededor del 90 % de los dolores lumbares son inespecíficos, y que lo que más ayuda es mantenerse activo y evitar exámenes de rutina.',
     pullQuote: 'El dolor lumbar inespecífico es una condición heterogénea y de excelente pronóstico en agudo si evitamos la trampa de la patologización, el reposo y la cascada inútil de fármacos e imágenes de rutina.',
-    content: `El dolor lumbar constituye una de las principales causas de consulta en salud. Aproximadamente el 90% de los casos se clasifican como dolor lumbar inespecífico, es decir, no asociado a una causa patoanatómica específica (como radiculopatía severa, fractura o infección).
+    content: `Cuando a alguien le duele la espalda, lo primero que suele pedir es un examen o un remedio. Es comprensible: queremos ver qué pasa y queremos que deje de doler. Pero en el dolor lumbar inespecífico, que es la gran mayoría de los casos, esas dos cosas ayudan bastante menos de lo que creemos.
 
-En una revisión publicada en *JAMA* (2026), **Aidan G. Cashin, Roger Chou, Melissa B. Weimer y James H. McAuley** sintetizan la evidencia disponible y las guías internacionales para delinear un enfoque de evaluación y manejo centrado en la persona.
+La revisión de Aidan Cashin, Roger Chou, Melissa Weimer y James McAuley publicada en *JAMA* (2026) reúne la evidencia y las guías de Estados Unidos (ACP), Reino Unido (NICE) y la Organización Mundial de la Salud. En este artículo me enfoco en dos temas donde más nos equivocamos: las imágenes y los fármacos.
 
-### Uso de imágenes de rutina
-La revisión aborda la prescripción rutinaria de radiografías o resonancias para el dolor lumbar inespecífico:
-- **Resultados clínicos:** Diversos ensayos clínicos muestran que los exámenes de imagen de rutina en ausencia de signos de alarma no modifican el pronóstico a mediano o largo plazo.
-- **Hallazgos incidentales:** Los exámenes de imagen frecuentemente identifican hallazgos normales asociados a la edad (como deshidratación discal o cambios degenerativos leves) que también se observan en personas asintomáticas.
-- **Indicaciones específicas:** Los estudios de imagen se reservan para situaciones en las que existen signos de sospecha de patología específica (banderas rojas) o déficit neurológico progresivo.
+### Primero, de qué hablamos
 
-### Opciones de manejo según la evidencia
-- **Fase Aguda (< 6 semanas):** Educación sobre el curso benigno de la condición, recomendación de mantener la actividad habitual dentro de la tolerancia y evitar el reposo en cama.
-- **Fase Crónica (> 12 semanas):** Educación, programas de automanejo y ejercicio activo adaptado a las preferencias de la persona.
+Alrededor del 90% de las personas que consultan por dolor lumbar tienen dolor **inespecífico**. Eso significa que no se asocia a una condición concreta como radiculopatía, estenosis, fractura, espondiloartritis axial, infección o cáncer. No es un diagnóstico de descarte vago: es la categoría más común y, en general, la de mejor pronóstico.
 
-### Conclusión
-Todo lo mencionado acá está respaldado por los papers que se dejan a continuación. Para el abordaje del dolor lumbar inespecífico:
-- Se promueve mantener la actividad física y evitar el reposo prolongado.
-- La educación activa y el ejercicio adaptado contribuyen a recuperar la confianza en el movimiento.`,
+Según su duración se clasifica en agudo (menos de 6 semanas), subagudo (6 a 12 semanas) y crónico (más de 12 semanas).
+
+### Imágenes: cuándo sí y cuándo no
+
+La revisión es clara: **no se recomiendan radiografías, tomografías ni resonancias de rutina** en el dolor lumbar inespecífico, sin importar cuánto tiempo lleve. No mejoran los resultados clínicos y suelen encontrar hallazgos incidentales que llevan a más exámenes e intervenciones innecesarias.
+
+Un dato del propio artículo lo ilustra bien. En un estudio poblacional de 3.369 adultos, los cambios degenerativos en la resonancia aparecieron en el 77,8% de las personas con dolor lumbar y en el 74,4% de las personas sin dolor. La diferencia es mínima. En personas sin dolor, la degeneración discal pasó del 38,1% entre los 41 y 49 años al 81,9% entre los 60 y 68.
+
+Cuando estos hallazgos se interpretan como la causa del dolor ("tienes una discopatía", "tienes un disco abombado"), la persona puede ponerse más ansiosa, recibir un diagnóstico que no corresponde y terminar en tratamientos que no le sirven.
+
+La imagen sí tiene lugar en estas situaciones:
+
+- **Déficit neurológico grave o progresivo:** pérdida de fuerza, anestesia en silla de montar, retención urinaria.
+- **Sospecha de condición seria:** antecedente de cáncer, fiebre, trauma importante, cambios nuevos en vejiga o intestino.
+- **Síndrome de cauda equina:** afecta a muy pocas personas en atención primaria (cerca del 0,1%), pero requiere resonancia inmediata y evaluación urgente.
+- **Radiculopatía o estenosis** en alguien que es candidato a cirugía o a un procedimiento.
+
+También deja claro cuándo no hace falta: si no hay criterios de alarma, si el dolor mejoró tras un mes de tratamiento o si ya existe una imagen previa y nada ha cambiado.
+
+### Fármacos: menos de lo que parece
+
+Aquí la revisión trae varias sorpresas para quienes crecieron con la idea de "paracetamol y reposo".
+
+**Paracetamol.** Ya no se considera de primera línea. En un ensayo con 1.652 adultos con dolor lumbar agudo, el tiempo de recuperación fue prácticamente igual con paracetamol en horario fijo, paracetamol según necesidad o placebo (alrededor de 17 días en todos los grupos). Tampoco se recomienda en el dolor crónico.
+
+**Antiinflamatorios (AINE).** Son el fármaco con mejor respaldo. Frente a placebo, en menos de dos semanas, reducen el dolor en unos 11 puntos sobre 100 y la discapacidad en unos 8 puntos. Es un efecto pequeño. Aumentan los efectos adversos gastrointestinales, y hay que usarlos con cuidado en personas mayores o con problemas renales, cardiovasculares o digestivos. En el dolor crónico quedan como opción de segunda línea.
+
+**Relajantes musculares.** Pueden ayudar algo en el dolor agudo, con más efectos adversos como mareo y somnolencia. En el crónico no se recomiendan.
+
+**Benzodiacepinas, corticoides y antiepilépticos** (como pregabalina o gabapentina). No se recomiendan para el dolor lumbar inespecífico crónico: no muestran beneficio y sí aumentan los efectos adversos.
+
+**Opioides.** Las guías no coinciden del todo, y la tendencia es restringirlos. NICE solo acepta opioides débiles en el dolor agudo si un AINE no se puede usar o no funcionó; la OMS y NICE no los recomiendan para el dolor crónico, y la ACP los reserva para casos graves que no responden a nada más.
+
+**Duloxetina.** Muestra una reducción pequeña del dolor en el dolor crónico, con más efectos adversos que el placebo.
+
+### Entonces, ¿qué sí ayuda?
+
+Lo primero, para cualquier duración, es lo que la revisión llama manejo inicial:
+
+- Tranquilizar: explicar que es poco probable una enfermedad seria.
+- Conversar sobre el tiempo esperado de recuperación.
+- Mantenerse activo, seguir con las actividades habituales (incluido el trabajo) y evitar el reposo prolongado.
+- Automanejo: calor local para aliviar y dosificar la actividad, manteniéndola o aumentándola de a poco.
+
+En el dolor agudo se suman calor, manipulación, masaje o acupuntura, con beneficios pequeños y de corto plazo. En el crónico, el centro es el **ejercicio** (cualquier tipo que la persona disfrute y pueda sostener), las terapias psicológicas como la terapia cognitivo-conductual y, para casos más complejos, la rehabilitación multidisciplinaria.
+
+### Lo que esto cambia en la práctica
+
+Para el paciente, el mensaje es tranquilizador: la mayoría mejora, una imagen rara vez cambia el plan y los remedios tienen un rol acotado. Lo que más pesa está en sus manos: moverse, retomar de a poco y entender lo que pasa.
+
+Para el clínico, el desafío es otro. Pedir una resonancia o recetar algo es rápido; explicar bien y acompañar toma más tiempo. Pero es lo que la evidencia respalda. Antes de cada examen o fármaco, vale la pena preguntarse: ¿esto va a cambiar lo que hago o solo va a calmar la incertidumbre de hoy?
+
+### Un límite a considerar
+
+Es una revisión narrativa basada en guías y metaanálisis, no un estudio nuevo. Muchos efectos son pequeños y las guías no siempre coinciden. Aun así, en lo esencial (no imágenes de rutina, menos fármacos, más educación y movimiento) el acuerdo es amplio.`,
     references: [
       {
         author: 'Cashin AG, Chou R, Weimer MB, McAuley JH.',
@@ -2285,19 +2512,65 @@ Medir la fuerza es una herramienta útil, pero no debe convertirse en una guía 
     readingTime: 6,
     summary: 'A partir de Reeves et al. (2019), revisamos por qué la idea de una "columna inestable" puede generar miedo y estrategias de movimiento que perpetúan el dolor.',
     pullQuote: 'Informar al paciente de que su columna está "inestable" o es "frágil" desencadena una respuesta biológica de bloqueo y coactivación protectora excesiva que acaba fatigando los músculos de la espalda e incrementando el dolor.',
-    content: `El dolor lumbar es frecuente en la consulta de kinesiología. A menudo se recurre a explicaciones que afectan la confianza del paciente: se les diagnostica con "pérdida de la estabilidad del core", "vértebras rotadas" o "inestabilidad de columna". 
+    content: `"Tienes la columna inestable." Pocas frases dejan tanta huella en un paciente. Desde ese momento, agacharse, levantar a un hijo o salir a trotar se vuelven riesgos. Muchas personas empiezan a caminar apretando el abdomen, evitan girar y dejan de hacer lo que les gustaba.
 
-En un artículo de opinión clínica publicado por N. Peter Reeves y un panel de investigadores (Hodges, van Dieën, Cholewicki, Kawchuk) en el *JOSPT* (2019), se analiza este paradigma bajo un enfoque de sistemas biológicos.
+Pero ¿qué sabemos realmente sobre la inestabilidad de la columna? Peter Reeves, Jacek Cholewicki, Jaap van Dieën, Greg Kawchuk y Paul Hodges abordaron esa pregunta en un comentario clínico en *JOSPT* (2019). La respuesta es más matizada, y más interesante, de lo que solemos transmitir.
 
-### El modelo estático vs El modelo de dinámica integrada
-Los autores explican que la estabilidad de columna es un concepto dinámico regulado e interdependiente:
-- **La ilusión de la fragilidad:** Una columna lumbar aislada de músculos colapsaría bajo solo 20 Newtons de carga estática. No obstante, en un organismo vivo, la columna lumbopélvica está inmersa en una red de control motor estructurada. 
-- **La trampa del sobre-bloqueo protector:** Cuando un paciente percibe de forma constante que su columna "está inestable" o "se va a desalinear", el sistema nervioso responde elevando la coactivación de la musculatura superficial (recto abdominal, erectores). Esta contracción defensiva constante supera los umbrales fisiológicos de fatiga metabólica (5% de contracción voluntaria máxima), impidiendo la variabilidad del movimiento, aumentando la presión intradiscal y generando por sí misma dolor muscular persistente de tipo isquémico.
+### Qué significa "estable"
 
-### Conclusión
-La columna humana es una estructura adaptativa y maleable. Nuestro lenguaje clínico debe estar libre de nocebos:
-- Evita ordenar bloqueos de transverso abdominal constantes al agacharse. El movimiento debe ser fluido y libre.
-- Reasegura al paciente explicando que el dolor no equivale a inestabilidad estructural. La estabilidad no requiere rigidez, sino un sistema nervioso capaz de adaptarse de forma dinámica a su entorno.`,
+Los autores parten de una definición general. Un sistema es estable si, al recibir una pequeña perturbación, vuelve a un comportamiento parecido al anterior. El ejemplo clásico es una bolita en el fondo de un valle: la empujas un poco y vuelve a su lugar. Si está en la cima de una colina, un empujón pequeño la hace caer.
+
+En términos de control, lo que estabiliza un sistema es la retroalimentación negativa (corregir en sentido contrario al error). La retroalimentación positiva (amplificar el error) lo desestabiliza.
+
+El concepto de estabilidad de columna ha evolucionado. Primero fue una idea estática: cuánta actividad muscular hace falta para que la columna no "colapse". Luego se volvió dinámica: importan también el momento en que se activan los músculos, los reflejos y la preparación anticipada ante una carga.
+
+### Lo que sí sabemos
+
+- **El sistema nervioso vigila de cerca la estabilidad.** Varios estudios muestran que la activación de los músculos del tronco se ajusta a las demandas de estabilidad de cada tarea.
+- **La columna sana está bien protegida.** El acoplamiento neural y mecánico entre segmentos hace muy difícil que un error de control produzca inestabilidad segmentaria.
+- **Los hallazgos degenerativos no explican por sí solos el dolor.** Los cambios en la imagen pueden alterar la rigidez de la columna, pero no hay una correspondencia uno a uno con el dolor. Lo que importa también es si el control muscular alcanza a compensar.
+
+### Lo que no sabemos
+
+Esta es la parte más honesta del artículo: **no sabemos si la columna presenta un comportamiento inestable que cause lesiones.** No podemos observar directamente el sistema nervioso ni todos los elementos que controlan la columna, así que la inestabilidad no se puede medir con facilidad en una persona.
+
+Los autores sí reconocen que, en una columna lesionada, la laxitud articular, la inhibición neural y la menor fuerza y resistencia muscular podrían crear condiciones para inestabilidad si todos esos factores coinciden. Y aun cuando no la causen, aumentan las demandas para mantener la estabilidad, lo que podría contribuir al dolor por fatiga o por más carga sobre los tejidos.
+
+En resumen: la inestabilidad es un concepto relevante para investigar, pero rara vez es un diagnóstico que podamos hacer con seguridad en la consulta. Y las pruebas clínicas que se usan para "detectarla" tienen limitaciones importantes.
+
+### Cuando la protección se vuelve el problema
+
+Los autores plantean una pregunta que me parece clave: ¿puede el miedo al dolor hacer que la persona abandone un control más fino y eficiente para usar una estrategia más básica, como apretar todo el tronco a la vez (coactivación), con el fin de protegerse de una inestabilidad que quizá no existe?
+
+Esto conecta con lo que describen van Dieën y colaboradores sobre el "control rígido". La coactivación sostenida aumenta la compresión sobre la columna, fatiga los músculos y reduce la variabilidad del movimiento. Si la amenaza no es real, la persona paga el costo sin recibir protección a cambio.
+
+Por eso la palabra "inestable" no es neutra. Puede empujar a alguien hacia una forma de moverse que sostiene el problema.
+
+### Una idea más amplia: el dolor como sistema
+
+En la parte más especulativa del artículo, los autores llevan el concepto de estabilidad más allá de la mecánica y lo aplican a las señales de dolor.
+
+Los nociceptores tienen una característica propia de los sistemas inestables: un ciclo de retroalimentación positiva. Cuando se activan, liberan sustancias químicas que sensibilizan a los nociceptores vecinos y aumentan la excitabilidad de las neuronas de la médula. Así, un mismo estímulo puede generar cada vez más señal.
+
+Desde esta mirada, el dolor persistente podría entenderse como un sistema que perdió su "estabilidad". También abre la puerta a pensar en dolor de origen **iatrogénico**, es decir, provocado o mantenido por la propia atención en salud: diagnósticos que asustan, explicaciones que aumentan la amenaza, tratamientos que refuerzan la idea de fragilidad.
+
+Los autores son claros en que esta parte es especulativa, pero ofrece un marco útil para integrar biomecánica, neurofisiología y lo que vive la persona.
+
+### Qué hacer con esto en la consulta
+
+**Cuidar las palabras.** En vez de "tu columna es inestable", algo como: "tu espalda está sensible y protegiéndose; vamos a ayudarla a recuperar confianza y capacidad". Es más preciso y no agrega miedo.
+
+**Evaluar el control sin asumir fragilidad.** Observar cómo se mueve la persona, si aprieta todo para cualquier tarea, si contiene la respiración, si evita ciertos movimientos.
+
+**Si hay rigidez protectora,** el objetivo puede ser soltar: movimiento variado, exposición gradual a lo que evita, respiración, confianza.
+
+**Si hay poco control o poca capacidad,** el objetivo puede ser construir fuerza y coordinación, con progresión.
+
+**Explicar que la columna es robusta.** La evidencia muestra que una columna sana está muy bien protegida por su propio sistema de control. Esa información, bien dada, ya es parte del tratamiento.
+
+### Para cerrar
+
+Los autores no dicen que la inestabilidad sea un mito absoluto. Dicen algo más útil: es un concepto complejo, difícil de medir y fácil de usar mal. Mientras la ciencia sigue investigándolo, lo que sí está en nuestras manos es no convertir una hipótesis incierta en una sentencia para el paciente.`,
     references: [
       {
         author: 'Reeves NP, Cholewicki J, van Dieën JH, Kawchuk G, Hodges PW.',
@@ -2657,25 +2930,58 @@ En lugar de infundir miedo al paciente explicando que su escápula "funciona mal
     readingTime: 6,
     summary: '¿Tu resonancia dice "hernia discal"? Es probable que sea una arruga de la edad. Analizamos la evidencia sobre los hallazgos estructurales en personas completamente sanas.',
     pullQuote: 'La prevalencia de degeneración discal en individuos asintomáticos de 30 años es del 52%, y sube al 80% a los 50 años. Lo que ves en tu resonancia se parece mucho más a las canas de tu piel que a una lesión de gravedad.',
-    content: `Clínicamente, nos enfrentamos a una de las paradojas más complejas del razonamiento clínico actual: el desacople estructural. Durante décadas, el modelo médico tradicional nos entrenó para buscar una "falla estructural" que explique cada milímetro de experiencia dolorosa. Si el paciente manifestaba dolor lumbar, la solución inmediata era tomar una fotografía de su columna. Pero la biología se niega a ser tan reduccionista.
+    content: `Pocas cosas asustan tanto a una persona con dolor lumbar como leer su propio informe de resonancia. "Discopatía degenerativa", "protrusión", "fisura del anillo", "deshidratación discal". Son palabras que suenan a daño, y es lógico que alguien piense que su espalda se está rompiendo.
 
-¿Por qué importa esto? Porque el lenguaje y las imágenes interactúan directamente con tu sistema nervioso. Cuando te entregan un informe mecanografiado repleto de palabras como *"degenerativo"*, *"desgaste"* o *"deshidratación discal"*, tu cerebro interpreta una amenaza biológica inminente. Esta percepción de vulnerabilidad incrementa la facilitación nociceptiva y perpetúa el **dolor persistente**. 
+El problema es que esas mismas palabras aparecen en los informes de muchísimas personas que no tienen ningún dolor. Esa es la paradoja: lo que vemos en la imagen y lo que siente la persona muchas veces van por caminos distintos.
 
-### La evidencia sobre individuos sanos
+### Qué hizo el estudio
 
-Una revisión sistemática de Brinjikji et al. (2015) analizó las resonancias magnéticas de más de 3.100 personas que **nunca habían tenido dolor de espalda o síntomas lumbares**. Los resultados deberían estar pegados con un imán en las paredes de cada consulta clínica:
+Waleed Brinjikji y su equipo (2015) hicieron una revisión sistemática de 33 estudios que habían tomado resonancias o tomografías de columna a personas **sin dolor lumbar**. En total, 3.110 personas asintomáticas. Agruparon los hallazgos por década de edad, desde los 20 hasta los 80 años, y calcularon con qué frecuencia aparecía cada cambio "degenerativo".
 
-- **Degeneración discal:** Presente en el 37% de los jóvenes asintomáticos de 20 años y en el 80% de los adultos asintomáticos de 50 años.
-- **Protusión discal:** Encontrada en el 30% de los sujetos de 20 años y en el 60% de los de 50 años, todos completamente funcionales y sin molestias.
-- **Fisuras anulares:** Presentes en el 37% de los individuos asintomáticos a los 40 años.
+La pregunta era simple: si alguien sin dolor se hace una resonancia, ¿qué va a encontrar?
 
-Esto no significa que la anatomía no importe, o que las hernias de disco no puedan provocar dolor en contextos específicos (como por ejemplo, la compresión de una raíz nerviosa asociada a radiculopatía aguda). Lo que esta evidencia demuestra es que los hallazgos mecánicos en imagenología suelen ser variantes anatómicas normales asociadas al ciclo vital o "arrugas internas", más que lesiones traumáticas activas.
+### Lo que encontraron
 
-### Implicancia clínica: ¿Hacia dónde nos movemos?
+| Hallazgo | 20 años | 30 años | 40 años | 50 años | 60 años | 70 años | 80 años |
+|---|---|---|---|---|---|---|---|
+| Degeneración discal | 37% | 52% | 68% | 80% | 88% | 93% | 96% |
+| Abombamiento discal | 30% | 40% | 50% | 60% | 69% | 77% | 84% |
+| Protrusión discal | 29% | 31% | 33% | 36% | 38% | 40% | 43% |
+| Fisura anular | 19% | 20% | 22% | 23% | 25% | 27% | 29% |
 
-Si eres profesional del movimiento, tu rol no es rehabilitar una imagen. Tu rol es reacondicionar las capacidades biológicas y el espectro de tolerancia de una persona. El movimiento progresivo y libre de miedo actúa sobre la columna no solo mejorando la estabilidad del par de fuerzas de la musculatura lumbopélvica, sino también modulando la sensibilidad del asta dorsal de la médula espinal e induciendo plasticidad cortical.
+Hay que leer esta tabla con calma. A los 20 años, más de un tercio de las personas sin dolor ya tiene algún grado de degeneración discal. A los 50, son ocho de cada diez. A los 80, prácticamente todos.
 
-La próxima vez que analices un informe con una lista exhaustiva de hallazgos anatómicos, respira hondo. El sistema musculoesquelético humano es dinámico, autoadaptativo y resiliente. Una hernia no es una sentencia: es una parte de tu historia, no el final de ella.`,
+Los autores lo resumen así: muchos de estos hallazgos forman parte del envejecimiento normal y no se asocian necesariamente con dolor. Se parecen más a las canas o a las arrugas que a una lesión.
+
+### Por qué esto importa en la consulta
+
+Si estos cambios están en la mayoría de las personas sin dolor, no podemos usarlos para explicar el dolor de una persona en particular. Que tu resonancia muestre una protrusión no significa que esa protrusión sea la causa de lo que sientes. Puede serlo, pero la imagen sola no lo demuestra.
+
+Esto tiene consecuencias reales. La revisión de Cashin y colaboradores en *JAMA* (2026) advierte que atribuir los síntomas a estos hallazgos puede aumentar la ansiedad del paciente, llevar a diagnósticos inadecuados y a exámenes y tratamientos que no mejoran los resultados. Las guías no recomiendan imágenes de rutina en el dolor lumbar inespecífico, de ninguna duración, cuando no hay señales de alarma.
+
+También importa por el lenguaje. Una persona que lee "columna degenerada" puede empezar a moverse con miedo, evitar agacharse, dejar de entrenar o de trabajar. Ese miedo y esa protección sostenidos en el tiempo sí se relacionan con peor evolución. La palabra pesa.
+
+### Lo que no dice este estudio
+
+Sería un error pasar al otro extremo y decir que la anatomía nunca importa. Hay situaciones donde la imagen es útil y necesaria:
+
+- Sospecha de fractura, infección o cáncer.
+- Déficit neurológico grave o que progresa (pérdida de fuerza en una pierna, anestesia en silla de montar, problemas para orinar).
+- Dolor radicular o estenosis cuando la persona es candidata a cirugía o a un procedimiento.
+
+En esos casos, la resonancia ayuda a decidir. Fuera de ellos, rara vez cambia el tratamiento.
+
+Hay otro matiz. Este es un estudio de personas sin dolor; no compara directamente con personas con dolor. Un metaanálisis posterior del mismo grupo encontró que algunos hallazgos son algo más frecuentes en personas con dolor lumbar menores de 50 años. Es decir, la asociación existe, pero es débil y no sirve para explicar un caso individual.
+
+### Qué hacer con esto
+
+**Si eres paciente:** tu informe describe cómo es tu columna, no cuánto te va a doler ni qué puedes hacer. La mayoría de las personas con dolor lumbar mejora, con o sin esos hallazgos. Lo que más ayuda es mantenerte activo, retomar tus actividades de forma gradual y entender qué está pasando.
+
+**Si eres clínico:** antes de pedir una imagen, pregúntate qué decisión vas a cambiar con ella. Si ya existe, ayuda a la persona a leerla. Una frase como "esto es algo que tiene la mayoría de la gente de tu edad sin dolor" puede bajar mucho la amenaza. Después, el trabajo es el mismo de siempre: evaluar cómo se mueve, qué evita, qué cree sobre su espalda, cómo duerme y qué espera, y construir un plan de carga progresiva que le devuelva confianza.
+
+### Para cerrar
+
+Una resonancia muestra estructura. El dolor es una experiencia que depende de muchas cosas más: el sistema nervioso, el contexto, el miedo, el sueño, la carga. Cuando entendemos que la mayoría de los "hallazgos" son parte de vivir, dejamos de tratar imágenes y volvemos a tratar personas.`,
     references: [
       {
         author: 'Brinjikji W, Luetmer PH, Comstock B, et al.',
@@ -2683,6 +2989,20 @@ La próxima vez que analices un informe con una lista exhaustiva de hallazgos an
         journal: 'American Journal of Neuroradiology',
         doi: '10.3174/ajnr.A4173',
         title: 'Systematic literature review of imaging features of spinal degeneration in asymptomatic populations'
+      },
+      {
+        author: 'Brinjikji W, Diehn FE, Jarvik JG, et al.',
+        year: '2015',
+        journal: 'American Journal of Neuroradiology',
+        doi: '10.3174/ajnr.A4498',
+        title: 'MRI Findings of Disc Degeneration are More Prevalent in Adults with Low Back Pain than in Asymptomatic Controls: A Systematic Review and Meta-Analysis'
+      },
+      {
+        author: 'Cashin AG, Chou R, Weimer MB, McAuley JH.',
+        year: '2026',
+        journal: 'JAMA',
+        doi: '10.1001/jama.2026.9631',
+        title: 'Low Back Pain: A Review'
       },
       {
         author: 'O\'Sullivan P, Caneiro JP, O\'Keeffe M, et al.',

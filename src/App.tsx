@@ -60,9 +60,15 @@ function parseSpanishDate(dateStr: string): number {
   return new Date(year, month, day).getTime();
 }
 
-const SORTED_ARTICLES: Article[] = STATIC_ARTICLES.filter((a) => !ARTICULOS_OCULTOS.includes(a.slug)).sort(
-  (a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date)
-);
+// Minutos de lectura calculados desde el texto real (~200 palabras por minuto).
+function minutosLectura(texto: string): number {
+  const palabras = texto.replace(/[#*_|>`-]/g, " ").split(/\s+/).filter(Boolean).length;
+  return Math.max(2, Math.round(palabras / 200));
+}
+
+const SORTED_ARTICLES: Article[] = STATIC_ARTICLES.filter((a) => !ARTICULOS_OCULTOS.includes(a.slug))
+  .map((a) => ({ ...a, readingTime: minutosLectura(a.content) }))
+  .sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
 
 const TOPIC_CHIPS = [
   ...CATEGORIES.segmento,
