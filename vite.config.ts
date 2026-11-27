@@ -1,11 +1,22 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, type Plugin} from 'vite';
+
+// Identificador de cada publicación. La app lo compara con /version.json para avisar que hay una versión nueva.
+const BUILD_ID = String(Date.now());
+const versionJson = (): Plugin => ({
+  name: 'version-json',
+  apply: 'build',
+  generateBundle() {
+    this.emitFile({ type: 'asset', fileName: 'version.json', source: JSON.stringify({ build: BUILD_ID }) });
+  },
+});
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), versionJson()],
+    define: { __BUILD_ID__: JSON.stringify(BUILD_ID) },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

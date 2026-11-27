@@ -20,6 +20,7 @@ import {
   Menu,
   Link2,
 } from "lucide-react";
+import { AvisoActualizacion } from "./components/AvisoActualizacion";
 import { STATIC_ARTICLES, CATEGORIES, Article, BORRADORES } from "./data";
 import { INFOGRAFIAS, Infografia } from "./data/infografias";
 import { InfografiaCompartir, descargarPdfInfografia, linkInfografia } from "./components/InfografiaCompartir";
@@ -762,6 +763,7 @@ Lee el artículo completo en MyoKine (@myokinecl)
 
   return (
     <div className="min-h-screen bg-white text-[#1D2433] font-sans flex flex-col">
+      <AvisoActualizacion />
       {/* Compact Header (Max 64px height on mobile) */}
       <header className="h-16 border-b border-[#E3E5E8] bg-white/95 sticky top-0 z-40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
