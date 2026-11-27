@@ -106,11 +106,9 @@ La revisión es clara en un punto: hay evidencia de **alta certeza** de que el d
 
 En la práctica, ese "ajustar la actividad" suele traducirse en un plan de ejercicio progresivo y adaptado a la persona. Otras revisiones sobre el manguito rotador coinciden en que la educación y el ejercicio son la primera línea de tratamiento.
 
-### Qué significa para ti
+### Lo que me llevo
 
-**Si tienes dolor de hombro:** que una imagen muestre "desgaste" o una rotura no significa que eso explique tu dolor ni que necesites operarte. Lo esperable es mejorar, aunque a veces tome tiempo y tenga altibajos.
-
-**Si eres profesional de la salud:** nuestra explicación es parte del tratamiento. Descartar lo grave, evitar etiquetas que asustan, pedir imágenes solo cuando cambian la conducta y acompañar con un plan claro es, según esta revisión, lo que más ayuda.
+Que una imagen muestre cambios en el manguito no significa que eso explique el dolor ni que haga falta operar. Lo esperable es mejorar, aunque a veces tome tiempo y tenga altibajos. Y que nuestra explicación es parte del tratamiento: descartar lo grave, evitar etiquetas que asustan, pedir imágenes solo cuando cambian la conducta y acompañar con un plan claro es, según esta revisión, lo que más ayuda.
 
 ### Límites
 
@@ -359,11 +357,9 @@ Otros dos estudios no mostraron diferencias en la recuperación de la fuerza má
 
 [[figura:creatina-rehab]]
 
-### Qué significa para ti
+### Lo que me llevo
 
-**Si estás inmovilizado:** la creatina no parece evitar la atrofia por sí sola. Lo que más ayuda sigue siendo volver a cargar el músculo apenas se pueda, de forma segura y progresiva.
-
-**Si estás en rehabilitación:** acompañada de ejercicio de fuerza, la creatina podría sumar algo. Pero la evidencia todavía no permite afirmarlo con seguridad. Si te interesa usarla, conversa con tu equipo de salud, sobre todo si tienes alguna enfermedad renal o tomas otros medicamentos.
+Durante la inmovilización, la creatina no parece evitar la atrofia por sí sola. Lo que más ayuda sigue siendo volver a cargar el músculo apenas se pueda, de forma segura y progresiva. En la rehabilitación, acompañada de ejercicio de fuerza, podría sumar algo, pero la evidencia todavía no permite afirmarlo con seguridad. Si alguien quiere usarla, conviene conversarlo con su equipo de salud, sobre todo si tiene alguna enfermedad renal o toma otros medicamentos.
 
 ### Por qué se pensó que podía ayudar
 
@@ -450,11 +446,9 @@ Mientras tanto, la evidencia dice cosas que casi ningún paciente sabía:
 - Muchas personas con roturas mejoran sin cirugía.
 - Hasta un **40 %** vuelve a romperse después de la reparación y, aun así, mejora parecido. Eso pone en duda que el beneficio venga de "reparar" el tendón.
 
-### Qué significa para ti
+### Lo que me llevo
 
-**Si tienes dolor de hombro:** una imagen alterada no es una sentencia. Antes de decidir, puedes preguntar qué beneficio real se espera, qué riesgos tiene la cirugía y qué pasa si sigues con un plan de ejercicio bien hecho.
-
-**Si eres profesional de la salud:** lo que decimos al mostrar una resonancia pesa más que casi cualquier ejercicio que indiquemos. Explicar que los hallazgos son frecuentes en personas sin dolor, dar un plan de ejercicio con dosis y progresión claras, y compartir la decisión con el paciente no es un detalle: es parte del tratamiento.
+Una imagen alterada no es una sentencia. Antes de decidir una cirugía vale la pena preguntar qué beneficio real se espera, qué riesgos tiene y qué pasa si se sigue con un plan de ejercicio bien hecho. Y lo que decimos al mostrar una resonancia pesa más que casi cualquier ejercicio que indiquemos: explicar que los hallazgos son frecuentes en personas sin dolor, dar un plan con dosis y progresión claras y compartir la decisión no es un detalle, es parte del tratamiento.
 
 ### Límites del estudio
 
