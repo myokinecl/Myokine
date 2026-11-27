@@ -11,7 +11,7 @@ export const BORRADORES: Article[] = [
     borrador: true,
     slug: 'reflexion-si-el-sistema-nervioso-pudiera-hablar',
     title: 'Si el sistema nervioso pudiera hablar, seríamos más humildes',
-    subtitle: 'Sobre lo poco que entendemos del cuerpo, lo rápido que cambian nuestras certezas y el momento de la historia en que nos tocó estudiarlo.',
+    subtitle: 'Sobre lo poco que entendemos de lo que nos pasa y la seguridad con la que a veces lo explicamos.',
     categoryType: 'tematica',
     categoryValue: 'rehabilitacion-razonamiento',
     categoryLabel: 'Razonamiento clínico',
@@ -19,25 +19,23 @@ export const BORRADORES: Article[] = [
     date: '27 de Noviembre, 2026',
     author: 'Lukas · MyoKine',
     readingTime: 4,
-    summary: 'Explicamos con mucha seguridad lo que le pasa a un cuerpo que apenas empezamos a entender. Cada década cambia lo que creemos importante, y eso debería hacernos más cuidadosos con lo que afirmamos.',
+    summary: 'Explicamos con mucha seguridad lo que le pasa a un sistema que apenas empezamos a entender. Reconocerlo cambia cómo hablo con mis pacientes.',
     pullQuote: 'Si el sistema nervioso pudiera escucharnos explicar lo que le pasa, probablemente se reiría un poco.',
     content: `Hay una idea que me ronda hace tiempo y que me gusta decir medio en broma: si el sistema nervioso pudiera escucharnos mientras explicamos lo que le pasa, y respondernos con palabras, seríamos bastante más humildes.
 
-Lo pienso cada vez que me escucho explicando un dolor con mucha seguridad. "Es el tendón." "Es la postura." "Es que el sistema nervioso está sensibilizado." Puede que algo de eso sea cierto, pero casi siempre es una versión muy simplificada de lo que realmente ocurre. Estamos hablando del sistema más complejo que conocemos, que integra lo que sentimos, lo que recordamos, lo que esperamos y lo que hacemos, todo al mismo tiempo. Pretender resumirlo en una frase de consulta tiene algo de ingenuo.
+Lo pienso cada vez que me escucho explicando un dolor con mucha seguridad. "Es el tendón." "Es la postura." "Es que el sistema nervioso está sensibilizado." Puede que algo de eso sea cierto, pero casi siempre es una versión muy simplificada de lo que realmente ocurre.
 
-No soy el primero en pensar algo parecido. Hay una frase que se atribuye al físico Emerson Pugh, alrededor de 1938, y que dice más o menos así: si el cerebro humano fuera tan simple que pudiéramos entenderlo, nosotros seríamos tan simples que no podríamos. Su hijo, George Pugh, la publicó en un libro de 1977 y contó que venía de su padre. Me gusta porque dice lo mismo desde otro ángulo: el instrumento con el que intentamos entender el cuerpo es parte del mismo cuerpo que queremos entender.
+Estamos hablando del sistema más complejo que conocemos. En cada momento integra lo que llega desde los tejidos con lo que recordamos, lo que esperamos, lo que tememos y el contexto en que estamos. Por eso el mismo golpe duele distinto en un partido que en la casa, y la misma rodilla molesta más en una semana de estrés que en vacaciones. Cuando intento resumir todo eso en una frase de consulta, me doy cuenta de que tiene algo de ingenuo.
 
-Esto no significa que no sepamos nada. Hay muchísima evidencia que respalda lo que hacemos en salud y deporte, y la uso todos los días. Pero hay una diferencia entre decir "esto es lo que sabemos hoy" y decir "esto es lo que pasa". La primera frase deja espacio para aprender. La segunda lo cierra.
+No soy el primero en pensar algo parecido. Hay una frase que se atribuye al físico Emerson Pugh, alrededor de 1938, y que dice más o menos así: si el cerebro humano fuera tan simple que pudiéramos entenderlo, nosotros seríamos tan simples que no podríamos. Su hijo, George Pugh, la publicó en un libro de 1977 y contó que venía de su padre. Me gusta porque recuerda algo que se nos olvida: el instrumento con el que intentamos entender lo que nos pasa es parte de lo mismo que queremos entender.
 
-Basta mirar unas décadas hacia atrás. Durante mucho tiempo, la recomendación de ejercicio para la salud fue casi solo aeróbica: correr, nadar, andar en bicicleta. La primera declaración del American College of Sports Medicine, en 1978, hablaba de capacidad cardiorrespiratoria y composición corporal, y recién en 1990 sumó el entrenamiento de fuerza. Después vino una época en que la fuerza pasó a estar en el centro, cuando entendimos que el músculo también funciona como un órgano que se comunica con el resto del cuerpo. Hoy hablamos de longevidad, de VO2máx y de fuerza como predictores de cuántos años vamos a vivir y en qué condiciones.
+Esto no significa que no sepamos nada. Hay muchísima evidencia que respalda lo que hacemos, y la uso todos los días. Pero hay una diferencia entre decir "esto es lo que creemos que está pasando" y decir "esto es lo que pasa". La primera frase deja espacio para seguir mirando. La segunda lo cierra, y si me equivoco, el paciente se queda con una explicación que no le sirve.
 
-Cada una de esas etapas tuvo algo de razón, y cada una dejó cosas fuera. No creo que estemos en el final de esa historia. Creo que estamos en un punto bastante temprano.
+Me pasa también conmigo mismo. Cuando algo me duele, tiendo a armar una historia rápida sobre por qué, y casi siempre la creo. Pocas veces me detengo a pensar que mi propio sistema nervioso está participando en esa historia, eligiendo qué notar y qué ignorar.
 
-Si lo pienso en perspectiva, llevamos muy poco tiempo estudiando el cuerpo con método científico, comparado con todo el tiempo que llevamos existiendo como especie. Me pregunto qué van a pensar de nosotros en 50 años. Probablemente algunas de las cosas que hoy defendemos con convicción les parezcan tan incompletas como a nosotros nos parecen ciertas ideas de hace 50 años.
+En la consulta, esto se traduce en cosas bien concretas. Intento explicar lo que creo que está pasando como una hipótesis razonable y no como una verdad cerrada. Intento no prometer certezas que no tengo. Y cuando un paciente me pregunta algo que no sé, prefiero decirle que no lo sé, o que la evidencia todavía no lo tiene claro, antes que inventar una explicación que suene bien.
 
-Para mí, esto tiene consecuencias bien concretas en la consulta. Intento explicar lo que creo que está pasando, pero dejando claro que es una hipótesis razonable, no una verdad cerrada. Intento no prometer certezas que no tengo. Y cuando un paciente me pregunta algo que no sé, prefiero decirle que no lo sé, o que la evidencia todavía no lo tiene claro, antes que inventar una explicación que suene bien.
-
-Creo que esa humildad no le quita valor a lo que hacemos. Al contrario, nos obliga a mirar con más atención a la persona que tenemos al frente, que al final es la que mejor nos puede contar cómo le está yendo.`,
+Creo que esa humildad no le quita valor a lo que hacemos. Al contrario, nos obliga a escuchar con más atención a la persona que tenemos al frente, que al final es la que mejor puede contarnos lo que le está pasando.`,
     references: [
       {
         author: 'Pugh GE.',
@@ -46,18 +44,11 @@ Creo que esa humildad no le quita valor a lo que hacemos. Al contrario, nos obli
         title: 'The Biological Origin of Human Values'
       },
       {
-        author: 'Garber CE, Blissmer B, Deschenes MR, et al.',
-        year: '2011',
-        journal: 'Medicine & Science in Sports & Exercise, 43(7):1334-1359',
-        doi: '10.1249/MSS.0b013e318213fefb',
-        title: 'Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults: guidance for prescribing exercise'
-      },
-      {
-        author: 'Pedersen BK, Febbraio MA.',
-        year: '2012',
-        journal: 'Nature Reviews Endocrinology, 8(8):457-465',
-        doi: '10.1038/nrendo.2012.49',
-        title: 'Muscles, exercise and obesity: skeletal muscle as a secretory organ'
+        author: 'Raja SN, Carr DB, Cohen M, et al.',
+        year: '2020',
+        journal: 'Pain, 161(9):1976-1982',
+        doi: '10.1097/j.pain.0000000000001939',
+        title: 'The revised International Association for the Study of Pain definition of pain: concepts, challenges, and compromises'
       }
     ]
   },
