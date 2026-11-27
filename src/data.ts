@@ -52,15 +52,18 @@ export const CATEGORIES = {
     { value: 'evidencia-dolor', label: '¿Qué dice la evidencia sobre mi dolor?', desc: 'Hallazgos explicados en simple, para que entiendas tu proceso.' },
     { value: 'diagnostico', label: 'Entender mi diagnóstico', desc: 'Traducción de términos clínicos atemorizantes a explicaciones biológicas útiles.' },
     { value: 'mitos', label: 'Mitos frecuentes', desc: 'Ideas antiguas que no se sostienen, como la postura ideal o la alineación perfecta.' },
-    { value: 'preguntas-kinesiologo', label: 'Preguntas para tu kinesiólogo', desc: 'Herramientas prácticas para que tomes el control de tu consulta.' }
+    { value: 'preguntas-kinesiologo', label: 'Preguntas para tu kinesiólogo', desc: 'Herramientas prácticas para que tomes el control de tu consulta.' },
+    { value: 'explicar-dolor', label: 'Explicar el dolor', desc: 'Serie en 8 partes para entender tu dolor con ejemplos de la vida diaria.' }
   ]
 };
 
 import { ARTICULOS_NUEVOS } from './data/articulosNuevos';
 import { BORRADORES } from './data/borradores';
+import { EXPLICAR_DOLOR } from './data/explicarDolor';
 export { BORRADORES };
 
 export const STATIC_ARTICLES: Article[] = [
+  ...EXPLICAR_DOLOR,
   ...ARTICULOS_NUEVOS,
   {
     id: '49',

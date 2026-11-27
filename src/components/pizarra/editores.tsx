@@ -333,6 +333,8 @@ export function Editor({ it, set }: { it: Item; set: Set }) {
           <Texto label="Lo que más le importa" area value={d.meta} onChange={(v) => up({ meta: v })} />
         </div>
       );
+    case "metafora":
+      return <p className="text-[15px] text-[#5A6170]">Gráfico listo para explicar. Dibuja encima para marcar dónde está la persona hoy.</p>;
     case "camino":
       return <p className="text-[15px] text-[#5A6170]">Este gráfico no tiene datos que editar. Dibuja encima para marcar dónde va la persona.</p>;
     case "fuerza":

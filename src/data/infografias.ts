@@ -19,6 +19,10 @@ import img18 from '../assets/images/infografias/18-sueno-y-dolor.jpg';
 import img19 from '../assets/images/infografias/19-estilo-de-vida-dolor-persistente.jpg';
 import img20 from '../assets/images/infografias/20-plan-crisis-de-dolor.jpg';
 import img21 from '../assets/images/infografias/21-como-medir-tu-progreso.jpg';
+import img22 from '../assets/images/infografias/22-el-dolor-no-mide-el-dano.jpg';
+import img23 from '../assets/images/infografias/23-ni-evitar-ni-aguantar.jpg';
+import img24 from '../assets/images/infografias/24-tu-linea-de-partida.jpg';
+import img25 from '../assets/images/infografias/25-entrena-sin-que-suene-la-alarma.jpg';
 
 export interface Infografia {
   id: string;
@@ -249,5 +253,45 @@ export const INFOGRAFIAS: Infografia[] = [
     image: img21,
     description: "El dolor no es la única medida. Lo más importante es lo que vuelves a poder hacer.",
     downloadName: 'MyoKine-como-medir-tu-progreso.jpg',
+  },
+  {
+    id: 'inf-22',
+    relatedCategories: ['explicar-dolor', 'dolor-persistente'],
+    slug: "el-dolor-no-mide-el-dano",
+    title: "El dolor no mide el daño",
+    topic: "Dolor",
+    image: img22,
+    description: "Puede haber mucho dolor con poco daño y poco dolor con mucho daño. El dolor depende de cuánto peligro percibe tu sistema nervioso.",
+    downloadName: 'MyoKine-el-dolor-no-mide-el-dano.jpg',
+  },
+  {
+    id: 'inf-23',
+    relatedCategories: ['explicar-dolor', 'dolor-persistente'],
+    slug: "ni-evitar-ni-aguantar",
+    title: "Ni evitar ni aguantar",
+    topic: "Dolor",
+    image: img23,
+    description: "Evitar todo lo que duele o aguantar hasta reventar terminan en el mismo lugar. Hay un tercer camino: planificar y subir de a poco.",
+    downloadName: 'MyoKine-ni-evitar-ni-aguantar.jpg',
+  },
+  {
+    id: 'inf-24',
+    relatedCategories: ['explicar-dolor', 'dolor-persistente'],
+    slug: "tu-linea-de-partida",
+    title: "Tu línea de partida",
+    topic: "Dolor",
+    image: img24,
+    description: "Cómo volver a hacer lo que te importa sin quedar mal al día siguiente: elegir, medir, planificar y subir de a poco.",
+    downloadName: 'MyoKine-tu-linea-de-partida.jpg',
+  },
+  {
+    id: 'inf-25',
+    relatedCategories: ['explicar-dolor', 'dolor-persistente'],
+    slug: "entrena-sin-que-suene-la-alarma",
+    title: "Entrena un movimiento sin que suene la alarma",
+    topic: "Dolor",
+    image: img25,
+    description: "Si un movimiento te da miedo o te duele, puedes entrenarlo de otras formas para que tu cerebro vuelva a sentirlo seguro.",
+    downloadName: 'MyoKine-entrena-sin-que-suene-la-alarma.jpg',
   },
 ];

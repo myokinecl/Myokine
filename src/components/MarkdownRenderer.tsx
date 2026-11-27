@@ -32,7 +32,12 @@ function inline(text: string, keyBase = "i"): React.ReactNode[] {
       else if (t.startsWith("[")) {
         const mm = t.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         out.push(
-          <a key={key} href={mm?.[2]} target="_blank" rel="noopener noreferrer" className="text-[#0F5C4D] underline underline-offset-4">
+          <a
+            key={key}
+            href={mm?.[2]}
+            {...(mm?.[2]?.startsWith("#") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+            className="text-[#0F5C4D] underline underline-offset-4"
+          >
             {mm?.[1]}
           </a>
         );

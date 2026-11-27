@@ -24,7 +24,8 @@ export type Kind =
   | "arribaabajo"
   | "camino"
   | "dato"
-  | "escucha";
+  | "escucha"
+  | "metafora";
 
 export interface Item {
   id: string;
@@ -267,6 +268,8 @@ export function datosIniciales(kind: Kind, preset?: string): any {
       };
     case "camino":
       return {};
+    case "metafora":
+      return { tipo: preset || "alarma" };
     case "escucha":
       return {
         titulo: "Lo que me contaste",
@@ -325,6 +328,8 @@ export function base(it: Item): { w: number; h: number } {
       return { w: 680, h: 560 };
     case "camino":
       return { w: 600, h: 380 };
+    case "metafora":
+      return { w: 640, h: it.d.tipo === "montanas" ? 480 : 420 };
     case "dato":
       return { w: 600, h: 300 };
     case "escucha":
@@ -404,6 +409,9 @@ export const CATALOGO: { grupo: string; items: Entrada[] }[] = [
       { kind: "plan", preset: "evidencia", nombre: "Lo que dice la evidencia", ayuda: "Primera línea de tratamiento" },
       { kind: "dato", preset: "hombro", nombre: "Dato de la evidencia", ayuda: "Número grande con su fuente" },
       { kind: "escucha", nombre: "Lo que me contaste", ayuda: "Sus palabras y lo que le importa" },
+      { kind: "metafora", preset: "alarma", nombre: "Una alarma más sensible", ayuda: "Suena antes y más fuerte" },
+      { kind: "metafora", preset: "evitar", nombre: "Ni evitar ni aguantar", ayuda: "Dos patrones y el tercer camino" },
+      { kind: "metafora", preset: "montanas", nombre: "El margen de protección", ayuda: "Dolor, brote y tejido al subir de a poco" },
     ],
   },
   {

@@ -33,6 +33,14 @@ export type Figura = {
       zonas?: { desde: number; hasta: number; texto: string }[];
     }
   | { tipo: "lista"; columnas: { titulo: string; puntos: string[]; tono?: "verde" | "gris" }[] }
+  | {
+      /** Esquema conceptual con varias líneas rectas (sin números en los ejes). */
+      tipo: "lineas";
+      ejeX: string;
+      ejeY: string;
+      series: { nombre: string; puntos: [number, number][]; tono?: "verde" | "gris" | "marca" | "tinta"; punteada?: boolean }[];
+      notas?: { x: number; y: number; texto: string }[];
+    }
 );
 
 export type FormatoFigura = "v" | "h";

@@ -633,6 +633,88 @@ function Camino({ it }: { it: Item }) {
   );
 }
 
+// ---------- Metáforas de dolor (basadas en Explain Pain, dibujo propio) ----------
+function Metafora({ it }: { it: Item }) {
+  const { w, h } = base(it);
+  const t = it.d.tipo;
+  const ejes = (yBase: number) => (
+    <>
+      <line x1={50} y1={yBase} x2={w - 30} y2={yBase} stroke={C.ink} strokeWidth={2} />
+      <line x1={50} y1={110} x2={50} y2={yBase} stroke={C.ink} strokeWidth={2} />
+    </>
+  );
+  if (t === "evitar") {
+    const yb = 330;
+    const X = (x: number) => 50 + (x / 10) * (w - 90);
+    const Y = (y: number) => yb - (y / 10) * 190;
+    const ag = [[0, 8], [1, 10], [2, 2], [3, 3], [4, 9], [5, 1.5], [6, 2.5], [7, 7.5], [8, 1], [9, 2], [10, 4]];
+    const ev = [[0, 8], [2, 7], [4, 5.8], [6, 4.6], [8, 3.6], [10, 2.8]];
+    const path = (a: number[][]) => "M" + a.map(([x, y]) => `${X(x)},${Y(y)}`).join(" L");
+    return (
+      <Tarjeta w={w} h={h} titulo="Ni evitar ni aguantar">
+        {ejes(yb)}
+        <path d={path(ag)} fill="none" stroke={C.go} strokeWidth={5} strokeLinejoin="round" />
+        <path d={path(ev)} fill="none" stroke={C.ink2} strokeWidth={4} strokeDasharray="10 8" />
+        <path d="M330,96 L380,96" stroke={C.go} strokeWidth={5} />
+        <T x={390} y={102} s={17} w={600} c={C.go}>Aguantar hasta reventar</T>
+        <path d="M330,124 L380,124" stroke={C.ink2} strokeWidth={4} strokeDasharray="10 8" />
+        <T x={390} y={130} s={17} c={C.ink2}>Evitar todo lo que duele</T>
+        <T x={w - 30} y={yb + 24} s={16} a="end" c={C.ink2}>semanas</T>
+        <T x={28} y={h - 44} s={19}>Las dos terminan en hacer cada vez menos.</T>
+        <T x={28} y={h - 18} s={19} w={700} c={C.go}>El tercer camino: planificar y subir de a poco.</T>
+      </Tarjeta>
+    );
+  }
+  if (t === "montanas") {
+    const yb = 390;
+    const X = (x: number) => 50 + (x / 10) * (w - 90);
+    const Y = (y: number) => yb - (y / 10) * 200;
+    const esc: number[][] = [];
+    for (let k = 0; k < 8; k++) esc.push([k * 1.25, 1.5 + k * 0.55], [(k + 1) * 1.25, 1.5 + k * 0.55]);
+    const ley = [
+      { t: "Lo que tolera el tejido", c: C.ink, d: undefined as string | undefined, sw: 3 },
+      { t: "Dónde aparece el dolor", c: C.rojo, d: "10 8", sw: 3 },
+      { t: "Dónde aparece un brote", c: C.ink2, d: "4 6", sw: 3 },
+      { t: "Lo que haces, de a poco", c: C.go, d: undefined, sw: 6 },
+    ];
+    return (
+      <Tarjeta w={w} h={h} titulo="El margen de protección">
+        {ley.map((l, i) => (
+          <g key={i}>
+            <path d={`M${28 + (i % 2) * 300},${96 + Math.floor(i / 2) * 28} l44,0`} stroke={l.c} strokeWidth={l.sw} strokeDasharray={l.d} />
+            <T x={82 + (i % 2) * 300} y={102 + Math.floor(i / 2) * 28} s={16} c={l.c === C.ink ? C.ink : l.c}>{l.t}</T>
+          </g>
+        ))}
+        {ejes(yb)}
+        <path d={`M${X(0)},${Y(8.6)} L${X(10)},${Y(9.6)}`} stroke={C.ink} strokeWidth={3} />
+        <path d={`M${X(0)},${Y(4.6)} L${X(10)},${Y(7.6)}`} stroke={C.rojo} strokeWidth={3} strokeDasharray="10 8" />
+        <path d={`M${X(0)},${Y(3.2)} L${X(10)},${Y(6.6)}`} stroke={C.ink2} strokeWidth={3} strokeDasharray="4 6" />
+        <path d={"M" + esc.map(([x, y]) => `${X(x)},${Y(y)}`).join(" L")} fill="none" stroke={C.go} strokeWidth={6} strokeLinejoin="round" />
+        <T x={w - 30} y={yb + 24} s={16} a="end" c={C.ink2}>semanas</T>
+        <T x={28} y={h - 18} s={19}>Al subir de a poco, las tres líneas también suben.</T>
+      </Tarjeta>
+    );
+  }
+  // alarma
+  const yb = 330;
+  const X = (x: number) => 50 + (x / 10) * (w - 90);
+  const Y = (y: number) => yb - (y / 10) * 200;
+  return (
+    <Tarjeta w={w} h={h} titulo="Una alarma más sensible">
+      {ejes(yb)}
+      <path d={`M${X(0)},${Y(0)} L${X(5.5)},${Y(0)} L${X(10)},${Y(5)}`} fill="none" stroke={C.ink2} strokeWidth={4} strokeDasharray="10 8" />
+      <path d={`M${X(0)},${Y(0)} L${X(1.5)},${Y(0)} L${X(10)},${Y(10)}`} fill="none" stroke={C.go} strokeWidth={6} />
+      <path d="M70,96 L120,96" stroke={C.go} strokeWidth={6} />
+      <T x={130} y={102} s={17} w={600} c={C.go}>Alarma sensible</T>
+      <path d="M70,124 L120,124" stroke={C.ink2} strokeWidth={4} strokeDasharray="10 8" />
+      <T x={130} y={130} s={17} c={C.ink2}>Alarma habitual</T>
+      <T x={w - 30} y={yb + 24} s={16} a="end" c={C.ink2}>roce, carga, movimiento</T>
+      <T x={28} y={h - 44} s={19}>Como la alarma de un auto que suena cuando pasa un camión.</T>
+      <T x={28} y={h - 18} s={19} w={700} c={C.go}>Se puede volver a calmar, de a poco.</T>
+    </Tarjeta>
+  );
+}
+
 // ---------- Dato de la evidencia ----------
 function Dato({ it }: { it: Item }) {
   const { w, h } = base(it);
@@ -709,6 +791,7 @@ export function Elemento({ it }: { it: Item }) {
     case "contexto": return <Contexto it={it} />;
     case "arribaabajo": return <ArribaAbajo it={it} />;
     case "camino": return <Camino it={it} />;
+    case "metafora": return <Metafora it={it} />;
     case "dato": return <Dato it={it} />;
     case "escucha": return <Escucha it={it} />;
   }

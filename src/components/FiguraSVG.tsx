@@ -331,6 +331,8 @@ function Cuerpo({ f, caja, fmt }: { f: Figura; caja: Caja; fmt: FormatoFigura })
         </g>
       );
     }
+    case "lineas":
+      return <Lineas f={f} caja={caja} v={fmt === "v"} />;
     case "curva": {
       const mL = 90;
       const mB = 80;
@@ -393,6 +395,60 @@ function Cuerpo({ f, caja, fmt }: { f: Figura; caja: Caja; fmt: FormatoFigura })
       );
     }
   }
+}
+
+function Lineas({ f, caja, v }: { f: Extract<Figura, { tipo: "lineas" }>; caja: Caja; v: boolean }) {
+  const colores = { verde: C.verde, gris: "#9AA0AA", marca: "#C9A227", tinta: C.tinta };
+  const leyH = f.series.length * 40 + 16;
+  const mL = 60;
+  const mB = 60;
+  const area = { x: caja.x + mL, y: caja.y + leyH + 10, w: caja.w - mL - 10, h: caja.h - leyH - mB - 10 };
+  const todos = f.series.flatMap((s) => s.puntos);
+  const xMax = Math.max(...todos.map((p) => p[0]));
+  const yMax = Math.max(...todos.map((p) => p[1])) * 1.1;
+  const X = (x: number) => area.x + (x / xMax) * area.w;
+  const Y = (y: number) => area.y + area.h - (y / yMax) * area.h;
+  return (
+    <g>
+      {f.series.map((s, i) => {
+        const col = colores[s.tono ?? (i === 0 ? "verde" : "gris")];
+        return (
+          <g key={s.nombre}>
+            <line x1={caja.x} y1={caja.y + 18 + i * 40} x2={caja.x + 44} y2={caja.y + 18 + i * 40} stroke={col} strokeWidth={8} strokeDasharray={s.punteada ? "10 8" : undefined} strokeLinecap="round" />
+            <text x={caja.x + 60} y={caja.y + 27 + i * 40} fontFamily={FONT} fontSize={v ? 26 : 28} fill={C.tinta}>
+              {s.nombre}
+            </text>
+          </g>
+        );
+      })}
+      <line x1={area.x} y1={area.y + area.h} x2={area.x + area.w} y2={area.y + area.h} stroke={C.tinta} strokeWidth={3} />
+      <line x1={area.x} y1={area.y} x2={area.x} y2={area.y + area.h} stroke={C.tinta} strokeWidth={3} />
+      {f.series.map((s, i) => {
+        const col = colores[s.tono ?? (i === 0 ? "verde" : "gris")];
+        return (
+          <polyline
+            key={s.nombre}
+            points={s.puntos.map(([a, b]) => `${X(a)},${Y(b)}`).join(" ")}
+            fill="none"
+            stroke={col}
+            strokeWidth={7}
+            strokeLinejoin="round"
+            strokeLinecap="round"
+            strokeDasharray={s.punteada ? "14 10" : undefined}
+          />
+        );
+      })}
+      {(f.notas ?? []).map((n, i) => (
+        <Texto key={i} x={X(n.x)} y={Y(n.y)} lineas={cortar(n.texto, v ? 300 : 380, 24, 600)} fs={24} peso={600} anchor="middle" lh={1.15} color={C.tinta2} />
+      ))}
+      <text x={area.x + area.w / 2} y={caja.y + caja.h} textAnchor="middle" fontFamily={FONT} fontSize={28} fontWeight={600} fill={C.tinta}>
+        {f.ejeX}
+      </text>
+      <text transform={`translate(${caja.x + 24} ${area.y + area.h / 2}) rotate(-90)`} textAnchor="middle" fontFamily={FONT} fontSize={28} fontWeight={600} fill={C.tinta}>
+        {f.ejeY}
+      </text>
+    </g>
+  );
 }
 
 export function FiguraSVG({ f, fmt, svgRef }: { f: Figura; fmt: FormatoFigura; svgRef?: React.Ref<SVGSVGElement> }) {

@@ -523,6 +523,133 @@ const LISTA: Figura[] = [
       },
     ],
   },
+  {
+    id: "dano-vs-dolor",
+    tipo: "lista",
+    titulo: "El dolor no mide el daño",
+    bajada: "Ejemplos cotidianos en que el dolor y el daño no van de la mano.",
+    fuente: "MyoKine · basado en Butler y Moseley, Explain Pain (2013)",
+    columnas: [
+      {
+        titulo: "Mucho daño, poco dolor",
+        puntos: [
+          "Un esguince en pleno partido que duele recién en la ducha",
+          "Una hernia de disco en alguien que nunca ha tenido dolor de espalda",
+          "Una lesión grande en una emergencia, sentida solo como un golpe",
+        ],
+      },
+      {
+        titulo: "Poco daño, mucho dolor",
+        tono: "gris",
+        puntos: [
+          "Un corte con papel",
+          "El dedo chico del pie contra la pata de la cama",
+          "Una espinilla el día de una entrevista importante",
+        ],
+      },
+    ],
+  },
+  {
+    id: "contexto-dolor",
+    tipo: "espectro",
+    titulo: "El mismo cuerpo, distinto dolor",
+    bajada: "El sistema nervioso evalúa el peligro con todo lo que está pasando, no solo con el tejido.",
+    fuente: "MyoKine · basado en Butler y Moseley, Explain Pain (2013)",
+    centro: "El tejido puede ser el mismo",
+    izq: {
+      titulo: "Suele subir el volumen",
+      puntos: ["Dormir mal o estar estresado", "Creer que algo se está dañando", "Sentir que no te creen", "Mucho en juego: trabajo, competencia"],
+    },
+    der: {
+      titulo: "Suele bajar el volumen",
+      puntos: ["Entender qué te pasa", "Estar con personas de confianza", "Hacer algo que disfrutas", "Sentirte capaz de manejarlo"],
+    },
+  },
+  {
+    id: "alarma-sensible",
+    tipo: "lineas",
+    titulo: "Una alarma que suena antes y más fuerte",
+    bajada: "Con el dolor persistente, estímulos que antes no molestaban empiezan a doler.",
+    fuente: "MyoKine · esquema conceptual basado en Butler y Moseley, Explain Pain (2013)",
+    ejeX: "Estímulo (roce, carga, movimiento)",
+    ejeY: "Dolor",
+    series: [
+      { nombre: "Alarma sensible", puntos: [[0, 0], [1.5, 0], [10, 10]], tono: "verde" },
+      { nombre: "Alarma habitual", puntos: [[0, 0], [5.5, 0], [10, 5]], tono: "gris", punteada: true },
+    ],
+    notas: [{ x: 3.2, y: 5.5, texto: "Lo que antes no dolía, ahora duele" }],
+  },
+  {
+    id: "cancion-repetida",
+    tipo: "pasos",
+    titulo: "La canción del dolor se aprende y se puede desaprender",
+    bajada: "Con el tiempo, el cerebro produce dolor con más facilidad. También puede aprender otros repertorios.",
+    fuente: "MyoKine · basado en Butler y Moseley, Explain Pain (2013)",
+    items: [
+      { titulo: "Al principio protege", texto: "El dolor ayuda a cuidar la zona mientras sana." },
+      { titulo: "Se practica", texto: "Meses de dolor hacen que esa respuesta salga cada vez más fácil." },
+      { titulo: "Se dispara con poco", texto: "Un recuerdo, un lugar o pensar en un movimiento pueden activarla." },
+      { titulo: "Otras canciones", texto: "Moverse de formas nuevas, de a poco, enseña al cerebro un repertorio distinto." },
+    ],
+  },
+  {
+    id: "capas-cebolla",
+    tipo: "pasos",
+    titulo: "Las capas de una experiencia de dolor",
+    bajada: "Todas pueden sumar peligro al mismo tiempo. Varias se pueden cambiar.",
+    fuente: "MyoKine · basado en Butler y Moseley, Explain Pain (2013)",
+    items: [
+      { titulo: "Los tejidos", texto: "Cómo están y cuánta carga toleran hoy." },
+      { titulo: "Lo que crees y temes", texto: "Qué crees que tienes y qué te asusta que pase." },
+      { titulo: "Cuánto te hace sufrir", texto: "Cansancio, sueño, sensación de que no termina." },
+      { titulo: "Lo que haces para escapar", texto: "Buscar la solución definitiva, evitar, aguantar." },
+      { titulo: "Tu entorno", texto: "Trabajo, familia y si sientes que te creen." },
+    ],
+  },
+  {
+    id: "evitar-aguantar",
+    tipo: "lineas",
+    titulo: "Evitar o aguantar terminan en el mismo lugar",
+    bajada: "Con el tiempo, en ambos casos se puede hacer cada vez menos.",
+    fuente: "MyoKine · esquema conceptual basado en Butler y Moseley, Explain Pain (2013)",
+    ejeX: "Semanas",
+    ejeY: "Actividad que toleras",
+    series: [
+      { nombre: "Aguantar hasta reventar", puntos: [[0, 8], [1, 10], [2, 2], [3, 3], [4, 9], [5, 1.5], [6, 2.5], [7, 7.5], [8, 1], [9, 2], [10, 4]], tono: "verde" },
+      { nombre: "Evitar todo lo que duele", puntos: [[0, 8], [2, 7], [4, 5.8], [6, 4.6], [8, 3.6], [10, 2.8]], tono: "gris", punteada: true },
+    ],
+  },
+  {
+    id: "linea-de-partida",
+    tipo: "lineas",
+    titulo: "Subir de a poco desde tu línea de partida",
+    bajada: "Un poco más que ayer, pero no mucho más. El margen antes de un brote también va subiendo.",
+    fuente: "MyoKine · esquema conceptual basado en Butler y Moseley, Explain Pain (2013)",
+    ejeX: "Semanas",
+    ejeY: "Actividad",
+    series: [
+      { nombre: "Lo que haces, planificado", puntos: [[0, 2], [1, 2], [1, 2.6], [2, 2.6], [2, 3.2], [3, 3.2], [3, 3.8], [4, 3.8], [4, 4.4], [5, 4.4], [5, 5], [6, 5], [6, 5.6], [7, 5.6], [7, 6.2], [8, 6.2]], tono: "verde" },
+      { nombre: "Donde aparece un brote", puntos: [[0, 4], [8, 8.4]], tono: "gris", punteada: true },
+    ],
+  },
+  {
+    id: "entrenar-mapa",
+    tipo: "lista",
+    titulo: "Formas de entrenar un movimiento sin que suene la alarma",
+    bajada: "Cambiar cómo, dónde y para qué lo haces le muestra al cerebro que es seguro.",
+    fuente: "MyoKine · basado en Butler y Moseley, Explain Pain (2013)",
+    columnas: [
+      {
+        titulo: "Cambiar el cómo",
+        puntos: ["Imaginarlo antes de hacerlo", "Acostado, sentado o apoyado", "En el agua", "Frente a un espejo o con los ojos cerrados"],
+      },
+      {
+        titulo: "Cambiar el dónde y el para qué",
+        tono: "gris",
+        puntos: ["En la casa, en el parque o donde empezó el dolor", "Con un propósito: amarrarte los zapatos", "Con música o conversando", "Sin las mañas que aprendiste"],
+      },
+    ],
+  },
 ];
 
 export const FIGURAS: Record<string, Figura> = Object.fromEntries(LISTA.map((f) => [f.id, f]));
