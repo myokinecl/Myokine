@@ -22,6 +22,8 @@ export interface Article {
   references: Reference[];
   summary: string; // 2-line description that hooks
   audience?: 'paciente' | 'clinico' | 'ambos';
+  /** Si es true, no aparece en el journal: solo se ve en #/borradores. */
+  borrador?: boolean;
 }
 
 export const CATEGORIES = {
@@ -43,7 +45,8 @@ export const CATEGORIES = {
     { value: 'nutricion', label: 'Nutrición y composición', desc: 'Ingesta proteica, inflamación sistémica y reparación tisular.' },
     { value: 'sueno', label: 'Sueño y recuperación', desc: 'Cómo dormir influye en el dolor, la recuperación y el rendimiento.' },
     { value: 'salud-mental', label: 'Salud mental y movimiento', desc: 'Emociones, estrés, interocepción y cómo se viven en el cuerpo.' },
-    { value: 'ciencias-deporte', label: 'Ciencias del deporte', desc: 'Monitoreo de carga interna y externa, fisiología del rendimiento.' }
+    { value: 'ciencias-deporte', label: 'Ciencias del deporte', desc: 'Monitoreo de carga interna y externa, fisiología del rendimiento.' },
+    { value: 'fisiologia-clinica', label: 'Fisiología clínica del ejercicio', desc: 'Fitness cardiorrespiratorio, pasos diarios y ejercicio en enfermedades crónicas.' }
   ],
   paciente: [
     { value: 'evidencia-dolor', label: '¿Qué dice la evidencia sobre mi dolor?', desc: 'Hallazgos explicados en simple, para que entiendas tu proceso.' },
@@ -53,7 +56,12 @@ export const CATEGORIES = {
   ]
 };
 
+import { ARTICULOS_NUEVOS } from './data/articulosNuevos';
+import { BORRADORES } from './data/borradores';
+export { BORRADORES };
+
 export const STATIC_ARTICLES: Article[] = [
+  ...ARTICULOS_NUEVOS,
   {
     id: '49',
     slug: 'dolor-hombro-atencion-primaria-haas-2026',

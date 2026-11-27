@@ -108,6 +108,8 @@ function Tarjeta(p: { key?: React.Key; caja: Caja; titulo: string; texto: string
   );
 }
 
+const colorSerie = (i: number) => [C.verde, C.verde2, "#9AA0AA"][i] ?? C.tinta2;
+
 function grilla(n: number, caja: Caja, cols: number, gap: number) {
   const filas = Math.ceil(n / cols);
   const w = (caja.w - gap * (cols - 1)) / cols;
@@ -214,8 +216,8 @@ function Cuerpo({ f, caja, fmt }: { f: Figura; caja: Caja; fmt: FormatoFigura })
           {series.length > 1 &&
             series.map((s, i) => (
               <g key={s}>
-                <rect x={caja.x + i * (caja.w / 2)} y={caja.y + 8} width={30} height={30} rx={6} fill={i === 0 ? C.verde : C.verde2} />
-                <text x={caja.x + i * (caja.w / 2) + 44} y={caja.y + 33} fontFamily={FONT} fontSize={28} fill={C.tinta}>
+                <rect x={caja.x + i * (caja.w / series.length)} y={caja.y + 8} width={30} height={30} rx={6} fill={colorSerie(i)} />
+                <text x={caja.x + i * (caja.w / series.length) + 44} y={caja.y + 33} fontFamily={FONT} fontSize={series.length > 2 ? 24 : 28} fill={C.tinta}>
                   {s}
                 </text>
               </g>
@@ -242,7 +244,7 @@ function Cuerpo({ f, caja, fmt }: { f: Figura; caja: Caja; fmt: FormatoFigura })
                   return (
                     <g key={j}>
                       <rect x={barX} y={yy} width={barW} height={grosor} rx={grosor / 2} fill={C.suave} />
-                      <rect x={barX} y={yy} width={w} height={grosor} rx={grosor / 2} fill={j === 0 ? C.verde : C.verde2} />
+                      <rect x={barX} y={yy} width={w} height={grosor} rx={grosor / 2} fill={colorSerie(j)} />
                       <text x={barX + w + 16} y={yy + grosor * 0.5 + fsL * 0.36} fontFamily={FONT} fontSize={fsL} fontWeight={700} fill={C.tinta}>
                         {val.toLocaleString("es-CL")}
                         {f.unidad ?? ""}

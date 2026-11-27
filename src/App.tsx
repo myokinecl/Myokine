@@ -20,7 +20,7 @@ import {
   Menu,
   Link2,
 } from "lucide-react";
-import { STATIC_ARTICLES, CATEGORIES, Article } from "./data";
+import { STATIC_ARTICLES, CATEGORIES, Article, BORRADORES } from "./data";
 import { INFOGRAFIAS, Infografia } from "./data/infografias";
 import { InfografiaCompartir, descargarPdfInfografia, linkInfografia } from "./components/InfografiaCompartir";
 import { CLINICAL_QUESTIONS, ClinicalQuestion } from "./questions";
@@ -32,7 +32,7 @@ import { Pizarra } from "./components/Pizarra";
 import { ARTICULOS_OCULTOS } from "./data/revision";
 import exercisePolypillImg from "./assets/images/exercise_polypill_1781741842587.jpg";
 
-type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca" | "pizarra";
+type TabType = "journal" | "infografias" | "academia" | "sobre-mi" | "biblioteca" | "pizarra" | "borradores";
 type AudienceFilter = "todos" | "paciente" | "clinico";
 
 const SPANISH_MONTHS: Record<string, number> = {
@@ -67,9 +67,15 @@ function minutosLectura(texto: string): number {
   return Math.max(2, Math.round(palabras / 200));
 }
 
-const SORTED_ARTICLES: Article[] = STATIC_ARTICLES.filter((a) => !ARTICULOS_OCULTOS.includes(a.slug))
+const SORTED_ARTICLES: Article[] = STATIC_ARTICLES.filter((a) => !ARTICULOS_OCULTOS.includes(a.slug) && !a.borrador)
   .map((a) => ({ ...a, readingTime: minutosLectura(a.content) }))
   .sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
+
+// Borradores: no salen en el journal, solo en #/borradores (para revisión de Lukas).
+const ARTICULOS_BORRADOR: Article[] = BORRADORES.filter((a) => a.borrador).map((a) => ({
+  ...a,
+  readingTime: minutosLectura(a.content),
+}));
 
 const TOPIC_CHIPS = [
   ...CATEGORIES.segmento,
@@ -159,7 +165,9 @@ export default function App() {
 
       if (clean.startsWith("articulo/")) {
         const slug = decodeURIComponent(clean.slice("articulo/".length));
-        const found = articles.find((a) => a.slug === slug || a.id === slug);
+        const found =
+          articles.find((a) => a.slug === slug || a.id === slug) ||
+          ARTICULOS_BORRADOR.find((a) => a.slug === slug || a.id === slug);
         if (found) {
           setActiveTab("journal");
           setSelectedArticle(found);
@@ -190,6 +198,13 @@ export default function App() {
 
       if (clean === "academia") {
         setActiveTab("academia");
+        setSelectedArticle(null);
+        setSelectedInfografia(null);
+        return;
+      }
+
+      if (clean === "borradores") {
+        setActiveTab("borradores");
         setSelectedArticle(null);
         setSelectedInfografia(null);
         return;
@@ -238,6 +253,7 @@ export default function App() {
       "sobre-mi": "#/sobre-mi",
       biblioteca: "#/biblioteca",
       pizarra: "#/pizarra",
+      borradores: "#/borradores",
     };
     window.location.hash = hashMap[tab];
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -869,6 +885,13 @@ Lee el artículo completo en MyoKine (@myokinecl)
               <span>Volver al Journal</span>
             </button>
 
+            {selectedArticle.borrador && (
+              <div className="mb-8 rounded-xl bg-[#F5E663]/60 px-4 py-3 text-sm text-[#1D2433]">
+                <strong>Borrador para revisar.</strong> No aparece en el journal. Solo se ve con este link o desde{" "}
+                <a href="#/borradores" className="underline font-semibold">la lista de borradores</a>.
+              </div>
+            )}
+
             {/* Category & Date */}
             <div className="flex flex-wrap items-center gap-2.5 text-sm font-semibold text-[#0F5C4D] mb-4">
               <span>{selectedArticle.categoryLabel}</span>
@@ -1468,6 +1491,32 @@ Lee el artículo completo en MyoKine (@myokinecl)
 
         {/* VIEW 3: ACADEMIA (Fixed 6-question Quiz only) */}
         {activeTab === "pizarra" && !selectedArticle && <Pizarra />}
+
+        {activeTab === "borradores" && !selectedArticle && (
+          <section className="max-w-3xl mx-auto">
+            <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#1D2433] mb-3">Borradores</h1>
+            <p className="text-[#5A6170] mb-8">
+              Reflexiones escritas para que las revises y las reescribas con tu voz. No aparecen en el journal hasta que
+              cambies <code>borrador: true</code> en <code>src/data/borradores.ts</code>.
+            </p>
+            <ul className="space-y-3">
+              {ARTICULOS_BORRADOR.map((a) => (
+                <li key={a.slug}>
+                  <a
+                    href={`#/articulo/${a.slug}`}
+                    className="block rounded-xl border border-[#E3E5E8] bg-white p-5 hover:border-[#0F5C4D] transition-colors"
+                  >
+                    <div className="text-xs font-semibold text-[#0F5C4D] mb-1">
+                      {a.categoryLabel} · {a.readingTime} min
+                    </div>
+                    <div className="font-display text-lg font-bold text-[#1D2433]">{a.title}</div>
+                    <div className="text-sm text-[#5A6170] mt-1">{a.summary}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {activeTab === "academia" && !selectedArticle && (
           <div
